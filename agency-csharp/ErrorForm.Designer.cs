@@ -85,6 +85,7 @@
             this.Controls.Add(this.return_btn);
             this.Name = "ErrorForm";
             this.Text = "ErrorForm";
+            this.Load += new System.EventHandler(this.ErrorForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

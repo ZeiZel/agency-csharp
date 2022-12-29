@@ -15,6 +15,7 @@ namespace agency_csharp
         public SuccessForm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -27,6 +28,11 @@ namespace agency_csharp
             Form mainPage = new MainWindow();
             mainPage.Show();
             Close();
+        }
+
+        private void SuccessForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

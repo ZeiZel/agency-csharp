@@ -84,6 +84,7 @@
             this.Controls.Add(this.return_btn);
             this.Name = "SuccessForm";
             this.Text = "Успех!";
+            this.Load += new System.EventHandler(this.SuccessForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

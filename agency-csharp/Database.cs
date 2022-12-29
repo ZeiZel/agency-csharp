@@ -9,7 +9,7 @@ namespace agency_csharp
 {
     class Database
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=ZEIZEL;Initial Catalog=Agency;Integrated Security=True;");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source=ZEIZEL;Initial Catalog=Agency;Persist Security Info=True;User ID=guest;Password=guest;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=True");
 
         public void openConnection()
         {

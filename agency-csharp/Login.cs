@@ -30,6 +30,8 @@ namespace agency_csharp
         {
             Form register = new Register();
             register.Show();
+
+            this.Hide();
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
@@ -40,18 +42,56 @@ namespace agency_csharp
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string queryString = $"select id, email, password, name from UserModel where name = '{loginUser}' and password = '{passUser}'";
 
-            SqlCommand command = new SqlCommand(queryString, database.getConnection());
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count == 1)
+            if (login_tb.Text.Length > 0 && password_tb.Text.Length > 0)
             {
-                MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Form mainWindow = new MainWindow();
+                string queryString = $"select [id], [email], [password], [name] from [dbo].[User] where [name] = '{loginUser}' and [password] = '{passUser}'";
+
+                SqlCommand command = new SqlCommand(queryString, database.getConnection());
+
+                adapter.SelectCommand = command;
+                adapter.Fill(table);
+
+                if (table.Rows.Count == 1)
+                {
+                    MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("К сожалению, данные были введены некорректно либо такого аккаунта не существует", "Войти не удалось", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            } else
+            {
+                MessageBox.Show("Введите данные во все поля", "Зарегистрироваться не удалось", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Вы уверены, что хотите всё стереть?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                password_tb.Text = "";
+                login_tb.Text = "";
+            }
+            
+        }
+
+        private void openedEye_pb_Click(object sender, EventArgs e)
+        {
+            password_tb.UseSystemPasswordChar = false;
+            openedEye_pb.Visible = false;
+            closedEye_pb.Visible = true;
+        }
+
+        private void closedEye_pb_Click(object sender, EventArgs e)
+        {
+            password_tb.UseSystemPasswordChar = true;
+            openedEye_pb.Visible = true;
+            closedEye_pb.Visible = false;
         }
     }
 }

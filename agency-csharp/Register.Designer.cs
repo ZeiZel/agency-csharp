@@ -48,6 +48,7 @@
             this.login_data_gb = new System.Windows.Forms.GroupBox();
             this.personality_data_gb = new System.Windows.Forms.GroupBox();
             this.back_btn = new System.Windows.Forms.Button();
+            this.clear_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.login_data_gb.SuspendLayout();
             this.personality_data_gb.SuspendLayout();
@@ -273,12 +274,26 @@
             this.back_btn.UseVisualStyleBackColor = false;
             this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
+            // clear_btn
+            // 
+            this.clear_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.clear_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_btn.Image = ((System.Drawing.Image)(resources.GetObject("clear_btn.Image")));
+            this.clear_btn.Location = new System.Drawing.Point(568, 600);
+            this.clear_btn.Name = "clear_btn";
+            this.clear_btn.Size = new System.Drawing.Size(48, 52);
+            this.clear_btn.TabIndex = 16;
+            this.clear_btn.UseVisualStyleBackColor = false;
+            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(685, 702);
+            this.Controls.Add(this.clear_btn);
             this.Controls.Add(this.back_btn);
             this.Controls.Add(this.personality_data_gb);
             this.Controls.Add(this.login_data_gb);
@@ -316,5 +331,6 @@
         private GroupBox login_data_gb;
         private GroupBox personality_data_gb;
         private Button back_btn;
+        private Button clear_btn;
     }
 }

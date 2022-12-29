@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.openedEye_pb = new System.Windows.Forms.PictureBox();
             this.closedEye_pb = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.openedEye_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closedEye_pb)).BeginInit();
@@ -138,16 +139,31 @@
             this.openedEye_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.openedEye_pb.TabIndex = 4;
             this.openedEye_pb.TabStop = false;
+            this.openedEye_pb.Click += new System.EventHandler(this.openedEye_pb_Click);
             // 
             // closedEye_pb
             // 
             this.closedEye_pb.Image = ((System.Drawing.Image)(resources.GetObject("closedEye_pb.Image")));
-            this.closedEye_pb.Location = new System.Drawing.Point(326, 363);
+            this.closedEye_pb.Location = new System.Drawing.Point(326, 364);
             this.closedEye_pb.Name = "closedEye_pb";
             this.closedEye_pb.Size = new System.Drawing.Size(35, 35);
             this.closedEye_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closedEye_pb.TabIndex = 4;
             this.closedEye_pb.TabStop = false;
+            this.closedEye_pb.Click += new System.EventHandler(this.closedEye_pb_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(325, 522);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 52);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 
@@ -155,6 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(397, 610);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.closedEye_pb);
             this.Controls.Add(this.openedEye_pb);
             this.Controls.Add(this.label2);
@@ -186,5 +203,6 @@
         private Label label2;
         private PictureBox openedEye_pb;
         private PictureBox closedEye_pb;
+        private Button button1;
     }
 }

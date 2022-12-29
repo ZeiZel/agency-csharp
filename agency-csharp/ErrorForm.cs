@@ -15,6 +15,7 @@ namespace agency_csharp
         public ErrorForm()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void return_btn_Click(object sender, EventArgs e)
@@ -23,6 +24,11 @@ namespace agency_csharp
             login.Show();
 
             Close();
+        }
+
+        private void ErrorForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
