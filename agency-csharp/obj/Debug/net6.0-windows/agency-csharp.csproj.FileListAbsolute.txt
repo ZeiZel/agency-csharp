@@ -47,3 +47,5 @@ D:\CourseProject\agency-csharp\agency-csharp\bin\Debug\net6.0-windows\runtimes\w
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.ErrorForm.resources
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.SuccessForm.resources
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency-csharp.csproj.CopyComplete
+D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.Contract.resources
+D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.Documents.resources

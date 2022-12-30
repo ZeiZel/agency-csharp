@@ -25,8 +25,8 @@ namespace agency_csharp
 
         private void return_btn_Click(object sender, EventArgs e)
         {
-            Form mainPage = new MainWindow();
-            mainPage.Show();
+            Form login = new Login();
+            login.Show();
             Close();
         }
 

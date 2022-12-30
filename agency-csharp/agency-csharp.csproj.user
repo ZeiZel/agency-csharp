@@ -7,6 +7,12 @@
     <Compile Update="Appliciant.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Documents.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ErrorForm.cs">
       <SubType>Form</SubType>
     </Compile>

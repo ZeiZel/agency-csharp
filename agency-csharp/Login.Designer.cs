@@ -39,9 +39,11 @@
             this.openedEye_pb = new System.Windows.Forms.PictureBox();
             this.closedEye_pb = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.openedEye_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closedEye_pb)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoginBtn
@@ -53,7 +55,7 @@
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LoginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.LoginBtn.Location = new System.Drawing.Point(111, 444);
+            this.LoginBtn.Location = new System.Drawing.Point(75, 336);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(156, 52);
             this.LoginBtn.TabIndex = 0;
@@ -63,9 +65,10 @@
             // 
             // login_tb
             // 
-            this.login_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.login_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.login_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.login_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.login_tb.Location = new System.Drawing.Point(71, 267);
+            this.login_tb.Location = new System.Drawing.Point(75, 164);
             this.login_tb.Multiline = true;
             this.login_tb.Name = "login_tb";
             this.login_tb.Size = new System.Drawing.Size(237, 36);
@@ -73,9 +76,10 @@
             // 
             // password_tb
             // 
-            this.password_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.password_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.password_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.password_tb.Location = new System.Drawing.Point(71, 363);
+            this.password_tb.Location = new System.Drawing.Point(75, 260);
             this.password_tb.Multiline = true;
             this.password_tb.Name = "password_tb";
             this.password_tb.Size = new System.Drawing.Size(237, 36);
@@ -90,7 +94,7 @@
             this.register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.register_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.register_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.register_btn.Location = new System.Drawing.Point(111, 522);
+            this.register_btn.Location = new System.Drawing.Point(75, 414);
             this.register_btn.Name = "register_btn";
             this.register_btn.Size = new System.Drawing.Size(156, 52);
             this.register_btn.TabIndex = 0;
@@ -101,9 +105,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(72, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(701, 147);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 152);
+            this.pictureBox1.Size = new System.Drawing.Size(237, 241);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -112,8 +116,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.label1.Location = new System.Drawing.Point(71, 231);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(75, 128);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 22);
             this.label1.TabIndex = 3;
@@ -123,8 +127,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.label2.Location = new System.Drawing.Point(71, 328);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label2.Location = new System.Drawing.Point(75, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 22);
             this.label2.TabIndex = 3;
@@ -133,7 +137,7 @@
             // openedEye_pb
             // 
             this.openedEye_pb.Image = ((System.Drawing.Image)(resources.GetObject("openedEye_pb.Image")));
-            this.openedEye_pb.Location = new System.Drawing.Point(326, 363);
+            this.openedEye_pb.Location = new System.Drawing.Point(330, 260);
             this.openedEye_pb.Name = "openedEye_pb";
             this.openedEye_pb.Size = new System.Drawing.Size(35, 35);
             this.openedEye_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,7 +148,7 @@
             // closedEye_pb
             // 
             this.closedEye_pb.Image = ((System.Drawing.Image)(resources.GetObject("closedEye_pb.Image")));
-            this.closedEye_pb.Location = new System.Drawing.Point(326, 364);
+            this.closedEye_pb.Location = new System.Drawing.Point(330, 261);
             this.closedEye_pb.Name = "closedEye_pb";
             this.closedEye_pb.Size = new System.Drawing.Size(35, 35);
             this.closedEye_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,40 +159,51 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(325, 522);
+            this.button1.Location = new System.Drawing.Point(258, 414);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 52);
+            this.button1.Size = new System.Drawing.Size(54, 52);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.LoginBtn);
+            this.panel1.Controls.Add(this.closedEye_pb);
+            this.panel1.Controls.Add(this.register_btn);
+            this.panel1.Controls.Add(this.openedEye_pb);
+            this.panel1.Controls.Add(this.login_tb);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.password_tb);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(450, 600);
+            this.panel1.TabIndex = 7;
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(397, 610);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.closedEye_pb);
-            this.Controls.Add(this.openedEye_pb);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.password_tb);
-            this.Controls.Add(this.login_tb);
-            this.Controls.Add(this.register_btn);
-            this.Controls.Add(this.LoginBtn);
             this.Name = "Login";
             this.Text = "Вход";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.openedEye_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closedEye_pb)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -204,5 +219,6 @@
         private PictureBox openedEye_pb;
         private PictureBox closedEye_pb;
         private Button button1;
+        private Panel panel1;
     }
 }

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "agency-csharp/1.0.0": {
         "dependencies": {
+          "EmptyLicensesLicx": "3.0.0",
           "Microsoft.Data.SqlClient": "5.0.1"
         },
         "runtime": {
@@ -48,6 +49,7 @@
           }
         }
       },
+      "EmptyLicensesLicx/3.0.0": {},
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -406,6 +408,13 @@
       "sha512": "sha512-EycyMsb6rD2PK9P0SyibFfEhvWWttdrYhyPF4f41uzdB/44yQlV+2Wehxyg489Rj6gbPvSPgbKq0xsHJBhipZA==",
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
+    },
+    "EmptyLicensesLicx/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q5L8ge/GRCp4cDP39MWzX2RZysJTIg9Ovx6mCYyzaZX99wJs7U8jLaRYFbpN2VPzVqACFz63MfKKayFyzDCKzA==",
+      "path": "emptylicenseslicx/3.0.0",
+      "hashPath": "emptylicenseslicx.3.0.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",

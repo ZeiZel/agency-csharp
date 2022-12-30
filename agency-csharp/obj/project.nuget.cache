@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MqhtUBz7m0sNcI6MjfliIsyXQhj3uqHWR287d5UAtg64kitE4pkMpdFr+6inKiqk/e13Ca4BeT0qaUF6dJZuZA==",
+  "dgSpecHash": "I3avkOi2+tmZADGPG2QXTY0zBzA7Bpm3fs4YJDQTlpoA5HhA+CYzXoLDqOPks+s48hov5EVWyEBTeXZPD7/tIg==",
   "success": true,
   "projectFilePath": "D:\\CourseProject\\agency-csharp\\agency-csharp\\agency-csharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Администратор\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Администратор\\.nuget\\packages\\emptylicenseslicx\\3.0.0\\emptylicenseslicx.3.0.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Администратор\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
