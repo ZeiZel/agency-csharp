@@ -98,7 +98,7 @@ namespace agency_csharp
             var loginUser = login_tb.Text;
             var passUser = password_tb.Text;
 
-            int length = GetLength($"select [r_login], [r_password] from [dbo].[Register] where [r_login] = '{loginUser}' and [r_password] = '{passUser}'");            
+            int length = GetLength($"select [r_login], [r_password], [r_isAdmin], [r_isUser], [r_isEmployee] from [dbo].[Register] where [r_login] = '{loginUser}' and [r_password] = '{passUser}'");            
 
             if (length > 0)
             {

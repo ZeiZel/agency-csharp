@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace agency_csharp
 {
-    public partial class SetRole : Form
+    public partial class AdminPanel : Form
     {
-        public SetRole()
+        public AdminPanel()
         {
             InitializeComponent();
         }

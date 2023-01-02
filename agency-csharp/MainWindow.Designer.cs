@@ -39,7 +39,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.personality_data_gb = new System.Windows.Forms.GroupBox();
             this.number_tb = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.userId = new System.Windows.Forms.TextBox();
             this.name_tb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.surname_tb = new System.Windows.Forms.TextBox();
@@ -126,14 +128,13 @@
             this.vacDel_tb = new System.Windows.Forms.Button();
             this.vacSave_tb = new System.Windows.Forms.Button();
             this.vacChange_tb = new System.Windows.Forms.Button();
-            this.report = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sadasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.управлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.userId = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.info_tabPage.SuspendLayout();
             this.employess_tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -181,12 +182,11 @@
             this.info_tabPage.Controls.Add(this.clients_tab);
             this.info_tabPage.Controls.Add(this.organizations_tab);
             this.info_tabPage.Controls.Add(this.vacamcy_tab);
-            this.info_tabPage.Controls.Add(this.report);
             this.info_tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.info_tabPage.Location = new System.Drawing.Point(0, 24);
+            this.info_tabPage.Location = new System.Drawing.Point(0, 27);
             this.info_tabPage.Name = "info_tabPage";
             this.info_tabPage.SelectedIndex = 0;
-            this.info_tabPage.Size = new System.Drawing.Size(1122, 720);
+            this.info_tabPage.Size = new System.Drawing.Size(1122, 717);
             this.info_tabPage.TabIndex = 0;
             // 
             // employess_tab
@@ -200,7 +200,7 @@
             this.employess_tab.Location = new System.Drawing.Point(4, 24);
             this.employess_tab.Name = "employess_tab";
             this.employess_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.employess_tab.Size = new System.Drawing.Size(1114, 692);
+            this.employess_tab.Size = new System.Drawing.Size(1114, 689);
             this.employess_tab.TabIndex = 0;
             this.employess_tab.Text = "Сотрудники";
             // 
@@ -320,6 +320,17 @@
             this.number_tb.Size = new System.Drawing.Size(212, 35);
             this.number_tb.TabIndex = 8;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label7.Location = new System.Drawing.Point(38, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(150, 22);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Идентификатор";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -330,6 +341,17 @@
             this.label3.Size = new System.Drawing.Size(46, 22);
             this.label3.TabIndex = 10;
             this.label3.Text = "Имя";
+            // 
+            // userId
+            // 
+            this.userId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.userId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userId.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.userId.Location = new System.Drawing.Point(38, 51);
+            this.userId.Multiline = true;
+            this.userId.Name = "userId";
+            this.userId.Size = new System.Drawing.Size(212, 35);
+            this.userId.TabIndex = 8;
             // 
             // name_tb
             // 
@@ -536,7 +558,7 @@
             this.clients_tab.Location = new System.Drawing.Point(4, 24);
             this.clients_tab.Name = "clients_tab";
             this.clients_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.clients_tab.Size = new System.Drawing.Size(1114, 638);
+            this.clients_tab.Size = new System.Drawing.Size(1114, 689);
             this.clients_tab.TabIndex = 1;
             this.clients_tab.Text = "Клиенты";
             // 
@@ -866,7 +888,7 @@
             this.organizations_tab.Controls.Add(this.groupBox8);
             this.organizations_tab.Location = new System.Drawing.Point(4, 24);
             this.organizations_tab.Name = "organizations_tab";
-            this.organizations_tab.Size = new System.Drawing.Size(1114, 638);
+            this.organizations_tab.Size = new System.Drawing.Size(1114, 689);
             this.organizations_tab.TabIndex = 2;
             this.organizations_tab.Text = "Организации";
             // 
@@ -1171,7 +1193,7 @@
             this.vacamcy_tab.Controls.Add(this.groupBox11);
             this.vacamcy_tab.Location = new System.Drawing.Point(4, 24);
             this.vacamcy_tab.Name = "vacamcy_tab";
-            this.vacamcy_tab.Size = new System.Drawing.Size(1114, 638);
+            this.vacamcy_tab.Size = new System.Drawing.Size(1114, 689);
             this.vacamcy_tab.TabIndex = 3;
             this.vacamcy_tab.Text = "Вакансии";
             // 
@@ -1468,39 +1490,43 @@
             this.vacChange_tb.UseVisualStyleBackColor = false;
             this.vacChange_tb.Click += new System.EventHandler(this.vacChange_tb_Click);
             // 
-            // report
-            // 
-            this.report.Location = new System.Drawing.Point(4, 24);
-            this.report.Name = "report";
-            this.report.Padding = new System.Windows.Forms.Padding(3);
-            this.report.Size = new System.Drawing.Size(1114, 638);
-            this.report.TabIndex = 4;
-            this.report.Text = "Отчётность";
-            this.report.UseVisualStyleBackColor = true;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sadasdToolStripMenuItem,
-            this.информацияToolStripMenuItem});
+            this.информацияToolStripMenuItem,
+            this.управлениеToolStripMenuItem,
+            this.userStatus_tstb});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1122, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1122, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // sadasdToolStripMenuItem
             // 
             this.sadasdToolStripMenuItem.Name = "sadasdToolStripMenuItem";
-            this.sadasdToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.sadasdToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
             this.sadasdToolStripMenuItem.Text = "Файл";
             // 
             // информацияToolStripMenuItem
             // 
             this.информацияToolStripMenuItem.Name = "информацияToolStripMenuItem";
-            this.информацияToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.информацияToolStripMenuItem.Size = new System.Drawing.Size(93, 23);
             this.информацияToolStripMenuItem.Text = "Информация";
+            // 
+            // управлениеToolStripMenuItem
+            // 
+            this.управлениеToolStripMenuItem.Name = "управлениеToolStripMenuItem";
+            this.управлениеToolStripMenuItem.Size = new System.Drawing.Size(85, 23);
+            this.управлениеToolStripMenuItem.Text = "Управление";
+            // 
+            // userStatus_tstb
+            // 
+            this.userStatus_tstb.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.userStatus_tstb.Name = "userStatus_tstb";
+            this.userStatus_tstb.Size = new System.Drawing.Size(150, 23);
             // 
             // statusStrip1
             // 
@@ -1516,28 +1542,6 @@
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
-            // 
-            // userId
-            // 
-            this.userId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.userId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userId.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.userId.Location = new System.Drawing.Point(38, 51);
-            this.userId.Multiline = true;
-            this.userId.Name = "userId";
-            this.userId.Size = new System.Drawing.Size(212, 35);
-            this.userId.TabIndex = 8;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label7.Location = new System.Drawing.Point(38, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 22);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Идентификатор";
             // 
             // MainWindow
             // 
@@ -1711,8 +1715,9 @@
         private Button vacDel_tb;
         private Button vacSave_tb;
         private Button vacChange_tb;
-        private TabPage report;
         private Label label7;
         private TextBox userId;
+        private ToolStripMenuItem управлениеToolStripMenuItem;
+        private ToolStripTextBox userStatus_tstb;
     }
 }

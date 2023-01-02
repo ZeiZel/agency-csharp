@@ -45,7 +45,7 @@ namespace agency_csharp
 
             if (login_tb.Text.Length > 0 && password_tb.Text.Length > 0)
             {
-                string queryString = $"select [r_login], [r_password] from [dbo].[Register] where [r_login] = '{loginUser}' and [r_password] = '{passUser}'";
+                string queryString = $"select * from Register where [r_login] = '{loginUser}' and [r_password] = '{passUser}'";
 
                 SqlCommand command = new SqlCommand(queryString, database.getConnection());
 
@@ -54,8 +54,10 @@ namespace agency_csharp
 
                 if (table.Rows.Count == 1)
                 {
+                    var user = new CheckUser(table.Rows[0].ItemArray[3].ToString(), Convert.ToBoolean(table.Rows[0].ItemArray[5]), Convert.ToBoolean(table.Rows[0].ItemArray[7]));
+
                     MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Form mainWindow = new MainWindow();
+                    Form mainWindow = new MainWindow(user);
                     mainWindow.Show();
                     this.Hide();
                 }

@@ -22,17 +22,37 @@ namespace agency_csharp
 
     public partial class MainWindow : Form
     {
+        private readonly CheckUser _user;
         Database database = new Database();
 
         int selectedRow;
 
-        public MainWindow()
+        public MainWindow(CheckUser user)
         {
+            _user = user;
+
+
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
             CreateColumns();
             RefreshDataGrid(dataGridView1);
+        }
+
+        // Определяет уровень доступа для админа
+        private void IsAdmin()
+        {
+            // если пользователь админ, то IsAdmin будет = true
+            управлениеToolStripMenuItem.Enabled = _user.IsAdmin;
+            add_btn.Visible = _user.IsAdmin;
+        }
+
+        // Определяет уровень доступа для работника
+        private void IsEmployee()
+        {
+            // если пользователь админ, то IsAdmin будет = true
+            управлениеToolStripMenuItem.Enabled = _user.IsEmployee;
+            add_btn.Visible = _user.IsEmployee;
         }
 
         /// <summary>
@@ -211,7 +231,9 @@ namespace agency_csharp
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-
+            userStatus_tstb.Text = $"{_user.Login}: {_user.Status}";
+            IsAdmin();
+            IsEmployee();
         }
 
         /// <summary>
