@@ -62,7 +62,7 @@ namespace agency_csharp
                         SqlCommand commandUser = new SqlCommand(queryUser, database.getConnection());
                         
                         //string queryRegister = $"insert into Register (id_fk_user, r_email, r_login, r_password, r_isAdmin, r_isUser, r_isEmployee) values('{userId}', '{emailUser}', '{loginUser}', '{passUser}', 0, 1, 0);";
-                        string queryRegister = $"EXEC CreateFKRegister '{nameUser}', '{loginUser}', '{emailUser}', '{passUser}', 0, 1, 0;";
+                        string queryRegister = $"EXEC CreateFKRegister '{nameUser}', '{emailUser}', '{loginUser}', '{passUser}', 0, 1, 0;";
                         SqlCommand commandRegister = new SqlCommand(queryRegister, database.getConnection());
 
                         if (commandUser.ExecuteNonQuery() == 1 && commandRegister.ExecuteNonQuery() == 1)

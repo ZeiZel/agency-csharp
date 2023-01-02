@@ -37,7 +37,7 @@ namespace agency_csharp
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             var loginUser = login_tb.Text;
-            var passUser = password_tb.Text;
+            var passUser = PasswordEncrypt.HashPassword(password_tb.Text);
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
