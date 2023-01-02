@@ -32,7 +32,7 @@ namespace agency_csharp
         private void register_btn_Click(object sender, EventArgs e)
         {
             var loginUser = login_tb.Text;
-            var passUser = password_tb.Text;
+            var passUser = PasswordEncrypt.HashPassword(password_tb.Text);
             var nameUser = name_tb.Text;
             var numberUser = number_tb.Text;
             var surnameUser = surname_tb.Text;
@@ -41,41 +41,55 @@ namespace agency_csharp
 
             bool result = checkUser();
 
+            bool isNumeric = Int64.TryParse(numberUser, out Int64 n) && numberUser.Length == 10;
+
             if (result)
             {
-                if (login_tb.Text.Length > 0 &&
-                password_tb.Text.Length > 0 &&
-                name_tb.Text.Length > 0 &&
-                number_tb.Text.Length > 0 &&
-                surname_tb.Text.Length > 0 &&
-                mail_tb.Text.Length > 0 &&
-                thirdname_tb.Text.Length > 0
-                )
+                if (isNumeric)
                 {
-                    string queryString = $"insert into [dbo].[User]([name], [login], [email], [password], [phoneNumber], [surname], [patronymic]) values('{nameUser}', '{loginUser}', '{emailUser}', '{passUser}', '{numberUser}', '{surnameUser}', '{patronymicUser}');";
-
-                    SqlCommand command = new SqlCommand(queryString, database.getConnection());
-                    database.openConnection();
-
-                    if (command.ExecuteNonQuery() == 1)
+                    if (login_tb.Text.Length > 0 &&
+                    password_tb.Text.Length > 0 &&
+                    name_tb.Text.Length > 0 &&
+                    number_tb.Text.Length > 0 &&
+                    surname_tb.Text.Length > 0 &&
+                    mail_tb.Text.Length > 0 &&
+                    thirdname_tb.Text.Length > 0
+                    )
                     {
-                        Form success = new SuccessForm();
-                        success.Show();
-                        this.Close();
-                    }
-                    else
-                    {
-                        Form error = new ErrorForm();
-                        error.Show();
-                        this.Close();
-                    }
+                        database.openConnection();
 
-                    database.closeConnection();
-                }
-                else
+                        string queryUser = $"insert into Users (u_name, u_surname, u_patronymic, u_phoneNumber) values('{nameUser}', '{surnameUser}', '{patronymicUser}', '{numberUser}');";
+                        SqlCommand commandUser = new SqlCommand(queryUser, database.getConnection());
+                        
+                        //string queryRegister = $"insert into Register (id_fk_user, r_email, r_login, r_password, r_isAdmin, r_isUser, r_isEmployee) values('{userId}', '{emailUser}', '{loginUser}', '{passUser}', 0, 1, 0);";
+                        string queryRegister = $"EXEC CreateFKRegister '{nameUser}', '{loginUser}', '{emailUser}', '{passUser}', 0, 1, 0;";
+                        SqlCommand commandRegister = new SqlCommand(queryRegister, database.getConnection());
+
+                        if (commandUser.ExecuteNonQuery() == 1 && commandRegister.ExecuteNonQuery() == 1)
+                        {
+                            Form success = new SuccessForm();
+                            success.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            Form error = new ErrorForm();
+                            error.Show();
+                            this.Close();
+                        }
+
+                        database.closeConnection();
+                    } else
+                    {
+                        MessageBox.Show("Введите данные во все поля", "Зарегистрироваться не удалось", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                } else
                 {
-                    MessageBox.Show("Введите данные во все поля", "Зарегистрироваться не удалось", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ваш номер телефона введён неправильно (вводите без \"+7\")", "Зарегистрироваться не удалось", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+            } else
+            {
+                MessageBox.Show("Такой пользователь уже есть!");
             }
         }
 
@@ -84,7 +98,21 @@ namespace agency_csharp
             var loginUser = login_tb.Text;
             var passUser = password_tb.Text;
 
-            string queryString = $"select [id], [email], [password], [name] from [dbo].[User] where [name] = '{loginUser}' and [password] = '{passUser}'";
+            int length = GetLength($"select [r_login], [r_password] from [dbo].[Register] where [r_login] = '{loginUser}' and [r_password] = '{passUser}'");            
+
+            if (length > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private int GetLength(string query)
+        {
+            string queryString = query;
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
@@ -93,15 +121,7 @@ namespace agency_csharp
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            if (table.Rows.Count > 0)
-            {
-                MessageBox.Show("Такой пользователь уже есть!");
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return table.Rows.Count;
         }
 
         private void clear_btn_Click(object sender, EventArgs e)

@@ -45,7 +45,7 @@ namespace agency_csharp
 
             if (login_tb.Text.Length > 0 && password_tb.Text.Length > 0)
             {
-                string queryString = $"select [id], [email], [password], [name] from [dbo].[User] where [name] = '{loginUser}' and [password] = '{passUser}'";
+                string queryString = $"select [r_login], [r_password] from [dbo].[Register] where [r_login] = '{loginUser}' and [r_password] = '{passUser}'";
 
                 SqlCommand command = new SqlCommand(queryString, database.getConnection());
 
@@ -72,7 +72,7 @@ namespace agency_csharp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы уверены, что хотите всё стереть?", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Вы уверены, что хотите всё стереть?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 password_tb.Text = "";
                 login_tb.Text = "";

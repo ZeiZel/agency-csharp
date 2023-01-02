@@ -28,6 +28,9 @@
     <Compile Update="Register.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SetRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SuccessForm.cs">
       <SubType>Form</SubType>
     </Compile>
