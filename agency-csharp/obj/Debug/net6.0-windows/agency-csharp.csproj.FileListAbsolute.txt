@@ -50,3 +50,4 @@ D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency-csh
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.Contract.resources
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.Documents.resources
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.AdminPanel.resources
+D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.Report.resources

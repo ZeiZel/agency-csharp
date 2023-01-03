@@ -108,6 +108,9 @@ namespace agency_csharp
             }
 
             reader.Close();
+
+            // закрыть (!!)
+            database.closeConnection();
         }
 
         /// <summary>
@@ -423,6 +426,17 @@ namespace agency_csharp
         }
 
         private void vacSave_tb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void администрированиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form admin = new AdminPanel();
+            admin.Show(); 
+        }
+
+        private void отчётностьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
