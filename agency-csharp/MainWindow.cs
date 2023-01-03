@@ -438,7 +438,20 @@ namespace agency_csharp
 
         private void отчётностьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            Form report = new Report();
+            report.Show();
+        }
 
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form about = new About();
+            about.Show();
+        }
+
+        private void обновленияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form updates = new CheckUpdates();
+            updates.Show();
         }
     }
 }

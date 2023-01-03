@@ -51,3 +51,5 @@ D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csh
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.Documents.resources
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.AdminPanel.resources
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.Report.resources
+D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.About.resources
+D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.CheckUpdates.resources
