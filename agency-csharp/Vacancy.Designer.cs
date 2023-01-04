@@ -62,6 +62,7 @@
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновленияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
+            this.response_btn = new System.Windows.Forms.Button();
             this.groupBox14.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vacancy_dgv)).BeginInit();
@@ -86,7 +87,7 @@
             this.groupBox14.Controls.Add(this.label34);
             this.groupBox14.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox14.Location = new System.Drawing.Point(1082, 44);
+            this.groupBox14.Location = new System.Drawing.Point(37, 373);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(296, 448);
             this.groupBox14.TabIndex = 33;
@@ -234,7 +235,7 @@
             this.groupBox9.Controls.Add(this.vacSearch_tb);
             this.groupBox9.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox9.Location = new System.Drawing.Point(497, 489);
+            this.groupBox9.Location = new System.Drawing.Point(416, 492);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(408, 104);
             this.groupBox9.TabIndex = 32;
@@ -299,11 +300,11 @@
             this.vacancy_dgv.AllowUserToDeleteRows = false;
             this.vacancy_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.vacancy_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vacancy_dgv.Location = new System.Drawing.Point(344, 44);
+            this.vacancy_dgv.Location = new System.Drawing.Point(416, 46);
             this.vacancy_dgv.Name = "vacancy_dgv";
             this.vacancy_dgv.ReadOnly = true;
             this.vacancy_dgv.RowTemplate.Height = 25;
-            this.vacancy_dgv.Size = new System.Drawing.Size(714, 424);
+            this.vacancy_dgv.Size = new System.Drawing.Size(1062, 424);
             this.vacancy_dgv.TabIndex = 31;
             // 
             // groupBox10
@@ -319,7 +320,7 @@
             this.groupBox10.Controls.Add(this.label21);
             this.groupBox10.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox10.Location = new System.Drawing.Point(21, 44);
+            this.groupBox10.Location = new System.Drawing.Point(37, 46);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(296, 321);
             this.groupBox10.TabIndex = 30;
@@ -422,7 +423,7 @@
             this.userStatus_tstb});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1404, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1508, 27);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -457,11 +458,29 @@
             this.userStatus_tstb.Size = new System.Drawing.Size(150, 23);
             this.userStatus_tstb.Click += new System.EventHandler(this.userStatus_tstb_Click);
             // 
+            // response_btn
+            // 
+            this.response_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.response_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.response_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.response_btn.FlatAppearance.BorderSize = 0;
+            this.response_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.response_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.response_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.response_btn.Location = new System.Drawing.Point(858, 501);
+            this.response_btn.Name = "response_btn";
+            this.response_btn.Size = new System.Drawing.Size(179, 87);
+            this.response_btn.TabIndex = 35;
+            this.response_btn.Text = "Откликнуться на вакансию";
+            this.response_btn.UseVisualStyleBackColor = false;
+            this.response_btn.Click += new System.EventHandler(this.response_btn_Click);
+            // 
             // Vacancy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 651);
+            this.ClientSize = new System.Drawing.Size(1508, 855);
+            this.Controls.Add(this.response_btn);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox14);
             this.Controls.Add(this.groupBox9);
@@ -519,5 +538,6 @@
         private ToolStripMenuItem оПрограммеToolStripMenuItem;
         private ToolStripMenuItem обновленияToolStripMenuItem;
         private ToolStripTextBox userStatus_tstb;
+        private Button response_btn;
     }
 }

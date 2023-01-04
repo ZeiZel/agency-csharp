@@ -27,8 +27,8 @@ namespace agency_csharp
 
             CreateColumns(vacancy_dgv);
             RefreshDataGrid(
-                vacancy_dgv, 
-                "select * from [dbo].[Vacancy]"
+                vacancy_dgv,
+                "select id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment from Vacancy, Organization, Adress inner join Organization O on Adress.id_pk_adress = O.id_fk_adress"
             );
         }
 
@@ -50,12 +50,12 @@ namespace agency_csharp
 
         private void CreateColumns(DataGridView dgv)
         {
-            dgv.Columns.Add("id_pk_vacancy", "Id организации");
+            dgv.Columns.Add("id_pk_vacancy", "Id Вакансии");
             dgv.Columns.Add("id_pk_adress", "Id Адреса");
 
             dgv.Columns.Add("o_name", "Организация");
-            dgv.Columns.Add("u_surname", "Должность");
-            dgv.Columns.Add("u_patronymic", "Номер телефона");
+            dgv.Columns.Add("v_profession", "Должность");
+            dgv.Columns.Add("v_description", "Номер телефона");
 
             dgv.Columns.Add("a_region", "Регион");
             dgv.Columns.Add("a_city", "Населённый пункт");
@@ -147,9 +147,27 @@ namespace agency_csharp
         private void refresh_btn_Click(object sender, EventArgs e)
         {
             RefreshDataGrid(
-                vacancy_dgv, 
-                "select * from [dbo].[Vacancy]"
+                vacancy_dgv,
+                "select id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment from Vacancy, Organization, Adress inner join Organization O on Adress.id_pk_adress = O.id_fk_adress"
             );
+        }
+
+        private void response_btn_Click(object sender, EventArgs e)
+        {
+            database.openConnection();
+
+            var selectedRowIndex = vacancy_dgv.CurrentCell.RowIndex;
+
+            var userName = _user.Login;
+            var vacancyId = vacancy_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString();
+
+            string queryResponse = $"EXEC ResponseUserInsert {userName}, {vacancyId}";
+            SqlCommand command = new SqlCommand(queryResponse, database.getConnection());
+            command.ExecuteNonQuery();
+
+            database.closeConnection();
+
+            MessageBox.Show("Отклик на вакансию отправлен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

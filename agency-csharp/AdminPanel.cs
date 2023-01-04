@@ -29,7 +29,7 @@ namespace agency_csharp
 
         private void CreateColumns()
         {
-            dataGridView1.Columns.Add("id_pk_register", "ID");
+            dataGridView1.Columns.Add("id_pk_register", "Id регистрации");
             dataGridView1.Columns.Add("r_login", "Логин");
             dataGridView1.Columns.Add("r_password", "Пароль");
             //dataGridView1.Columns.Add("r_isAdmin", "Права администратора");
@@ -43,6 +43,7 @@ namespace agency_csharp
 
             dataGridView1.Columns.Add(checkColumnAdmin);
             dataGridView1.Columns.Add(checkColumnEmployee);
+            dataGridView1.Columns.Add("id_fk_user", "Id пользователя");
         }
 
         private void ReadSingleRow(DataGridView dgv, IDataRecord record)
@@ -52,7 +53,8 @@ namespace agency_csharp
                 record.GetString(1), 
                 record.GetString(2), 
                 record.GetBoolean(3), 
-                record.GetBoolean(4)
+                record.GetBoolean(4),
+                record.GetInt32(5)
             );
         }
 
@@ -60,7 +62,7 @@ namespace agency_csharp
         {
             dataGridView1.Rows.Clear();
 
-            string query = "select [id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee] from [dbo].[Register]";
+            string query = "select [id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee], [id_fk_user] from [dbo].[Register]";
 
             SqlCommand command = new SqlCommand(query, database.getConnection());
 
@@ -110,12 +112,17 @@ namespace agency_csharp
                 var id = dataGridView1.Rows[i].Cells[0].Value.ToString();
                 var isAdmin = dataGridView1.Rows[i].Cells[3].Value.ToString();
                 var isEmployee = dataGridView1.Rows[i].Cells[4].Value.ToString();
+                var idUser = dataGridView1.Rows[i].Cells[5].Value.ToString();
 
                 // !!
                 string changeQuery = $"update Register SET r_isAdmin = '{isAdmin}', r_isEmployee = '{isEmployee}' where id_pk_register = {id}";
+                string queryAddEmployee = $"EXEC AddUserEmployee {idUser}";
 
                 SqlCommand command = new SqlCommand(changeQuery, database.getConnection());
                 command.ExecuteNonQuery();
+
+                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
+                commandAddEmp.ExecuteNonQuery();
             }
 
             database.closeConnection();

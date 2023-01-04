@@ -57,6 +57,7 @@
             this.delete_btn = new System.Windows.Forms.Button();
             this.save_btn = new System.Windows.Forms.Button();
             this.change_btn = new System.Windows.Forms.Button();
+            this.Register = new System.Windows.Forms.Button();
             this.clients_tab = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.clientRefresh_btn = new System.Windows.Forms.Button();
@@ -173,6 +174,8 @@
             this.vacDel_tb = new System.Windows.Forms.Button();
             this.vacSave_tb = new System.Windows.Forms.Button();
             this.vacChange_tb = new System.Windows.Forms.Button();
+            this.contract_tab = new System.Windows.Forms.TabPage();
+            this.responses_tab = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчётностьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -184,7 +187,7 @@
             this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.contract_tab = new System.Windows.Forms.TabPage();
+            this.passportEdit_btn = new System.Windows.Forms.Button();
             this.info_tabPage.SuspendLayout();
             this.employess_tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -236,6 +239,7 @@
             this.info_tabPage.Controls.Add(this.organizations_tab);
             this.info_tabPage.Controls.Add(this.vacamcy_tab);
             this.info_tabPage.Controls.Add(this.contract_tab);
+            this.info_tabPage.Controls.Add(this.responses_tab);
             this.info_tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.info_tabPage.ItemSize = new System.Drawing.Size(78, 20);
             this.info_tabPage.Location = new System.Drawing.Point(0, 27);
@@ -252,6 +256,7 @@
             this.employess_tab.Controls.Add(this.dataGridView1);
             this.employess_tab.Controls.Add(this.personality_data_gb);
             this.employess_tab.Controls.Add(this.groupBox1);
+            this.employess_tab.Controls.Add(this.Register);
             this.employess_tab.Location = new System.Drawing.Point(4, 24);
             this.employess_tab.Name = "employess_tab";
             this.employess_tab.Padding = new System.Windows.Forms.Padding(3);
@@ -301,6 +306,7 @@
             this.search_grid_btn.Size = new System.Drawing.Size(48, 52);
             this.search_grid_btn.TabIndex = 17;
             this.search_grid_btn.UseVisualStyleBackColor = false;
+            this.search_grid_btn.Click += new System.EventHandler(this.search_grid_btn_Click);
             // 
             // clear_btn
             // 
@@ -603,6 +609,23 @@
             this.change_btn.UseVisualStyleBackColor = false;
             this.change_btn.Click += new System.EventHandler(this.change_btn_Click);
             // 
+            // Register
+            // 
+            this.Register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.Register.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Register.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.Register.FlatAppearance.BorderSize = 0;
+            this.Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Register.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Register.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Register.Location = new System.Drawing.Point(371, 461);
+            this.Register.Name = "Register";
+            this.Register.Size = new System.Drawing.Size(211, 82);
+            this.Register.TabIndex = 18;
+            this.Register.Text = "Зарегистрировать пользователя";
+            this.Register.UseVisualStyleBackColor = false;
+            this.Register.Click += new System.EventHandler(this.register_btn_Click);
+            // 
             // clients_tab
             // 
             this.clients_tab.BackColor = System.Drawing.Color.White;
@@ -610,6 +633,7 @@
             this.clients_tab.Controls.Add(this.clientView_dgv);
             this.clients_tab.Controls.Add(this.groupBox12);
             this.clients_tab.Controls.Add(this.groupBox4);
+            this.clients_tab.Controls.Add(this.passportEdit_btn);
             this.clients_tab.Controls.Add(this.groupBox5);
             this.clients_tab.Location = new System.Drawing.Point(4, 24);
             this.clients_tab.Name = "clients_tab";
@@ -627,7 +651,7 @@
             this.groupBox3.Controls.Add(this.clientSearch_tb);
             this.groupBox3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox3.Location = new System.Drawing.Point(496, 502);
+            this.groupBox3.Location = new System.Drawing.Point(533, 502);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(428, 100);
             this.groupBox3.TabIndex = 27;
@@ -2092,6 +2116,24 @@
             this.vacChange_tb.UseVisualStyleBackColor = false;
             this.vacChange_tb.Click += new System.EventHandler(this.vacChange_tb_Click);
             // 
+            // contract_tab
+            // 
+            this.contract_tab.Location = new System.Drawing.Point(4, 24);
+            this.contract_tab.Name = "contract_tab";
+            this.contract_tab.Size = new System.Drawing.Size(1417, 689);
+            this.contract_tab.TabIndex = 4;
+            this.contract_tab.Text = "Контракты";
+            this.contract_tab.UseVisualStyleBackColor = true;
+            // 
+            // responses_tab
+            // 
+            this.responses_tab.Location = new System.Drawing.Point(4, 24);
+            this.responses_tab.Name = "responses_tab";
+            this.responses_tab.Size = new System.Drawing.Size(1417, 689);
+            this.responses_tab.TabIndex = 5;
+            this.responses_tab.Text = "Отклики";
+            this.responses_tab.UseVisualStyleBackColor = true;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
@@ -2181,14 +2223,22 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
-            // contract_tab
+            // passportEdit_btn
             // 
-            this.contract_tab.Location = new System.Drawing.Point(4, 24);
-            this.contract_tab.Name = "contract_tab";
-            this.contract_tab.Size = new System.Drawing.Size(1417, 689);
-            this.contract_tab.TabIndex = 4;
-            this.contract_tab.Text = "Контракты";
-            this.contract_tab.UseVisualStyleBackColor = true;
+            this.passportEdit_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.passportEdit_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passportEdit_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.passportEdit_btn.FlatAppearance.BorderSize = 0;
+            this.passportEdit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passportEdit_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportEdit_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.passportEdit_btn.Location = new System.Drawing.Point(353, 469);
+            this.passportEdit_btn.Name = "passportEdit_btn";
+            this.passportEdit_btn.Size = new System.Drawing.Size(174, 57);
+            this.passportEdit_btn.TabIndex = 18;
+            this.passportEdit_btn.Text = "Редактировать паспорт";
+            this.passportEdit_btn.UseVisualStyleBackColor = false;
+            this.passportEdit_btn.Click += new System.EventHandler(this.passportEdit_btn_Click);
             // 
             // MainWindow
             // 
@@ -2202,6 +2252,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
             this.Text = "Главная";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainWindow_FormClosed);
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.info_tabPage.ResumeLayout(false);
             this.employess_tab.ResumeLayout(false);
@@ -2422,5 +2473,8 @@
         private Label label35;
         private TextBox vacancyID_tb;
         private TabPage contract_tab;
+        private Button Register;
+        private TabPage responses_tab;
+        private Button passportEdit_btn;
     }
 }

@@ -43,6 +43,13 @@ namespace agency_csharp
         {
             управлениеToolStripMenuItem.Visible = _user.IsAdmin;
             файлToolStripMenuItem.Visible = _user.IsAdmin;
+            
+            add_btn.Enabled = _user.IsAdmin;
+            delete_btn.Enabled = _user.IsAdmin;
+            change_btn.Enabled = _user.IsAdmin;
+            save_btn.Enabled = _user.IsAdmin;
+
+            groupBox1.Visible = _user.IsAdmin;
         }
 
         // Определяет уровень доступа для работника
@@ -91,7 +98,7 @@ namespace agency_csharp
             dgv.Rows.Clear();
 
             string query = 
-                "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Employee E on Users.id_pk_user = E.id_fk_user; ";
+                "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Employee E on Users.id_pk_user = E.id_fk_user;";
 
             SqlCommand command = new SqlCommand(query, database.getConnection());
 
@@ -271,28 +278,9 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void add_btn_Click(object sender, EventArgs e)
         {
-            database.openConnection();
-
-            var userName = name_tb.Text;
-            var userSurname = surname_tb.Text;
-            var userPatronymic = thirdname_tb.Text;
-            var userNumber = number_tb.Text;
-
-            if (Int64.TryParse(userNumber, out Int64 n))
-            {
-                string queryString = $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{userName}', '{userSurname}', '{userPatronymic}', '{userNumber}');";
-                SqlCommand command = new SqlCommand(queryString, database.getConnection());
-                command.ExecuteNonQuery();
-
-                MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Пожалуйста, введите корректный номер телефона", "Не удалось добавить запись", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            database.closeConnection();
-            RefreshDataGrid(dataGridView1);
+            MessageBox.Show("Либо зарегистрируйте нового пользователя, либо дайте зарегистрироваться работнику самому. После данной операции перейдите в меню \"Управление\" и откройте окно \"Администрирование\", где вы и сможете поменять статус пользователя.", "Как добавить работника?");
+            Form admin = new AdminPanel();
+            admin.Show();
         }
 
         /// <summary>
@@ -332,7 +320,7 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void search_tb_TextChanged(object sender, EventArgs e)
         {
-            Search(dataGridView1, $"select * from [dbo].[Users] where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
+            Search(dataGridView1, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
         }
 
         private void clientSearch_tb_TextChanged(object sender, EventArgs e)
@@ -451,19 +439,125 @@ namespace agency_csharp
             updates.Show();
         }
 
+        /// <summary>
+        /// Кнопки добавления записей
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void clientAdd_Click(object sender, EventArgs e)
         {
+            database.openConnection();
 
+            var id = Convert.ToInt32(clientID_tb.Text);
+            var clientName = name_tb.Text;
+            var clientSurname = surname_tb.Text;
+            var clientPatronymic = thirdname_tb.Text;
+            var clientNumber = number_tb.Text;
+
+            if (Int64.TryParse(clientNumber, out Int64 n))
+            {
+                string queryString = $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{clientName}', '{clientSurname}', '{clientPatronymic}', '{clientNumber}');";
+                SqlCommand command = new SqlCommand(queryString, database.getConnection());
+                command.ExecuteNonQuery();
+
+                string queryAddEmployee = $"EXEC AddUserClient  {clientName}, {clientNumber}";
+                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
+                commandAddEmp.ExecuteNonQuery();
+
+                MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, введите корректный номер телефона", "Не удалось добавить запись", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            database.closeConnection();
         }
 
         private void orgAdd_btn_Click(object sender, EventArgs e)
         {
+            database.openConnection();
 
+            //var id = Convert.ToInt32(userId_tb.Text);
+            var userName = name_tb.Text;
+            var userSurname = surname_tb.Text;
+            var userPatronymic = thirdname_tb.Text;
+            var userNumber = number_tb.Text;
+
+            if (Int64.TryParse(userNumber, out Int64 n))
+            {
+                string queryString = $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{userName}', '{userSurname}', '{userPatronymic}', '{userNumber}');";
+                SqlCommand command = new SqlCommand(queryString, database.getConnection());
+                command.ExecuteNonQuery();
+
+                string queryAddEmployee = $"EXEC AddUserEmployee  {userName}, {userNumber}";
+                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
+                commandAddEmp.ExecuteNonQuery();
+
+                MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, введите корректный номер телефона", "Не удалось добавить запись", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            database.closeConnection();
         }
 
         private void vacAdd_tb_Click(object sender, EventArgs e)
         {
+            database.openConnection();
 
+            //var id = Convert.ToInt32(userId_tb.Text);
+            var userName = name_tb.Text;
+            var userSurname = surname_tb.Text;
+            var userPatronymic = thirdname_tb.Text;
+            var userNumber = number_tb.Text;
+
+            if (Int64.TryParse(userNumber, out Int64 n))
+            {
+                string queryString = $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{userName}', '{userSurname}', '{userPatronymic}', '{userNumber}');";
+                SqlCommand command = new SqlCommand(queryString, database.getConnection());
+                command.ExecuteNonQuery();
+
+                string queryAddEmployee = $"EXEC AddUserEmployee  {userName}, {userNumber}";
+                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
+                commandAddEmp.ExecuteNonQuery();
+
+                MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, введите корректный номер телефона", "Не удалось добавить запись", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            database.closeConnection();
+        }
+
+        private void register_btn_Click(object sender, EventArgs e)
+        {
+            Form register = new Register();
+            register.Show();
+        }
+
+        private void search_grid_btn_Click(object sender, EventArgs e)
+        {
+            Search(dataGridView1, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
+        }
+
+        private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form login = new Login();
+            login.Show();
+        }
+
+        private void passportEdit_btn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("При переходе на данную форму вы обязуетесь не разглашать паспортные данные пользователей.", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Form documents = new Documents();
+                documents.Show();
+            }
         }
     }
 }
