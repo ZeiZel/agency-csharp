@@ -64,9 +64,24 @@
             this.clientClear_btn = new System.Windows.Forms.Button();
             this.clientSearch_tb = new System.Windows.Forms.TextBox();
             this.clientView_dgv = new System.Windows.Forms.DataGridView();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.adressApartment_tb = new System.Windows.Forms.TextBox();
+            this.adressBuilding_tb = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.adressRegion_tb = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.adressID_tb = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.adressCity_tb = new System.Windows.Forms.TextBox();
+            this.adressStreet_tb = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.clientNum_tb = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.clientID_tb = new System.Windows.Forms.TextBox();
             this.clientName_tb = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.clientSur_tb = new System.Windows.Forms.TextBox();
@@ -83,6 +98,19 @@
             this.clientSave = new System.Windows.Forms.Button();
             this.clientChange = new System.Windows.Forms.Button();
             this.organizations_tab = new System.Windows.Forms.TabPage();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.orgRefresh_btn = new System.Windows.Forms.Button();
             this.orgSearch_btn = new System.Windows.Forms.Button();
@@ -91,8 +119,10 @@
             this.organization_dgv = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.orgNum_tb = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.orgMail_tb = new System.Windows.Forms.TextBox();
+            this.orgID_tb = new System.Windows.Forms.TextBox();
             this.orgName_tb = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -106,6 +136,19 @@
             this.orgSave_btn = new System.Windows.Forms.Button();
             this.orgChange_btn = new System.Windows.Forms.Button();
             this.vacamcy_tab = new System.Windows.Forms.TabPage();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.button15 = new System.Windows.Forms.Button();
             this.vacSearch_btn = new System.Windows.Forms.Button();
@@ -114,7 +157,9 @@
             this.vacancy_dgv = new System.Windows.Forms.DataGridView();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.vacNum_tb = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.vacancyID_tb = new System.Windows.Forms.TextBox();
             this.vacOrgName_tb = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.vacName_tb = new System.Windows.Forms.TextBox();
@@ -129,7 +174,7 @@
             this.vacSave_tb = new System.Windows.Forms.Button();
             this.vacChange_tb = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sadasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчётностьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.управлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.администрированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -139,6 +184,7 @@
             this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.contract_tab = new System.Windows.Forms.TabPage();
             this.info_tabPage.SuspendLayout();
             this.employess_tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -152,6 +198,7 @@
             this.clients_tab.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientView_dgv)).BeginInit();
+            this.groupBox12.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -159,6 +206,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.organizations_tab.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.organization_dgv)).BeginInit();
             this.groupBox7.SuspendLayout();
@@ -168,6 +216,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.vacamcy_tab.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vacancy_dgv)).BeginInit();
             this.groupBox10.SuspendLayout();
@@ -186,11 +235,13 @@
             this.info_tabPage.Controls.Add(this.clients_tab);
             this.info_tabPage.Controls.Add(this.organizations_tab);
             this.info_tabPage.Controls.Add(this.vacamcy_tab);
+            this.info_tabPage.Controls.Add(this.contract_tab);
             this.info_tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.info_tabPage.ItemSize = new System.Drawing.Size(78, 20);
             this.info_tabPage.Location = new System.Drawing.Point(0, 27);
             this.info_tabPage.Name = "info_tabPage";
             this.info_tabPage.SelectedIndex = 0;
-            this.info_tabPage.Size = new System.Drawing.Size(1122, 717);
+            this.info_tabPage.Size = new System.Drawing.Size(1425, 717);
             this.info_tabPage.TabIndex = 0;
             // 
             // employess_tab
@@ -204,7 +255,7 @@
             this.employess_tab.Location = new System.Drawing.Point(4, 24);
             this.employess_tab.Name = "employess_tab";
             this.employess_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.employess_tab.Size = new System.Drawing.Size(1114, 689);
+            this.employess_tab.Size = new System.Drawing.Size(1417, 689);
             this.employess_tab.TabIndex = 0;
             this.employess_tab.Text = "Сотрудники";
             // 
@@ -217,9 +268,9 @@
             this.groupBox2.Controls.Add(this.search_tb);
             this.groupBox2.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox2.Location = new System.Drawing.Point(371, 557);
+            this.groupBox2.Location = new System.Drawing.Point(662, 472);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(714, 100);
+            this.groupBox2.Size = new System.Drawing.Size(417, 100);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Управление";
@@ -231,7 +282,7 @@
             this.refresh_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.refresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("refresh_btn.Image")));
-            this.refresh_btn.Location = new System.Drawing.Point(365, 34);
+            this.refresh_btn.Location = new System.Drawing.Point(73, 30);
             this.refresh_btn.Name = "refresh_btn";
             this.refresh_btn.Size = new System.Drawing.Size(55, 52);
             this.refresh_btn.TabIndex = 17;
@@ -245,7 +296,7 @@
             this.search_grid_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.search_grid_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_grid_btn.Image = ((System.Drawing.Image)(resources.GetObject("search_grid_btn.Image")));
-            this.search_grid_btn.Location = new System.Drawing.Point(426, 34);
+            this.search_grid_btn.Location = new System.Drawing.Point(134, 30);
             this.search_grid_btn.Name = "search_grid_btn";
             this.search_grid_btn.Size = new System.Drawing.Size(48, 52);
             this.search_grid_btn.TabIndex = 17;
@@ -258,7 +309,7 @@
             this.clear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_btn.Image = ((System.Drawing.Image)(resources.GetObject("clear_btn.Image")));
-            this.clear_btn.Location = new System.Drawing.Point(311, 34);
+            this.clear_btn.Location = new System.Drawing.Point(19, 30);
             this.clear_btn.Name = "clear_btn";
             this.clear_btn.Size = new System.Drawing.Size(48, 52);
             this.clear_btn.TabIndex = 17;
@@ -270,7 +321,7 @@
             this.search_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.search_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.search_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.search_tb.Location = new System.Drawing.Point(480, 40);
+            this.search_tb.Location = new System.Drawing.Point(188, 36);
             this.search_tb.Multiline = true;
             this.search_tb.Name = "search_tb";
             this.search_tb.Size = new System.Drawing.Size(212, 35);
@@ -287,7 +338,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(714, 424);
+            this.dataGridView1.Size = new System.Drawing.Size(999, 424);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -557,12 +608,13 @@
             this.clients_tab.BackColor = System.Drawing.Color.White;
             this.clients_tab.Controls.Add(this.groupBox3);
             this.clients_tab.Controls.Add(this.clientView_dgv);
+            this.clients_tab.Controls.Add(this.groupBox12);
             this.clients_tab.Controls.Add(this.groupBox4);
             this.clients_tab.Controls.Add(this.groupBox5);
             this.clients_tab.Location = new System.Drawing.Point(4, 24);
             this.clients_tab.Name = "clients_tab";
             this.clients_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.clients_tab.Size = new System.Drawing.Size(1114, 689);
+            this.clients_tab.Size = new System.Drawing.Size(1417, 689);
             this.clients_tab.TabIndex = 1;
             this.clients_tab.Text = "Клиенты";
             // 
@@ -575,9 +627,9 @@
             this.groupBox3.Controls.Add(this.clientSearch_tb);
             this.groupBox3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox3.Location = new System.Drawing.Point(365, 532);
+            this.groupBox3.Location = new System.Drawing.Point(496, 502);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(714, 100);
+            this.groupBox3.Size = new System.Drawing.Size(428, 100);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Управление";
@@ -589,7 +641,7 @@
             this.clientRefresh_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.clientRefresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientRefresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("clientRefresh_btn.Image")));
-            this.clientRefresh_btn.Location = new System.Drawing.Point(365, 34);
+            this.clientRefresh_btn.Location = new System.Drawing.Point(78, 34);
             this.clientRefresh_btn.Name = "clientRefresh_btn";
             this.clientRefresh_btn.Size = new System.Drawing.Size(55, 52);
             this.clientRefresh_btn.TabIndex = 17;
@@ -603,7 +655,7 @@
             this.clientSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.clientSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("clientSearch_btn.Image")));
-            this.clientSearch_btn.Location = new System.Drawing.Point(426, 34);
+            this.clientSearch_btn.Location = new System.Drawing.Point(139, 34);
             this.clientSearch_btn.Name = "clientSearch_btn";
             this.clientSearch_btn.Size = new System.Drawing.Size(48, 52);
             this.clientSearch_btn.TabIndex = 17;
@@ -616,7 +668,7 @@
             this.clientClear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.clientClear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientClear_btn.Image = ((System.Drawing.Image)(resources.GetObject("clientClear_btn.Image")));
-            this.clientClear_btn.Location = new System.Drawing.Point(311, 34);
+            this.clientClear_btn.Location = new System.Drawing.Point(24, 34);
             this.clientClear_btn.Name = "clientClear_btn";
             this.clientClear_btn.Size = new System.Drawing.Size(48, 52);
             this.clientClear_btn.TabIndex = 17;
@@ -627,7 +679,7 @@
             this.clientSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientSearch_tb.Location = new System.Drawing.Point(480, 40);
+            this.clientSearch_tb.Location = new System.Drawing.Point(193, 40);
             this.clientSearch_tb.Multiline = true;
             this.clientSearch_tb.Name = "clientSearch_tb";
             this.clientSearch_tb.Size = new System.Drawing.Size(212, 35);
@@ -640,18 +692,176 @@
             this.clientView_dgv.AllowUserToDeleteRows = false;
             this.clientView_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.clientView_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clientView_dgv.Location = new System.Drawing.Point(365, 25);
+            this.clientView_dgv.Location = new System.Drawing.Point(353, 25);
             this.clientView_dgv.Name = "clientView_dgv";
             this.clientView_dgv.ReadOnly = true;
             this.clientView_dgv.RowTemplate.Height = 25;
             this.clientView_dgv.Size = new System.Drawing.Size(714, 424);
             this.clientView_dgv.TabIndex = 26;
             // 
+            // groupBox12
+            // 
+            this.groupBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox12.Controls.Add(this.adressApartment_tb);
+            this.groupBox12.Controls.Add(this.adressBuilding_tb);
+            this.groupBox12.Controls.Add(this.label20);
+            this.groupBox12.Controls.Add(this.label1);
+            this.groupBox12.Controls.Add(this.adressRegion_tb);
+            this.groupBox12.Controls.Add(this.label22);
+            this.groupBox12.Controls.Add(this.adressID_tb);
+            this.groupBox12.Controls.Add(this.label9);
+            this.groupBox12.Controls.Add(this.adressCity_tb);
+            this.groupBox12.Controls.Add(this.adressStreet_tb);
+            this.groupBox12.Controls.Add(this.label15);
+            this.groupBox12.Controls.Add(this.label16);
+            this.groupBox12.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox12.Location = new System.Drawing.Point(1095, 25);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(296, 448);
+            this.groupBox12.TabIndex = 25;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Данные адреса";
+            // 
+            // adressApartment_tb
+            // 
+            this.adressApartment_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressApartment_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressApartment_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressApartment_tb.Location = new System.Drawing.Point(43, 383);
+            this.adressApartment_tb.Multiline = true;
+            this.adressApartment_tb.Name = "adressApartment_tb";
+            this.adressApartment_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressApartment_tb.TabIndex = 8;
+            // 
+            // adressBuilding_tb
+            // 
+            this.adressBuilding_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressBuilding_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressBuilding_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressBuilding_tb.Location = new System.Drawing.Point(43, 312);
+            this.adressBuilding_tb.Multiline = true;
+            this.adressBuilding_tb.Name = "adressBuilding_tb";
+            this.adressBuilding_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressBuilding_tb.TabIndex = 8;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label20.Location = new System.Drawing.Point(43, 31);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(150, 22);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Идентификатор";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(43, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 22);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Регион";
+            // 
+            // adressRegion_tb
+            // 
+            this.adressRegion_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressRegion_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressRegion_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressRegion_tb.Location = new System.Drawing.Point(43, 119);
+            this.adressRegion_tb.Multiline = true;
+            this.adressRegion_tb.Name = "adressRegion_tb";
+            this.adressRegion_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressRegion_tb.TabIndex = 8;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label22.Location = new System.Drawing.Point(43, 358);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(94, 22);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Квартира";
+            // 
+            // adressID_tb
+            // 
+            this.adressID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressID_tb.Location = new System.Drawing.Point(43, 56);
+            this.adressID_tb.Multiline = true;
+            this.adressID_tb.Name = "adressID_tb";
+            this.adressID_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressID_tb.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label9.Location = new System.Drawing.Point(43, 287);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 22);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Строение";
+            // 
+            // adressCity_tb
+            // 
+            this.adressCity_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressCity_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressCity_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressCity_tb.Location = new System.Drawing.Point(43, 182);
+            this.adressCity_tb.Multiline = true;
+            this.adressCity_tb.Name = "adressCity_tb";
+            this.adressCity_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressCity_tb.TabIndex = 8;
+            // 
+            // adressStreet_tb
+            // 
+            this.adressStreet_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressStreet_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressStreet_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressStreet_tb.Location = new System.Drawing.Point(43, 246);
+            this.adressStreet_tb.Multiline = true;
+            this.adressStreet_tb.Name = "adressStreet_tb";
+            this.adressStreet_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressStreet_tb.TabIndex = 8;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label15.Location = new System.Drawing.Point(43, 221);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(64, 22);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Улица";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label16.Location = new System.Drawing.Point(43, 157);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(176, 22);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Населённый пункт";
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.groupBox4.Controls.Add(this.clientNum_tb);
+            this.groupBox4.Controls.Add(this.label19);
             this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.clientID_tb);
             this.groupBox4.Controls.Add(this.clientName_tb);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.clientSur_tb);
@@ -662,7 +872,7 @@
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox4.Location = new System.Drawing.Point(29, 25);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(296, 331);
+            this.groupBox4.Size = new System.Drawing.Size(296, 364);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Персональные данные";
@@ -672,29 +882,51 @@
             this.clientNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientNum_tb.Location = new System.Drawing.Point(39, 255);
+            this.clientNum_tb.Location = new System.Drawing.Point(39, 312);
             this.clientNum_tb.Multiline = true;
             this.clientNum_tb.Name = "clientNum_tb";
             this.clientNum_tb.Size = new System.Drawing.Size(212, 35);
             this.clientNum_tb.TabIndex = 8;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label19.Location = new System.Drawing.Point(39, 31);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(150, 22);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Идентификатор";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label2.Location = new System.Drawing.Point(39, 37);
+            this.label2.Location = new System.Drawing.Point(39, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 22);
             this.label2.TabIndex = 10;
             this.label2.Text = "Имя";
+            // 
+            // clientID_tb
+            // 
+            this.clientID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.clientID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clientID_tb.Location = new System.Drawing.Point(39, 56);
+            this.clientID_tb.Multiline = true;
+            this.clientID_tb.Name = "clientID_tb";
+            this.clientID_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientID_tb.TabIndex = 8;
             // 
             // clientName_tb
             // 
             this.clientName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientName_tb.Location = new System.Drawing.Point(39, 62);
+            this.clientName_tb.Location = new System.Drawing.Point(39, 119);
             this.clientName_tb.Multiline = true;
             this.clientName_tb.Name = "clientName_tb";
             this.clientName_tb.Size = new System.Drawing.Size(212, 35);
@@ -705,7 +937,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label8.Location = new System.Drawing.Point(39, 230);
+            this.label8.Location = new System.Drawing.Point(39, 287);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(177, 22);
             this.label8.TabIndex = 9;
@@ -716,7 +948,7 @@
             this.clientSur_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientSur_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientSur_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientSur_tb.Location = new System.Drawing.Point(39, 125);
+            this.clientSur_tb.Location = new System.Drawing.Point(39, 182);
             this.clientSur_tb.Multiline = true;
             this.clientSur_tb.Name = "clientSur_tb";
             this.clientSur_tb.Size = new System.Drawing.Size(212, 35);
@@ -727,7 +959,7 @@
             this.clientPat_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientPat_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientPat_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientPat_tb.Location = new System.Drawing.Point(39, 189);
+            this.clientPat_tb.Location = new System.Drawing.Point(39, 246);
             this.clientPat_tb.Multiline = true;
             this.clientPat_tb.Name = "clientPat_tb";
             this.clientPat_tb.Size = new System.Drawing.Size(212, 35);
@@ -738,7 +970,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label10.Location = new System.Drawing.Point(39, 164);
+            this.label10.Location = new System.Drawing.Point(39, 221);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 22);
             this.label10.TabIndex = 9;
@@ -749,7 +981,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label11.Location = new System.Drawing.Point(39, 100);
+            this.label11.Location = new System.Drawing.Point(39, 157);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 22);
             this.label11.TabIndex = 9;
@@ -830,6 +1062,7 @@
             this.clientAdd.TabIndex = 18;
             this.clientAdd.Text = "Добавить";
             this.clientAdd.UseVisualStyleBackColor = false;
+            this.clientAdd.Click += new System.EventHandler(this.clientAdd_Click);
             // 
             // clientDel
             // 
@@ -886,15 +1119,172 @@
             // organizations_tab
             // 
             this.organizations_tab.BackColor = System.Drawing.Color.White;
+            this.organizations_tab.Controls.Add(this.groupBox13);
             this.organizations_tab.Controls.Add(this.groupBox6);
             this.organizations_tab.Controls.Add(this.organization_dgv);
             this.organizations_tab.Controls.Add(this.groupBox7);
             this.organizations_tab.Controls.Add(this.groupBox8);
             this.organizations_tab.Location = new System.Drawing.Point(4, 24);
             this.organizations_tab.Name = "organizations_tab";
-            this.organizations_tab.Size = new System.Drawing.Size(1114, 689);
+            this.organizations_tab.Size = new System.Drawing.Size(1417, 689);
             this.organizations_tab.TabIndex = 2;
             this.organizations_tab.Text = "Организации";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox13.Controls.Add(this.textBox1);
+            this.groupBox13.Controls.Add(this.textBox2);
+            this.groupBox13.Controls.Add(this.label23);
+            this.groupBox13.Controls.Add(this.label24);
+            this.groupBox13.Controls.Add(this.textBox3);
+            this.groupBox13.Controls.Add(this.label25);
+            this.groupBox13.Controls.Add(this.textBox4);
+            this.groupBox13.Controls.Add(this.label26);
+            this.groupBox13.Controls.Add(this.textBox5);
+            this.groupBox13.Controls.Add(this.textBox6);
+            this.groupBox13.Controls.Add(this.label27);
+            this.groupBox13.Controls.Add(this.label28);
+            this.groupBox13.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox13.Location = new System.Drawing.Point(1101, 25);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(296, 448);
+            this.groupBox13.TabIndex = 28;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Данные адреса";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(43, 383);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(212, 35);
+            this.textBox1.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(43, 312);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(212, 35);
+            this.textBox2.TabIndex = 8;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label23.Location = new System.Drawing.Point(43, 31);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(150, 22);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "Идентификатор";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label24.Location = new System.Drawing.Point(43, 94);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(72, 22);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Регион";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.Location = new System.Drawing.Point(43, 119);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(212, 35);
+            this.textBox3.TabIndex = 8;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label25.Location = new System.Drawing.Point(43, 358);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(94, 22);
+            this.label25.TabIndex = 9;
+            this.label25.Text = "Квартира";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.Location = new System.Drawing.Point(43, 56);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(212, 35);
+            this.textBox4.TabIndex = 8;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label26.Location = new System.Drawing.Point(43, 287);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(94, 22);
+            this.label26.TabIndex = 9;
+            this.label26.Text = "Строение";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.Location = new System.Drawing.Point(43, 182);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(212, 35);
+            this.textBox5.TabIndex = 8;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox6.Location = new System.Drawing.Point(43, 246);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(212, 35);
+            this.textBox6.TabIndex = 8;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label27.Location = new System.Drawing.Point(43, 221);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(64, 22);
+            this.label27.TabIndex = 9;
+            this.label27.Text = "Улица";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label28.Location = new System.Drawing.Point(43, 157);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(176, 22);
+            this.label28.TabIndex = 9;
+            this.label28.Text = "Населённый пункт";
             // 
             // groupBox6
             // 
@@ -905,9 +1295,9 @@
             this.groupBox6.Controls.Add(this.orgSearch_tb);
             this.groupBox6.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox6.Location = new System.Drawing.Point(365, 531);
+            this.groupBox6.Location = new System.Drawing.Point(503, 478);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(714, 100);
+            this.groupBox6.Size = new System.Drawing.Size(420, 100);
             this.groupBox6.TabIndex = 27;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Управление";
@@ -919,7 +1309,7 @@
             this.orgRefresh_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.orgRefresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgRefresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("orgRefresh_btn.Image")));
-            this.orgRefresh_btn.Location = new System.Drawing.Point(365, 34);
+            this.orgRefresh_btn.Location = new System.Drawing.Point(73, 33);
             this.orgRefresh_btn.Name = "orgRefresh_btn";
             this.orgRefresh_btn.Size = new System.Drawing.Size(55, 52);
             this.orgRefresh_btn.TabIndex = 17;
@@ -933,7 +1323,7 @@
             this.orgSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.orgSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("orgSearch_btn.Image")));
-            this.orgSearch_btn.Location = new System.Drawing.Point(426, 34);
+            this.orgSearch_btn.Location = new System.Drawing.Point(134, 33);
             this.orgSearch_btn.Name = "orgSearch_btn";
             this.orgSearch_btn.Size = new System.Drawing.Size(48, 52);
             this.orgSearch_btn.TabIndex = 17;
@@ -946,7 +1336,7 @@
             this.orgClear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.orgClear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgClear_btn.Image = ((System.Drawing.Image)(resources.GetObject("orgClear_btn.Image")));
-            this.orgClear_btn.Location = new System.Drawing.Point(311, 34);
+            this.orgClear_btn.Location = new System.Drawing.Point(19, 33);
             this.orgClear_btn.Name = "orgClear_btn";
             this.orgClear_btn.Size = new System.Drawing.Size(48, 52);
             this.orgClear_btn.TabIndex = 17;
@@ -957,7 +1347,7 @@
             this.orgSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orgSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgSearch_tb.Location = new System.Drawing.Point(480, 40);
+            this.orgSearch_tb.Location = new System.Drawing.Point(188, 39);
             this.orgSearch_tb.Multiline = true;
             this.orgSearch_tb.Name = "orgSearch_tb";
             this.orgSearch_tb.Size = new System.Drawing.Size(212, 35);
@@ -970,7 +1360,7 @@
             this.organization_dgv.AllowUserToDeleteRows = false;
             this.organization_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.organization_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.organization_dgv.Location = new System.Drawing.Point(365, 25);
+            this.organization_dgv.Location = new System.Drawing.Point(356, 25);
             this.organization_dgv.Name = "organization_dgv";
             this.organization_dgv.ReadOnly = true;
             this.organization_dgv.RowTemplate.Height = 25;
@@ -981,8 +1371,10 @@
             // 
             this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.groupBox7.Controls.Add(this.orgNum_tb);
+            this.groupBox7.Controls.Add(this.label36);
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Controls.Add(this.orgMail_tb);
+            this.groupBox7.Controls.Add(this.orgID_tb);
             this.groupBox7.Controls.Add(this.orgName_tb);
             this.groupBox7.Controls.Add(this.label13);
             this.groupBox7.Controls.Add(this.label14);
@@ -990,7 +1382,7 @@
             this.groupBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox7.Location = new System.Drawing.Point(29, 25);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(296, 307);
+            this.groupBox7.Size = new System.Drawing.Size(296, 336);
             this.groupBox7.TabIndex = 25;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Персональные данные";
@@ -1000,18 +1392,29 @@
             this.orgNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orgNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgNum_tb.Location = new System.Drawing.Point(43, 157);
+            this.orgNum_tb.Location = new System.Drawing.Point(45, 195);
             this.orgNum_tb.Multiline = true;
             this.orgNum_tb.Name = "orgNum_tb";
             this.orgNum_tb.Size = new System.Drawing.Size(212, 35);
             this.orgNum_tb.TabIndex = 8;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label36.Location = new System.Drawing.Point(45, 31);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(150, 22);
+            this.label36.TabIndex = 10;
+            this.label36.Text = "Идентификатор";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label12.Location = new System.Drawing.Point(43, 56);
+            this.label12.Location = new System.Drawing.Point(45, 94);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(140, 22);
             this.label12.TabIndex = 10;
@@ -1022,18 +1425,29 @@
             this.orgMail_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgMail_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orgMail_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgMail_tb.Location = new System.Drawing.Point(43, 226);
+            this.orgMail_tb.Location = new System.Drawing.Point(45, 264);
             this.orgMail_tb.Multiline = true;
             this.orgMail_tb.Name = "orgMail_tb";
             this.orgMail_tb.Size = new System.Drawing.Size(212, 35);
             this.orgMail_tb.TabIndex = 8;
+            // 
+            // orgID_tb
+            // 
+            this.orgID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.orgID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orgID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.orgID_tb.Location = new System.Drawing.Point(45, 56);
+            this.orgID_tb.Multiline = true;
+            this.orgID_tb.Name = "orgID_tb";
+            this.orgID_tb.Size = new System.Drawing.Size(212, 35);
+            this.orgID_tb.TabIndex = 8;
             // 
             // orgName_tb
             // 
             this.orgName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orgName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgName_tb.Location = new System.Drawing.Point(43, 81);
+            this.orgName_tb.Location = new System.Drawing.Point(45, 119);
             this.orgName_tb.Multiline = true;
             this.orgName_tb.Name = "orgName_tb";
             this.orgName_tb.Size = new System.Drawing.Size(212, 35);
@@ -1044,7 +1458,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label13.Location = new System.Drawing.Point(43, 132);
+            this.label13.Location = new System.Drawing.Point(45, 170);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(177, 22);
             this.label13.TabIndex = 9;
@@ -1055,7 +1469,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label14.Location = new System.Drawing.Point(43, 201);
+            this.label14.Location = new System.Drawing.Point(45, 239);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 22);
             this.label14.TabIndex = 9;
@@ -1136,6 +1550,7 @@
             this.orgAdd_btn.TabIndex = 18;
             this.orgAdd_btn.Text = "Добавить";
             this.orgAdd_btn.UseVisualStyleBackColor = false;
+            this.orgAdd_btn.Click += new System.EventHandler(this.orgAdd_btn_Click);
             // 
             // orgDel_btn
             // 
@@ -1191,15 +1606,173 @@
             // 
             // vacamcy_tab
             // 
+            this.vacamcy_tab.BackColor = System.Drawing.Color.Transparent;
+            this.vacamcy_tab.Controls.Add(this.groupBox14);
             this.vacamcy_tab.Controls.Add(this.groupBox9);
             this.vacamcy_tab.Controls.Add(this.vacancy_dgv);
             this.vacamcy_tab.Controls.Add(this.groupBox10);
             this.vacamcy_tab.Controls.Add(this.groupBox11);
             this.vacamcy_tab.Location = new System.Drawing.Point(4, 24);
             this.vacamcy_tab.Name = "vacamcy_tab";
-            this.vacamcy_tab.Size = new System.Drawing.Size(1114, 689);
+            this.vacamcy_tab.Size = new System.Drawing.Size(1417, 689);
             this.vacamcy_tab.TabIndex = 3;
             this.vacamcy_tab.Text = "Вакансии";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox14.Controls.Add(this.textBox7);
+            this.groupBox14.Controls.Add(this.textBox8);
+            this.groupBox14.Controls.Add(this.label29);
+            this.groupBox14.Controls.Add(this.label30);
+            this.groupBox14.Controls.Add(this.textBox9);
+            this.groupBox14.Controls.Add(this.label31);
+            this.groupBox14.Controls.Add(this.textBox10);
+            this.groupBox14.Controls.Add(this.label32);
+            this.groupBox14.Controls.Add(this.textBox11);
+            this.groupBox14.Controls.Add(this.textBox12);
+            this.groupBox14.Controls.Add(this.label33);
+            this.groupBox14.Controls.Add(this.label34);
+            this.groupBox14.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox14.Location = new System.Drawing.Point(1095, 25);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(296, 448);
+            this.groupBox14.TabIndex = 29;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Данные адреса";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox7.Location = new System.Drawing.Point(43, 383);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(212, 35);
+            this.textBox7.TabIndex = 8;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox8.Location = new System.Drawing.Point(43, 312);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(212, 35);
+            this.textBox8.TabIndex = 8;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label29.Location = new System.Drawing.Point(43, 31);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(150, 22);
+            this.label29.TabIndex = 10;
+            this.label29.Text = "Идентификатор";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label30.Location = new System.Drawing.Point(43, 94);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(72, 22);
+            this.label30.TabIndex = 10;
+            this.label30.Text = "Регион";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox9.Location = new System.Drawing.Point(43, 119);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(212, 35);
+            this.textBox9.TabIndex = 8;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label31.Location = new System.Drawing.Point(43, 358);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(94, 22);
+            this.label31.TabIndex = 9;
+            this.label31.Text = "Квартира";
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox10.Location = new System.Drawing.Point(43, 56);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(212, 35);
+            this.textBox10.TabIndex = 8;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label32.Location = new System.Drawing.Point(43, 287);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(94, 22);
+            this.label32.TabIndex = 9;
+            this.label32.Text = "Строение";
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox11.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox11.Location = new System.Drawing.Point(43, 182);
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(212, 35);
+            this.textBox11.TabIndex = 8;
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox12.Location = new System.Drawing.Point(43, 246);
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(212, 35);
+            this.textBox12.TabIndex = 8;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label33.Location = new System.Drawing.Point(43, 221);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(64, 22);
+            this.label33.TabIndex = 9;
+            this.label33.Text = "Улица";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label34.Location = new System.Drawing.Point(43, 157);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(176, 22);
+            this.label34.TabIndex = 9;
+            this.label34.Text = "Населённый пункт";
             // 
             // groupBox9
             // 
@@ -1210,9 +1783,9 @@
             this.groupBox9.Controls.Add(this.vacSearch_tb);
             this.groupBox9.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox9.Location = new System.Drawing.Point(365, 518);
+            this.groupBox9.Location = new System.Drawing.Point(506, 488);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(714, 100);
+            this.groupBox9.Size = new System.Drawing.Size(426, 100);
             this.groupBox9.TabIndex = 27;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Управление";
@@ -1224,7 +1797,7 @@
             this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.Location = new System.Drawing.Point(365, 34);
+            this.button15.Location = new System.Drawing.Point(77, 33);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(55, 52);
             this.button15.TabIndex = 17;
@@ -1238,7 +1811,7 @@
             this.vacSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.vacSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vacSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("vacSearch_btn.Image")));
-            this.vacSearch_btn.Location = new System.Drawing.Point(426, 34);
+            this.vacSearch_btn.Location = new System.Drawing.Point(138, 33);
             this.vacSearch_btn.Name = "vacSearch_btn";
             this.vacSearch_btn.Size = new System.Drawing.Size(48, 52);
             this.vacSearch_btn.TabIndex = 17;
@@ -1251,7 +1824,7 @@
             this.vacClrear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.vacClrear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vacClrear_btn.Image = ((System.Drawing.Image)(resources.GetObject("vacClrear_btn.Image")));
-            this.vacClrear_btn.Location = new System.Drawing.Point(311, 34);
+            this.vacClrear_btn.Location = new System.Drawing.Point(23, 33);
             this.vacClrear_btn.Name = "vacClrear_btn";
             this.vacClrear_btn.Size = new System.Drawing.Size(48, 52);
             this.vacClrear_btn.TabIndex = 17;
@@ -1262,7 +1835,7 @@
             this.vacSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vacSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vacSearch_tb.Location = new System.Drawing.Point(480, 40);
+            this.vacSearch_tb.Location = new System.Drawing.Point(192, 39);
             this.vacSearch_tb.Multiline = true;
             this.vacSearch_tb.Name = "vacSearch_tb";
             this.vacSearch_tb.Size = new System.Drawing.Size(212, 35);
@@ -1275,7 +1848,7 @@
             this.vacancy_dgv.AllowUserToDeleteRows = false;
             this.vacancy_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.vacancy_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vacancy_dgv.Location = new System.Drawing.Point(365, 25);
+            this.vacancy_dgv.Location = new System.Drawing.Point(353, 25);
             this.vacancy_dgv.Name = "vacancy_dgv";
             this.vacancy_dgv.ReadOnly = true;
             this.vacancy_dgv.RowTemplate.Height = 25;
@@ -1286,7 +1859,9 @@
             // 
             this.groupBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.groupBox10.Controls.Add(this.vacNum_tb);
+            this.groupBox10.Controls.Add(this.label35);
             this.groupBox10.Controls.Add(this.label17);
+            this.groupBox10.Controls.Add(this.vacancyID_tb);
             this.groupBox10.Controls.Add(this.vacOrgName_tb);
             this.groupBox10.Controls.Add(this.label18);
             this.groupBox10.Controls.Add(this.vacName_tb);
@@ -1295,7 +1870,7 @@
             this.groupBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox10.Location = new System.Drawing.Point(29, 25);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(296, 301);
+            this.groupBox10.Size = new System.Drawing.Size(296, 321);
             this.groupBox10.TabIndex = 25;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Персональные данные";
@@ -1305,29 +1880,51 @@
             this.vacNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vacNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vacNum_tb.Location = new System.Drawing.Point(38, 214);
+            this.vacNum_tb.Location = new System.Drawing.Point(34, 254);
             this.vacNum_tb.Multiline = true;
             this.vacNum_tb.Name = "vacNum_tb";
             this.vacNum_tb.Size = new System.Drawing.Size(212, 35);
             this.vacNum_tb.TabIndex = 8;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label35.Location = new System.Drawing.Point(34, 31);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(150, 22);
+            this.label35.TabIndex = 10;
+            this.label35.Text = "Идентификатор";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label17.Location = new System.Drawing.Point(38, 54);
+            this.label17.Location = new System.Drawing.Point(34, 94);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(125, 22);
             this.label17.TabIndex = 10;
             this.label17.Text = "Организация";
+            // 
+            // vacancyID_tb
+            // 
+            this.vacancyID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.vacancyID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vacancyID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.vacancyID_tb.Location = new System.Drawing.Point(34, 56);
+            this.vacancyID_tb.Multiline = true;
+            this.vacancyID_tb.Name = "vacancyID_tb";
+            this.vacancyID_tb.Size = new System.Drawing.Size(212, 35);
+            this.vacancyID_tb.TabIndex = 8;
             // 
             // vacOrgName_tb
             // 
             this.vacOrgName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacOrgName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vacOrgName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vacOrgName_tb.Location = new System.Drawing.Point(38, 79);
+            this.vacOrgName_tb.Location = new System.Drawing.Point(34, 119);
             this.vacOrgName_tb.Multiline = true;
             this.vacOrgName_tb.Name = "vacOrgName_tb";
             this.vacOrgName_tb.Size = new System.Drawing.Size(212, 35);
@@ -1338,7 +1935,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label18.Location = new System.Drawing.Point(38, 189);
+            this.label18.Location = new System.Drawing.Point(34, 229);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(177, 22);
             this.label18.TabIndex = 9;
@@ -1349,7 +1946,7 @@
             this.vacName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vacName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vacName_tb.Location = new System.Drawing.Point(38, 142);
+            this.vacName_tb.Location = new System.Drawing.Point(34, 182);
             this.vacName_tb.Multiline = true;
             this.vacName_tb.Name = "vacName_tb";
             this.vacName_tb.Size = new System.Drawing.Size(212, 35);
@@ -1360,7 +1957,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label21.Location = new System.Drawing.Point(38, 117);
+            this.label21.Location = new System.Drawing.Point(34, 157);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(108, 22);
             this.label21.TabIndex = 9;
@@ -1441,6 +2038,7 @@
             this.vacAdd_tb.TabIndex = 18;
             this.vacAdd_tb.Text = "Добавить";
             this.vacAdd_tb.UseVisualStyleBackColor = false;
+            this.vacAdd_tb.Click += new System.EventHandler(this.vacAdd_tb_Click);
             // 
             // vacDel_tb
             // 
@@ -1496,30 +2094,30 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sadasdToolStripMenuItem,
+            this.файлToolStripMenuItem,
             this.управлениеToolStripMenuItem,
             this.информацияToolStripMenuItem,
             this.userStatus_tstb});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1122, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1425, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // sadasdToolStripMenuItem
+            // файлToolStripMenuItem
             // 
-            this.sadasdToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.отчётностьToolStripMenuItem1});
-            this.sadasdToolStripMenuItem.Name = "sadasdToolStripMenuItem";
-            this.sadasdToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
-            this.sadasdToolStripMenuItem.Text = "Файл";
+            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
+            this.файлToolStripMenuItem.Text = "Файл";
             // 
             // отчётностьToolStripMenuItem1
             // 
             this.отчётностьToolStripMenuItem1.Name = "отчётностьToolStripMenuItem1";
-            this.отчётностьToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.отчётностьToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.отчётностьToolStripMenuItem1.Text = "Отчётность";
             this.отчётностьToolStripMenuItem1.Click += new System.EventHandler(this.отчётностьToolStripMenuItem1_Click);
             // 
@@ -1550,7 +2148,7 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -1574,7 +2172,7 @@
             this.toolStripProgressBar1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 722);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1122, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1425, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -1583,11 +2181,21 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
+            // contract_tab
+            // 
+            this.contract_tab.Location = new System.Drawing.Point(4, 24);
+            this.contract_tab.Name = "contract_tab";
+            this.contract_tab.Size = new System.Drawing.Size(1417, 689);
+            this.contract_tab.TabIndex = 4;
+            this.contract_tab.Text = "Контракты";
+            this.contract_tab.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 744);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1425, 744);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.info_tabPage);
             this.Controls.Add(this.menuStrip1);
@@ -1611,6 +2219,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientView_dgv)).EndInit();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1619,6 +2229,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.organizations_tab.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.organization_dgv)).EndInit();
@@ -1630,6 +2242,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.vacamcy_tab.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vacancy_dgv)).EndInit();
@@ -1655,7 +2269,7 @@
         private TabPage employess_tab;
         private TabPage clients_tab;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem sadasdToolStripMenuItem;
+        private ToolStripMenuItem файлToolStripMenuItem;
         private StatusStrip statusStrip1;
         private ToolStripProgressBar toolStripProgressBar1;
         private TabPage organizations_tab;
@@ -1763,5 +2377,50 @@
         private ToolStripMenuItem обновленияToolStripMenuItem;
         private ToolStripMenuItem администрированиеToolStripMenuItem;
         private ToolStripMenuItem отчётностьToolStripMenuItem1;
+        private GroupBox groupBox12;
+        private TextBox adressApartment_tb;
+        private TextBox adressBuilding_tb;
+        private Label label20;
+        private TextBox adressRegion_tb;
+        private Label label22;
+        private TextBox adressID_tb;
+        private Label label9;
+        private TextBox adressCity_tb;
+        private TextBox adressStreet_tb;
+        private Label label15;
+        private Label label16;
+        private Label label19;
+        private TextBox clientID_tb;
+        private GroupBox groupBox13;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Label label23;
+        private Label label24;
+        private TextBox textBox3;
+        private Label label25;
+        private TextBox textBox4;
+        private Label label26;
+        private TextBox textBox5;
+        private TextBox textBox6;
+        private Label label27;
+        private Label label28;
+        private Label label36;
+        private TextBox orgID_tb;
+        private GroupBox groupBox14;
+        private TextBox textBox7;
+        private TextBox textBox8;
+        private Label label29;
+        private Label label30;
+        private TextBox textBox9;
+        private Label label31;
+        private TextBox textBox10;
+        private Label label32;
+        private TextBox textBox11;
+        private TextBox textBox12;
+        private Label label33;
+        private Label label34;
+        private Label label35;
+        private TextBox vacancyID_tb;
+        private TabPage contract_tab;
     }
 }

@@ -54,11 +54,22 @@ namespace agency_csharp
 
                 if (table.Rows.Count == 1)
                 {
-                    var user = new CheckUser(table.Rows[0].ItemArray[3].ToString(), Convert.ToBoolean(table.Rows[0].ItemArray[5]), Convert.ToBoolean(table.Rows[0].ItemArray[7]));
+                    var userLogin = table.Rows[0].ItemArray[3].ToString();
+                    var isAdmin = Convert.ToBoolean(table.Rows[0].ItemArray[5]);
+                    var isEmployee = Convert.ToBoolean(table.Rows[0].ItemArray[7]);
+                    var user = new CheckUser(userLogin, isAdmin, isEmployee);
 
-                    MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Form mainWindow = new MainWindow(user);
-                    mainWindow.Show();
+                    if (isAdmin == true || isEmployee == true)
+                    {
+                        MessageBox.Show("Вы успешно вошли!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Form mainWindow = new MainWindow(user);
+                        mainWindow.Show();
+                    } else
+                    {
+                        Form vacancy = new Vacancy(user);
+                        vacancy.Show();
+                    }
+
                     this.Hide();
                 }
                 else

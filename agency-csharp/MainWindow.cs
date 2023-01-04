@@ -31,7 +31,6 @@ namespace agency_csharp
         {
             _user = user;
 
-
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
@@ -42,17 +41,14 @@ namespace agency_csharp
         // Определяет уровень доступа для админа
         private void IsAdmin()
         {
-            // если пользователь админ, то IsAdmin будет = true
-            управлениеToolStripMenuItem.Enabled = _user.IsAdmin;
-            add_btn.Visible = _user.IsAdmin;
+            управлениеToolStripMenuItem.Visible = _user.IsAdmin;
+            файлToolStripMenuItem.Visible = _user.IsAdmin;
         }
 
         // Определяет уровень доступа для работника
         private void IsEmployee()
         {
-            // если пользователь админ, то IsAdmin будет = true
-            управлениеToolStripMenuItem.Enabled = _user.IsEmployee;
-            add_btn.Visible = _user.IsEmployee;
+            
         }
 
         /// <summary>
@@ -94,7 +90,8 @@ namespace agency_csharp
         {
             dgv.Rows.Clear();
 
-            string query = "select * from [dbo].[Users]";
+            string query = 
+                "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Employee E on Users.id_pk_user = E.id_fk_user; ";
 
             SqlCommand command = new SqlCommand(query, database.getConnection());
 
@@ -452,6 +449,21 @@ namespace agency_csharp
         {
             Form updates = new CheckUpdates();
             updates.Show();
+        }
+
+        private void clientAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void orgAdd_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vacAdd_tb_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
