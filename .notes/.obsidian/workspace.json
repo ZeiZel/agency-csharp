@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "1d38fb64006ad891",
@@ -149,8 +148,9 @@
   },
   "active": "128c898b909dccb7",
   "lastOpenFiles": [
+    "AdminPanel.png",
+    "Курсовой проект.md",
     "README.md",
-    "README 1.md",
-    "Курсовой проект.md"
+    "README 1.md"
   ]
 }
