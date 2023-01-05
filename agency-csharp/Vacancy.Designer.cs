@@ -268,6 +268,7 @@
             this.vacSearch_btn.Size = new System.Drawing.Size(48, 52);
             this.vacSearch_btn.TabIndex = 17;
             this.vacSearch_btn.UseVisualStyleBackColor = false;
+            this.vacSearch_btn.Click += new System.EventHandler(this.vacSearch_btn_Click);
             // 
             // vacClrear_btn
             // 
@@ -293,6 +294,7 @@
             this.vacSearch_tb.Name = "vacSearch_tb";
             this.vacSearch_tb.Size = new System.Drawing.Size(204, 35);
             this.vacSearch_tb.TabIndex = 8;
+            this.vacSearch_tb.TextChanged += new System.EventHandler(this.vacSearch_tb_TextChanged);
             // 
             // vacancy_dgv
             // 
@@ -306,6 +308,7 @@
             this.vacancy_dgv.RowTemplate.Height = 25;
             this.vacancy_dgv.Size = new System.Drawing.Size(1062, 424);
             this.vacancy_dgv.TabIndex = 31;
+            this.vacancy_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vacancy_dgv_CellClick);
             // 
             // groupBox10
             // 
@@ -479,6 +482,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1508, 855);
             this.Controls.Add(this.response_btn);
             this.Controls.Add(this.menuStrip1);

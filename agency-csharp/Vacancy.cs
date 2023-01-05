@@ -169,5 +169,45 @@ namespace agency_csharp
 
             MessageBox.Show("Отклик на вакансию отправлен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void vacancy_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRow = e.RowIndex;
+
+            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = vacancy_dgv.Rows[selectedRow];
+
+                vacancyID_tb.Text = row.Cells[0].Value.ToString();
+                vacOrgName_tb.Text = row.Cells[2].Value.ToString();
+                vacName_tb.Text = row.Cells[3].Value.ToString();
+                vacNum_tb.Text = row.Cells[4].Value.ToString();
+                
+                adressId_tb.Text = row.Cells[1].Value.ToString();
+                adressRegion_tb.Text = row.Cells[5].Value.ToString();
+                adressCity_tb.Text = row.Cells[6].Value.ToString();
+                adressStreet_tb.Text = row.Cells[7].Value.ToString();
+                adressBuilding_tb.Text = row.Cells[8].Value.ToString();
+                adressApartment_tb.Text = row.Cells[9].Value.ToString();
+            }
+        }
+
+        private void vacSearch_tb_TextChanged(object sender, EventArgs e)
+        {
+            Search(
+                vacancy_dgv, 
+                $"select id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment from Vacancy, Organization, Adress inner join Organization O on Adress.id_pk_adress = O.id_fk_adress where concat(id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment) like '%{vacSearch_tb.Text}%'"
+            );
+
+        }
+
+        private void vacSearch_btn_Click(object sender, EventArgs e)
+        {
+            Search(
+                vacancy_dgv,
+                $"select id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment from Vacancy, Organization, Adress inner join Organization O on Adress.id_pk_adress = O.id_fk_adress where concat(id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment) like '%{vacSearch_tb.Text}%'"
+            );
+        }
     }
 }
