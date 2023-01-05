@@ -209,5 +209,11 @@ namespace agency_csharp
                 $"select id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment from Vacancy, Organization, Adress inner join Organization O on Adress.id_pk_adress = O.id_fk_adress where concat(id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment) like '%{vacSearch_tb.Text}%'"
             );
         }
+
+        private void Vacancy_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form login = new Login();
+            login.Show();
+        }
     }
 }

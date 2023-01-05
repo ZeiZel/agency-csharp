@@ -492,6 +492,7 @@
             this.Controls.Add(this.groupBox10);
             this.Name = "Vacancy";
             this.Text = "Vacancy";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Vacancy_FormClosed);
             this.Load += new System.EventHandler(this.Vacancy_Load);
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
