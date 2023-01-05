@@ -330,6 +330,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Register";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load);
             this.login_data_gb.ResumeLayout(false);
             this.login_data_gb.PerformLayout();
             this.personality_data_gb.ResumeLayout(false);

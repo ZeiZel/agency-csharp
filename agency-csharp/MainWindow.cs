@@ -160,7 +160,7 @@ namespace agency_csharp
         }
 
         // Этот метод будет проверить состояние клетки
-        private void Update()
+        private void UpdateEmp()
         {
             database.openConnection();
 
@@ -177,9 +177,33 @@ namespace agency_csharp
                 {
                     var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
 
-                    string query = $"delete from [dbo].[Users] where [id_pk_user] = {id}";
-                    SqlCommand command = new SqlCommand(query, database.getConnection());
-                    command.ExecuteNonQuery();
+                    database.openConnection();
+
+                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
+
+                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
+                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
+                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
+
+                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
+                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
+
+                    if (
+                            //commandRegDel.ExecuteNonQuery() == 0 && 
+                            //command.ExecuteNonQuery() == 0 && 
+                            commandEmpDel.ExecuteNonQuery() == 0 &&
+                            commandEmpDelRules.ExecuteNonQuery() == 0
+                        )
+                    {
+                        MessageBox.Show("Сотрудник удалён");
+                    }
+
+                    database.closeConnection();
                 }
 
                 if (rowState == RowState.Modified)
@@ -397,7 +421,7 @@ namespace agency_csharp
         private void save_btn_Click(object sender, EventArgs e)
         {
             // чтобы работало удаление, нужно в сохранение запихнуть обновление
-            Update();
+            UpdateEmp();
         }
 
         private void clientSave_Click(object sender, EventArgs e)
@@ -553,10 +577,20 @@ namespace agency_csharp
 
         private void passportEdit_btn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("При переходе на данную форму вы обязуетесь не разглашать паспортные данные пользователей.", "Внимание", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("При переходе на данную форму вы обязуетесь не разглашать паспортные данные пользователей.", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                Form documents = new Documents();
-                documents.Show();
+                if (
+                        clientName_tb.Text.Length > 0 && clientName_tb.Text.Length <= 50 &&
+                        clientSur_tb.Text.Length > 0 && clientSur_tb.Text.Length <= 50 &&
+                        clientPat_tb.Text.Length > 0 && clientPat_tb.Text.Length <= 50
+                    )
+                {
+                    Form documents = new Documents(clientName_tb.Text, clientSur_tb.Text, clientPat_tb.Text, clientID_tb.Text);
+                    documents.Show();
+                } else
+                {
+                    MessageBox.Show("Сначала выберите пользователя, у которого хотите отредактировать паспорт", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

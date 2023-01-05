@@ -116,37 +116,35 @@ namespace agency_csharp
 
                 // !!
                 string changeQuery = $"update Register SET r_isAdmin = '{isAdmin}', r_isEmployee = '{isEmployee}' where id_pk_register = {id}";
-                string queryAddEmployee = $"EXEC AddUserEmployee {idUser}";
+                string queryEmployee = $"select [id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee] from [dbo].[Register]";
+
+                if (Convert.ToBoolean(dataGridView1.Rows[i].Cells[4].Value))
+                {
+                    string queryStringCheck = $"select * from Employee where id_fk_user = {id}";
+
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    DataTable table = new DataTable();
+                    SqlCommand commandCheck = new SqlCommand(queryStringCheck, database.getConnection());
+
+                    adapter.SelectCommand = commandCheck;
+                    adapter.Fill(table);
+
+                    if (table.Rows.Count == 0)
+                    {
+                        queryEmployee = $"EXEC AddUserEmployee {idUser}";
+                    }
+                } else
+                {
+                    queryEmployee = $"delete from Employee where id_fk_user = {id}";
+                }
 
                 SqlCommand command = new SqlCommand(changeQuery, database.getConnection());
                 command.ExecuteNonQuery();
 
-                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
+                SqlCommand commandAddEmp = new SqlCommand(queryEmployee, database.getConnection());
                 commandAddEmp.ExecuteNonQuery();
             }
 
-            database.closeConnection();
-            RefreshDataGrid();
-        }
-
-        private void delete_btn_Click(object sender, EventArgs e)
-        {
-            database.openConnection();
-
-            var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
-            var id = Convert.ToInt32(dataGridView1.Rows[selectedRowIntex].Cells[0].Value);
-
-            var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
-            SqlCommand commandDel = new SqlCommand(deleteUserQuery, database.getConnection());
-
-            var deleteQuery = $"delete from Register where id_pk_register = {id};";
-            SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
-
-            if (commandDel.ExecuteNonQuery() == 0 && command.ExecuteNonQuery() == 0)
-            {
-                MessageBox.Show("Текст");
-            }
-            
             database.closeConnection();
             RefreshDataGrid();
         }

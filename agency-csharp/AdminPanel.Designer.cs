@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPanel));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.add_btn = new System.Windows.Forms.Button();
-            this.delete_btn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.refresh_btn = new System.Windows.Forms.Button();
             this.search_grid_btn = new System.Windows.Forms.Button();
@@ -61,30 +60,13 @@
             this.add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.add_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.add_btn.Location = new System.Drawing.Point(113, 436);
+            this.add_btn.Location = new System.Drawing.Point(247, 436);
             this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(174, 66);
+            this.add_btn.Size = new System.Drawing.Size(174, 53);
             this.add_btn.TabIndex = 19;
-            this.add_btn.Text = "Добавить";
+            this.add_btn.Text = "Сохранить";
             this.add_btn.UseVisualStyleBackColor = false;
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
-            // 
-            // delete_btn
-            // 
-            this.delete_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.delete_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delete_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.delete_btn.FlatAppearance.BorderSize = 0;
-            this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.delete_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.delete_btn.Location = new System.Drawing.Point(360, 436);
-            this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(174, 66);
-            this.delete_btn.TabIndex = 20;
-            this.delete_btn.Text = "Удалить";
-            this.delete_btn.UseVisualStyleBackColor = false;
-            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // groupBox2
             // 
@@ -163,7 +145,6 @@
             this.ClientSize = new System.Drawing.Size(634, 514);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.add_btn);
-            this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AdminPanel";
             this.Text = "Администрирование";
@@ -179,7 +160,6 @@
 
         private DataGridView dataGridView1;
         private Button add_btn;
-        private Button delete_btn;
         private GroupBox groupBox2;
         private Button refresh_btn;
         private Button search_grid_btn;
