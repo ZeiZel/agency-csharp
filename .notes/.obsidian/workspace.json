@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ccdd8c24e4c1494c",
+        "id": "c3b2afc4057883e5",
         "type": "tabs",
         "children": [
           {
-            "id": "66c0d14a1ba1d171",
+            "id": "fc29ff21272f8c7f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Курсовой проект.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Курсовой проект.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Курсовой проект.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Курсовой проект.md"
+                "file": "README.md"
               }
             }
           }
@@ -146,12 +146,16 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "66c0d14a1ba1d171",
+  "active": "fc29ff21272f8c7f",
   "lastOpenFiles": [
-    "assets/About.png",
-    "Курсовой проект.md",
-    "AdminPanel.png",
+    "assets/login.png",
     "README.md",
+    "assets/register.png",
+    "assets/findVacancy.png",
+    "Курсовой проект.md",
+    "'/assets/About.png'.md",
+    "assets/About.png",
+    "assets/AdminPanel.png",
     "README 1.md"
   ]
 }
