@@ -50,6 +50,9 @@ namespace agency_csharp
             save_btn.Enabled = _user.IsAdmin;
 
             groupBox1.Visible = _user.IsAdmin;
+
+            contractChange_btn.Visible = _user.IsAdmin;
+            contractChange_pb.Visible = _user.IsAdmin;
         }
 
         // Определяет уровень доступа для работника
@@ -592,6 +595,11 @@ namespace agency_csharp
                     MessageBox.Show("Сначала выберите пользователя, у которого хотите отредактировать паспорт", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void contractAdd_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -89,6 +89,7 @@
             this.clientPat_tb = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.passportEdit_btn = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -175,7 +176,64 @@
             this.vacSave_tb = new System.Windows.Forms.Button();
             this.vacChange_tb = new System.Windows.Forms.Button();
             this.contract_tab = new System.Windows.Forms.TabPage();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.contractRefresh_btn = new System.Windows.Forms.Button();
+            this.contractSearch_btn = new System.Windows.Forms.Button();
+            this.contractClear_btn = new System.Windows.Forms.Button();
+            this.contractSearch_tb = new System.Windows.Forms.TextBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.contractChange_pb = new System.Windows.Forms.PictureBox();
+            this.contractAdd_btn = new System.Windows.Forms.Button();
+            this.contractSave_btn = new System.Windows.Forms.Button();
+            this.contractChange_btn = new System.Windows.Forms.Button();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.contractAgentSurame_tb = new System.Windows.Forms.TextBox();
+            this.contractAgentName_tb = new System.Windows.Forms.TextBox();
+            this.contractClientSurname_tb = new System.Windows.Forms.TextBox();
+            this.contractClientName_tb = new System.Windows.Forms.TextBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.contractId_tb = new System.Windows.Forms.TextBox();
+            this.contractConditions_tb = new System.Windows.Forms.RichTextBox();
+            this.contractDate_tb = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.contract_dgv = new System.Windows.Forms.DataGridView();
             this.responses_tab = new System.Windows.Forms.TabPage();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.responseAdd_btn = new System.Windows.Forms.Button();
+            this.responseDel_btn = new System.Windows.Forms.Button();
+            this.responseSave_btn = new System.Windows.Forms.Button();
+            this.responseChange_btn = new System.Windows.Forms.Button();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.responseRefresh_brn = new System.Windows.Forms.Button();
+            this.responseSearch_btn = new System.Windows.Forms.Button();
+            this.responseClear_btn = new System.Windows.Forms.Button();
+            this.responseSearch_tb = new System.Windows.Forms.TextBox();
+            this.response_dgv = new System.Windows.Forms.DataGridView();
+            this.responseData_gb = new System.Windows.Forms.GroupBox();
+            this.responseClientNum_tb = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.responseClientName_tb = new System.Windows.Forms.TextBox();
+            this.responseOrg_tb = new System.Windows.Forms.TextBox();
+            this.responseClientSurname_tb = new System.Windows.Forms.TextBox();
+            this.responseVac_tb = new System.Windows.Forms.TextBox();
+            this.responseClientPat_tb = new System.Windows.Forms.TextBox();
+            this.responseId_tb = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчётностьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -187,7 +245,6 @@
             this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.passportEdit_btn = new System.Windows.Forms.Button();
             this.info_tabPage.SuspendLayout();
             this.employess_tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -228,6 +285,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            this.contract_tab.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractChange_pb)).BeginInit();
+            this.groupBox16.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contract_dgv)).BeginInit();
+            this.responses_tab.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            this.groupBox21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.response_dgv)).BeginInit();
+            this.responseData_gb.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -1010,6 +1085,23 @@
             this.label11.Size = new System.Drawing.Size(91, 22);
             this.label11.TabIndex = 9;
             this.label11.Text = "Фамилия";
+            // 
+            // passportEdit_btn
+            // 
+            this.passportEdit_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.passportEdit_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passportEdit_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.passportEdit_btn.FlatAppearance.BorderSize = 0;
+            this.passportEdit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passportEdit_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportEdit_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.passportEdit_btn.Location = new System.Drawing.Point(353, 469);
+            this.passportEdit_btn.Name = "passportEdit_btn";
+            this.passportEdit_btn.Size = new System.Drawing.Size(174, 57);
+            this.passportEdit_btn.TabIndex = 18;
+            this.passportEdit_btn.Text = "Редактировать паспорт";
+            this.passportEdit_btn.UseVisualStyleBackColor = false;
+            this.passportEdit_btn.Click += new System.EventHandler(this.passportEdit_btn_Click);
             // 
             // groupBox5
             // 
@@ -2118,6 +2210,11 @@
             // 
             // contract_tab
             // 
+            this.contract_tab.Controls.Add(this.groupBox17);
+            this.contract_tab.Controls.Add(this.groupBox18);
+            this.contract_tab.Controls.Add(this.groupBox16);
+            this.contract_tab.Controls.Add(this.groupBox15);
+            this.contract_tab.Controls.Add(this.contract_dgv);
             this.contract_tab.Location = new System.Drawing.Point(4, 24);
             this.contract_tab.Name = "contract_tab";
             this.contract_tab.Size = new System.Drawing.Size(1417, 689);
@@ -2125,14 +2222,746 @@
             this.contract_tab.Text = "Контракты";
             this.contract_tab.UseVisualStyleBackColor = true;
             // 
+            // groupBox17
+            // 
+            this.groupBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox17.Controls.Add(this.contractRefresh_btn);
+            this.groupBox17.Controls.Add(this.contractSearch_btn);
+            this.groupBox17.Controls.Add(this.contractClear_btn);
+            this.groupBox17.Controls.Add(this.contractSearch_tb);
+            this.groupBox17.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox17.Location = new System.Drawing.Point(958, 472);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(437, 100);
+            this.groupBox17.TabIndex = 30;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Управление";
+            // 
+            // contractRefresh_btn
+            // 
+            this.contractRefresh_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.contractRefresh_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contractRefresh_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.contractRefresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contractRefresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("contractRefresh_btn.Image")));
+            this.contractRefresh_btn.Location = new System.Drawing.Point(77, 33);
+            this.contractRefresh_btn.Name = "contractRefresh_btn";
+            this.contractRefresh_btn.Size = new System.Drawing.Size(55, 52);
+            this.contractRefresh_btn.TabIndex = 17;
+            this.contractRefresh_btn.UseVisualStyleBackColor = false;
+            // 
+            // contractSearch_btn
+            // 
+            this.contractSearch_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.contractSearch_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contractSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.contractSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contractSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("contractSearch_btn.Image")));
+            this.contractSearch_btn.Location = new System.Drawing.Point(138, 33);
+            this.contractSearch_btn.Name = "contractSearch_btn";
+            this.contractSearch_btn.Size = new System.Drawing.Size(48, 52);
+            this.contractSearch_btn.TabIndex = 17;
+            this.contractSearch_btn.UseVisualStyleBackColor = false;
+            // 
+            // contractClear_btn
+            // 
+            this.contractClear_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.contractClear_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contractClear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.contractClear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contractClear_btn.Image = ((System.Drawing.Image)(resources.GetObject("contractClear_btn.Image")));
+            this.contractClear_btn.Location = new System.Drawing.Point(23, 33);
+            this.contractClear_btn.Name = "contractClear_btn";
+            this.contractClear_btn.Size = new System.Drawing.Size(48, 52);
+            this.contractClear_btn.TabIndex = 17;
+            this.contractClear_btn.UseVisualStyleBackColor = false;
+            // 
+            // contractSearch_tb
+            // 
+            this.contractSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.contractSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contractSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractSearch_tb.Location = new System.Drawing.Point(192, 39);
+            this.contractSearch_tb.Multiline = true;
+            this.contractSearch_tb.Name = "contractSearch_tb";
+            this.contractSearch_tb.Size = new System.Drawing.Size(212, 35);
+            this.contractSearch_tb.TabIndex = 8;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox18.Controls.Add(this.pictureBox17);
+            this.groupBox18.Controls.Add(this.pictureBox18);
+            this.groupBox18.Controls.Add(this.contractChange_pb);
+            this.groupBox18.Controls.Add(this.contractAdd_btn);
+            this.groupBox18.Controls.Add(this.contractSave_btn);
+            this.groupBox18.Controls.Add(this.contractChange_btn);
+            this.groupBox18.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox18.Location = new System.Drawing.Point(615, 472);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(296, 186);
+            this.groupBox18.TabIndex = 29;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Панель управления";
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Location = new System.Drawing.Point(34, 84);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 19;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
+            this.pictureBox18.Location = new System.Drawing.Point(34, 41);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 19;
+            this.pictureBox18.TabStop = false;
+            // 
+            // contractChange_pb
+            // 
+            this.contractChange_pb.Image = ((System.Drawing.Image)(resources.GetObject("contractChange_pb.Image")));
+            this.contractChange_pb.Location = new System.Drawing.Point(34, 127);
+            this.contractChange_pb.Name = "contractChange_pb";
+            this.contractChange_pb.Size = new System.Drawing.Size(43, 37);
+            this.contractChange_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.contractChange_pb.TabIndex = 19;
+            this.contractChange_pb.TabStop = false;
+            // 
+            // contractAdd_btn
+            // 
+            this.contractAdd_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.contractAdd_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contractAdd_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.contractAdd_btn.FlatAppearance.BorderSize = 0;
+            this.contractAdd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contractAdd_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractAdd_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.contractAdd_btn.Location = new System.Drawing.Point(83, 41);
+            this.contractAdd_btn.Name = "contractAdd_btn";
+            this.contractAdd_btn.Size = new System.Drawing.Size(174, 37);
+            this.contractAdd_btn.TabIndex = 18;
+            this.contractAdd_btn.Text = "Добавить";
+            this.contractAdd_btn.UseVisualStyleBackColor = false;
+            this.contractAdd_btn.Click += new System.EventHandler(this.contractAdd_btn_Click);
+            // 
+            // contractSave_btn
+            // 
+            this.contractSave_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.contractSave_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contractSave_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.contractSave_btn.FlatAppearance.BorderSize = 0;
+            this.contractSave_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contractSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractSave_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.contractSave_btn.Location = new System.Drawing.Point(83, 84);
+            this.contractSave_btn.Name = "contractSave_btn";
+            this.contractSave_btn.Size = new System.Drawing.Size(174, 37);
+            this.contractSave_btn.TabIndex = 18;
+            this.contractSave_btn.Text = "Сохранить";
+            this.contractSave_btn.UseVisualStyleBackColor = false;
+            // 
+            // contractChange_btn
+            // 
+            this.contractChange_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.contractChange_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.contractChange_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contractChange_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.contractChange_btn.FlatAppearance.BorderSize = 0;
+            this.contractChange_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contractChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractChange_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.contractChange_btn.Location = new System.Drawing.Point(83, 127);
+            this.contractChange_btn.Name = "contractChange_btn";
+            this.contractChange_btn.Size = new System.Drawing.Size(174, 37);
+            this.contractChange_btn.TabIndex = 18;
+            this.contractChange_btn.Text = "Изменить";
+            this.contractChange_btn.UseVisualStyleBackColor = false;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox16.Controls.Add(this.label41);
+            this.groupBox16.Controls.Add(this.label42);
+            this.groupBox16.Controls.Add(this.contractAgentSurame_tb);
+            this.groupBox16.Controls.Add(this.contractAgentName_tb);
+            this.groupBox16.Controls.Add(this.contractClientSurname_tb);
+            this.groupBox16.Controls.Add(this.contractClientName_tb);
+            this.groupBox16.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox16.Location = new System.Drawing.Point(20, 472);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(532, 151);
+            this.groupBox16.TabIndex = 28;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Заключили";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label41.Location = new System.Drawing.Point(34, 37);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(65, 22);
+            this.label41.TabIndex = 10;
+            this.label41.Text = "Агент:";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label42.Location = new System.Drawing.Point(34, 100);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(78, 22);
+            this.label42.TabIndex = 10;
+            this.label42.Text = "Клиент:";
+            // 
+            // contractAgentSurame_tb
+            // 
+            this.contractAgentSurame_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.contractAgentSurame_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contractAgentSurame_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractAgentSurame_tb.Location = new System.Drawing.Point(317, 31);
+            this.contractAgentSurame_tb.Multiline = true;
+            this.contractAgentSurame_tb.Name = "contractAgentSurame_tb";
+            this.contractAgentSurame_tb.Size = new System.Drawing.Size(176, 35);
+            this.contractAgentSurame_tb.TabIndex = 8;
+            // 
+            // contractAgentName_tb
+            // 
+            this.contractAgentName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.contractAgentName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contractAgentName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractAgentName_tb.Location = new System.Drawing.Point(117, 31);
+            this.contractAgentName_tb.Multiline = true;
+            this.contractAgentName_tb.Name = "contractAgentName_tb";
+            this.contractAgentName_tb.Size = new System.Drawing.Size(182, 35);
+            this.contractAgentName_tb.TabIndex = 8;
+            // 
+            // contractClientSurname_tb
+            // 
+            this.contractClientSurname_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.contractClientSurname_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contractClientSurname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractClientSurname_tb.Location = new System.Drawing.Point(317, 94);
+            this.contractClientSurname_tb.Multiline = true;
+            this.contractClientSurname_tb.Name = "contractClientSurname_tb";
+            this.contractClientSurname_tb.Size = new System.Drawing.Size(176, 35);
+            this.contractClientSurname_tb.TabIndex = 8;
+            // 
+            // contractClientName_tb
+            // 
+            this.contractClientName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.contractClientName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contractClientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractClientName_tb.Location = new System.Drawing.Point(117, 94);
+            this.contractClientName_tb.Multiline = true;
+            this.contractClientName_tb.Name = "contractClientName_tb";
+            this.contractClientName_tb.Size = new System.Drawing.Size(182, 35);
+            this.contractClientName_tb.TabIndex = 8;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox15.Controls.Add(this.label37);
+            this.groupBox15.Controls.Add(this.label38);
+            this.groupBox15.Controls.Add(this.contractId_tb);
+            this.groupBox15.Controls.Add(this.contractConditions_tb);
+            this.groupBox15.Controls.Add(this.contractDate_tb);
+            this.groupBox15.Controls.Add(this.label40);
+            this.groupBox15.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox15.Location = new System.Drawing.Point(20, 16);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(532, 445);
+            this.groupBox15.TabIndex = 28;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Персональные данные";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label37.Location = new System.Drawing.Point(34, 31);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(150, 22);
+            this.label37.TabIndex = 10;
+            this.label37.Text = "Идентификатор";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label38.Location = new System.Drawing.Point(34, 94);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(163, 22);
+            this.label38.TabIndex = 10;
+            this.label38.Text = "Дата заключения";
+            // 
+            // contractId_tb
+            // 
+            this.contractId_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.contractId_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contractId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractId_tb.Location = new System.Drawing.Point(34, 56);
+            this.contractId_tb.Multiline = true;
+            this.contractId_tb.Name = "contractId_tb";
+            this.contractId_tb.Size = new System.Drawing.Size(150, 35);
+            this.contractId_tb.TabIndex = 8;
+            // 
+            // contractConditions_tb
+            // 
+            this.contractConditions_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.contractConditions_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contractConditions_tb.Location = new System.Drawing.Point(34, 182);
+            this.contractConditions_tb.Name = "contractConditions_tb";
+            this.contractConditions_tb.Size = new System.Drawing.Size(459, 242);
+            this.contractConditions_tb.TabIndex = 0;
+            this.contractConditions_tb.Text = "";
+            // 
+            // contractDate_tb
+            // 
+            this.contractDate_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.contractDate_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contractDate_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractDate_tb.Location = new System.Drawing.Point(34, 119);
+            this.contractDate_tb.Multiline = true;
+            this.contractDate_tb.Name = "contractDate_tb";
+            this.contractDate_tb.Size = new System.Drawing.Size(459, 35);
+            this.contractDate_tb.TabIndex = 8;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label40.Location = new System.Drawing.Point(34, 157);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(82, 22);
+            this.label40.TabIndex = 9;
+            this.label40.Text = "Условия";
+            // 
+            // contract_dgv
+            // 
+            this.contract_dgv.AllowUserToAddRows = false;
+            this.contract_dgv.AllowUserToDeleteRows = false;
+            this.contract_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.contract_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.contract_dgv.Location = new System.Drawing.Point(615, 16);
+            this.contract_dgv.Name = "contract_dgv";
+            this.contract_dgv.ReadOnly = true;
+            this.contract_dgv.RowTemplate.Height = 25;
+            this.contract_dgv.Size = new System.Drawing.Size(780, 445);
+            this.contract_dgv.TabIndex = 27;
+            // 
             // responses_tab
             // 
+            this.responses_tab.Controls.Add(this.groupBox22);
+            this.responses_tab.Controls.Add(this.groupBox21);
+            this.responses_tab.Controls.Add(this.response_dgv);
+            this.responses_tab.Controls.Add(this.responseData_gb);
             this.responses_tab.Location = new System.Drawing.Point(4, 24);
             this.responses_tab.Name = "responses_tab";
             this.responses_tab.Size = new System.Drawing.Size(1417, 689);
             this.responses_tab.TabIndex = 5;
             this.responses_tab.Text = "Отклики";
             this.responses_tab.UseVisualStyleBackColor = true;
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox22.Controls.Add(this.pictureBox19);
+            this.groupBox22.Controls.Add(this.pictureBox21);
+            this.groupBox22.Controls.Add(this.pictureBox22);
+            this.groupBox22.Controls.Add(this.pictureBox23);
+            this.groupBox22.Controls.Add(this.responseAdd_btn);
+            this.groupBox22.Controls.Add(this.responseDel_btn);
+            this.groupBox22.Controls.Add(this.responseSave_btn);
+            this.groupBox22.Controls.Add(this.responseChange_btn);
+            this.groupBox22.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox22.Location = new System.Drawing.Point(386, 446);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(530, 152);
+            this.groupBox22.TabIndex = 32;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Панель управления";
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
+            this.pictureBox19.Location = new System.Drawing.Point(276, 82);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox19.TabIndex = 19;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
+            this.pictureBox21.Location = new System.Drawing.Point(34, 41);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox21.TabIndex = 19;
+            this.pictureBox21.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
+            this.pictureBox22.Location = new System.Drawing.Point(34, 84);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox22.TabIndex = 19;
+            this.pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
+            this.pictureBox23.Location = new System.Drawing.Point(276, 39);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox23.TabIndex = 19;
+            this.pictureBox23.TabStop = false;
+            // 
+            // responseAdd_btn
+            // 
+            this.responseAdd_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.responseAdd_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.responseAdd_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.responseAdd_btn.FlatAppearance.BorderSize = 0;
+            this.responseAdd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.responseAdd_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseAdd_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.responseAdd_btn.Location = new System.Drawing.Point(83, 41);
+            this.responseAdd_btn.Name = "responseAdd_btn";
+            this.responseAdd_btn.Size = new System.Drawing.Size(174, 37);
+            this.responseAdd_btn.TabIndex = 18;
+            this.responseAdd_btn.Text = "Добавить";
+            this.responseAdd_btn.UseVisualStyleBackColor = false;
+            // 
+            // responseDel_btn
+            // 
+            this.responseDel_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.responseDel_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.responseDel_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.responseDel_btn.FlatAppearance.BorderSize = 0;
+            this.responseDel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.responseDel_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseDel_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.responseDel_btn.Location = new System.Drawing.Point(83, 84);
+            this.responseDel_btn.Name = "responseDel_btn";
+            this.responseDel_btn.Size = new System.Drawing.Size(174, 37);
+            this.responseDel_btn.TabIndex = 18;
+            this.responseDel_btn.Text = "Удалить";
+            this.responseDel_btn.UseVisualStyleBackColor = false;
+            // 
+            // responseSave_btn
+            // 
+            this.responseSave_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.responseSave_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.responseSave_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.responseSave_btn.FlatAppearance.BorderSize = 0;
+            this.responseSave_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.responseSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseSave_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.responseSave_btn.Location = new System.Drawing.Point(325, 82);
+            this.responseSave_btn.Name = "responseSave_btn";
+            this.responseSave_btn.Size = new System.Drawing.Size(174, 37);
+            this.responseSave_btn.TabIndex = 18;
+            this.responseSave_btn.Text = "Сохранить";
+            this.responseSave_btn.UseVisualStyleBackColor = false;
+            // 
+            // responseChange_btn
+            // 
+            this.responseChange_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.responseChange_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.responseChange_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.responseChange_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.responseChange_btn.FlatAppearance.BorderSize = 0;
+            this.responseChange_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.responseChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseChange_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.responseChange_btn.Location = new System.Drawing.Point(325, 39);
+            this.responseChange_btn.Name = "responseChange_btn";
+            this.responseChange_btn.Size = new System.Drawing.Size(174, 37);
+            this.responseChange_btn.TabIndex = 18;
+            this.responseChange_btn.Text = "Изменить";
+            this.responseChange_btn.UseVisualStyleBackColor = false;
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox21.Controls.Add(this.responseRefresh_brn);
+            this.groupBox21.Controls.Add(this.responseSearch_btn);
+            this.groupBox21.Controls.Add(this.responseClear_btn);
+            this.groupBox21.Controls.Add(this.responseSearch_tb);
+            this.groupBox21.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox21.Location = new System.Drawing.Point(944, 446);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(420, 100);
+            this.groupBox21.TabIndex = 31;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Управление";
+            // 
+            // responseRefresh_brn
+            // 
+            this.responseRefresh_brn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.responseRefresh_brn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.responseRefresh_brn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.responseRefresh_brn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.responseRefresh_brn.Image = ((System.Drawing.Image)(resources.GetObject("responseRefresh_brn.Image")));
+            this.responseRefresh_brn.Location = new System.Drawing.Point(77, 33);
+            this.responseRefresh_brn.Name = "responseRefresh_brn";
+            this.responseRefresh_brn.Size = new System.Drawing.Size(55, 52);
+            this.responseRefresh_brn.TabIndex = 17;
+            this.responseRefresh_brn.UseVisualStyleBackColor = false;
+            // 
+            // responseSearch_btn
+            // 
+            this.responseSearch_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.responseSearch_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.responseSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.responseSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.responseSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("responseSearch_btn.Image")));
+            this.responseSearch_btn.Location = new System.Drawing.Point(138, 33);
+            this.responseSearch_btn.Name = "responseSearch_btn";
+            this.responseSearch_btn.Size = new System.Drawing.Size(48, 52);
+            this.responseSearch_btn.TabIndex = 17;
+            this.responseSearch_btn.UseVisualStyleBackColor = false;
+            // 
+            // responseClear_btn
+            // 
+            this.responseClear_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.responseClear_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.responseClear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.responseClear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.responseClear_btn.Image = ((System.Drawing.Image)(resources.GetObject("responseClear_btn.Image")));
+            this.responseClear_btn.Location = new System.Drawing.Point(23, 33);
+            this.responseClear_btn.Name = "responseClear_btn";
+            this.responseClear_btn.Size = new System.Drawing.Size(48, 52);
+            this.responseClear_btn.TabIndex = 17;
+            this.responseClear_btn.UseVisualStyleBackColor = false;
+            // 
+            // responseSearch_tb
+            // 
+            this.responseSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.responseSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.responseSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseSearch_tb.Location = new System.Drawing.Point(192, 39);
+            this.responseSearch_tb.Multiline = true;
+            this.responseSearch_tb.Name = "responseSearch_tb";
+            this.responseSearch_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseSearch_tb.TabIndex = 8;
+            // 
+            // response_dgv
+            // 
+            this.response_dgv.AllowUserToAddRows = false;
+            this.response_dgv.AllowUserToDeleteRows = false;
+            this.response_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.response_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.response_dgv.Location = new System.Drawing.Point(386, 32);
+            this.response_dgv.Name = "response_dgv";
+            this.response_dgv.ReadOnly = true;
+            this.response_dgv.RowTemplate.Height = 25;
+            this.response_dgv.Size = new System.Drawing.Size(978, 387);
+            this.response_dgv.TabIndex = 27;
+            // 
+            // responseData_gb
+            // 
+            this.responseData_gb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.responseData_gb.Controls.Add(this.responseClientNum_tb);
+            this.responseData_gb.Controls.Add(this.label43);
+            this.responseData_gb.Controls.Add(this.label47);
+            this.responseData_gb.Controls.Add(this.label46);
+            this.responseData_gb.Controls.Add(this.label44);
+            this.responseData_gb.Controls.Add(this.responseClientName_tb);
+            this.responseData_gb.Controls.Add(this.responseOrg_tb);
+            this.responseData_gb.Controls.Add(this.responseClientSurname_tb);
+            this.responseData_gb.Controls.Add(this.responseVac_tb);
+            this.responseData_gb.Controls.Add(this.responseClientPat_tb);
+            this.responseData_gb.Controls.Add(this.responseId_tb);
+            this.responseData_gb.Controls.Add(this.label48);
+            this.responseData_gb.Controls.Add(this.label45);
+            this.responseData_gb.Controls.Add(this.label49);
+            this.responseData_gb.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.responseData_gb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.responseData_gb.Location = new System.Drawing.Point(24, 32);
+            this.responseData_gb.Name = "responseData_gb";
+            this.responseData_gb.Size = new System.Drawing.Size(296, 499);
+            this.responseData_gb.TabIndex = 26;
+            this.responseData_gb.TabStop = false;
+            this.responseData_gb.Text = "Отклик";
+            // 
+            // responseClientNum_tb
+            // 
+            this.responseClientNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.responseClientNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.responseClientNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseClientNum_tb.Location = new System.Drawing.Point(34, 439);
+            this.responseClientNum_tb.Multiline = true;
+            this.responseClientNum_tb.Name = "responseClientNum_tb";
+            this.responseClientNum_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseClientNum_tb.TabIndex = 8;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label43.Location = new System.Drawing.Point(34, 94);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(125, 22);
+            this.label43.TabIndex = 10;
+            this.label43.Text = "Организация";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label47.Location = new System.Drawing.Point(34, 414);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(177, 22);
+            this.label47.TabIndex = 9;
+            this.label47.Text = "Контактный номер";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label46.Location = new System.Drawing.Point(34, 221);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(46, 22);
+            this.label46.TabIndex = 10;
+            this.label46.Text = "Имя";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label44.Location = new System.Drawing.Point(34, 31);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(150, 22);
+            this.label44.TabIndex = 10;
+            this.label44.Text = "Идентификатор";
+            // 
+            // responseClientName_tb
+            // 
+            this.responseClientName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.responseClientName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.responseClientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseClientName_tb.Location = new System.Drawing.Point(34, 246);
+            this.responseClientName_tb.Multiline = true;
+            this.responseClientName_tb.Name = "responseClientName_tb";
+            this.responseClientName_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseClientName_tb.TabIndex = 8;
+            // 
+            // responseOrg_tb
+            // 
+            this.responseOrg_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.responseOrg_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.responseOrg_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseOrg_tb.Location = new System.Drawing.Point(34, 119);
+            this.responseOrg_tb.Multiline = true;
+            this.responseOrg_tb.Name = "responseOrg_tb";
+            this.responseOrg_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseOrg_tb.TabIndex = 8;
+            // 
+            // responseClientSurname_tb
+            // 
+            this.responseClientSurname_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.responseClientSurname_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.responseClientSurname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseClientSurname_tb.Location = new System.Drawing.Point(34, 309);
+            this.responseClientSurname_tb.Multiline = true;
+            this.responseClientSurname_tb.Name = "responseClientSurname_tb";
+            this.responseClientSurname_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseClientSurname_tb.TabIndex = 8;
+            // 
+            // responseVac_tb
+            // 
+            this.responseVac_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.responseVac_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.responseVac_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseVac_tb.Location = new System.Drawing.Point(34, 182);
+            this.responseVac_tb.Multiline = true;
+            this.responseVac_tb.Name = "responseVac_tb";
+            this.responseVac_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseVac_tb.TabIndex = 8;
+            // 
+            // responseClientPat_tb
+            // 
+            this.responseClientPat_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.responseClientPat_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.responseClientPat_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseClientPat_tb.Location = new System.Drawing.Point(34, 373);
+            this.responseClientPat_tb.Multiline = true;
+            this.responseClientPat_tb.Name = "responseClientPat_tb";
+            this.responseClientPat_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseClientPat_tb.TabIndex = 8;
+            // 
+            // responseId_tb
+            // 
+            this.responseId_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.responseId_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.responseId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseId_tb.Location = new System.Drawing.Point(34, 56);
+            this.responseId_tb.Multiline = true;
+            this.responseId_tb.Name = "responseId_tb";
+            this.responseId_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseId_tb.TabIndex = 8;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label48.Location = new System.Drawing.Point(34, 348);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(90, 22);
+            this.label48.TabIndex = 9;
+            this.label48.Text = "Отчество";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label45.Location = new System.Drawing.Point(34, 157);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(108, 22);
+            this.label45.TabIndex = 9;
+            this.label45.Text = "Должность";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label49.Location = new System.Drawing.Point(34, 284);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(91, 22);
+            this.label49.TabIndex = 9;
+            this.label49.Text = "Фамилия";
             // 
             // menuStrip1
             // 
@@ -2223,23 +3052,6 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
-            // passportEdit_btn
-            // 
-            this.passportEdit_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.passportEdit_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.passportEdit_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.passportEdit_btn.FlatAppearance.BorderSize = 0;
-            this.passportEdit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.passportEdit_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.passportEdit_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.passportEdit_btn.Location = new System.Drawing.Point(353, 469);
-            this.passportEdit_btn.Name = "passportEdit_btn";
-            this.passportEdit_btn.Size = new System.Drawing.Size(174, 57);
-            this.passportEdit_btn.TabIndex = 18;
-            this.passportEdit_btn.Text = "Редактировать паспорт";
-            this.passportEdit_btn.UseVisualStyleBackColor = false;
-            this.passportEdit_btn.Click += new System.EventHandler(this.passportEdit_btn_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2305,6 +3117,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            this.contract_tab.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractChange_pb)).EndInit();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contract_dgv)).EndInit();
+            this.responses_tab.ResumeLayout(false);
+            this.groupBox22.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.response_dgv)).EndInit();
+            this.responseData_gb.ResumeLayout(false);
+            this.responseData_gb.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -2476,5 +3311,62 @@
         private Button Register;
         private TabPage responses_tab;
         private Button passportEdit_btn;
+        private GroupBox groupBox16;
+        private Label label41;
+        private Label label42;
+        private TextBox contractAgentSurame_tb;
+        private TextBox contractAgentName_tb;
+        private TextBox contractClientSurname_tb;
+        private TextBox contractClientName_tb;
+        private GroupBox groupBox15;
+        private Label label37;
+        private Label label38;
+        private TextBox contractId_tb;
+        private RichTextBox contractConditions_tb;
+        private TextBox contractDate_tb;
+        private Label label40;
+        private DataGridView contract_dgv;
+        private GroupBox groupBox17;
+        private Button contractRefresh_btn;
+        private Button contractSearch_btn;
+        private Button contractClear_btn;
+        private TextBox contractSearch_tb;
+        private GroupBox groupBox18;
+        private PictureBox pictureBox17;
+        private PictureBox pictureBox18;
+        private PictureBox contractChange_pb;
+        private Button contractAdd_btn;
+        private Button contractSave_btn;
+        private Button contractChange_btn;
+        private GroupBox groupBox21;
+        private Button responseRefresh_brn;
+        private Button responseSearch_btn;
+        private Button responseClear_btn;
+        private TextBox responseSearch_tb;
+        private TextBox responseClientNum_tb;
+        private Label label44;
+        private Label label46;
+        private TextBox responseId_tb;
+        private TextBox responseClientName_tb;
+        private Label label47;
+        private TextBox responseClientSurname_tb;
+        private TextBox responseClientPat_tb;
+        private Label label48;
+        private Label label49;
+        private DataGridView response_dgv;
+        private GroupBox responseData_gb;
+        private Label label43;
+        private TextBox responseOrg_tb;
+        private TextBox responseVac_tb;
+        private Label label45;
+        private GroupBox groupBox22;
+        private PictureBox pictureBox19;
+        private PictureBox pictureBox21;
+        private PictureBox pictureBox22;
+        private PictureBox pictureBox23;
+        private Button responseAdd_btn;
+        private Button responseDel_btn;
+        private Button responseSave_btn;
+        private Button responseChange_btn;
     }
 }
