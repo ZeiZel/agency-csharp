@@ -2804,7 +2804,7 @@
             this.responseData_gb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.responseData_gb.Location = new System.Drawing.Point(24, 32);
             this.responseData_gb.Name = "responseData_gb";
-            this.responseData_gb.Size = new System.Drawing.Size(296, 499);
+            this.responseData_gb.Size = new System.Drawing.Size(296, 566);
             this.responseData_gb.TabIndex = 26;
             this.responseData_gb.TabStop = false;
             this.responseData_gb.Text = "Отклик";
@@ -2814,7 +2814,7 @@
             this.responseClientNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseClientNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseClientNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseClientNum_tb.Location = new System.Drawing.Point(34, 439);
+            this.responseClientNum_tb.Location = new System.Drawing.Point(34, 499);
             this.responseClientNum_tb.Multiline = true;
             this.responseClientNum_tb.Name = "responseClientNum_tb";
             this.responseClientNum_tb.Size = new System.Drawing.Size(212, 35);
@@ -2825,7 +2825,7 @@
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label43.Location = new System.Drawing.Point(34, 94);
+            this.label43.Location = new System.Drawing.Point(34, 104);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(125, 22);
             this.label43.TabIndex = 10;
@@ -2836,7 +2836,7 @@
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label47.Location = new System.Drawing.Point(34, 414);
+            this.label47.Location = new System.Drawing.Point(34, 469);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(177, 22);
             this.label47.TabIndex = 9;
@@ -2847,7 +2847,7 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label46.Location = new System.Drawing.Point(34, 221);
+            this.label46.Location = new System.Drawing.Point(34, 250);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(46, 22);
             this.label46.TabIndex = 10;
@@ -2869,7 +2869,7 @@
             this.responseClientName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseClientName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseClientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseClientName_tb.Location = new System.Drawing.Point(34, 246);
+            this.responseClientName_tb.Location = new System.Drawing.Point(34, 280);
             this.responseClientName_tb.Multiline = true;
             this.responseClientName_tb.Name = "responseClientName_tb";
             this.responseClientName_tb.Size = new System.Drawing.Size(212, 35);
@@ -2880,7 +2880,7 @@
             this.responseOrg_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseOrg_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseOrg_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseOrg_tb.Location = new System.Drawing.Point(34, 119);
+            this.responseOrg_tb.Location = new System.Drawing.Point(34, 134);
             this.responseOrg_tb.Multiline = true;
             this.responseOrg_tb.Name = "responseOrg_tb";
             this.responseOrg_tb.Size = new System.Drawing.Size(212, 35);
@@ -2891,7 +2891,7 @@
             this.responseClientSurname_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseClientSurname_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseClientSurname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseClientSurname_tb.Location = new System.Drawing.Point(34, 309);
+            this.responseClientSurname_tb.Location = new System.Drawing.Point(34, 353);
             this.responseClientSurname_tb.Multiline = true;
             this.responseClientSurname_tb.Name = "responseClientSurname_tb";
             this.responseClientSurname_tb.Size = new System.Drawing.Size(212, 35);
@@ -2902,7 +2902,7 @@
             this.responseVac_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseVac_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseVac_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseVac_tb.Location = new System.Drawing.Point(34, 182);
+            this.responseVac_tb.Location = new System.Drawing.Point(34, 207);
             this.responseVac_tb.Multiline = true;
             this.responseVac_tb.Name = "responseVac_tb";
             this.responseVac_tb.Size = new System.Drawing.Size(212, 35);
@@ -2913,7 +2913,7 @@
             this.responseClientPat_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseClientPat_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseClientPat_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseClientPat_tb.Location = new System.Drawing.Point(34, 373);
+            this.responseClientPat_tb.Location = new System.Drawing.Point(34, 426);
             this.responseClientPat_tb.Multiline = true;
             this.responseClientPat_tb.Name = "responseClientPat_tb";
             this.responseClientPat_tb.Size = new System.Drawing.Size(212, 35);
@@ -2924,7 +2924,7 @@
             this.responseId_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseId_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseId_tb.Location = new System.Drawing.Point(34, 56);
+            this.responseId_tb.Location = new System.Drawing.Point(34, 61);
             this.responseId_tb.Multiline = true;
             this.responseId_tb.Name = "responseId_tb";
             this.responseId_tb.Size = new System.Drawing.Size(212, 35);
@@ -2935,7 +2935,7 @@
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label48.Location = new System.Drawing.Point(34, 348);
+            this.label48.Location = new System.Drawing.Point(34, 396);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(90, 22);
             this.label48.TabIndex = 9;
@@ -2946,7 +2946,7 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label45.Location = new System.Drawing.Point(34, 157);
+            this.label45.Location = new System.Drawing.Point(34, 177);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(108, 22);
             this.label45.TabIndex = 9;
@@ -2957,7 +2957,7 @@
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label49.Location = new System.Drawing.Point(34, 284);
+            this.label49.Location = new System.Drawing.Point(34, 323);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(91, 22);
             this.label49.TabIndex = 9;
