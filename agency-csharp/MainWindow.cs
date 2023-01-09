@@ -34,8 +34,38 @@ namespace agency_csharp
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
-            CreateColumns();
-            RefreshDataGrid(dataGridView1);
+            #region Вызов функций отрисовки таблиц
+
+            string[] columnsEmp = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
+            string[] columnNamesEmp = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            Utilities.CreateColumns(dataGridView1, columnsEmp, columnNamesEmp);
+            Utilities.RefreshDataGrid(dataGridView1, database);
+
+            string[] columnsClients = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
+            string[] columnNamesClients = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            Utilities.CreateColumns(clientView_dgv, columnsClients, columnNamesClients);
+            Utilities.RefreshDataGrid(clientView_dgv, database);
+
+            string[] columnsOrg = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
+            string[] columnNamesOrg = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            Utilities.CreateColumns(organization_dgv, columnsOrg, columnNamesOrg);
+            Utilities.RefreshDataGrid(organization_dgv, database);
+
+            string[] columnsVac = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
+            string[] columnNamesVac = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            Utilities.CreateColumns(vacancy_dgv, columnsVac, columnNamesVac);
+            Utilities.RefreshDataGrid(vacancy_dgv, database);
+
+            string[] columnsContracts = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
+            string[] columnNamesContracts = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            Utilities.CreateColumns(contract_dgv, columnsContracts, columnNamesContracts);
+            Utilities.RefreshDataGrid(contract_dgv, database);
+
+            string[] columnsResp = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
+            string[] columnNamesResp = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            Utilities.CreateColumns(response_dgv, columnsResp, columnNamesResp);
+            Utilities.RefreshDataGrid(response_dgv, database);
+            #endregion
         }
 
         // Определяет уровень доступа для админа
@@ -56,69 +86,7 @@ namespace agency_csharp
         }
 
         // Определяет уровень доступа для работника
-        private void IsEmployee()
-        {
-            
-        }
-
-        /// <summary>
-        /// Создание колонок в датагриде
-        /// </summary>
-        private void CreateColumns()
-        {
-            dataGridView1.Columns.Add("id_pk_user", "Идентификатор");
-            dataGridView1.Columns.Add("u_name", "Имя");
-            dataGridView1.Columns.Add("u_surname", "Фамилия");
-            dataGridView1.Columns.Add("u_patronymic", "Отчество");
-            dataGridView1.Columns.Add("u_phoneNumber", "Контактный номер");
-
-            dataGridView1.Columns.Add("IsNew", String.Empty);
-        }
-
-        /// <summary>
-        /// Вывод одной строки в датагрид
-        /// </summary>
-        /// <param name="dgv"></param>
-        /// <param name="record"></param>
-        private void ReadSingleRow(DataGridView dgv, IDataRecord record)
-        {
-            dgv.Rows.Add(
-                record.GetInt32(0),
-                record.GetString(1), 
-                record.GetString(2), 
-                record.GetString(3), 
-                record.GetString(4), 
-                RowState.ModifiedNew
-            );
-        }
-
-        /// <summary>
-        /// Обновление выбранного датагрида 
-        /// </summary>
-        /// <param name="dgv"></param>
-        private void RefreshDataGrid(DataGridView dgv)
-        {
-            dgv.Rows.Clear();
-
-            string query = 
-                "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Employee E on Users.id_pk_user = E.id_fk_user;";
-
-            SqlCommand command = new SqlCommand(query, database.getConnection());
-
-            database.openConnection();
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                ReadSingleRow(dgv, reader);
-            }
-
-            reader.Close();
-
-            // закрыть (!!)
-            database.closeConnection();
-        }
+        private void IsEmployee() {}
 
         /// <summary>
         /// Осуществление поиска в определённом датагриде
@@ -136,7 +104,7 @@ namespace agency_csharp
 
             while (reader.Read())
             {
-                ReadSingleRow(dgv, reader);
+                Utilities.ReadSingleRow(dgv, reader);
             }
 
             reader.Close();
@@ -616,7 +584,7 @@ namespace agency_csharp
 
         private void refresh_btn_Click(object sender, EventArgs e)
         {
-            RefreshDataGrid(dataGridView1);
+            Utilities.RefreshDataGrid(dataGridView1, database);
             ClearFields();
         }
 
@@ -649,17 +617,17 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void clientRefresh_btn_Click(object sender, EventArgs e)
         {
-            RefreshDataGrid(clientView_dgv);
+            Utilities.RefreshDataGrid(clientView_dgv, database);
         }
 
         private void orgRefresh_btn_Click(object sender, EventArgs e)
         {
-            RefreshDataGrid(organization_dgv);
+            Utilities.RefreshDataGrid(organization_dgv, database);
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            RefreshDataGrid(vacancy_dgv);
+            Utilities.RefreshDataGrid(vacancy_dgv, database);
         }
 
         /// <summary>
