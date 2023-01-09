@@ -195,6 +195,7 @@
             this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Вход";
             this.Load += new System.EventHandler(this.Form1_Load);

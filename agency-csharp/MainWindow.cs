@@ -25,6 +25,13 @@ namespace agency_csharp
         private readonly CheckUser _user;
         Database database = new Database();
 
+        readonly string refreshQueryEmp = "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Employee E on Users.id_pk_user = E.id_fk_user;";
+        readonly string refreshQueryClient = "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Client C on Users.id_pk_user = C.id_user;";
+        readonly string refreshQueryOrg = "select id_pk_organization, o_name, o_phoneNumber, o_email from Organization;";
+        readonly string refreshQueryVac = "select id_pk_vacancy, o_name, v_profession, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization";
+        readonly string refreshQueryContracts = "select id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname from Contracts inner join Employee Emp on Contracts.c_fk_employee = Emp.id_pk_employee inner join Client Cli on Cli.id_pk_client = Contracts.c_fk_client inner join Users C on C.id_pk_user = Cli.id_user inner join Users E on E.id_pk_user = Emp.id_fk_user";
+        readonly string refreshQueryResp = "select id_pk_response, o_name, u_name, u_surname, u_patronymic, u_phoneNumber from UserResponse inner join Vacancy V on V.id_pk_vacancy = UserResponse.id_fk_vacancy inner join Organization O on O.id_pk_organization = V.id_organization inner join Users U on U.id_pk_user = UserResponse.id_fk_user";
+        
         int selectedRow;
 
         public MainWindow(CheckUser user)
@@ -34,37 +41,38 @@ namespace agency_csharp
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
+            // TODO: тут нужно поменять колонки таблиц
             #region Вызов функций отрисовки таблиц
 
             string[] columnsEmp = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
             string[] columnNamesEmp = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
             Utilities.CreateColumns(dataGridView1, columnsEmp, columnNamesEmp);
-            Utilities.RefreshDataGrid(dataGridView1, database);
+            Utilities.RefreshDataGridEmpCli(dataGridView1, database, refreshQueryEmp);
 
             string[] columnsClients = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
-            string[] columnNamesClients = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            string[] columnNamesClients = { "ID_клиента", "Имя", "Фамилия", "Отчество", "Номер телефона" };
             Utilities.CreateColumns(clientView_dgv, columnsClients, columnNamesClients);
-            Utilities.RefreshDataGrid(clientView_dgv, database);
+            Utilities.RefreshDataGridEmpCli(clientView_dgv, database, refreshQueryClient);
 
-            string[] columnsOrg = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
-            string[] columnNamesOrg = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            string[] columnsOrg = { "id_pk_organization", "o_name", "o_phoneNumber", "o_email" };
+            string[] columnNamesOrg = { "Идентификатор", "Наименование", "Контактный номер", "Почта" };
             Utilities.CreateColumns(organization_dgv, columnsOrg, columnNamesOrg);
-            Utilities.RefreshDataGrid(organization_dgv, database);
+            Utilities.RefreshDataGridOrg(organization_dgv, database, refreshQueryOrg);
 
-            string[] columnsVac = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
-            string[] columnNamesVac = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            string[] columnsVac = { "id_pk_vacancy", "o_name", "v_profession", "o_phoneNumber" };
+            string[] columnNamesVac = { "ID вакансии", "Организация", "Должность", "Контакный номер" };
             Utilities.CreateColumns(vacancy_dgv, columnsVac, columnNamesVac);
-            Utilities.RefreshDataGrid(vacancy_dgv, database);
+            Utilities.RefreshDataGridVac(vacancy_dgv, database, refreshQueryVac);
 
-            string[] columnsContracts = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
-            string[] columnNamesContracts = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            string[] columnsContracts = { "id_pk_contract", "c_createdAt", "c_conditions", "u_name", "u_surname", "u_name", "u_surname" };
+            string[] columnNamesContracts = { "ID контракта", "Дата заключения", "Условия", "Имя клиента", "Фамилия клиента", "Имя агента", "Фамилия агента" };
             Utilities.CreateColumns(contract_dgv, columnsContracts, columnNamesContracts);
-            Utilities.RefreshDataGrid(contract_dgv, database);
+            Utilities.RefreshDataGridContracts(contract_dgv, database, refreshQueryContracts);
 
-            string[] columnsResp = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
-            string[] columnNamesResp = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            string[] columnsResp = { "id_pk_response", "o_name", "v_profession", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
+            string[] columnNamesResp = { "ID отклика", "Организация", "Должность", "Имя", "Фамилия", "Отчество", "Номер телефона" };
             Utilities.CreateColumns(response_dgv, columnsResp, columnNamesResp);
-            Utilities.RefreshDataGrid(response_dgv, database);
+            Utilities.RefreshDataGridResp(response_dgv, database, refreshQueryResp);
             #endregion
         }
 
@@ -87,435 +95,6 @@ namespace agency_csharp
 
         // Определяет уровень доступа для работника
         private void IsEmployee() {}
-
-        /// <summary>
-        /// Осуществление поиска в определённом датагриде
-        /// </summary>
-        /// <param name="dgv"></param>
-        private void Search(DataGridView dgv, string searchQuery)
-        {
-            dgv.Rows.Clear();
-
-            SqlCommand command = new SqlCommand(searchQuery, database.getConnection());
-
-            database.openConnection();
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                Utilities.ReadSingleRow(dgv, reader);
-            }
-
-            reader.Close();
-            database.closeConnection();
-        }
-
-        // Функция удаления строки
-        private void DeleteRow(DataGridView dgv)
-        {
-            // индекс строки, в которой сейчас находимся
-            int index = dgv.CurrentCell.RowIndex;
-
-            dgv.Rows[index].Visible = false;
-
-            // если строка пустая
-            if (dgv.Rows[index].Cells[0].Value.ToString() == string.Empty)
-            {
-                // то состояние строки будет = удалённой
-                dgv.Rows[index].Cells[5].Value = RowState.Deleted;
-                return;
-            }
-
-            dgv.Rows[index].Cells[5].Value = RowState.Deleted;
-        }
-
-        /// <summary>
-        /// Этот метод будет отправлять изменения таблиц в базу данных
-        /// </summary>
-        private void UpdateEmployees()
-        {
-            database.openConnection();
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
-
-                if (rowState == RowState.Existed)
-                {
-                    continue;
-                }
-
-                if (rowState == RowState.Deleted)
-                {
-                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
-
-                    database.openConnection();
-
-                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
-
-                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
-                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
-                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
-                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
-
-                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
-                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
-
-                    if (
-                            //commandRegDel.ExecuteNonQuery() == 0 && 
-                            //command.ExecuteNonQuery() == 0 && 
-                            commandEmpDel.ExecuteNonQuery() == 0 &&
-                            commandEmpDelRules.ExecuteNonQuery() == 0
-                        )
-                    {
-                        MessageBox.Show("Сотрудник удалён");
-                    }
-
-                    database.closeConnection();
-                }
-
-                if (rowState == RowState.Modified)
-                {
-                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
-
-                    string query =
-                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
-                    SqlCommand command = new SqlCommand(query, database.getConnection());
-                    command.ExecuteNonQuery();
-                }
-            }
-
-            database.closeConnection();
-        }
-
-        private void UpdateClients()
-        {
-            database.openConnection();
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
-
-                if (rowState == RowState.Existed)
-                {
-                    continue;
-                }
-
-                if (rowState == RowState.Deleted)
-                {
-                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
-
-                    database.openConnection();
-
-                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
-
-                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
-                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
-                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
-                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
-
-                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
-                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
-
-                    if (
-                            //commandRegDel.ExecuteNonQuery() == 0 && 
-                            //command.ExecuteNonQuery() == 0 && 
-                            commandEmpDel.ExecuteNonQuery() == 0 &&
-                            commandEmpDelRules.ExecuteNonQuery() == 0
-                        )
-                    {
-                        MessageBox.Show("Сотрудник удалён");
-                    }
-
-                    database.closeConnection();
-                }
-
-                if (rowState == RowState.Modified)
-                {
-                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
-
-                    string query =
-                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
-                    SqlCommand command = new SqlCommand(query, database.getConnection());
-                    command.ExecuteNonQuery();
-                }
-            }
-
-            database.closeConnection();
-        }
-
-        private void UpdateOrganizations()
-        {
-            database.openConnection();
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
-
-                if (rowState == RowState.Existed)
-                {
-                    continue;
-                }
-
-                if (rowState == RowState.Deleted)
-                {
-                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
-
-                    database.openConnection();
-
-                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
-
-                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
-                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
-                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
-                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
-
-                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
-                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
-
-                    if (
-                            //commandRegDel.ExecuteNonQuery() == 0 && 
-                            //command.ExecuteNonQuery() == 0 && 
-                            commandEmpDel.ExecuteNonQuery() == 0 &&
-                            commandEmpDelRules.ExecuteNonQuery() == 0
-                        )
-                    {
-                        MessageBox.Show("Сотрудник удалён");
-                    }
-
-                    database.closeConnection();
-                }
-
-                if (rowState == RowState.Modified)
-                {
-                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
-
-                    string query =
-                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
-                    SqlCommand command = new SqlCommand(query, database.getConnection());
-                    command.ExecuteNonQuery();
-                }
-            }
-
-            database.closeConnection();
-        }
-
-        private void UpdateVacancys()
-        {
-            database.openConnection();
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
-
-                if (rowState == RowState.Existed)
-                {
-                    continue;
-                }
-
-                if (rowState == RowState.Deleted)
-                {
-                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
-
-                    database.openConnection();
-
-                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
-
-                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
-                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
-                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
-                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
-
-                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
-                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
-
-                    if (
-                            //commandRegDel.ExecuteNonQuery() == 0 && 
-                            //command.ExecuteNonQuery() == 0 && 
-                            commandEmpDel.ExecuteNonQuery() == 0 &&
-                            commandEmpDelRules.ExecuteNonQuery() == 0
-                        )
-                    {
-                        MessageBox.Show("Сотрудник удалён");
-                    }
-
-                    database.closeConnection();
-                }
-
-                if (rowState == RowState.Modified)
-                {
-                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
-
-                    string query =
-                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
-                    SqlCommand command = new SqlCommand(query, database.getConnection());
-                    command.ExecuteNonQuery();
-                }
-            }
-
-            database.closeConnection();
-        }
-
-        private void UpdateContracts()
-        {
-            database.openConnection();
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
-
-                if (rowState == RowState.Existed)
-                {
-                    continue;
-                }
-
-                if (rowState == RowState.Deleted)
-                {
-                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
-
-                    database.openConnection();
-
-                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
-
-                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
-                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
-                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
-                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
-
-                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
-                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
-
-                    if (
-                            //commandRegDel.ExecuteNonQuery() == 0 && 
-                            //command.ExecuteNonQuery() == 0 && 
-                            commandEmpDel.ExecuteNonQuery() == 0 &&
-                            commandEmpDelRules.ExecuteNonQuery() == 0
-                        )
-                    {
-                        MessageBox.Show("Сотрудник удалён");
-                    }
-
-                    database.closeConnection();
-                }
-
-                if (rowState == RowState.Modified)
-                {
-                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
-
-                    string query =
-                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
-                    SqlCommand command = new SqlCommand(query, database.getConnection());
-                    command.ExecuteNonQuery();
-                }
-            }
-
-            database.closeConnection();
-        }
-
-        private void UpdateResponses()
-        {
-            database.openConnection();
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
-            {
-                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
-
-                if (rowState == RowState.Existed)
-                {
-                    continue;
-                }
-
-                if (rowState == RowState.Deleted)
-                {
-                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
-
-                    database.openConnection();
-
-                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
-
-                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
-                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
-                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
-
-                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
-                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
-
-                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
-                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
-
-                    if (
-                            //commandRegDel.ExecuteNonQuery() == 0 && 
-                            //command.ExecuteNonQuery() == 0 && 
-                            commandEmpDel.ExecuteNonQuery() == 0 &&
-                            commandEmpDelRules.ExecuteNonQuery() == 0
-                        )
-                    {
-                        MessageBox.Show("Сотрудник удалён");
-                    }
-
-                    database.closeConnection();
-                }
-
-                if (rowState == RowState.Modified)
-                {
-                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
-                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
-                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
-                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
-
-                    string query =
-                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
-                    SqlCommand command = new SqlCommand(query, database.getConnection());
-                    command.ExecuteNonQuery();
-                }
-            }
-
-            database.closeConnection();
-        }
 
         // Этот метод будет производить изменение данных
         private void Change()
@@ -560,12 +139,94 @@ namespace agency_csharp
             IsEmployee();
         }
 
-        /// <summary>
-        /// Ввод выбранной записи в датагриде внутрь текстбоксов
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Ввод выбранной записи в датагриде внутрь текстбоксов
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRow = e.RowIndex;
+
+            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+
+                userId.Text = row.Cells[0].Value.ToString();
+                name_tb.Text = row.Cells[1].Value.ToString();
+                surname_tb.Text = row.Cells[2].Value.ToString();
+                thirdname_tb.Text = row.Cells[3].Value.ToString();
+                number_tb.Text = row.Cells[4].Value.ToString();
+            }
+        }
+
+        // TODO: Нужно поменять тут колонки таблиц
+        private void client_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRow = e.RowIndex;
+
+            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+
+                userId.Text = row.Cells[0].Value.ToString();
+                name_tb.Text = row.Cells[1].Value.ToString();
+                surname_tb.Text = row.Cells[2].Value.ToString();
+                thirdname_tb.Text = row.Cells[3].Value.ToString();
+                number_tb.Text = row.Cells[4].Value.ToString();
+            }
+        }
+
+        private void org_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRow = e.RowIndex;
+
+            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+
+                userId.Text = row.Cells[0].Value.ToString();
+                name_tb.Text = row.Cells[1].Value.ToString();
+                surname_tb.Text = row.Cells[2].Value.ToString();
+                thirdname_tb.Text = row.Cells[3].Value.ToString();
+                number_tb.Text = row.Cells[4].Value.ToString();
+            }
+        }
+
+        private void vac_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRow = e.RowIndex;
+
+            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+
+                userId.Text = row.Cells[0].Value.ToString();
+                name_tb.Text = row.Cells[1].Value.ToString();
+                surname_tb.Text = row.Cells[2].Value.ToString();
+                thirdname_tb.Text = row.Cells[3].Value.ToString();
+                number_tb.Text = row.Cells[4].Value.ToString();
+            }
+        }
+
+        private void contract_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRow = e.RowIndex;
+
+            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+
+                userId.Text = row.Cells[0].Value.ToString();
+                name_tb.Text = row.Cells[1].Value.ToString();
+                surname_tb.Text = row.Cells[2].Value.ToString();
+                thirdname_tb.Text = row.Cells[3].Value.ToString();
+                number_tb.Text = row.Cells[4].Value.ToString();
+            }
+        }
+
+        private void resp_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedRow = e.RowIndex;
 
@@ -584,7 +245,7 @@ namespace agency_csharp
 
         private void refresh_btn_Click(object sender, EventArgs e)
         {
-            Utilities.RefreshDataGrid(dataGridView1, database);
+            Utilities.RefreshDataGridEmpCli(dataGridView1, database, refreshQueryEmp);
             ClearFields();
         }
 
@@ -617,17 +278,18 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void clientRefresh_btn_Click(object sender, EventArgs e)
         {
-            Utilities.RefreshDataGrid(clientView_dgv, database);
+            // TODO: Нужно поменять запрос на рефреш
+            Utilities.RefreshDataGridEmpCli(clientView_dgv, database, refreshQueryEmp);
         }
 
         private void orgRefresh_btn_Click(object sender, EventArgs e)
         {
-            Utilities.RefreshDataGrid(organization_dgv, database);
+            Utilities.RefreshDataGridOrg(organization_dgv, database, refreshQueryEmp);
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            Utilities.RefreshDataGrid(vacancy_dgv, database);
+            Utilities.RefreshDataGridVac(vacancy_dgv, database, refreshQueryEmp);
         }
 
         /// <summary>
@@ -637,7 +299,7 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void search_tb_TextChanged(object sender, EventArgs e)
         {
-            Search(dataGridView1, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
+            Utilities.Search(dataGridView1, database, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
         }
 
         private void clientSearch_tb_TextChanged(object sender, EventArgs e)
@@ -663,7 +325,7 @@ namespace agency_csharp
         private void delete_btn_Click(object sender, EventArgs e)
         {
             // тут мы помечаем под удаление ячейку и после сохранения все изменения вступят в силу
-            DeleteRow(dataGridView1);
+            Utilities.DeleteRow(dataGridView1);
         }
 
         private void clientDel_Click(object sender, EventArgs e)
@@ -714,22 +376,22 @@ namespace agency_csharp
         private void save_btn_Click(object sender, EventArgs e)
         {
             // чтобы работало удаление, нужно в сохранение запихнуть обновление
-            UpdateEmployees();
+            UpdateDGV.Employees(dataGridView1, database);
         }
 
         private void clientSave_Click(object sender, EventArgs e)
         {
-
+            UpdateDGV.Clients(clientView_dgv, database);
         }
 
         private void orgSave_btn_Click(object sender, EventArgs e)
         {
-
+            UpdateDGV.Organizations(organization_dgv, database);
         }
 
         private void vacSave_tb_Click(object sender, EventArgs e)
         {
-
+            UpdateDGV.Vacancys(vacancy_dgv, database);
         }
 
         private void администрированиеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -763,62 +425,14 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void clientAdd_Click(object sender, EventArgs e)
         {
-            database.openConnection();
-
-            var id = Convert.ToInt32(clientID_tb.Text);
-            var clientName = name_tb.Text;
-            var clientSurname = surname_tb.Text;
-            var clientPatronymic = thirdname_tb.Text;
-            var clientNumber = number_tb.Text;
-
-            if (Int64.TryParse(clientNumber, out Int64 n))
-            {
-                string queryString = $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{clientName}', '{clientSurname}', '{clientPatronymic}', '{clientNumber}');";
-                SqlCommand command = new SqlCommand(queryString, database.getConnection());
-                command.ExecuteNonQuery();
-
-                string queryAddEmployee = $"EXEC AddUserClient  {clientName}, {clientNumber}";
-                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
-                commandAddEmp.ExecuteNonQuery();
-
-                MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Пожалуйста, введите корректный номер телефона", "Не удалось добавить запись", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            database.closeConnection();
+            Form addClient = new ClientAdd();
+            addClient.Show();
         }
 
         private void orgAdd_btn_Click(object sender, EventArgs e)
         {
-            database.openConnection();
-
-            //var id = Convert.ToInt32(userId_tb.Text);
-            var userName = name_tb.Text;
-            var userSurname = surname_tb.Text;
-            var userPatronymic = thirdname_tb.Text;
-            var userNumber = number_tb.Text;
-
-            if (Int64.TryParse(userNumber, out Int64 n))
-            {
-                string queryString = $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{userName}', '{userSurname}', '{userPatronymic}', '{userNumber}');";
-                SqlCommand command = new SqlCommand(queryString, database.getConnection());
-                command.ExecuteNonQuery();
-
-                string queryAddEmployee = $"EXEC AddUserEmployee  {userName}, {userNumber}";
-                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
-                commandAddEmp.ExecuteNonQuery();
-
-                MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Пожалуйста, введите корректный номер телефона", "Не удалось добавить запись", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            database.closeConnection();
+            Form addOrg = new AddOrganization();
+            addOrg.Show();
         }
 
         private void vacAdd_tb_Click(object sender, EventArgs e)
@@ -859,7 +473,7 @@ namespace agency_csharp
 
         private void search_grid_btn_Click(object sender, EventArgs e)
         {
-            Search(dataGridView1, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
+            Utilities.Search(dataGridView1, database, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
         }
 
         private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
@@ -890,6 +504,16 @@ namespace agency_csharp
         private void contractAdd_btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void contractSave_btn_Click(object sender, EventArgs e)
+        {
+            UpdateDGV.Contracts(contract_dgv, database);
+        }
+
+        private void responseSave_btn_Click(object sender, EventArgs e)
+        {
+            UpdateDGV.Responses(response_dgv, database);
         }
     }
 }

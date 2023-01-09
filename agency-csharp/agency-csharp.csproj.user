@@ -16,6 +16,9 @@
     <Compile Update="CheckUpdates.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ClientAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Contract.cs">
       <SubType>Form</SubType>
     </Compile>
