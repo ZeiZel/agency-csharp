@@ -35,12 +35,18 @@ namespace agency_csharp
         private readonly CheckUser _user;
         Database database = new Database();
 
-        readonly string refreshQueryEmp = "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Employee E on Users.id_pk_user = E.id_fk_user;";
-        readonly string refreshQueryClient = "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Client C on Users.id_pk_user = C.id_user;";
-        readonly string refreshQueryOrg = "select id_pk_organization, o_name, o_phoneNumber, o_email from Organization;";
-        readonly string refreshQueryVac = "select id_pk_vacancy, o_name, v_profession, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization";
-        readonly string refreshQueryContracts = "select id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname from Contracts inner join Employee Emp on Contracts.c_fk_employee = Emp.id_pk_employee inner join Client Cli on Cli.id_pk_client = Contracts.c_fk_client inner join Users C on C.id_pk_user = Cli.id_user inner join Users E on E.id_pk_user = Emp.id_fk_user";
-        readonly string refreshQueryResp = "select id_pk_response, o_name, u_name, u_surname, u_patronymic, u_phoneNumber from UserResponse inner join Vacancy V on V.id_pk_vacancy = UserResponse.id_fk_vacancy inner join Organization O on O.id_pk_organization = V.id_organization inner join Users U on U.id_pk_user = UserResponse.id_fk_user";
+        readonly string refreshQueryEmp = 
+            "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Employee E on Users.id_pk_user = E.id_fk_user;";
+        readonly string refreshQueryClient = 
+            "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Client C on Users.id_pk_user = C.id_user;";
+        readonly string refreshQueryOrg = 
+            "select id_pk_organization, o_name, o_phoneNumber, o_email from Organization;";
+        readonly string refreshQueryVac = 
+            "select id_pk_vacancy, o_name, v_profession, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization";
+        readonly string refreshQueryContracts = 
+            "select id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname from Contracts inner join Employee Emp on Contracts.c_fk_employee = Emp.id_pk_employee inner join Client Cli on Cli.id_pk_client = Contracts.c_fk_client inner join Users C on C.id_pk_user = Cli.id_user inner join Users E on E.id_pk_user = Emp.id_fk_user";
+        readonly string refreshQueryResp =
+            "select id_pk_response, o_name, v_profession, u_name, u_surname, u_patronymic, u_phoneNumber from UserResponse inner join Vacancy V on V.id_pk_vacancy = UserResponse.id_fk_vacancy inner join Organization O on O.id_pk_organization = V.id_organization inner join Users U on U.id_pk_user = UserResponse.id_fk_user";
         
         int selectedRow;
 
@@ -58,31 +64,38 @@ namespace agency_csharp
             string[] columnNamesEmp = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
             Utilities.CreateColumns(dataGridView1, columnsEmp, columnNamesEmp);
             Utilities.RefreshDataGrid(dataGridView1, database, SwitchState.Employee, refreshQueryEmp);
+            dataGridView1.Columns[5].Visible = false;
 
             string[] columnsClients = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
             string[] columnNamesClients = { "ID_клиента", "Имя", "Фамилия", "Отчество", "Номер телефона" };
             Utilities.CreateColumns(clientView_dgv, columnsClients, columnNamesClients);
             Utilities.RefreshDataGrid(clientView_dgv, database, SwitchState.Client, refreshQueryClient);
+            clientView_dgv.Columns[5].Visible = false;
 
             string[] columnsOrg = { "id_pk_organization", "o_name", "o_phoneNumber", "o_email" };
             string[] columnNamesOrg = { "Идентификатор", "Наименование", "Контактный номер", "Почта" };
             Utilities.CreateColumns(organization_dgv, columnsOrg, columnNamesOrg);
             Utilities.RefreshDataGrid(organization_dgv, database, SwitchState.Organization, refreshQueryOrg);
+            organization_dgv.Columns[4].Visible = false;
 
             string[] columnsVac = { "id_pk_vacancy", "o_name", "v_profession", "o_phoneNumber" };
             string[] columnNamesVac = { "ID вакансии", "Организация", "Должность", "Контакный номер" };
             Utilities.CreateColumns(vacancy_dgv, columnsVac, columnNamesVac);
             Utilities.RefreshDataGrid(vacancy_dgv, database, SwitchState.Vacancy, refreshQueryVac);
+            vacancy_dgv.Columns[4].Visible = false;
 
-            string[] columnsContracts = { "id_pk_contract", "c_createdAt", "c_conditions", "u_name", "u_surname", "u_name", "u_surname" };
-            string[] columnNamesContracts = { "ID контракта", "Дата заключения", "Условия", "Имя клиента", "Фамилия клиента", "Имя агента", "Фамилия агента" };
+            string[] columnsContracts = { "id_pk_contract", "c_conditions", "c_createdAt", "u_name", "u_surname", "u_name", "u_surname" };
+            string[] columnNamesContracts = { "ID контракта", "Условия", "Дата заключения", "Имя клиента", "Фамилия клиента", "Имя агента", "Фамилия агента" };
             Utilities.CreateColumns(contract_dgv, columnsContracts, columnNamesContracts);
             Utilities.RefreshDataGrid(contract_dgv, database, SwitchState.Contract, refreshQueryContracts);
+            contract_dgv.Columns[7].Visible = false;
 
             string[] columnsResp = { "id_pk_response", "o_name", "v_profession", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
             string[] columnNamesResp = { "ID отклика", "Организация", "Должность", "Имя", "Фамилия", "Отчество", "Номер телефона" };
             Utilities.CreateColumns(response_dgv, columnsResp, columnNamesResp);
             Utilities.RefreshDataGrid(response_dgv, database, SwitchState.Response, refreshQueryResp);
+            response_dgv.Columns[7].Visible = false;
+
             #endregion
         }
 
@@ -175,13 +188,13 @@ namespace agency_csharp
             // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+                DataGridViewRow row = clientView_dgv.Rows[selectedRow];
 
-                userId.Text = row.Cells[0].Value.ToString();
-                name_tb.Text = row.Cells[1].Value.ToString();
-                surname_tb.Text = row.Cells[2].Value.ToString();
-                thirdname_tb.Text = row.Cells[3].Value.ToString();
-                number_tb.Text = row.Cells[4].Value.ToString();
+                clientID_tb.Text = row.Cells[0].Value.ToString();
+                clientName_tb.Text = row.Cells[1].Value.ToString();
+                clientSur_tb.Text = row.Cells[2].Value.ToString();
+                clientPat_tb.Text = row.Cells[3].Value.ToString();
+                clientNum_tb.Text = row.Cells[4].Value.ToString();
             }
         }
 
@@ -192,13 +205,12 @@ namespace agency_csharp
             // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+                DataGridViewRow row = organization_dgv.Rows[selectedRow];
 
-                userId.Text = row.Cells[0].Value.ToString();
-                name_tb.Text = row.Cells[1].Value.ToString();
-                surname_tb.Text = row.Cells[2].Value.ToString();
-                thirdname_tb.Text = row.Cells[3].Value.ToString();
-                number_tb.Text = row.Cells[4].Value.ToString();
+                orgID_tb.Text = row.Cells[0].Value.ToString();
+                orgName_tb.Text = row.Cells[1].Value.ToString();
+                orgNum_tb.Text = row.Cells[2].Value.ToString();
+                orgMail_tb.Text = row.Cells[3].Value.ToString();
             }
         }
 
@@ -209,13 +221,12 @@ namespace agency_csharp
             // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+                DataGridViewRow row = vacancy_dgv.Rows[selectedRow];
 
-                userId.Text = row.Cells[0].Value.ToString();
-                name_tb.Text = row.Cells[1].Value.ToString();
-                surname_tb.Text = row.Cells[2].Value.ToString();
-                thirdname_tb.Text = row.Cells[3].Value.ToString();
-                number_tb.Text = row.Cells[4].Value.ToString();
+                vacancyID_tb.Text = row.Cells[0].Value.ToString();
+                vacOrgName_tb.Text = row.Cells[1].Value.ToString();
+                vacName_tb.Text = row.Cells[2].Value.ToString();
+                vacNum_tb.Text = row.Cells[3].Value.ToString();
             }
         }
 
@@ -226,13 +237,15 @@ namespace agency_csharp
             // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+                DataGridViewRow row = contract_dgv.Rows[selectedRow];
 
-                userId.Text = row.Cells[0].Value.ToString();
-                name_tb.Text = row.Cells[1].Value.ToString();
-                surname_tb.Text = row.Cells[2].Value.ToString();
-                thirdname_tb.Text = row.Cells[3].Value.ToString();
-                number_tb.Text = row.Cells[4].Value.ToString();
+                contractId_tb.Text = row.Cells[0].Value.ToString();
+                contractConditions_tb.Text = row.Cells[1].Value.ToString();
+                contractDate_tb.Text = row.Cells[2].Value.ToString();
+                contractAgentName_tb.Text = row.Cells[3].Value.ToString();
+                contractAgentSurame_tb.Text = row.Cells[4].Value.ToString();
+                contractClientName_tb.Text = row.Cells[5].Value.ToString();
+                contractClientSurname_tb.Text = row.Cells[6].Value.ToString();
             }
         }
 
@@ -243,13 +256,15 @@ namespace agency_csharp
             // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+                DataGridViewRow row = response_dgv.Rows[selectedRow];
 
-                userId.Text = row.Cells[0].Value.ToString();
-                name_tb.Text = row.Cells[1].Value.ToString();
-                surname_tb.Text = row.Cells[2].Value.ToString();
-                thirdname_tb.Text = row.Cells[3].Value.ToString();
-                number_tb.Text = row.Cells[4].Value.ToString();
+                responseId_tb.Text = row.Cells[0].Value.ToString();
+                responseOrg_tb.Text = row.Cells[1].Value.ToString();
+                responseVac_tb.Text = row.Cells[2].Value.ToString();
+                responseClientName_tb.Text = row.Cells[3].Value.ToString();
+                responseClientSurname_tb.Text = row.Cells[4].Value.ToString();
+                responseClientPat_tb.Text = row.Cells[5].Value.ToString();
+                responseClientNum_tb.Text = row.Cells[6].Value.ToString();
             }
         }
 
