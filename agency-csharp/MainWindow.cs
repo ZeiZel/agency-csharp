@@ -144,26 +144,348 @@ namespace agency_csharp
         }
 
         // Функция удаления строки
-        private void DeleteRow()
+        private void DeleteRow(DataGridView dgv)
         {
             // индекс строки, в которой сейчас находимся
-            int index = dataGridView1.CurrentCell.RowIndex;
+            int index = dgv.CurrentCell.RowIndex;
 
-            dataGridView1.Rows[index].Visible = false;
+            dgv.Rows[index].Visible = false;
 
             // если строка пустая
-            if (dataGridView1.Rows[index].Cells[0].Value.ToString() == string.Empty)
+            if (dgv.Rows[index].Cells[0].Value.ToString() == string.Empty)
             {
                 // то состояние строки будет = удалённой
-                dataGridView1.Rows[index].Cells[5].Value = RowState.Deleted;
+                dgv.Rows[index].Cells[5].Value = RowState.Deleted;
                 return;
             }
 
-            dataGridView1.Rows[index].Cells[5].Value = RowState.Deleted;
+            dgv.Rows[index].Cells[5].Value = RowState.Deleted;
         }
 
-        // Этот метод будет проверить состояние клетки
-        private void UpdateEmp()
+        /// <summary>
+        /// Этот метод будет отправлять изменения таблиц в базу данных
+        /// </summary>
+        private void UpdateEmployees()
+        {
+            database.openConnection();
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
+
+                    database.openConnection();
+
+                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
+
+                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
+                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
+                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
+
+                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
+                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
+
+                    if (
+                            //commandRegDel.ExecuteNonQuery() == 0 && 
+                            //command.ExecuteNonQuery() == 0 && 
+                            commandEmpDel.ExecuteNonQuery() == 0 &&
+                            commandEmpDelRules.ExecuteNonQuery() == 0
+                        )
+                    {
+                        MessageBox.Show("Сотрудник удалён");
+                    }
+
+                    database.closeConnection();
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+                    string query =
+                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            database.closeConnection();
+        }
+
+        private void UpdateClients()
+        {
+            database.openConnection();
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
+
+                    database.openConnection();
+
+                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
+
+                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
+                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
+                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
+
+                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
+                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
+
+                    if (
+                            //commandRegDel.ExecuteNonQuery() == 0 && 
+                            //command.ExecuteNonQuery() == 0 && 
+                            commandEmpDel.ExecuteNonQuery() == 0 &&
+                            commandEmpDelRules.ExecuteNonQuery() == 0
+                        )
+                    {
+                        MessageBox.Show("Сотрудник удалён");
+                    }
+
+                    database.closeConnection();
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+                    string query =
+                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            database.closeConnection();
+        }
+
+        private void UpdateOrganizations()
+        {
+            database.openConnection();
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
+
+                    database.openConnection();
+
+                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
+
+                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
+                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
+                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
+
+                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
+                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
+
+                    if (
+                            //commandRegDel.ExecuteNonQuery() == 0 && 
+                            //command.ExecuteNonQuery() == 0 && 
+                            commandEmpDel.ExecuteNonQuery() == 0 &&
+                            commandEmpDelRules.ExecuteNonQuery() == 0
+                        )
+                    {
+                        MessageBox.Show("Сотрудник удалён");
+                    }
+
+                    database.closeConnection();
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+                    string query =
+                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            database.closeConnection();
+        }
+
+        private void UpdateVacancys()
+        {
+            database.openConnection();
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
+
+                    database.openConnection();
+
+                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
+
+                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
+                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
+                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
+
+                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
+                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
+
+                    if (
+                            //commandRegDel.ExecuteNonQuery() == 0 && 
+                            //command.ExecuteNonQuery() == 0 && 
+                            commandEmpDel.ExecuteNonQuery() == 0 &&
+                            commandEmpDelRules.ExecuteNonQuery() == 0
+                        )
+                    {
+                        MessageBox.Show("Сотрудник удалён");
+                    }
+
+                    database.closeConnection();
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+                    string query =
+                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            database.closeConnection();
+        }
+
+        private void UpdateContracts()
+        {
+            database.openConnection();
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                var rowState = (RowState)dataGridView1.Rows[i].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
+
+                    database.openConnection();
+
+                    //var selectedRowIntex = dataGridView1.CurrentCell.RowIndex;
+
+                    var deleteEmployeeQuery = $"delete from Employee where id_fk_user = {id}";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    var deleteEmployeeRulesQuery = $"update Register SET r_isEmployee = 'False' where id_pk_register = {id}";
+                    SqlCommand commandEmpDelRules = new SqlCommand(deleteEmployeeQuery, database.getConnection());
+
+                    //var deleteUserQuery = $"EXEC DeleteUserFromRegister {id}";
+                    //SqlCommand commandRegDel = new SqlCommand(deleteUserQuery, database.getConnection());
+
+                    //var deleteQuery = $"delete from Register where id_pk_register = {id};";
+                    //SqlCommand command = new SqlCommand(deleteQuery, database.getConnection());
+
+                    if (
+                            //commandRegDel.ExecuteNonQuery() == 0 && 
+                            //command.ExecuteNonQuery() == 0 && 
+                            commandEmpDel.ExecuteNonQuery() == 0 &&
+                            commandEmpDelRules.ExecuteNonQuery() == 0
+                        )
+                    {
+                        MessageBox.Show("Сотрудник удалён");
+                    }
+
+                    database.closeConnection();
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var userId = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                    var userName = dataGridView1.Rows[i].Cells[1].Value.ToString();
+                    var userSurname = dataGridView1.Rows[i].Cells[2].Value.ToString();
+                    var userPatronymic = dataGridView1.Rows[i].Cells[3].Value.ToString();
+                    var userNumber = dataGridView1.Rows[i].Cells[4].Value.ToString();
+
+                    string query =
+                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            database.closeConnection();
+        }
+
+        private void UpdateResponses()
         {
             database.openConnection();
 
@@ -373,7 +695,7 @@ namespace agency_csharp
         private void delete_btn_Click(object sender, EventArgs e)
         {
             // тут мы помечаем под удаление ячейку и после сохранения все изменения вступят в силу
-            DeleteRow();
+            DeleteRow(dataGridView1);
         }
 
         private void clientDel_Click(object sender, EventArgs e)
@@ -424,7 +746,7 @@ namespace agency_csharp
         private void save_btn_Click(object sender, EventArgs e)
         {
             // чтобы работало удаление, нужно в сохранение запихнуть обновление
-            UpdateEmp();
+            UpdateEmployees();
         }
 
         private void clientSave_Click(object sender, EventArgs e)

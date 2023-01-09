@@ -1722,7 +1722,7 @@
             // 
             // vacamcy_tab
             // 
-            this.vacamcy_tab.BackColor = System.Drawing.Color.Transparent;
+            this.vacamcy_tab.BackColor = System.Drawing.Color.White;
             this.vacamcy_tab.Controls.Add(this.groupBox14);
             this.vacamcy_tab.Controls.Add(this.groupBox9);
             this.vacamcy_tab.Controls.Add(this.vacancy_dgv);
