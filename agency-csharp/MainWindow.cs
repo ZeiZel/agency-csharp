@@ -20,6 +20,16 @@ namespace agency_csharp
         Deleted
     }
 
+    enum SwitchState
+    {
+        Employee,
+        Client,
+        Organization,
+        Vacancy,
+        Contract,
+        Response
+    }
+
     public partial class MainWindow : Form
     {
         private readonly CheckUser _user;
@@ -47,32 +57,32 @@ namespace agency_csharp
             string[] columnsEmp = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
             string[] columnNamesEmp = { "Идентификатор", "Имя", "Фамилия", "Отчество", "Номер телефона" };
             Utilities.CreateColumns(dataGridView1, columnsEmp, columnNamesEmp);
-            Utilities.RefreshDataGridEmpCli(dataGridView1, database, refreshQueryEmp);
+            Utilities.RefreshDataGrid(dataGridView1, database, SwitchState.Employee, refreshQueryEmp);
 
             string[] columnsClients = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
             string[] columnNamesClients = { "ID_клиента", "Имя", "Фамилия", "Отчество", "Номер телефона" };
             Utilities.CreateColumns(clientView_dgv, columnsClients, columnNamesClients);
-            Utilities.RefreshDataGridEmpCli(clientView_dgv, database, refreshQueryClient);
+            Utilities.RefreshDataGrid(clientView_dgv, database, SwitchState.Client, refreshQueryClient);
 
             string[] columnsOrg = { "id_pk_organization", "o_name", "o_phoneNumber", "o_email" };
             string[] columnNamesOrg = { "Идентификатор", "Наименование", "Контактный номер", "Почта" };
             Utilities.CreateColumns(organization_dgv, columnsOrg, columnNamesOrg);
-            Utilities.RefreshDataGridOrg(organization_dgv, database, refreshQueryOrg);
+            Utilities.RefreshDataGrid(organization_dgv, database, SwitchState.Organization, refreshQueryOrg);
 
             string[] columnsVac = { "id_pk_vacancy", "o_name", "v_profession", "o_phoneNumber" };
             string[] columnNamesVac = { "ID вакансии", "Организация", "Должность", "Контакный номер" };
             Utilities.CreateColumns(vacancy_dgv, columnsVac, columnNamesVac);
-            Utilities.RefreshDataGridVac(vacancy_dgv, database, refreshQueryVac);
+            Utilities.RefreshDataGrid(vacancy_dgv, database, SwitchState.Vacancy, refreshQueryVac);
 
             string[] columnsContracts = { "id_pk_contract", "c_createdAt", "c_conditions", "u_name", "u_surname", "u_name", "u_surname" };
             string[] columnNamesContracts = { "ID контракта", "Дата заключения", "Условия", "Имя клиента", "Фамилия клиента", "Имя агента", "Фамилия агента" };
             Utilities.CreateColumns(contract_dgv, columnsContracts, columnNamesContracts);
-            Utilities.RefreshDataGridContracts(contract_dgv, database, refreshQueryContracts);
+            Utilities.RefreshDataGrid(contract_dgv, database, SwitchState.Contract, refreshQueryContracts);
 
             string[] columnsResp = { "id_pk_response", "o_name", "v_profession", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
             string[] columnNamesResp = { "ID отклика", "Организация", "Должность", "Имя", "Фамилия", "Отчество", "Номер телефона" };
             Utilities.CreateColumns(response_dgv, columnsResp, columnNamesResp);
-            Utilities.RefreshDataGridResp(response_dgv, database, refreshQueryResp);
+            Utilities.RefreshDataGrid(response_dgv, database, SwitchState.Response, refreshQueryResp);
             #endregion
         }
 
@@ -245,7 +255,7 @@ namespace agency_csharp
 
         private void refresh_btn_Click(object sender, EventArgs e)
         {
-            Utilities.RefreshDataGridEmpCli(dataGridView1, database, refreshQueryEmp);
+            Utilities.RefreshDataGrid(dataGridView1, database, SwitchState.Employee, refreshQueryEmp);
             ClearFields();
         }
 
@@ -279,17 +289,17 @@ namespace agency_csharp
         private void clientRefresh_btn_Click(object sender, EventArgs e)
         {
             // TODO: Нужно поменять запрос на рефреш
-            Utilities.RefreshDataGridEmpCli(clientView_dgv, database, refreshQueryEmp);
+            Utilities.RefreshDataGrid(clientView_dgv, database, SwitchState.Client, refreshQueryEmp);
         }
 
         private void orgRefresh_btn_Click(object sender, EventArgs e)
         {
-            Utilities.RefreshDataGridOrg(organization_dgv, database, refreshQueryEmp);
+            Utilities.RefreshDataGrid(organization_dgv, database, SwitchState.Organization, refreshQueryEmp);
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            Utilities.RefreshDataGridVac(vacancy_dgv, database, refreshQueryEmp);
+            Utilities.RefreshDataGrid(vacancy_dgv, database, SwitchState.Vacancy, refreshQueryEmp);
         }
 
         /// <summary>
@@ -299,7 +309,7 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void search_tb_TextChanged(object sender, EventArgs e)
         {
-            Utilities.Search(dataGridView1, database, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
+            Utilities.Search(dataGridView1, database, SwitchState.Employee, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
         }
 
         private void clientSearch_tb_TextChanged(object sender, EventArgs e)
@@ -473,7 +483,7 @@ namespace agency_csharp
 
         private void search_grid_btn_Click(object sender, EventArgs e)
         {
-            Utilities.Search(dataGridView1, database, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
+            Utilities.Search(dataGridView1, database, SwitchState.Employee, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
         }
 
         private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)

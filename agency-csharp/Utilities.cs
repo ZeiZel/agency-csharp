@@ -16,7 +16,7 @@ namespace agency_csharp
         /// <param name="dgv"></param>
         /// <param name="database"></param>
         /// <param name="searchQuery"></param>
-        static public void Search(DataGridView dgv, Database database, string searchQuery)
+        static public void Search(DataGridView dgv, Database database, SwitchState state, string searchQuery)
         {
             dgv.Rows.Clear();
 
@@ -28,7 +28,7 @@ namespace agency_csharp
 
             while (reader.Read())
             {
-                Utilities.ReadSingleRow(dgv, reader);
+                Utilities.ReadSingleRow(dgv, reader, state);
             }
 
             reader.Close();
@@ -79,25 +79,74 @@ namespace agency_csharp
         /// </summary>
         /// <param name="dgv"></param>
         /// <param name="record"></param>
-        static public void ReadSingleRowEmpCli(DataGridView dgv, IDataRecord record)
+        static public void ReadSingleRow(DataGridView dgv, IDataRecord record, SwitchState state)
         {
-            dgv.Rows.Add(
-                record.GetInt32(0),
-                record.GetString(1),
-                record.GetString(2),
-                record.GetString(3),
-                record.GetString(4),
-                RowState.ModifiedNew
-            );
+            switch (state)
+            {
+                case SwitchState.Employee:
+                case SwitchState.Client:
+                    dgv.Rows.Add(
+                        record.GetInt32(0),
+                        record.GetString(1),
+                        record.GetString(2),
+                        record.GetString(3),
+                        record.GetString(4),
+                        RowState.ModifiedNew
+                    );
+                    break;
+                case SwitchState.Organization:
+                    dgv.Rows.Add(
+                        record.GetInt32(0),
+                        record.GetString(1),
+                        record.GetString(2),
+                        record.GetString(3),
+                        RowState.ModifiedNew
+                    );
+                    break;
+                case SwitchState.Vacancy:
+                    dgv.Rows.Add(
+                        record.GetInt32(0),
+                        record.GetString(1),
+                        record.GetString(2),
+                        record.GetString(3),
+                        RowState.ModifiedNew
+                    );
+                    break;
+                case SwitchState.Contract:
+                    dgv.Rows.Add(
+                        record.GetInt32(0),
+                        record.GetString(1),
+                        record.GetString(2),
+                        record.GetString(3),
+                        record.GetString(4),
+                        record.GetString(5),
+                        record.GetString(6),
+                        RowState.ModifiedNew
+                    );
+                    break;
+                case SwitchState.Response:
+                    dgv.Rows.Add(
+                        record.GetInt32(0),
+                        record.GetString(1),
+                        record.GetString(2),
+                        record.GetString(3),
+                        record.GetString(4),
+                        record.GetString(5),
+                        RowState.ModifiedNew
+                    );
+                    break;
+                default:
+                    MessageBox.Show("Внутренняя ошибка вызова состояния");
+                    break;
+            }
         }
-
 
         /// <summary>
         /// Обновление выбранного датагрида 
         /// </summary>
         /// <param name="dgv"></param>
         /// <param name="database"></param>
-        static public void RefreshDataGridEmpCli(DataGridView dgv, Database database, string query)
+        static public void RefreshDataGrid(DataGridView dgv, Database database, SwitchState state, string query)
         {
             dgv.Rows.Clear();
 
@@ -109,115 +158,7 @@ namespace agency_csharp
 
             while (reader.Read())
             {
-                ReadSingleRowEmpCli(dgv, reader);
-            }
-
-            reader.Close();
-
-            database.closeConnection();
-        }
-
-        static public void RefreshDataGridOrg(DataGridView dgv, Database database, string query)
-        {
-            dgv.Rows.Clear();
-
-            SqlCommand command = new SqlCommand(query, database.getConnection());
-
-            database.openConnection();
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                dgv.Rows.Add(
-                    reader.GetInt32(0),
-                    reader.GetString(1),
-                    reader.GetString(2),
-                    reader.GetString(3),
-                    reader.GetString(4),
-                    RowState.ModifiedNew
-                );
-            }
-
-            reader.Close();
-
-            database.closeConnection();
-        }
-
-        static public void RefreshDataGridVac(DataGridView dgv, Database database, string query)
-        {
-            dgv.Rows.Clear();
-
-            SqlCommand command = new SqlCommand(query, database.getConnection());
-
-            database.openConnection();
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                dgv.Rows.Add(
-                    reader.GetInt32(0),
-                    reader.GetString(1),
-                    reader.GetString(2),
-                    reader.GetString(3),
-                    reader.GetString(4),
-                    RowState.ModifiedNew
-                );
-            }
-
-            reader.Close();
-
-            database.closeConnection();
-        }
-
-        static public void RefreshDataGridContracts(DataGridView dgv, Database database, string query)
-        {
-            dgv.Rows.Clear();
-
-            SqlCommand command = new SqlCommand(query, database.getConnection());
-
-            database.openConnection();
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                dgv.Rows.Add(
-                    reader.GetInt32(0),
-                    reader.GetString(1),
-                    reader.GetString(2),
-                    reader.GetString(3),
-                    reader.GetString(4),
-                    RowState.ModifiedNew
-                );
-            }
-
-            reader.Close();
-
-            database.closeConnection();
-        }
-
-        static public void RefreshDataGridResp(DataGridView dgv, Database database, string query)
-        {
-            dgv.Rows.Clear();
-
-            SqlCommand command = new SqlCommand(query, database.getConnection());
-
-            database.openConnection();
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                dgv.Rows.Add(
-                    reader.GetInt32(0),
-                    reader.GetString(1),
-                    reader.GetString(2),
-                    reader.GetString(3),
-                    reader.GetString(4),
-                    RowState.ModifiedNew
-                );
+                ReadSingleRow(dgv, reader, state);
             }
 
             reader.Close();
