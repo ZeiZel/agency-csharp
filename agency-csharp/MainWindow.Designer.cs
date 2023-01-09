@@ -198,6 +198,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.отчётностьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.параметрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.управлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.администрированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -716,6 +717,7 @@
             this.clientSearch_btn.Size = new System.Drawing.Size(48, 52);
             this.clientSearch_btn.TabIndex = 17;
             this.clientSearch_btn.UseVisualStyleBackColor = false;
+            this.clientSearch_btn.Click += new System.EventHandler(this.clientSearch_btn_Click);
             // 
             // clientClear_btn
             // 
@@ -1089,6 +1091,7 @@
             this.orgSearch_btn.Size = new System.Drawing.Size(48, 52);
             this.orgSearch_btn.TabIndex = 17;
             this.orgSearch_btn.UseVisualStyleBackColor = false;
+            this.orgSearch_btn.Click += new System.EventHandler(this.orgSearch_btn_Click);
             // 
             // orgClear_btn
             // 
@@ -1421,6 +1424,7 @@
             this.vacSearch_btn.Size = new System.Drawing.Size(48, 52);
             this.vacSearch_btn.TabIndex = 17;
             this.vacSearch_btn.UseVisualStyleBackColor = false;
+            this.vacSearch_btn.Click += new System.EventHandler(this.vacSearch_btn_Click);
             // 
             // vacClrear_btn
             // 
@@ -1753,6 +1757,7 @@
             this.contractSearch_btn.Size = new System.Drawing.Size(48, 52);
             this.contractSearch_btn.TabIndex = 17;
             this.contractSearch_btn.UseVisualStyleBackColor = false;
+            this.contractSearch_btn.Click += new System.EventHandler(this.contractSearch_btn_Click);
             // 
             // contractClear_btn
             // 
@@ -1777,6 +1782,7 @@
             this.contractSearch_tb.Name = "contractSearch_tb";
             this.contractSearch_tb.Size = new System.Drawing.Size(212, 35);
             this.contractSearch_tb.TabIndex = 8;
+            this.contractSearch_tb.TextChanged += new System.EventHandler(this.contractSearch_tb_TextChanged);
             // 
             // groupBox18
             // 
@@ -2238,6 +2244,7 @@
             this.responseSearch_btn.Size = new System.Drawing.Size(48, 52);
             this.responseSearch_btn.TabIndex = 17;
             this.responseSearch_btn.UseVisualStyleBackColor = false;
+            this.responseSearch_btn.Click += new System.EventHandler(this.responseSearch_btn_Click);
             // 
             // responseClear_btn
             // 
@@ -2262,6 +2269,7 @@
             this.responseSearch_tb.Name = "responseSearch_tb";
             this.responseSearch_tb.Size = new System.Drawing.Size(212, 35);
             this.responseSearch_tb.TabIndex = 8;
+            this.responseSearch_tb.TextChanged += new System.EventHandler(this.responseSearch_tb_TextChanged);
             // 
             // response_dgv
             // 
@@ -2474,7 +2482,8 @@
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отчётностьToolStripMenuItem1});
+            this.отчётностьToolStripMenuItem1,
+            this.параметрыToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
             this.файлToolStripMenuItem.Text = "Файл";
@@ -2482,9 +2491,16 @@
             // отчётностьToolStripMenuItem1
             // 
             this.отчётностьToolStripMenuItem1.Name = "отчётностьToolStripMenuItem1";
-            this.отчётностьToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.отчётностьToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.отчётностьToolStripMenuItem1.Text = "Отчётность";
             this.отчётностьToolStripMenuItem1.Click += new System.EventHandler(this.отчётностьToolStripMenuItem1_Click);
+            // 
+            // параметрыToolStripMenuItem
+            // 
+            this.параметрыToolStripMenuItem.Name = "параметрыToolStripMenuItem";
+            this.параметрыToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.параметрыToolStripMenuItem.Text = "Параметры";
+            this.параметрыToolStripMenuItem.Click += new System.EventHandler(this.параметрыToolStripMenuItem_Click);
             // 
             // управлениеToolStripMenuItem
             // 
@@ -2818,5 +2834,6 @@
         private Button responseDel_btn;
         private Button responseSave_btn;
         private Button responseChange_btn;
+        private ToolStripMenuItem параметрыToolStripMenuItem;
     }
 }

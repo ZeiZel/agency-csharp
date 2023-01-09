@@ -116,9 +116,6 @@ namespace agency_csharp
             contractChange_pb.Visible = _user.IsAdmin;
         }
 
-        // Определяет уровень доступа для работника
-        private void IsEmployee() {}
-
         // Этот метод будет производить изменение данных
         private void Change()
         {
@@ -159,7 +156,6 @@ namespace agency_csharp
         {
             userStatus_tstb.Text = $"{_user.Login}: {_user.Status}";
             IsAdmin();
-            IsEmployee();
         }
 
         // Ввод выбранной записи в датагриде внутрь текстбоксов
@@ -324,22 +320,42 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void search_tb_TextChanged(object sender, EventArgs e)
         {
-            Utilities.Search(dataGridView1, database, SwitchState.Employee, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
+            Utilities.Search(
+                dataGridView1, 
+                database, 
+                SwitchState.Employee, 
+                $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'"
+            );
         }
 
         private void clientSearch_tb_TextChanged(object sender, EventArgs e)
         {
-
+            Utilities.Search(
+                clientView_dgv,
+                database,
+                SwitchState.Client,
+                $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{clientSearch_tb.Text}%'"
+            );
         }
 
         private void orgSearch_tb_TextChanged(object sender, EventArgs e)
         {
-
+            Utilities.Search(
+                organization_dgv,
+                database,
+                SwitchState.Organization,
+                $"select id_pk_organization, o_name, o_phoneNumber, o_email from Organization where concat(id_pk_organization, o_name, o_phoneNumber, o_email) like '%{orgSearch_tb.Text}%';"
+            );
         }
 
         private void vacSearch_tb_TextChanged(object sender, EventArgs e)
         {
-
+            Utilities.Search(
+                vacancy_dgv,
+                database,
+                SwitchState.Vacancy,
+                $"select id_pk_vacancy, o_name, v_profession, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization where concat(id_pk_vacancy, o_name, v_profession, o_phoneNumber) like '%{vacSearch_tb.Text}%';"
+            );
         }
 
         /// <summary>
@@ -472,7 +488,8 @@ namespace agency_csharp
 
             if (Int64.TryParse(userNumber, out Int64 n))
             {
-                string queryString = $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{userName}', '{userSurname}', '{userPatronymic}', '{userNumber}');";
+                string queryString = 
+                    $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{userName}', '{userSurname}', '{userPatronymic}', '{userNumber}');";
                 SqlCommand command = new SqlCommand(queryString, database.getConnection());
                 command.ExecuteNonQuery();
 
@@ -484,7 +501,12 @@ namespace agency_csharp
             }
             else
             {
-                MessageBox.Show("Пожалуйста, введите корректный номер телефона", "Не удалось добавить запись", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(
+                    "Пожалуйста, введите корректный номер телефона", 
+                    "Не удалось добавить запись", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning
+                );
             }
 
             database.closeConnection();
@@ -498,7 +520,12 @@ namespace agency_csharp
 
         private void search_grid_btn_Click(object sender, EventArgs e)
         {
-            Utilities.Search(dataGridView1, database, SwitchState.Employee, $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'");
+            Utilities.Search(
+                dataGridView1, 
+                database, 
+                SwitchState.Employee, 
+                $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'"
+            );
         }
 
         private void MainWindow_FormClosed(object sender, FormClosedEventArgs e)
@@ -509,7 +536,12 @@ namespace agency_csharp
 
         private void passportEdit_btn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("При переходе на данную форму вы обязуетесь не разглашать паспортные данные пользователей.", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (
+                MessageBox.Show("При переходе на данную форму вы обязуетесь не разглашать паспортные данные пользователей.", 
+                "Внимание", 
+                MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Warning
+                ) == DialogResult.Yes)
             {
                 if (
                         clientName_tb.Text.Length > 0 && clientName_tb.Text.Length <= 50 &&
@@ -521,7 +553,12 @@ namespace agency_csharp
                     documents.Show();
                 } else
                 {
-                    MessageBox.Show("Сначала выберите пользователя, у которого хотите отредактировать паспорт", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(
+                        "Сначала выберите пользователя, у которого хотите отредактировать паспорт", 
+                        "Ошибка", 
+                        MessageBoxButtons.OK, 
+                        MessageBoxIcon.Warning
+                    );
                 }
             }
         }
@@ -539,6 +576,82 @@ namespace agency_csharp
         private void responseSave_btn_Click(object sender, EventArgs e)
         {
             UpdateDGV.Responses(response_dgv, database);
+        }
+
+        private void параметрыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form settings = new Settings();
+            settings.Show();
+        }
+
+        private void contractSearch_tb_TextChanged(object sender, EventArgs e)
+        {
+            Utilities.Search(
+                contract_dgv,
+                database,
+                SwitchState.Vacancy,
+                $"select id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname from Contracts inner join Employee Emp on Contracts.c_fk_employee = Emp.id_pk_employee inner join Client Cli on Cli.id_pk_client = Contracts.c_fk_client inner join Users C on C.id_pk_user = Cli.id_user inner join Users E on E.id_pk_user = Emp.id_fk_user where concat(id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname) like '%{contractSearch_tb.Text}%';"
+            );
+        }
+
+        private void responseSearch_tb_TextChanged(object sender, EventArgs e)
+        {
+            Utilities.Search(
+                response_dgv,
+                database,
+                SwitchState.Vacancy,
+                $"select id_pk_response, o_name, v_profession, u_name, u_surname, u_patronymic, u_phoneNumber from UserResponse inner join Vacancy V on V.id_pk_vacancy = UserResponse.id_fk_vacancy inner join Organization O on O.id_pk_organization = V.id_organization inner join Users U on U.id_pk_user = UserResponse.id_fk_user where concat(id_pk_response, o_name, v_profession, u_name, u_surname, u_patronymic, u_phoneNumber) like '%{responseSearch_tb.Text}%';"
+            );
+        }
+
+        private void responseSearch_btn_Click(object sender, EventArgs e)
+        {
+            Utilities.Search(
+                response_dgv,
+                database,
+                SwitchState.Vacancy,
+                $"select id_pk_response, o_name, v_profession, u_name, u_surname, u_patronymic, u_phoneNumber from UserResponse inner join Vacancy V on V.id_pk_vacancy = UserResponse.id_fk_vacancy inner join Organization O on O.id_pk_organization = V.id_organization inner join Users U on U.id_pk_user = UserResponse.id_fk_user where concat(id_pk_response, o_name, v_profession, u_name, u_surname, u_patronymic, u_phoneNumber) like '%{responseSearch_tb.Text}%';"
+            );
+        }
+
+        private void contractSearch_btn_Click(object sender, EventArgs e)
+        {
+            Utilities.Search(
+                contract_dgv,
+                database,
+                SwitchState.Vacancy,
+                $"select id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname from Contracts inner join Employee Emp on Contracts.c_fk_employee = Emp.id_pk_employee inner join Client Cli on Cli.id_pk_client = Contracts.c_fk_client inner join Users C on C.id_pk_user = Cli.id_user inner join Users E on E.id_pk_user = Emp.id_fk_user where concat(id_pk_contract, c_conditions, c_createdAt) like '%{contractSearch_tb.Text}%';"
+            );
+        }
+
+        private void vacSearch_btn_Click(object sender, EventArgs e)
+        {
+            Utilities.Search(
+                vacancy_dgv,
+                database,
+                SwitchState.Vacancy,
+                $"select id_pk_vacancy, o_name, v_profession, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization where concat(id_pk_vacancy, o_name, v_profession, o_phoneNumber) like '%{vacSearch_tb.Text}%';"
+            );
+        }
+
+        private void orgSearch_btn_Click(object sender, EventArgs e)
+        {
+            Utilities.Search(
+                organization_dgv,
+                database,
+                SwitchState.Organization,
+                $"select id_pk_organization, o_name, o_phoneNumber, o_email from Organization where concat(id_pk_organization, o_name, o_phoneNumber, o_email) like '%{orgSearch_tb.Text}%';"
+            );
+        }
+
+        private void clientSearch_btn_Click(object sender, EventArgs e)
+        {
+            Utilities.Search(
+                clientView_dgv,
+                database,
+                SwitchState.Client,
+                $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{clientSearch_tb.Text}%'"
+            );
         }
     }
 }
