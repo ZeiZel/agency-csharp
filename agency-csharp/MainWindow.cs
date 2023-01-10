@@ -115,7 +115,6 @@ namespace agency_csharp
             contractChange_pb.Visible = _user.IsAdmin;
         }
 
-        // TODO: сделать изменение данных
         /// <summary>
         /// Этот метод будет производить изменение данных
         /// </summary>
@@ -266,8 +265,6 @@ namespace agency_csharp
                     MessageBox.Show("Произошла ошибка при изменении вызове функции изменения данных.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
-
-            
         }
 
         private void ClearFields(SwitchState state)

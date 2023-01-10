@@ -30,7 +30,7 @@ create table Adress (
 
 create table Client (
 	id_pk_client int identity(1,1) not null primary key,
-	id_user int not null FOREIGN KEY REFERENCES Users(id_pk_user),
+	id_user int not null FOREIGN KEY REFERENCES Users(id_pk_user) ON DELETE CASCADE,
 	id_adress int not null foreign key references Adress (id_pk_adress)
 );
 
@@ -65,7 +65,9 @@ create table OrgVac (
 create table Contracts (
 	id_pk_contract int identity(1,1) not null primary key,
 	c_conditions nvarchar(1000),
-	c_createdAt nvarchar(30)
+	c_createdAt nvarchar(30),
+	c_fk_client int foreign key references Client(id_pk_client),
+    c_fk_employee int foreign key references Employee(id_pk_employee)
 );
 
 -- статус контракта пользователя

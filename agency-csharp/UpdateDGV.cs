@@ -67,26 +67,75 @@ namespace agency_csharp
             database.closeConnection();
         }
 
+        // TODO: сделать обновление клиентов
         static public void Clients(DataGridView dgv, Database database)
         {
+            database.openConnection();
 
+            for (int i = 0; i < dgv.Rows.Count; i++)
+            {
+                var rowState = (RowState)dgv.Rows[i].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dgv.Rows[i].Cells[0].Value);
+
+                    // TODO: у клиента есть много связанных таблиц и с ними нужно решить вопрос
+                    var deleteClientQuery = $"delete from Client where id_user = {id}";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteClientQuery, database.getConnection());
+
+                    if (
+                            commandEmpDel.ExecuteNonQuery() == 0
+                        )
+                    {
+                        MessageBox.Show("Клиент удалён");
+                    }
+
+                    database.closeConnection();
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var userId = dgv.Rows[i].Cells[0].Value.ToString();
+                    var userName = dgv.Rows[i].Cells[1].Value.ToString();
+                    var userSurname = dgv.Rows[i].Cells[2].Value.ToString();
+                    var userPatronymic = dgv.Rows[i].Cells[3].Value.ToString();
+                    var userNumber = dgv.Rows[i].Cells[4].Value.ToString();
+
+                    string query =
+                        $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            database.closeConnection();
         }
-
+        
+        // TODO: сделать обновление организаций
         static public void Organizations(DataGridView dgv, Database database)
         {
 
         }
 
+        // TODO: сделать обновление вакансий
         static public void Vacancys(DataGridView dgv, Database database)
         {
 
         }
 
+        // TODO: сделать обновление контрактов
         static public void Contracts(DataGridView dgv, Database database)
         {
 
         }
 
+        // TODO: сделать обновление откликов
         static public void Responses(DataGridView dgv, Database database)
         {
 
