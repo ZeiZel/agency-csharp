@@ -151,13 +151,13 @@ namespace agency_csharp
 
         private void search_tb_TextChanged(object sender, EventArgs e)
         {
-            Search(dataGridView1, $"select [id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee] from [dbo].[Register] where concat([id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee]) like '%{search_tb.Text}%'");
+            Search(dataGridView1, $"select [id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee], [id_fk_user] from [dbo].[Register] where concat([id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee], [id_fk_user]) like '%{search_tb.Text}%'");
 
         }
 
         private void search_grid_btn_Click(object sender, EventArgs e)
         {
-            Search(dataGridView1, $"select [id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee] from [dbo].[Register] where concat([id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee]) like '%{search_tb.Text}%'");
+            Search(dataGridView1, $"select [id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee], [id_fk_user] from [dbo].[Register] where concat([id_pk_register], [r_login], [r_password], [r_isAdmin], [r_isEmployee], [id_fk_user]) like '%{search_tb.Text}%'");
 
         }
 

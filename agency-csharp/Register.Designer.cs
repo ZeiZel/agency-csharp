@@ -46,7 +46,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.login_data_gb = new System.Windows.Forms.GroupBox();
             this.personality_data_gb = new System.Windows.Forms.GroupBox();
-            this.back_btn = new System.Windows.Forms.Button();
             this.clear_btn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -265,23 +264,6 @@
             this.personality_data_gb.TabStop = false;
             this.personality_data_gb.Text = "Персональные данные";
             // 
-            // back_btn
-            // 
-            this.back_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.back_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.back_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.back_btn.FlatAppearance.BorderSize = 0;
-            this.back_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.back_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.back_btn.Location = new System.Drawing.Point(28, 626);
-            this.back_btn.Name = "back_btn";
-            this.back_btn.Size = new System.Drawing.Size(198, 52);
-            this.back_btn.TabIndex = 15;
-            this.back_btn.Text = "Вернуться обратно";
-            this.back_btn.UseVisualStyleBackColor = false;
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
-            // 
             // clear_btn
             // 
             this.clear_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
@@ -302,7 +284,6 @@
             this.panel1.Controls.Add(this.register_btn);
             this.panel1.Controls.Add(this.clear_btn);
             this.panel1.Controls.Add(this.login_data_gb);
-            this.panel1.Controls.Add(this.back_btn);
             this.panel1.Controls.Add(this.personality_data_gb);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -330,6 +311,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Register";
             this.Text = "Register";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Register_FormClosed);
             this.Load += new System.EventHandler(this.Register_Load);
             this.login_data_gb.ResumeLayout(false);
             this.login_data_gb.PerformLayout();
@@ -359,7 +341,6 @@
         private Label label7;
         private GroupBox login_data_gb;
         private GroupBox personality_data_gb;
-        private Button back_btn;
         private Button clear_btn;
         private Panel panel1;
         private PictureBox pictureBox1;

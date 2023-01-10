@@ -167,10 +167,8 @@
             this.responses_tab = new System.Windows.Forms.TabPage();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.responseAdd_btn = new System.Windows.Forms.Button();
             this.responseDel_btn = new System.Windows.Forms.Button();
             this.responseSave_btn = new System.Windows.Forms.Button();
             this.responseChange_btn = new System.Windows.Forms.Button();
@@ -256,7 +254,6 @@
             this.responses_tab.SuspendLayout();
             this.groupBox22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.groupBox21.SuspendLayout();
@@ -441,6 +438,7 @@
             // 
             this.userId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.userId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userId.Enabled = false;
             this.userId.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.userId.Location = new System.Drawing.Point(38, 51);
             this.userId.Multiline = true;
@@ -731,6 +729,7 @@
             this.clientClear_btn.Size = new System.Drawing.Size(48, 52);
             this.clientClear_btn.TabIndex = 17;
             this.clientClear_btn.UseVisualStyleBackColor = false;
+            this.clientClear_btn.Click += new System.EventHandler(this.clientClear_btn_Click);
             // 
             // clientSearch_tb
             // 
@@ -817,6 +816,7 @@
             // 
             this.clientID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientID_tb.Enabled = false;
             this.clientID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clientID_tb.Location = new System.Drawing.Point(39, 56);
             this.clientID_tb.Multiline = true;
@@ -1105,6 +1105,7 @@
             this.orgClear_btn.Size = new System.Drawing.Size(48, 52);
             this.orgClear_btn.TabIndex = 17;
             this.orgClear_btn.UseVisualStyleBackColor = false;
+            this.orgClear_btn.Click += new System.EventHandler(this.orgClear_btn_Click);
             // 
             // orgSearch_tb
             // 
@@ -1200,6 +1201,7 @@
             // 
             this.orgID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orgID_tb.Enabled = false;
             this.orgID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.orgID_tb.Location = new System.Drawing.Point(45, 56);
             this.orgID_tb.Multiline = true;
@@ -1438,6 +1440,7 @@
             this.vacClrear_btn.Size = new System.Drawing.Size(48, 52);
             this.vacClrear_btn.TabIndex = 17;
             this.vacClrear_btn.UseVisualStyleBackColor = false;
+            this.vacClrear_btn.Click += new System.EventHandler(this.vacClrear_btn_Click);
             // 
             // vacSearch_tb
             // 
@@ -1522,6 +1525,7 @@
             // 
             this.vacancyID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacancyID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vacancyID_tb.Enabled = false;
             this.vacancyID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.vacancyID_tb.Location = new System.Drawing.Point(34, 56);
             this.vacancyID_tb.Multiline = true;
@@ -1744,6 +1748,7 @@
             this.contractRefresh_btn.Size = new System.Drawing.Size(55, 52);
             this.contractRefresh_btn.TabIndex = 17;
             this.contractRefresh_btn.UseVisualStyleBackColor = false;
+            this.contractRefresh_btn.Click += new System.EventHandler(this.contractRefresh_btn_Click);
             // 
             // contractSearch_btn
             // 
@@ -1771,6 +1776,7 @@
             this.contractClear_btn.Size = new System.Drawing.Size(48, 52);
             this.contractClear_btn.TabIndex = 17;
             this.contractClear_btn.UseVisualStyleBackColor = false;
+            this.contractClear_btn.Click += new System.EventHandler(this.contractClear_btn_Click);
             // 
             // contractSearch_tb
             // 
@@ -1882,6 +1888,7 @@
             this.contractChange_btn.TabIndex = 18;
             this.contractChange_btn.Text = "Изменить";
             this.contractChange_btn.UseVisualStyleBackColor = false;
+            this.contractChange_btn.Click += new System.EventHandler(this.contractChange_btn_Click);
             // 
             // groupBox16
             // 
@@ -2011,6 +2018,7 @@
             // 
             this.contractId_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.contractId_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contractId_tb.Enabled = false;
             this.contractId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.contractId_tb.Location = new System.Drawing.Point(34, 56);
             this.contractId_tb.Multiline = true;
@@ -2081,10 +2089,8 @@
             // 
             this.groupBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.groupBox22.Controls.Add(this.pictureBox19);
-            this.groupBox22.Controls.Add(this.pictureBox21);
             this.groupBox22.Controls.Add(this.pictureBox22);
             this.groupBox22.Controls.Add(this.pictureBox23);
-            this.groupBox22.Controls.Add(this.responseAdd_btn);
             this.groupBox22.Controls.Add(this.responseDel_btn);
             this.groupBox22.Controls.Add(this.responseSave_btn);
             this.groupBox22.Controls.Add(this.responseChange_btn);
@@ -2107,20 +2113,10 @@
             this.pictureBox19.TabIndex = 19;
             this.pictureBox19.TabStop = false;
             // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(34, 41);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox21.TabIndex = 19;
-            this.pictureBox21.TabStop = false;
-            // 
             // pictureBox22
             // 
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(34, 84);
+            this.pictureBox22.Location = new System.Drawing.Point(29, 63);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(43, 37);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -2137,22 +2133,6 @@
             this.pictureBox23.TabIndex = 19;
             this.pictureBox23.TabStop = false;
             // 
-            // responseAdd_btn
-            // 
-            this.responseAdd_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.responseAdd_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.responseAdd_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.responseAdd_btn.FlatAppearance.BorderSize = 0;
-            this.responseAdd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.responseAdd_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseAdd_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.responseAdd_btn.Location = new System.Drawing.Point(83, 41);
-            this.responseAdd_btn.Name = "responseAdd_btn";
-            this.responseAdd_btn.Size = new System.Drawing.Size(174, 37);
-            this.responseAdd_btn.TabIndex = 18;
-            this.responseAdd_btn.Text = "Добавить";
-            this.responseAdd_btn.UseVisualStyleBackColor = false;
-            // 
             // responseDel_btn
             // 
             this.responseDel_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
@@ -2162,12 +2142,13 @@
             this.responseDel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.responseDel_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.responseDel_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.responseDel_btn.Location = new System.Drawing.Point(83, 84);
+            this.responseDel_btn.Location = new System.Drawing.Point(78, 63);
             this.responseDel_btn.Name = "responseDel_btn";
             this.responseDel_btn.Size = new System.Drawing.Size(174, 37);
             this.responseDel_btn.TabIndex = 18;
             this.responseDel_btn.Text = "Удалить";
             this.responseDel_btn.UseVisualStyleBackColor = false;
+            this.responseDel_btn.Click += new System.EventHandler(this.responseDel_btn_Click);
             // 
             // responseSave_btn
             // 
@@ -2202,6 +2183,7 @@
             this.responseChange_btn.TabIndex = 18;
             this.responseChange_btn.Text = "Изменить";
             this.responseChange_btn.UseVisualStyleBackColor = false;
+            this.responseChange_btn.Click += new System.EventHandler(this.responseChange_btn_Click);
             // 
             // groupBox21
             // 
@@ -2231,6 +2213,7 @@
             this.responseRefresh_brn.Size = new System.Drawing.Size(55, 52);
             this.responseRefresh_brn.TabIndex = 17;
             this.responseRefresh_brn.UseVisualStyleBackColor = false;
+            this.responseRefresh_brn.Click += new System.EventHandler(this.responseRefresh_brn_Click);
             // 
             // responseSearch_btn
             // 
@@ -2258,6 +2241,7 @@
             this.responseClear_btn.Size = new System.Drawing.Size(48, 52);
             this.responseClear_btn.TabIndex = 17;
             this.responseClear_btn.UseVisualStyleBackColor = false;
+            this.responseClear_btn.Click += new System.EventHandler(this.responseClear_btn_Click);
             // 
             // responseSearch_tb
             // 
@@ -2425,6 +2409,7 @@
             // 
             this.responseId_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseId_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.responseId_tb.Enabled = false;
             this.responseId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.responseId_tb.Location = new System.Drawing.Point(34, 61);
             this.responseId_tb.Multiline = true;
@@ -2637,7 +2622,6 @@
             this.responses_tab.ResumeLayout(false);
             this.groupBox22.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.groupBox21.ResumeLayout(false);
@@ -2827,10 +2811,8 @@
         private Label label45;
         private GroupBox groupBox22;
         private PictureBox pictureBox19;
-        private PictureBox pictureBox21;
         private PictureBox pictureBox22;
         private PictureBox pictureBox23;
-        private Button responseAdd_btn;
         private Button responseDel_btn;
         private Button responseSave_btn;
         private Button responseChange_btn;

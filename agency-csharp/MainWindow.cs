@@ -57,7 +57,6 @@ namespace agency_csharp
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
-            // TODO: тут нужно поменять колонки таблиц
             #region Вызов функций отрисовки таблиц
 
             string[] columnsEmp = { "id_pk_user", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
@@ -85,7 +84,7 @@ namespace agency_csharp
             vacancy_dgv.Columns[4].Visible = false;
 
             string[] columnsContracts = { "id_pk_contract", "c_conditions", "c_createdAt", "u_name", "u_surname", "u_name", "u_surname" };
-            string[] columnNamesContracts = { "ID контракта", "Условия", "Дата заключения", "Имя клиента", "Фамилия клиента", "Имя агента", "Фамилия агента" };
+            string[] columnNamesContracts = { "ID контракта", "Условия", "Дата заключения", "Имя агента", "Фамилия агента", "Имя клиента", "Фамилия клиента" };
             Utilities.CreateColumns(contract_dgv, columnsContracts, columnNamesContracts);
             Utilities.RefreshDataGrid(contract_dgv, database, SwitchState.Contract, refreshQueryContracts);
             contract_dgv.Columns[7].Visible = false;
@@ -116,38 +115,213 @@ namespace agency_csharp
             contractChange_pb.Visible = _user.IsAdmin;
         }
 
-        // Этот метод будет производить изменение данных
-        private void Change()
+        // TODO: сделать изменение данных
+        /// <summary>
+        /// Этот метод будет производить изменение данных
+        /// </summary>
+        /// <param name="state"></param>
+        private void Change(SwitchState state)
         {
-            var selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
+            int selectedRowIndex;
 
-            var id = userId.Text;
-            var userName = name_tb.Text;
-            var userSurname = surname_tb.Text;
-            var userPatronymic = thirdname_tb.Text;
+            int id;
+            
             Int64 userNumber;
 
-            if (dataGridView1.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+            string userName, userSurname, userPatronymic;
+
+            string orgName, orgNumber, orgMail;
+
+            string profession;
+
+            string contractDate,
+                  contractConditions,
+                  contractClientName,
+                  contractClientSurname,
+                  contractAgentName,
+                  contractAgentSurname;
+
+            string resProf, resOrg;
+
+            switch (state)
             {
-                if (Int64.TryParse(number_tb.Text, out userNumber))
-                {
-                    dataGridView1.Rows[selectedRowIndex].SetValues(id, userName, userSurname, userPatronymic, userNumber);
-                    dataGridView1.Rows[selectedRowIndex].Cells[5].Value = RowState.Modified;
-                }
-                else
-                {
-                    MessageBox.Show("Номер телефона введён неверный!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                case SwitchState.Employee:
+                    selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
+
+                    id = Convert.ToInt32(userId.Text);
+                    userName = name_tb.Text;
+                    userSurname = surname_tb.Text;
+                    userPatronymic = thirdname_tb.Text;
+
+                    if (dataGridView1.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+                    {
+                        if (Int64.TryParse(number_tb.Text, out userNumber))
+                        {
+                            dataGridView1.Rows[selectedRowIndex].SetValues(id, userName, userSurname, userPatronymic, userNumber);
+                            dataGridView1.Rows[selectedRowIndex].Cells[5].Value = RowState.Modified;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Номер телефона введён неверный!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    break;
+                case SwitchState.Client:
+                    selectedRowIndex = clientView_dgv.CurrentCell.RowIndex;
+
+                    id = Convert.ToInt32(clientID_tb.Text);
+                    userName = clientName_tb.Text;
+                    userSurname = clientSur_tb.Text;
+                    userPatronymic = clientPat_tb.Text;
+
+                    if (clientView_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+                    {
+                        if (Int64.TryParse(clientNum_tb.Text, out userNumber))
+                        {
+                            clientView_dgv.Rows[selectedRowIndex].SetValues(id, userName, userSurname, userPatronymic, userNumber);
+                            clientView_dgv.Rows[selectedRowIndex].Cells[5].Value = RowState.Modified;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Номер телефона введён неверный!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    break;
+                case SwitchState.Organization:
+                    selectedRowIndex = organization_dgv.CurrentCell.RowIndex;
+
+                    id = Convert.ToInt32(orgID_tb.Text);
+                    orgName = orgName_tb.Text;
+                    orgNumber = orgNum_tb.Text;
+                    orgMail = orgMail_tb.Text;
+
+                    if (organization_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+                    {
+                        organization_dgv.Rows[selectedRowIndex].SetValues(id, orgName, orgNumber, orgMail);
+                        organization_dgv.Rows[selectedRowIndex].Cells[4].Value = RowState.Modified;
+                    }
+                    break;
+                case SwitchState.Vacancy:
+                    selectedRowIndex = vacancy_dgv.CurrentCell.RowIndex;
+
+                    id = Convert.ToInt32(vacancyID_tb.Text);
+                    orgName = vacOrgName_tb.Text;
+                    profession = vacName_tb.Text;
+                    orgNumber = vacNum_tb.Text;
+
+                    if (vacancy_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+                    {
+                        if (Int64.TryParse(vacNum_tb.Text, out userNumber))
+                        {
+                            vacancy_dgv.Rows[selectedRowIndex].SetValues(id, orgName, profession, orgNumber);
+                            vacancy_dgv.Rows[selectedRowIndex].Cells[4].Value = RowState.Modified;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Номер телефона введён неверный!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    break;
+                case SwitchState.Contract:
+                    selectedRowIndex = contract_dgv.CurrentCell.RowIndex;
+
+                    id = Convert.ToInt32(contractId_tb.Text);
+                    contractDate = contractDate_tb.Text;
+                    contractConditions = contractDate_tb.Text;
+                    contractClientName = contractClientName_tb.Text;
+                    contractClientSurname = contractClientSurname_tb.Text;
+                    contractAgentName = contractAgentName_tb.Text;
+                    contractAgentSurname = contractAgentSurame_tb.Text;
+
+                    if (contract_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+                    {
+                        contract_dgv.Rows[selectedRowIndex].SetValues(id, contractConditions, contractDate, contractAgentName, contractAgentSurname, contractClientName, contractClientSurname);
+                        contract_dgv.Rows[selectedRowIndex].Cells[7].Value = RowState.Modified;
+                    }
+                    break;
+                case SwitchState.Response:
+                    selectedRowIndex = response_dgv.CurrentCell.RowIndex;
+
+                    id = Convert.ToInt32(responseId_tb.Text);
+                    resOrg = responseOrg_tb.Text;
+                    resProf = responseVac_tb.Text;
+                    userName = responseClientName_tb.Text;
+                    userSurname = responseClientSurname_tb.Text;
+                    userPatronymic = responseClientPat_tb.Text;
+
+                    if (response_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+                    {
+                        if (Int64.TryParse(responseClientNum_tb.Text, out userNumber))
+                        {
+                            response_dgv.Rows[selectedRowIndex].SetValues(id, resOrg, resProf, userName, userSurname, userPatronymic, userNumber);
+                            response_dgv.Rows[selectedRowIndex].Cells[7].Value = RowState.Modified;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Номер телефона введён неверный!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    break;
+                default:
+                    MessageBox.Show("Произошла ошибка при изменении вызове функции изменения данных.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
             }
+
+            
         }
 
-        private void ClearFields()
+        private void ClearFields(SwitchState state)
         {
-            userId.Text = "";
-            name_tb.Text = "";
-            surname_tb.Text = "";
-            thirdname_tb.Text = "";
-            number_tb.Text = "";
+            switch (state)
+            {
+                case SwitchState.Employee:
+                    userId.Text = "";
+                    name_tb.Text = "";
+                    surname_tb.Text = "";
+                    thirdname_tb.Text = "";
+                    number_tb.Text = "";
+                    break;
+                case SwitchState.Client:
+                    clientID_tb.Text = "";
+                    clientName_tb.Text = "";
+                    clientSur_tb.Text = "";
+                    clientPat_tb.Text = "";
+                    clientNum_tb.Text = "";
+                    break;
+                case SwitchState.Organization:
+                    orgID_tb.Text = "";
+                    orgMail_tb.Text = "";
+                    orgName_tb.Text = "";
+                    orgNum_tb.Text = "";
+                    break;
+                case SwitchState.Vacancy:
+                    vacancyID_tb.Text = "";
+                    vacName_tb.Text = "";
+                    vacNum_tb.Text = "";
+                    vacOrgName_tb.Text = "";
+                    break;
+                case SwitchState.Contract:
+                    contractId_tb.Text = "";
+                    contractDate_tb.Text = "";
+                    contractConditions_tb.Text = "";
+                    contractAgentName_tb.Text = "";
+                    contractAgentSurame_tb.Text = "";
+                    contractClientName_tb.Text = "";
+                    contractClientSurname_tb.Text = "";
+                    break;
+                case SwitchState.Response:
+                    responseClientName_tb.Text = "";
+                    responseClientNum_tb.Text = "";
+                    responseClientPat_tb.Text = "";
+                    responseClientSurname_tb.Text = "";
+                    responseId_tb.Text = "";
+                    responseOrg_tb.Text = "";
+                    responseVac_tb.Text = "";
+                    break;
+                default:
+                    MessageBox.Show("Ошибка очистки поля", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+            }
         }
 
         // ------------------------------------------------------------------------------------------------
@@ -158,7 +332,11 @@ namespace agency_csharp
             IsAdmin();
         }
 
-        // Ввод выбранной записи в датагриде внутрь текстбоксов
+        /// <summary>
+        /// Ввод выбранной записи в датагриде внутрь текстбоксов
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedRow = e.RowIndex;
@@ -176,12 +354,10 @@ namespace agency_csharp
             }
         }
 
-        // TODO: Нужно поменять тут колонки таблиц
         private void client_dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedRow = e.RowIndex;
 
-            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = clientView_dgv.Rows[selectedRow];
@@ -198,7 +374,6 @@ namespace agency_csharp
         {
             selectedRow = e.RowIndex;
 
-            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = organization_dgv.Rows[selectedRow];
@@ -214,7 +389,6 @@ namespace agency_csharp
         {
             selectedRow = e.RowIndex;
 
-            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = vacancy_dgv.Rows[selectedRow];
@@ -230,7 +404,6 @@ namespace agency_csharp
         {
             selectedRow = e.RowIndex;
 
-            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = contract_dgv.Rows[selectedRow];
@@ -249,7 +422,6 @@ namespace agency_csharp
         {
             selectedRow = e.RowIndex;
 
-            // проверка e.Row проводится для того, чтобы не выводилась ошибка выхода из диапазона
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = response_dgv.Rows[selectedRow];
@@ -267,7 +439,7 @@ namespace agency_csharp
         private void refresh_btn_Click(object sender, EventArgs e)
         {
             Utilities.RefreshDataGrid(dataGridView1, database, SwitchState.Employee, refreshQueryEmp);
-            ClearFields();
+            ClearFields(SwitchState.Employee);
         }
 
         /// <summary>
@@ -289,7 +461,7 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void clear_btn_Click(object sender, EventArgs e)
         {
-            ClearFields();
+            ClearFields(SwitchState.Employee);
         }
 
         /// <summary>
@@ -299,18 +471,20 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void clientRefresh_btn_Click(object sender, EventArgs e)
         {
-            // TODO: Нужно поменять запрос на рефреш
-            Utilities.RefreshDataGrid(clientView_dgv, database, SwitchState.Client, refreshQueryEmp);
+            Utilities.RefreshDataGrid(clientView_dgv, database, SwitchState.Client, refreshQueryClient);
+            ClearFields(SwitchState.Client);
         }
 
         private void orgRefresh_btn_Click(object sender, EventArgs e)
         {
-            Utilities.RefreshDataGrid(organization_dgv, database, SwitchState.Organization, refreshQueryEmp);
+            Utilities.RefreshDataGrid(organization_dgv, database, SwitchState.Organization, refreshQueryOrg);
+            ClearFields(SwitchState.Organization);
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            Utilities.RefreshDataGrid(vacancy_dgv, database, SwitchState.Vacancy, refreshQueryEmp);
+            Utilities.RefreshDataGrid(vacancy_dgv, database, SwitchState.Vacancy, refreshQueryVac);
+            ClearFields(SwitchState.Vacancy);
         }
 
         /// <summary>
@@ -371,17 +545,17 @@ namespace agency_csharp
 
         private void clientDel_Click(object sender, EventArgs e)
         {
-
+            Utilities.DeleteRow(clientView_dgv);
         }
 
         private void orgDel_btn_Click(object sender, EventArgs e)
         {
-
+            Utilities.DeleteRow(organization_dgv);
         }
 
         private void vacDel_tb_Click(object sender, EventArgs e)
         {
-
+            Utilities.DeleteRow(vacancy_dgv);
         }
 
         /// <summary>
@@ -391,21 +565,24 @@ namespace agency_csharp
         /// <param name="e"></param>
         private void change_btn_Click(object sender, EventArgs e)
         {
-            Change();
+            Change(SwitchState.Employee);
         }
 
         private void clientChange_Click(object sender, EventArgs e)
         {
+            Change(SwitchState.Client);
 
         }
 
         private void orgChange_btn_Click(object sender, EventArgs e)
         {
+            Change(SwitchState.Organization);
 
         }
 
         private void vacChange_tb_Click(object sender, EventArgs e)
         {
+            Change(SwitchState.Vacancy);
 
         }
 
@@ -459,6 +636,7 @@ namespace agency_csharp
             updates.Show();
         }
 
+        // TODO: Реализовать добавление клиента
         /// <summary>
         /// Кнопки добавления записей
         /// </summary>
@@ -470,12 +648,14 @@ namespace agency_csharp
             addClient.Show();
         }
 
+        // TODO: Реализовать добавление организации
         private void orgAdd_btn_Click(object sender, EventArgs e)
         {
             Form addOrg = new AddOrganization();
             addOrg.Show();
         }
 
+        // TODO: Реализовать добавление вакансии
         private void vacAdd_tb_Click(object sender, EventArgs e)
         {
             database.openConnection();
@@ -514,8 +694,8 @@ namespace agency_csharp
 
         private void register_btn_Click(object sender, EventArgs e)
         {
-            Form register = new Register();
-            register.Show();
+            Form registerNewUser = new EmployeeRegister();
+            registerNewUser.Show();
         }
 
         private void search_grid_btn_Click(object sender, EventArgs e)
@@ -563,9 +743,41 @@ namespace agency_csharp
             }
         }
 
+        // TODO: Реализовать добавление контракта
         private void contractAdd_btn_Click(object sender, EventArgs e)
         {
+            database.openConnection();
 
+            //var id = Convert.ToInt32(userId_tb.Text);
+            var userName = name_tb.Text;
+            var userSurname = surname_tb.Text;
+            var userPatronymic = thirdname_tb.Text;
+            var userNumber = number_tb.Text;
+
+            if (Int64.TryParse(userNumber, out Int64 n))
+            {
+                string queryString =
+                    $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{userName}', '{userSurname}', '{userPatronymic}', '{userNumber}');";
+                SqlCommand command = new SqlCommand(queryString, database.getConnection());
+                command.ExecuteNonQuery();
+
+                string queryAddEmployee = $"EXEC AddUserEmployee  {userName}, {userNumber}";
+                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
+                commandAddEmp.ExecuteNonQuery();
+
+                MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Пожалуйста, введите корректный номер телефона",
+                    "Не удалось добавить запись",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+
+            database.closeConnection();
         }
 
         private void contractSave_btn_Click(object sender, EventArgs e)
@@ -652,6 +864,60 @@ namespace agency_csharp
                 SwitchState.Client,
                 $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{clientSearch_tb.Text}%'"
             );
+        }
+
+        private void contractRefresh_btn_Click(object sender, EventArgs e)
+        {
+            Utilities.RefreshDataGrid(contract_dgv, database, SwitchState.Contract, refreshQueryContracts);
+            ClearFields(SwitchState.Contract);
+        }
+
+        private void responseRefresh_brn_Click(object sender, EventArgs e)
+        {
+            Utilities.RefreshDataGrid(response_dgv, database, SwitchState.Response, refreshQueryResp);
+            ClearFields(SwitchState.Response);
+        }
+
+        private void responseClear_btn_Click(object sender, EventArgs e)
+        {
+            ClearFields(SwitchState.Response);
+        }
+
+        private void contractClear_btn_Click(object sender, EventArgs e)
+        {
+            ClearFields(SwitchState.Contract);
+        }
+
+        private void vacClrear_btn_Click(object sender, EventArgs e)
+        {
+            ClearFields(SwitchState.Vacancy);
+        }
+
+        private void orgClear_btn_Click(object sender, EventArgs e)
+        {
+            ClearFields(SwitchState.Organization);
+        }
+
+        private void clientClear_btn_Click(object sender, EventArgs e)
+        {
+            ClearFields(SwitchState.Client);
+        }
+
+        private void responseDel_btn_Click(object sender, EventArgs e)
+        {
+            Utilities.DeleteRow(response_dgv);
+        }
+
+        private void contractChange_btn_Click(object sender, EventArgs e)
+        {
+            Change(SwitchState.Contract);
+
+        }
+
+        private void responseChange_btn_Click(object sender, EventArgs e)
+        {
+            Change(SwitchState.Response);
+
         }
     }
 }
