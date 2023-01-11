@@ -38,7 +38,7 @@ namespace agency_csharp
                     clientName.Length > 0 && clientName.Length < 50 &&
                     clientSurname.Length > 0 && clientSurname.Length < 50 &&
                     clientPat.Length > 0 && clientPat.Length < 50 &&
-                    clientNum.Length > 0 && clientNum.Length > 0 &&
+                    clientNum.Length > 0 && clientNum.Length < 50 &&
                     adressRegion.Length > 0 && adressRegion.Length < 50 &&
                     adressCity.Length > 0 && adressCity.Length < 50 &&
                     adressStreet.Length > 0 && adressStreet.Length < 50 &&

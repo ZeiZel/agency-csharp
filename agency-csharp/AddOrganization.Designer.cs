@@ -28,19 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.orgNum_tb = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
@@ -53,166 +40,21 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.orgAdd_btn = new System.Windows.Forms.Button();
             this.orgDel_btn = new System.Windows.Forms.Button();
-            this.groupBox13.SuspendLayout();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.adressApartment_tb = new System.Windows.Forms.TextBox();
+            this.adressBuilding_tb = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.adressRegion_tb = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.adressCity_tb = new System.Windows.Forms.TextBox();
+            this.adressStreet_tb = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.groupBox13.Controls.Add(this.textBox1);
-            this.groupBox13.Controls.Add(this.textBox2);
-            this.groupBox13.Controls.Add(this.label23);
-            this.groupBox13.Controls.Add(this.label24);
-            this.groupBox13.Controls.Add(this.textBox3);
-            this.groupBox13.Controls.Add(this.label25);
-            this.groupBox13.Controls.Add(this.textBox4);
-            this.groupBox13.Controls.Add(this.label26);
-            this.groupBox13.Controls.Add(this.textBox5);
-            this.groupBox13.Controls.Add(this.textBox6);
-            this.groupBox13.Controls.Add(this.label27);
-            this.groupBox13.Controls.Add(this.label28);
-            this.groupBox13.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox13.Location = new System.Drawing.Point(12, 12);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(296, 448);
-            this.groupBox13.TabIndex = 29;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Данные адреса";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(43, 383);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 35);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(43, 312);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 35);
-            this.textBox2.TabIndex = 8;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label23.Location = new System.Drawing.Point(43, 31);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(150, 22);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "Идентификатор";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label24.Location = new System.Drawing.Point(43, 94);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(72, 22);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "Регион";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(43, 119);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(212, 35);
-            this.textBox3.TabIndex = 8;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label25.Location = new System.Drawing.Point(43, 358);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(94, 22);
-            this.label25.TabIndex = 9;
-            this.label25.Text = "Квартира";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(43, 56);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(212, 35);
-            this.textBox4.TabIndex = 8;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label26.Location = new System.Drawing.Point(43, 287);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(94, 22);
-            this.label26.TabIndex = 9;
-            this.label26.Text = "Строение";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(43, 182);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(212, 35);
-            this.textBox5.TabIndex = 8;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.Location = new System.Drawing.Point(43, 246);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(212, 35);
-            this.textBox6.TabIndex = 8;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label27.Location = new System.Drawing.Point(43, 221);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(64, 22);
-            this.label27.TabIndex = 9;
-            this.label27.Text = "Улица";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label28.Location = new System.Drawing.Point(43, 157);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(176, 22);
-            this.label28.TabIndex = 9;
-            this.label28.Text = "Населённый пункт";
             // 
             // groupBox7
             // 
@@ -329,9 +171,9 @@
             this.groupBox8.Controls.Add(this.orgDel_btn);
             this.groupBox8.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox8.Location = new System.Drawing.Point(114, 476);
+            this.groupBox8.Location = new System.Drawing.Point(123, 426);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(447, 125);
+            this.groupBox8.Size = new System.Drawing.Size(410, 125);
             this.groupBox8.TabIndex = 31;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Панель управления";
@@ -370,41 +212,159 @@
             this.orgDel_btn.UseVisualStyleBackColor = false;
             this.orgDel_btn.Click += new System.EventHandler(this.orgDel_btn_Click);
             // 
+            // groupBox12
+            // 
+            this.groupBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox12.Controls.Add(this.adressApartment_tb);
+            this.groupBox12.Controls.Add(this.adressBuilding_tb);
+            this.groupBox12.Controls.Add(this.label1);
+            this.groupBox12.Controls.Add(this.adressRegion_tb);
+            this.groupBox12.Controls.Add(this.label22);
+            this.groupBox12.Controls.Add(this.label9);
+            this.groupBox12.Controls.Add(this.adressCity_tb);
+            this.groupBox12.Controls.Add(this.adressStreet_tb);
+            this.groupBox12.Controls.Add(this.label15);
+            this.groupBox12.Controls.Add(this.label16);
+            this.groupBox12.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox12.Location = new System.Drawing.Point(12, 21);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(296, 399);
+            this.groupBox12.TabIndex = 32;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Данные адреса";
+            // 
+            // adressApartment_tb
+            // 
+            this.adressApartment_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressApartment_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressApartment_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressApartment_tb.Location = new System.Drawing.Point(38, 332);
+            this.adressApartment_tb.Multiline = true;
+            this.adressApartment_tb.Name = "adressApartment_tb";
+            this.adressApartment_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressApartment_tb.TabIndex = 8;
+            // 
+            // adressBuilding_tb
+            // 
+            this.adressBuilding_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressBuilding_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressBuilding_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressBuilding_tb.Location = new System.Drawing.Point(38, 267);
+            this.adressBuilding_tb.Multiline = true;
+            this.adressBuilding_tb.Name = "adressBuilding_tb";
+            this.adressBuilding_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressBuilding_tb.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(38, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 22);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Регион";
+            // 
+            // adressRegion_tb
+            // 
+            this.adressRegion_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressRegion_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressRegion_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressRegion_tb.Location = new System.Drawing.Point(38, 72);
+            this.adressRegion_tb.Multiline = true;
+            this.adressRegion_tb.Name = "adressRegion_tb";
+            this.adressRegion_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressRegion_tb.TabIndex = 8;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label22.Location = new System.Drawing.Point(38, 306);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(94, 22);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Квартира";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label9.Location = new System.Drawing.Point(38, 241);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 22);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Строение";
+            // 
+            // adressCity_tb
+            // 
+            this.adressCity_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressCity_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressCity_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressCity_tb.Location = new System.Drawing.Point(38, 137);
+            this.adressCity_tb.Multiline = true;
+            this.adressCity_tb.Name = "adressCity_tb";
+            this.adressCity_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressCity_tb.TabIndex = 8;
+            // 
+            // adressStreet_tb
+            // 
+            this.adressStreet_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressStreet_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressStreet_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressStreet_tb.Location = new System.Drawing.Point(38, 202);
+            this.adressStreet_tb.Multiline = true;
+            this.adressStreet_tb.Name = "adressStreet_tb";
+            this.adressStreet_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressStreet_tb.TabIndex = 8;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label15.Location = new System.Drawing.Point(38, 176);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(64, 22);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Улица";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label16.Location = new System.Drawing.Point(38, 111);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(176, 22);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Населённый пункт";
+            // 
             // AddOrganization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 623);
+            this.ClientSize = new System.Drawing.Size(643, 585);
+            this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.groupBox13);
             this.Name = "AddOrganization";
             this.Text = "AddOrganization";
             this.Load += new System.EventHandler(this.AddOrganization_Load);
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private GroupBox groupBox13;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label23;
-        private Label label24;
-        private TextBox textBox3;
-        private Label label25;
-        private TextBox textBox4;
-        private Label label26;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private Label label27;
-        private Label label28;
         private GroupBox groupBox7;
         private TextBox orgNum_tb;
         private Label label36;
@@ -417,5 +377,16 @@
         private GroupBox groupBox8;
         private Button orgAdd_btn;
         private Button orgDel_btn;
+        private GroupBox groupBox12;
+        private TextBox adressApartment_tb;
+        private TextBox adressBuilding_tb;
+        private Label label1;
+        private TextBox adressRegion_tb;
+        private Label label22;
+        private Label label9;
+        private TextBox adressCity_tb;
+        private TextBox adressStreet_tb;
+        private Label label15;
+        private Label label16;
     }
 }
