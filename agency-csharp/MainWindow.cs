@@ -42,7 +42,7 @@ namespace agency_csharp
         readonly string refreshQueryOrg = 
             "select id_pk_organization, o_name, o_phoneNumber, o_email from Organization;";
         readonly string refreshQueryVac = 
-            "select id_pk_vacancy, o_name, v_profession, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization";
+            "select id_pk_vacancy, o_name, v_profession, v_description, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization";
         readonly string refreshQueryContracts = 
             "select id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname from Contracts inner join Employee Emp on Contracts.c_fk_employee = Emp.id_pk_employee inner join Client Cli on Cli.id_pk_client = Contracts.c_fk_client inner join Users C on C.id_pk_user = Cli.id_user inner join Users E on E.id_pk_user = Emp.id_fk_user";
         readonly string refreshQueryResp =
@@ -77,11 +77,11 @@ namespace agency_csharp
             Utilities.RefreshDataGrid(organization_dgv, database, SwitchState.Organization, refreshQueryOrg);
             organization_dgv.Columns[4].Visible = false;
 
-            string[] columnsVac = { "id_pk_vacancy", "o_name", "v_profession", "o_phoneNumber" };
-            string[] columnNamesVac = { "ID вакансии", "Организация", "Должность", "Контакный номер" };
+            string[] columnsVac = { "id_pk_vacancy", "o_name", "v_profession", "v_description", "o_phoneNumber" };
+            string[] columnNamesVac = { "ID вакансии", "Организация", "Должность", "Описание", "Контакный номер" };
             Utilities.CreateColumns(vacancy_dgv, columnsVac, columnNamesVac);
             Utilities.RefreshDataGrid(vacancy_dgv, database, SwitchState.Vacancy, refreshQueryVac);
-            vacancy_dgv.Columns[4].Visible = false;
+            vacancy_dgv.Columns[5].Visible = false;
 
             string[] columnsContracts = { "id_pk_contract", "c_conditions", "c_createdAt", "u_name", "u_surname", "u_name", "u_surname" };
             string[] columnNamesContracts = { "ID контракта", "Условия", "Дата заключения", "Имя агента", "Фамилия агента", "Имя клиента", "Фамилия клиента" };
@@ -131,7 +131,7 @@ namespace agency_csharp
 
             string orgName, orgNumber, orgMail;
 
-            string profession;
+            string profession, vacDescription, vacNumber;
 
             string contractDate,
                   contractConditions,
@@ -206,14 +206,15 @@ namespace agency_csharp
                     id = Convert.ToInt32(vacancyID_tb.Text);
                     orgName = vacOrgName_tb.Text;
                     profession = vacName_tb.Text;
-                    orgNumber = vacNum_tb.Text;
+                    vacDescription = vacDecription_rtb.Text;
+                    vacNumber = vacNum_tb.Text;
 
                     if (vacancy_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
                     {
                         if (Int64.TryParse(vacNum_tb.Text, out userNumber))
                         {
-                            vacancy_dgv.Rows[selectedRowIndex].SetValues(id, orgName, profession, orgNumber);
-                            vacancy_dgv.Rows[selectedRowIndex].Cells[4].Value = RowState.Modified;
+                            vacancy_dgv.Rows[selectedRowIndex].SetValues(id, orgName, profession, vacDescription, vacNumber);
+                            vacancy_dgv.Rows[selectedRowIndex].Cells[5].Value = RowState.Modified;
                         }
                         else
                         {
@@ -296,6 +297,7 @@ namespace agency_csharp
                     vacName_tb.Text = "";
                     vacNum_tb.Text = "";
                     vacOrgName_tb.Text = "";
+                    vacDecription_rtb.Text = "";
                     break;
                 case SwitchState.Contract:
                     contractId_tb.Text = "";
@@ -393,7 +395,8 @@ namespace agency_csharp
                 vacancyID_tb.Text = row.Cells[0].Value.ToString();
                 vacOrgName_tb.Text = row.Cells[1].Value.ToString();
                 vacName_tb.Text = row.Cells[2].Value.ToString();
-                vacNum_tb.Text = row.Cells[3].Value.ToString();
+                vacDecription_rtb.Text = row.Cells[3].Value.ToString();
+                vacNum_tb.Text = row.Cells[4].Value.ToString();
             }
         }
 
@@ -652,27 +655,22 @@ namespace agency_csharp
             addOrg.Show();
         }
 
-        // TODO: Реализовать добавление вакансии
         private void vacAdd_tb_Click(object sender, EventArgs e)
         {
             database.openConnection();
 
-            //var id = Convert.ToInt32(userId_tb.Text);
-            var userName = name_tb.Text;
-            var userSurname = surname_tb.Text;
-            var userPatronymic = thirdname_tb.Text;
-            var userNumber = number_tb.Text;
+            //var vacId = vacancyID_tb.Text;
+            var vacOrg = vacOrgName_tb.Text;
+            var vacProf = vacName_tb.Text;
+            var vacDesc = vacDecription_rtb.Text;
+            var vacNumber = vacNum_tb.Text;
 
-            if (Int64.TryParse(userNumber, out Int64 n))
+            if (Int64.TryParse(vacNumber, out Int64 n))
             {
                 string queryString = 
-                    $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{userName}', '{userSurname}', '{userPatronymic}', '{userNumber}');";
+                    $"EXEC AddVacancy '{vacOrg}', '{vacProf}', '{vacDesc}', '{vacNumber}';";
                 SqlCommand command = new SqlCommand(queryString, database.getConnection());
                 command.ExecuteNonQuery();
-
-                string queryAddEmployee = $"EXEC AddUserEmployee  {userName}, {userNumber}";
-                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
-                commandAddEmp.ExecuteNonQuery();
 
                 MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

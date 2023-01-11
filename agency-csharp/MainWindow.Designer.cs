@@ -205,6 +205,8 @@
             this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.vacDecription_rtb = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.info_tabPage.SuspendLayout();
             this.employess_tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1393,7 +1395,7 @@
             this.groupBox9.Controls.Add(this.vacSearch_tb);
             this.groupBox9.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox9.Location = new System.Drawing.Point(651, 488);
+            this.groupBox9.Location = new System.Drawing.Point(950, 488);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(426, 100);
             this.groupBox9.TabIndex = 27;
@@ -1460,22 +1462,24 @@
             this.vacancy_dgv.AllowUserToDeleteRows = false;
             this.vacancy_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.vacancy_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vacancy_dgv.Location = new System.Drawing.Point(353, 25);
+            this.vacancy_dgv.Location = new System.Drawing.Point(539, 25);
             this.vacancy_dgv.Name = "vacancy_dgv";
             this.vacancy_dgv.ReadOnly = true;
             this.vacancy_dgv.RowTemplate.Height = 25;
-            this.vacancy_dgv.Size = new System.Drawing.Size(1023, 424);
+            this.vacancy_dgv.Size = new System.Drawing.Size(837, 364);
             this.vacancy_dgv.TabIndex = 26;
             this.vacancy_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vac_dgv_CellClick);
             // 
             // groupBox10
             // 
             this.groupBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox10.Controls.Add(this.vacDecription_rtb);
             this.groupBox10.Controls.Add(this.vacNum_tb);
             this.groupBox10.Controls.Add(this.label35);
             this.groupBox10.Controls.Add(this.label17);
             this.groupBox10.Controls.Add(this.vacancyID_tb);
             this.groupBox10.Controls.Add(this.vacOrgName_tb);
+            this.groupBox10.Controls.Add(this.label1);
             this.groupBox10.Controls.Add(this.label18);
             this.groupBox10.Controls.Add(this.vacName_tb);
             this.groupBox10.Controls.Add(this.label21);
@@ -1483,7 +1487,7 @@
             this.groupBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox10.Location = new System.Drawing.Point(29, 25);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(296, 321);
+            this.groupBox10.Size = new System.Drawing.Size(417, 607);
             this.groupBox10.TabIndex = 25;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Персональные данные";
@@ -1590,7 +1594,7 @@
             this.groupBox11.Controls.Add(this.vacChange_tb);
             this.groupBox11.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox11.Location = new System.Drawing.Point(29, 381);
+            this.groupBox11.Location = new System.Drawing.Point(539, 395);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(296, 237);
             this.groupBox11.TabIndex = 24;
@@ -2547,6 +2551,27 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
+            // vacDecription_rtb
+            // 
+            this.vacDecription_rtb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.vacDecription_rtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vacDecription_rtb.Location = new System.Drawing.Point(34, 330);
+            this.vacDecription_rtb.Name = "vacDecription_rtb";
+            this.vacDecription_rtb.Size = new System.Drawing.Size(357, 247);
+            this.vacDecription_rtb.TabIndex = 11;
+            this.vacDecription_rtb.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(34, 305);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 22);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Описание вакансии";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2817,5 +2842,7 @@
         private Button responseSave_btn;
         private Button responseChange_btn;
         private ToolStripMenuItem параметрыToolStripMenuItem;
+        private RichTextBox vacDecription_rtb;
+        private Label label1;
     }
 }

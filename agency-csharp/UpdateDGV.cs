@@ -123,10 +123,47 @@ namespace agency_csharp
 
         }
 
-        // TODO: сделать обновление вакансий
         static public void Vacancys(DataGridView dgv, Database database)
         {
+            database.openConnection();
 
+            for (int i = 0; i < dgv.Rows.Count; i++)
+            {
+                var rowState = (RowState)dgv.Rows[i].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dgv.Rows[i].Cells[0].Value);
+
+                    var deleteClientQuery = $"EXEC DeleteVacancy {id}";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteClientQuery, database.getConnection());
+                    commandEmpDel.ExecuteNonQuery();
+
+                    MessageBox.Show("Вакансия удалена");
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var vacId = dgv.Rows[i].Cells[0].Value;
+                    var vacOrg = dgv.Rows[i].Cells[1].Value.ToString();
+                    var vacProf = dgv.Rows[i].Cells[2].Value.ToString();
+                    var vacDesc = dgv.Rows[i].Cells[3].Value.ToString();
+                    var vacNumber = dgv.Rows[i].Cells[4].Value.ToString();
+
+                    string query = $"EXEC UpdateVacancy {vacId}, '{vacProf}', '{vacOrg}', '{vacDesc}', '{vacNumber}';";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Вакансия изменена");
+                }
+            }
+
+            database.closeConnection();
         }
 
         // TODO: сделать обновление контрактов
