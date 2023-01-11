@@ -351,6 +351,7 @@
             this.orgAdd_btn.TabIndex = 18;
             this.orgAdd_btn.Text = "Добавить";
             this.orgAdd_btn.UseVisualStyleBackColor = false;
+            this.orgAdd_btn.Click += new System.EventHandler(this.orgAdd_btn_Click);
             // 
             // orgDel_btn
             // 
@@ -367,6 +368,7 @@
             this.orgDel_btn.TabIndex = 18;
             this.orgDel_btn.Text = "Отмена";
             this.orgDel_btn.UseVisualStyleBackColor = false;
+            this.orgDel_btn.Click += new System.EventHandler(this.orgDel_btn_Click);
             // 
             // AddOrganization
             // 

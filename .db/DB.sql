@@ -162,6 +162,51 @@ insert into ResponseStatus (rs_status) values ('Отменён');
 --         insert into UserResponse (id_fk_vacancy, id_fk_user) values (@id_vacancy, @id_user);
 --     END;
 
+-- Тут была осуществлена попытка убрать все контсрейнты ----------------------------------------------------------
+-- alter table Vacancy nocheck constraint all
+
+-- create procedure UpdateVacancy
+--     @vacId int,
+--     @vacProf nvarchar(50),
+--     @vacOrg nvarchar(50),
+--     @vacDesc nvarchar(50),
+--     @vacNumber nvarchar(50)
+-- AS DECLARE @o_id int
+--     BEGIN
+--         select @o_id = id_pk_organization from Organization where o_name = @vacOrg ;
+--         update Vacancy set id_organization = @o_id, v_profession = @vacProf, v_description = @vacDesc, v_contactNumber = @vacNumber where id_pk_vacancy = @vacId;
+--     END;
+
+-- create procedure DeleteVacancy
+--     @vacId int
+-- AS
+--     BEGIN
+--         delete from OrgVac where id_fk_vac = @vacId
+--         delete from UserResponse where id_fk_vacancy = @vacId
+--         delete from Vacancy where id_pk_vacancy = @vacId
+--     END;
+
+-- create procedure AddVacancy
+--     @vacOrg nvarchar(50),
+--     @vacProf nvarchar(50),
+--     @vacDesc nvarchar(50),
+--     @vacNumber nvarchar(50)
+-- AS DECLARE @o_id int, @v_id int
+--     BEGIN
+--         select @o_id = id_pk_organization from Organization where o_name = @vacOrg;
+--
+--         insert into Vacancy
+--             (id_organization, v_profession, v_description, v_contactNumber)
+--         values
+--             (@o_id, @vacProf, @vacDesc, @vacNumber);
+--
+--         select @v_id = id_pk_vacancy from Vacancy where v_profession = @vacProf and v_description = @vacDesc;
+--
+--         Insert Into OrgVac
+--             (id_fk_vac, id_fk_org)
+--         values
+--             (@v_id, @o_id);
+--     END;
 
 
 -- INSERTS

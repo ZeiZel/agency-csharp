@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
 namespace agency_csharp
 {
@@ -35,19 +26,19 @@ namespace agency_csharp
         private readonly CheckUser _user;
         Database database = new Database();
 
-        readonly string refreshQueryEmp = 
+        readonly string refreshQueryEmp =
             "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Employee E on Users.id_pk_user = E.id_fk_user;";
-        readonly string refreshQueryClient = 
+        readonly string refreshQueryClient =
             "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Client C on Users.id_pk_user = C.id_user;";
-        readonly string refreshQueryOrg = 
+        readonly string refreshQueryOrg =
             "select id_pk_organization, o_name, o_phoneNumber, o_email from Organization;";
-        readonly string refreshQueryVac = 
+        readonly string refreshQueryVac =
             "select id_pk_vacancy, o_name, v_profession, v_description, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization";
-        readonly string refreshQueryContracts = 
+        readonly string refreshQueryContracts =
             "select id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname from Contracts inner join Employee Emp on Contracts.c_fk_employee = Emp.id_pk_employee inner join Client Cli on Cli.id_pk_client = Contracts.c_fk_client inner join Users C on C.id_pk_user = Cli.id_user inner join Users E on E.id_pk_user = Emp.id_fk_user";
         readonly string refreshQueryResp =
             "select id_pk_response, o_name, v_profession, u_name, u_surname, u_patronymic, u_phoneNumber from UserResponse inner join Vacancy V on V.id_pk_vacancy = UserResponse.id_fk_vacancy inner join Organization O on O.id_pk_organization = V.id_organization inner join Users U on U.id_pk_user = UserResponse.id_fk_user";
-        
+
         int selectedRow;
 
         public MainWindow(CheckUser user)
@@ -103,7 +94,7 @@ namespace agency_csharp
         {
             управлениеToolStripMenuItem.Visible = _user.IsAdmin;
             файлToolStripMenuItem.Visible = _user.IsAdmin;
-            
+
             add_btn.Enabled = _user.IsAdmin;
             delete_btn.Enabled = _user.IsAdmin;
             change_btn.Enabled = _user.IsAdmin;
@@ -124,7 +115,7 @@ namespace agency_csharp
             int selectedRowIndex;
 
             int id;
-            
+
             Int64 userNumber;
 
             string userName, userSurname, userPatronymic;
@@ -495,9 +486,9 @@ namespace agency_csharp
         private void search_tb_TextChanged(object sender, EventArgs e)
         {
             Utilities.Search(
-                dataGridView1, 
-                database, 
-                SwitchState.Employee, 
+                dataGridView1,
+                database,
+                SwitchState.Employee,
                 $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'"
             );
         }
@@ -541,11 +532,6 @@ namespace agency_csharp
         {
             // тут мы помечаем под удаление ячейку и после сохранения все изменения вступят в силу
             Utilities.DeleteRow(dataGridView1);
-        }
-
-        private void clientDel_Click(object sender, EventArgs e)
-        {
-            Utilities.DeleteRow(clientView_dgv);
         }
 
         private void orgDel_btn_Click(object sender, EventArgs e)
@@ -615,7 +601,7 @@ namespace agency_csharp
         private void администрированиеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form admin = new AdminPanel();
-            admin.Show(); 
+            admin.Show();
         }
 
         private void отчётностьToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -659,7 +645,6 @@ namespace agency_csharp
         {
             database.openConnection();
 
-            //var vacId = vacancyID_tb.Text;
             var vacOrg = vacOrgName_tb.Text;
             var vacProf = vacName_tb.Text;
             var vacDesc = vacDecription_rtb.Text;
@@ -667,7 +652,7 @@ namespace agency_csharp
 
             if (Int64.TryParse(vacNumber, out Int64 n))
             {
-                string queryString = 
+                string queryString =
                     $"EXEC AddVacancy '{vacOrg}', '{vacProf}', '{vacDesc}', '{vacNumber}';";
                 SqlCommand command = new SqlCommand(queryString, database.getConnection());
                 command.ExecuteNonQuery();
@@ -677,9 +662,9 @@ namespace agency_csharp
             else
             {
                 MessageBox.Show(
-                    "Пожалуйста, введите корректный номер телефона", 
-                    "Не удалось добавить запись", 
-                    MessageBoxButtons.OK, 
+                    "Пожалуйста, введите корректный номер телефона",
+                    "Не удалось добавить запись",
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
             }
@@ -696,9 +681,9 @@ namespace agency_csharp
         private void search_grid_btn_Click(object sender, EventArgs e)
         {
             Utilities.Search(
-                dataGridView1, 
-                database, 
-                SwitchState.Employee, 
+                dataGridView1,
+                database,
+                SwitchState.Employee,
                 $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{search_tb.Text}%'"
             );
         }
@@ -712,9 +697,9 @@ namespace agency_csharp
         private void passportEdit_btn_Click(object sender, EventArgs e)
         {
             if (
-                MessageBox.Show("При переходе на данную форму вы обязуетесь не разглашать паспортные данные пользователей.", 
-                "Внимание", 
-                MessageBoxButtons.YesNo, 
+                MessageBox.Show("При переходе на данную форму вы обязуетесь не разглашать паспортные данные пользователей.",
+                "Внимание",
+                MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning
                 ) == DialogResult.Yes)
             {
@@ -726,12 +711,13 @@ namespace agency_csharp
                 {
                     Form documents = new Documents(clientName_tb.Text, clientSur_tb.Text, clientPat_tb.Text, clientID_tb.Text);
                     documents.Show();
-                } else
+                }
+                else
                 {
                     MessageBox.Show(
-                        "Сначала выберите пользователя, у которого хотите отредактировать паспорт", 
-                        "Ошибка", 
-                        MessageBoxButtons.OK, 
+                        "Сначала выберите пользователя, у которого хотите отредактировать паспорт",
+                        "Ошибка",
+                        MessageBoxButtons.OK,
                         MessageBoxIcon.Warning
                     );
                 }

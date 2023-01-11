@@ -329,6 +329,7 @@
             this.cancel_btn.TabIndex = 28;
             this.cancel_btn.Text = "Отмена";
             this.cancel_btn.UseVisualStyleBackColor = false;
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
             // 
             // groupBox1
             // 

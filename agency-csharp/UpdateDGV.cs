@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
 namespace agency_csharp
 {
@@ -86,7 +80,7 @@ namespace agency_csharp
                     var id = Convert.ToInt32(dgv.Rows[i].Cells[0].Value);
 
                     // TODO: у клиента есть много связанных таблиц и с ними нужно решить вопрос
-                    var deleteClientQuery = $"delete from Client where id_user = {id}";
+                    var deleteClientQuery = $"EXEC DeleteClient {id}";
                     SqlCommand commandEmpDel = new SqlCommand(deleteClientQuery, database.getConnection());
 
                     if (
@@ -116,7 +110,7 @@ namespace agency_csharp
 
             database.closeConnection();
         }
-        
+
         // TODO: сделать обновление организаций
         static public void Organizations(DataGridView dgv, Database database)
         {

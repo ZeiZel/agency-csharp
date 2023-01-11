@@ -80,10 +80,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.clientAdd = new System.Windows.Forms.Button();
-            this.clientDel = new System.Windows.Forms.Button();
             this.clientSave = new System.Windows.Forms.Button();
             this.clientChange = new System.Windows.Forms.Button();
             this.organizations_tab = new System.Windows.Forms.TabPage();
@@ -105,10 +103,8 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.orgAdd_btn = new System.Windows.Forms.Button();
-            this.orgDel_btn = new System.Windows.Forms.Button();
             this.orgSave_btn = new System.Windows.Forms.Button();
             this.orgChange_btn = new System.Windows.Forms.Button();
             this.vacamcy_tab = new System.Windows.Forms.TabPage();
@@ -119,11 +115,13 @@
             this.vacSearch_tb = new System.Windows.Forms.TextBox();
             this.vacancy_dgv = new System.Windows.Forms.DataGridView();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.vacDecription_rtb = new System.Windows.Forms.RichTextBox();
             this.vacNum_tb = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.vacancyID_tb = new System.Windows.Forms.TextBox();
             this.vacOrgName_tb = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.vacName_tb = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -205,8 +203,6 @@
             this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.vacDecription_rtb = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.info_tabPage.SuspendLayout();
             this.employess_tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -224,7 +220,6 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.organizations_tab.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -233,7 +228,6 @@
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.vacamcy_tab.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -914,17 +908,15 @@
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.groupBox5.Controls.Add(this.pictureBox5);
             this.groupBox5.Controls.Add(this.pictureBox6);
-            this.groupBox5.Controls.Add(this.pictureBox7);
             this.groupBox5.Controls.Add(this.pictureBox8);
             this.groupBox5.Controls.Add(this.clientAdd);
-            this.groupBox5.Controls.Add(this.clientDel);
             this.groupBox5.Controls.Add(this.clientSave);
             this.groupBox5.Controls.Add(this.clientChange);
             this.groupBox5.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox5.Location = new System.Drawing.Point(29, 395);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(296, 237);
+            this.groupBox5.Size = new System.Drawing.Size(296, 189);
             this.groupBox5.TabIndex = 24;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Панель управления";
@@ -932,7 +924,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(34, 170);
+            this.pictureBox5.Location = new System.Drawing.Point(34, 127);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(43, 37);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -949,20 +941,10 @@
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(34, 84);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(34, 127);
+            this.pictureBox8.Location = new System.Drawing.Point(34, 84);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(43, 37);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -986,23 +968,6 @@
             this.clientAdd.UseVisualStyleBackColor = false;
             this.clientAdd.Click += new System.EventHandler(this.clientAdd_Click);
             // 
-            // clientDel
-            // 
-            this.clientDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.clientDel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clientDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.clientDel.FlatAppearance.BorderSize = 0;
-            this.clientDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clientDel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.clientDel.Location = new System.Drawing.Point(83, 84);
-            this.clientDel.Name = "clientDel";
-            this.clientDel.Size = new System.Drawing.Size(174, 37);
-            this.clientDel.TabIndex = 18;
-            this.clientDel.Text = "Удалить";
-            this.clientDel.UseVisualStyleBackColor = false;
-            this.clientDel.Click += new System.EventHandler(this.clientDel_Click);
-            // 
             // clientSave
             // 
             this.clientSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
@@ -1012,7 +977,7 @@
             this.clientSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientSave.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clientSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.clientSave.Location = new System.Drawing.Point(83, 170);
+            this.clientSave.Location = new System.Drawing.Point(83, 127);
             this.clientSave.Name = "clientSave";
             this.clientSave.Size = new System.Drawing.Size(174, 37);
             this.clientSave.TabIndex = 18;
@@ -1030,7 +995,7 @@
             this.clientChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientChange.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clientChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.clientChange.Location = new System.Drawing.Point(83, 127);
+            this.clientChange.Location = new System.Drawing.Point(83, 84);
             this.clientChange.Name = "clientChange";
             this.clientChange.Size = new System.Drawing.Size(174, 37);
             this.clientChange.TabIndex = 18;
@@ -1150,7 +1115,7 @@
             this.groupBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox7.Location = new System.Drawing.Point(29, 25);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(296, 336);
+            this.groupBox7.Size = new System.Drawing.Size(303, 336);
             this.groupBox7.TabIndex = 25;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Персональные данные";
@@ -1249,17 +1214,15 @@
             this.groupBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.groupBox8.Controls.Add(this.pictureBox9);
             this.groupBox8.Controls.Add(this.pictureBox10);
-            this.groupBox8.Controls.Add(this.pictureBox11);
             this.groupBox8.Controls.Add(this.pictureBox12);
             this.groupBox8.Controls.Add(this.orgAdd_btn);
-            this.groupBox8.Controls.Add(this.orgDel_btn);
             this.groupBox8.Controls.Add(this.orgSave_btn);
             this.groupBox8.Controls.Add(this.orgChange_btn);
             this.groupBox8.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox8.Location = new System.Drawing.Point(29, 394);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(296, 237);
+            this.groupBox8.Size = new System.Drawing.Size(303, 184);
             this.groupBox8.TabIndex = 24;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Панель управления";
@@ -1267,7 +1230,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(34, 170);
+            this.pictureBox9.Location = new System.Drawing.Point(34, 127);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(43, 37);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1284,20 +1247,10 @@
             this.pictureBox10.TabIndex = 19;
             this.pictureBox10.TabStop = false;
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(34, 84);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(43, 37);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 19;
-            this.pictureBox11.TabStop = false;
-            // 
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(34, 127);
+            this.pictureBox12.Location = new System.Drawing.Point(34, 84);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(43, 37);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1321,23 +1274,6 @@
             this.orgAdd_btn.UseVisualStyleBackColor = false;
             this.orgAdd_btn.Click += new System.EventHandler(this.orgAdd_btn_Click);
             // 
-            // orgDel_btn
-            // 
-            this.orgDel_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.orgDel_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.orgDel_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.orgDel_btn.FlatAppearance.BorderSize = 0;
-            this.orgDel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orgDel_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgDel_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.orgDel_btn.Location = new System.Drawing.Point(83, 84);
-            this.orgDel_btn.Name = "orgDel_btn";
-            this.orgDel_btn.Size = new System.Drawing.Size(174, 37);
-            this.orgDel_btn.TabIndex = 18;
-            this.orgDel_btn.Text = "Удалить";
-            this.orgDel_btn.UseVisualStyleBackColor = false;
-            this.orgDel_btn.Click += new System.EventHandler(this.orgDel_btn_Click);
-            // 
             // orgSave_btn
             // 
             this.orgSave_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
@@ -1347,7 +1283,7 @@
             this.orgSave_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.orgSave_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.orgSave_btn.Location = new System.Drawing.Point(83, 170);
+            this.orgSave_btn.Location = new System.Drawing.Point(83, 127);
             this.orgSave_btn.Name = "orgSave_btn";
             this.orgSave_btn.Size = new System.Drawing.Size(174, 37);
             this.orgSave_btn.TabIndex = 18;
@@ -1365,7 +1301,7 @@
             this.orgChange_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.orgChange_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.orgChange_btn.Location = new System.Drawing.Point(83, 127);
+            this.orgChange_btn.Location = new System.Drawing.Point(83, 84);
             this.orgChange_btn.Name = "orgChange_btn";
             this.orgChange_btn.Size = new System.Drawing.Size(174, 37);
             this.orgChange_btn.TabIndex = 18;
@@ -1492,6 +1428,16 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Персональные данные";
             // 
+            // vacDecription_rtb
+            // 
+            this.vacDecription_rtb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.vacDecription_rtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vacDecription_rtb.Location = new System.Drawing.Point(34, 330);
+            this.vacDecription_rtb.Name = "vacDecription_rtb";
+            this.vacDecription_rtb.Size = new System.Drawing.Size(357, 247);
+            this.vacDecription_rtb.TabIndex = 11;
+            this.vacDecription_rtb.Text = "";
+            // 
             // vacNum_tb
             // 
             this.vacNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
@@ -1547,6 +1493,17 @@
             this.vacOrgName_tb.Name = "vacOrgName_tb";
             this.vacOrgName_tb.Size = new System.Drawing.Size(212, 35);
             this.vacOrgName_tb.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label1.Location = new System.Drawing.Point(34, 305);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 22);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Описание вакансии";
             // 
             // label18
             // 
@@ -2551,27 +2508,6 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
-            // vacDecription_rtb
-            // 
-            this.vacDecription_rtb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.vacDecription_rtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vacDecription_rtb.Location = new System.Drawing.Point(34, 330);
-            this.vacDecription_rtb.Name = "vacDecription_rtb";
-            this.vacDecription_rtb.Size = new System.Drawing.Size(357, 247);
-            this.vacDecription_rtb.TabIndex = 11;
-            this.vacDecription_rtb.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label1.Location = new System.Drawing.Point(34, 305);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 22);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Описание вакансии";
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2608,7 +2544,6 @@
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.organizations_tab.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -2619,7 +2554,6 @@
             this.groupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.vacamcy_tab.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
@@ -2718,10 +2652,8 @@
         private GroupBox groupBox5;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
         private PictureBox pictureBox8;
         private Button clientAdd;
-        private Button clientDel;
         private Button clientSave;
         private Button clientChange;
         private GroupBox groupBox6;
@@ -2740,10 +2672,8 @@
         private GroupBox groupBox8;
         private PictureBox pictureBox9;
         private PictureBox pictureBox10;
-        private PictureBox pictureBox11;
         private PictureBox pictureBox12;
         private Button orgAdd_btn;
-        private Button orgDel_btn;
         private Button orgSave_btn;
         private Button orgChange_btn;
         private GroupBox groupBox9;
