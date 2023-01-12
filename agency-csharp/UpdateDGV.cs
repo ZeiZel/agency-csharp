@@ -172,7 +172,7 @@ namespace agency_csharp
             DataGridView dgv, 
             Database database,
             string contractAgentName, 
-            string contractAgentSurame,
+            string contractAgentSurname,
             string contractClientName,
             string contractClientSurname
             )
@@ -181,7 +181,7 @@ namespace agency_csharp
 
             for (int i = 0; i < dgv.Rows.Count; i++)
             {
-                var rowState = (RowState)dgv.Rows[i].Cells[5].Value;
+                var rowState = (RowState)dgv.Rows[i].Cells[8].Value;
 
                 if (rowState == RowState.Existed)
                 {
@@ -195,22 +195,13 @@ namespace agency_csharp
                     var contractDate = dgv.Rows[i].Cells[2].Value.ToString();
                     var contractStatus = dgv.Rows[i].Cells[7].Value.ToString();
 
-                    DateTime dateParsed;
+                    string query = $"EXEC UpdateContract {contractId}, '{contractConditions}', '{contractDate}', " +
+                        $"'{contractAgentName}', '{contractAgentSurname}', " +
+                        $"'{contractClientName}', '{contractClientSurname}', '{contractStatus}';";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
 
-                    if (DateTime.TryParse(contractDate, out dateParsed))
-                    {
-                        string query = $"EXEC UpdateContract {contractId}, '{contractConditions}', '{contractDate}', '{contractAgentName}', '{contractAgentSurame}', " +
-                            $"'{contractClientName}', '{contractClientSurname}', '{contractStatus}';";
-                        SqlCommand command = new SqlCommand(query, database.getConnection());
-                        command.ExecuteNonQuery();
-
-                        MessageBox.Show("Контракт изменён");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Пожалуйста, введите дату в формате: дд/мм/гггг", "Ошибка ввода данных", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
+                    MessageBox.Show("Контракт изменён");
                 }
             }
 
