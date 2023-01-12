@@ -42,6 +42,7 @@ namespace agency_csharp
 
             bool result = CheckOrganization($"select id_pk_organization from Organization where o_name = {orgName} and o_phoneNumber = '{orgNum}'");
             bool findNumber = CheckOrganization($"select id_pk_organization from Organization where o_phoneNumber = '{orgNum}'");
+            bool findClient = CheckOrganization($"select id_pk_client from Client inner join Users U on U.id_pk_user = Client.id_user inner join Register R2 on U.id_pk_user = R2.id_fk_user where r_login = '{orgClient}';");
 
             if (result)
             {
@@ -61,13 +62,26 @@ namespace agency_csharp
                         adressApartment.Length > 0 && adressApartment.Length < 50
                         )
                         {
-                            string queryString =
-                            $"EXEC AddOrganization '{orgName}', '{orgClient}', '{orgNum}', '{orgMail}', " +
-                            $"'{adressRegion}', '{adressCity}', '{adressStreet}', '{adressBuilding}', '{adressApartment}';";
-                            SqlCommand command = new SqlCommand(queryString, database.getConnection());
-                            command.ExecuteNonQuery();
+                            if (findClient)
+                            {
+                                MessageBox.Show(
+                                "Такого клиента в организации не существует",
+                                "Не удалось добавить запись",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                                );
+                            }
+                            else
+                            {
+                                string queryString =
+                                $"EXEC AddOrganization '{orgName}', '{orgClient}', '{orgNum}', '{orgMail}', " +
+                                $"'{adressRegion}', '{adressCity}', '{adressStreet}', '{adressBuilding}', '{adressApartment}';";
+                                SqlCommand command = new SqlCommand(queryString, database.getConnection());
+                                command.ExecuteNonQuery();
 
-                            MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+
                         }
                         else
                         {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace agency_csharp
 {
@@ -35,9 +36,9 @@ namespace agency_csharp
         readonly string refreshQueryVac =
             "select id_pk_vacancy, o_name, v_profession, v_description, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization";
         readonly string refreshQueryContracts =
-            "select id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname from Contracts inner join Employee Emp on Contracts.c_fk_employee = Emp.id_pk_employee inner join Client Cli on Cli.id_pk_client = Contracts.c_fk_client inner join Users C on C.id_pk_user = Cli.id_user inner join Users E on E.id_pk_user = Emp.id_fk_user";
+            "select id_pk_contract, c_conditions, c_createdAt, E.u_name, E.u_surname, C.u_name, C.u_surname, cs_status from ContractStatus, Contracts inner join Employee Emp on Contracts.c_fk_employee = Emp.id_pk_employee inner join Client Cli on Cli.id_pk_client = Contracts.c_fk_client inner join Users C on C.id_pk_user = Cli.id_user inner join Users E on E.id_pk_user = Emp.id_fk_user where c_fk_status = ContractStatus.id_pk_status;";
         readonly string refreshQueryResp =
-            "select id_pk_response, o_name, v_profession, u_name, u_surname, u_patronymic, u_phoneNumber from UserResponse inner join Vacancy V on V.id_pk_vacancy = UserResponse.id_fk_vacancy inner join Organization O on O.id_pk_organization = V.id_organization inner join Users U on U.id_pk_user = UserResponse.id_fk_user";
+            "select id_pk_response, o_name, v_profession, u_name, u_surname, u_patronymic, u_phoneNumber, rs_status from ResponseStatus, UserResponse inner join Vacancy V on V.id_pk_vacancy = UserResponse.id_fk_vacancy inner join Organization O on O.id_pk_organization = V.id_organization inner join Users U on U.id_pk_user = UserResponse.id_fk_user where id_fk_status = id_pk_status;";
 
         int selectedRow;
 
@@ -74,17 +75,17 @@ namespace agency_csharp
             Utilities.RefreshDataGrid(vacancy_dgv, database, SwitchState.Vacancy, refreshQueryVac);
             vacancy_dgv.Columns[5].Visible = false;
 
-            string[] columnsContracts = { "id_pk_contract", "c_conditions", "c_createdAt", "u_name", "u_surname", "u_name", "u_surname" };
-            string[] columnNamesContracts = { "ID контракта", "Условия", "Дата заключения", "Имя агента", "Фамилия агента", "Имя клиента", "Фамилия клиента" };
+            string[] columnsContracts = { "id_pk_contract", "c_conditions", "c_createdAt", "u_name", "u_surname", "u_name", "u_surname", "cs_status" };
+            string[] columnNamesContracts = { "ID контракта", "Условия", "Дата заключения", "Имя агента", "Фамилия агента", "Имя клиента", "Фамилия клиента", "Статус контракта" };
             Utilities.CreateColumns(contract_dgv, columnsContracts, columnNamesContracts);
             Utilities.RefreshDataGrid(contract_dgv, database, SwitchState.Contract, refreshQueryContracts);
-            contract_dgv.Columns[7].Visible = false;
+            contract_dgv.Columns[8].Visible = false;
 
-            string[] columnsResp = { "id_pk_response", "o_name", "v_profession", "u_name", "u_surname", "u_patronymic", "u_phoneNumber" };
-            string[] columnNamesResp = { "ID отклика", "Организация", "Должность", "Имя", "Фамилия", "Отчество", "Номер телефона" };
+            string[] columnsResp = { "id_pk_response", "o_name", "v_profession", "u_name", "u_surname", "u_patronymic", "u_phoneNumber", "id_fk_status" };
+            string[] columnNamesResp = { "ID отклика", "Организация", "Должность", "Имя", "Фамилия", "Отчество", "Номер телефона", "Статус отклика" };
             Utilities.CreateColumns(response_dgv, columnsResp, columnNamesResp);
             Utilities.RefreshDataGrid(response_dgv, database, SwitchState.Response, refreshQueryResp);
-            response_dgv.Columns[7].Visible = false;
+            response_dgv.Columns[8].Visible = false;
 
             #endregion
         }
@@ -129,9 +130,10 @@ namespace agency_csharp
                   contractClientName,
                   contractClientSurname,
                   contractAgentName,
-                  contractAgentSurname;
+                  contractAgentSurname,
+                  contractStatus;
 
-            string resProf, resOrg;
+            string resProf, resOrg, resStatus;
 
             switch (state)
             {
@@ -219,16 +221,17 @@ namespace agency_csharp
 
                     id = Convert.ToInt32(contractId_tb.Text);
                     contractDate = contractDate_tb.Text;
-                    contractConditions = contractDate_tb.Text;
+                    contractConditions = contractConditions_tb.Text;
                     contractClientName = contractClientName_tb.Text;
                     contractClientSurname = contractClientSurname_tb.Text;
                     contractAgentName = contractAgentName_tb.Text;
                     contractAgentSurname = contractAgentSurame_tb.Text;
+                    contractStatus = contractStatus_cb.Text;
 
                     if (contract_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
                     {
-                        contract_dgv.Rows[selectedRowIndex].SetValues(id, contractConditions, contractDate, contractAgentName, contractAgentSurname, contractClientName, contractClientSurname);
-                        contract_dgv.Rows[selectedRowIndex].Cells[7].Value = RowState.Modified;
+                        contract_dgv.Rows[selectedRowIndex].SetValues(id, contractConditions, contractDate, contractAgentName, contractAgentSurname, contractClientName, contractClientSurname, contractStatus);
+                        contract_dgv.Rows[selectedRowIndex].Cells[8].Value = RowState.Modified;
                     }
                     break;
                 case SwitchState.Response:
@@ -240,13 +243,14 @@ namespace agency_csharp
                     userName = responseClientName_tb.Text;
                     userSurname = responseClientSurname_tb.Text;
                     userPatronymic = responseClientPat_tb.Text;
+                    resStatus = responseStatus_cb.Text;
 
                     if (response_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
                     {
                         if (Int64.TryParse(responseClientNum_tb.Text, out userNumber))
                         {
-                            response_dgv.Rows[selectedRowIndex].SetValues(id, resOrg, resProf, userName, userSurname, userPatronymic, userNumber);
-                            response_dgv.Rows[selectedRowIndex].Cells[7].Value = RowState.Modified;
+                            response_dgv.Rows[selectedRowIndex].SetValues(id, resOrg, resProf, userName, userSurname, userPatronymic, userNumber, resStatus);
+                            response_dgv.Rows[selectedRowIndex].Cells[8].Value = RowState.Modified;
                         }
                         else
                         {
@@ -300,6 +304,7 @@ namespace agency_csharp
                     contractAgentSurame_tb.Text = "";
                     contractClientName_tb.Text = "";
                     contractClientSurname_tb.Text = "";
+                    contractStatus_cb.Text = "";
                     break;
                 case SwitchState.Response:
                     responseClientName_tb.Text = "";
@@ -314,6 +319,34 @@ namespace agency_csharp
                     MessageBox.Show("Ошибка очистки поля", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
+        }
+
+        private Boolean Checker(string query)
+        {
+            int length = GetLength(query);
+
+            if (length > 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private int GetLength(string query)
+        {
+            string queryString = query;
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+            SqlCommand command = new SqlCommand(queryString, database.getConnection());
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            return table.Rows.Count;
         }
 
         // ------------------------------------------------------------------------------------------------
@@ -409,6 +442,7 @@ namespace agency_csharp
                 contractAgentSurame_tb.Text = row.Cells[4].Value.ToString();
                 contractClientName_tb.Text = row.Cells[5].Value.ToString();
                 contractClientSurname_tb.Text = row.Cells[6].Value.ToString();
+                contractStatus_cb.Text = row.Cells[7].Value.ToString();
             }
         }
 
@@ -427,6 +461,7 @@ namespace agency_csharp
                 responseClientSurname_tb.Text = row.Cells[4].Value.ToString();
                 responseClientPat_tb.Text = row.Cells[5].Value.ToString();
                 responseClientNum_tb.Text = row.Cells[6].Value.ToString();
+                responseStatus_cb.Text = row.Cells[7].Value.ToString();
             }
         }
 
@@ -593,7 +628,17 @@ namespace agency_csharp
 
         private void orgSave_btn_Click(object sender, EventArgs e)
         {
-            UpdateDGV.Organizations(organization_dgv, database);
+            string orgClient = orgClient_tb.Text;
+            bool findClient = Checker($"select id_pk_client from Client inner join Users U on U.id_pk_user = Client.id_user inner join Register R2 on U.id_pk_user = R2.id_fk_user where r_login = '{orgClient}';");
+
+            if (findClient)
+            {
+                MessageBox.Show("Такого клиента нет - обратитесь к администратору, чтобы получить данные о представителях организаций", "Ошибка изменения записи", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                UpdateDGV.Organizations(organization_dgv, database, orgClient);
+            }
         }
 
         private void vacSave_tb_Click(object sender, EventArgs e)
@@ -766,7 +811,40 @@ namespace agency_csharp
 
         private void contractSave_btn_Click(object sender, EventArgs e)
         {
-            UpdateDGV.Contracts(contract_dgv, database);
+            string contractClientName = contractClientName_tb.Text,
+                contractClientSurname = contractClientSurname_tb.Text,
+                contractAgentName = contractAgentName_tb.Text,
+                contractAgentSurname = contractAgentSurame_tb.Text;
+
+            bool findClient = Checker($"select id_pk_client from Client inner join Users U on U.id_pk_user = Client.id_user where u_name = '{contractClientName}' and u_surname = '{contractClientSurname}';");
+            bool findAgent = Checker($"select id_pk_employee from Employee inner join Users U on U.id_pk_user = Employee.id_fk_user where u_name = '{contractAgentName}' and u_surname = '{contractAgentSurname}'; ");
+
+            if (findAgent)
+            {
+                MessageBox.Show(
+                    "Такого агента не существует!",
+                    "Не удалось добавить запись",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+            else
+            {
+                if (findClient)
+                {
+                    MessageBox.Show(
+                    "Такого клиента не существует!",
+                    "Не удалось добавить запись",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                }
+                else
+                {
+                    UpdateDGV.Contracts(contract_dgv, database, contractAgentName, contractAgentSurname, contractClientName, contractClientSurname);
+                }
+            }
+
         }
 
         private void responseSave_btn_Click(object sender, EventArgs e)

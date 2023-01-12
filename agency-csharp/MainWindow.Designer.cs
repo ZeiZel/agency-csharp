@@ -205,6 +205,10 @@
             this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.responseStatus_cb = new System.Windows.Forms.ComboBox();
+            this.contractStatus_cb = new System.Windows.Forms.ComboBox();
             this.info_tabPage.SuspendLayout();
             this.employess_tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1964,6 +1968,8 @@
             // groupBox15
             // 
             this.groupBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox15.Controls.Add(this.contractStatus_cb);
+            this.groupBox15.Controls.Add(this.label15);
             this.groupBox15.Controls.Add(this.label37);
             this.groupBox15.Controls.Add(this.label38);
             this.groupBox15.Controls.Add(this.contractId_tb);
@@ -2259,6 +2265,8 @@
             // responseData_gb
             // 
             this.responseData_gb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.responseData_gb.Controls.Add(this.responseStatus_cb);
+            this.responseData_gb.Controls.Add(this.label16);
             this.responseData_gb.Controls.Add(this.responseClientNum_tb);
             this.responseData_gb.Controls.Add(this.label43);
             this.responseData_gb.Controls.Add(this.label47);
@@ -2277,7 +2285,7 @@
             this.responseData_gb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.responseData_gb.Location = new System.Drawing.Point(24, 32);
             this.responseData_gb.Name = "responseData_gb";
-            this.responseData_gb.Size = new System.Drawing.Size(296, 566);
+            this.responseData_gb.Size = new System.Drawing.Size(296, 621);
             this.responseData_gb.TabIndex = 26;
             this.responseData_gb.TabStop = false;
             this.responseData_gb.Text = "Отклик";
@@ -2533,6 +2541,52 @@
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label15.Location = new System.Drawing.Point(214, 31);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(69, 22);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Статус";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label16.Location = new System.Drawing.Point(34, 544);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 22);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Статус";
+            // 
+            // responseStatus_cb
+            // 
+            this.responseStatus_cb.FormattingEnabled = true;
+            this.responseStatus_cb.Items.AddRange(new object[] {
+            "Отправлен",
+            "Обработан",
+            "Отменён"});
+            this.responseStatus_cb.Location = new System.Drawing.Point(34, 570);
+            this.responseStatus_cb.Name = "responseStatus_cb";
+            this.responseStatus_cb.Size = new System.Drawing.Size(212, 26);
+            this.responseStatus_cb.TabIndex = 13;
+            // 
+            // contractStatus_cb
+            // 
+            this.contractStatus_cb.FormattingEnabled = true;
+            this.contractStatus_cb.Items.AddRange(new object[] {
+            "Заключён",
+            "Выполнен",
+            "Отменён"});
+            this.contractStatus_cb.Location = new System.Drawing.Point(214, 57);
+            this.contractStatus_cb.Name = "contractStatus_cb";
+            this.contractStatus_cb.Size = new System.Drawing.Size(182, 26);
+            this.contractStatus_cb.TabIndex = 11;
             // 
             // MainWindow
             // 
@@ -2802,5 +2856,9 @@
         private Label label1;
         private Label label9;
         private TextBox orgClient_tb;
+        private Label label15;
+        private Label label16;
+        private ComboBox contractStatus_cb;
+        private ComboBox responseStatus_cb;
     }
 }

@@ -118,6 +118,7 @@ namespace agency_csharp
                         record.GetString(4),
                         record.GetString(5),
                         record.GetString(6),
+                        record.GetString(7),
                         RowState.ModifiedNew
                     );
                     break;
@@ -130,6 +131,7 @@ namespace agency_csharp
                         record.GetString(4),
                         record.GetString(5),
                         record.GetString(6),
+                        record.GetString(7),
                         RowState.ModifiedNew
                     );
                     break;

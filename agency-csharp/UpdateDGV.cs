@@ -92,7 +92,7 @@ namespace agency_csharp
             database.closeConnection();
         }
 
-        static public void Organizations(DataGridView dgv, Database database)
+        static public void Organizations(DataGridView dgv, Database database, string orgClient)
         {
             database.openConnection();
 
@@ -109,7 +109,6 @@ namespace agency_csharp
                 {
                     var orgId = dgv.Rows[i].Cells[0].Value.ToString();
                     var orgName = dgv.Rows[i].Cells[1].Value.ToString();
-                    var orgClient = dgv.Rows[i].Cells[2].Value.ToString();
                     var orgNum = dgv.Rows[i].Cells[3].Value.ToString();
                     var orgMail = dgv.Rows[i].Cells[4].Value.ToString();
 
@@ -117,6 +116,8 @@ namespace agency_csharp
                         $"EXEC UpdateOrganization {orgId}, '{orgName}', '{orgClient}', '{orgNum}', '{orgMail}';";
                     SqlCommand command = new SqlCommand(query, database.getConnection());
                     command.ExecuteNonQuery();
+
+                    MessageBox.Show("Организация изменена");
                 }
             }
 
@@ -167,7 +168,14 @@ namespace agency_csharp
         }
 
         // TODO: сделать обновление контрактов
-        static public void Contracts(DataGridView dgv, Database database)
+        static public void Contracts(
+            DataGridView dgv, 
+            Database database,
+            string contractAgentName, 
+            string contractAgentSurame,
+            string contractClientName,
+            string contractClientSurname
+            )
         {
             database.openConnection();
 
@@ -180,30 +188,29 @@ namespace agency_csharp
                     continue;
                 }
 
-                if (rowState == RowState.Deleted)
-                {
-                    var id = Convert.ToInt32(dgv.Rows[i].Cells[0].Value);
-
-                    var deleteClientQuery = $"EXEC DeleteVacancy {id}";
-                    SqlCommand commandEmpDel = new SqlCommand(deleteClientQuery, database.getConnection());
-                    commandEmpDel.ExecuteNonQuery();
-
-                    MessageBox.Show("Вакансия удалена");
-                }
-
                 if (rowState == RowState.Modified)
                 {
-                    var vacId = dgv.Rows[i].Cells[0].Value;
-                    var vacOrg = dgv.Rows[i].Cells[1].Value.ToString();
-                    var vacProf = dgv.Rows[i].Cells[2].Value.ToString();
-                    var vacDesc = dgv.Rows[i].Cells[3].Value.ToString();
-                    var vacNumber = dgv.Rows[i].Cells[4].Value.ToString();
+                    var contractId = dgv.Rows[i].Cells[0].Value;
+                    var contractConditions = dgv.Rows[i].Cells[1].Value.ToString();
+                    var contractDate = dgv.Rows[i].Cells[2].Value.ToString();
+                    var contractStatus = dgv.Rows[i].Cells[7].Value.ToString();
 
-                    string query = $"EXEC UpdateVacancy {vacId}, '{vacProf}', '{vacOrg}', '{vacDesc}', '{vacNumber}';";
-                    SqlCommand command = new SqlCommand(query, database.getConnection());
-                    command.ExecuteNonQuery();
+                    DateTime dateParsed;
 
-                    MessageBox.Show("Вакансия изменена");
+                    if (DateTime.TryParse(contractDate, out dateParsed))
+                    {
+                        string query = $"EXEC UpdateContract {contractId}, '{contractConditions}', '{contractDate}', '{contractAgentName}', '{contractAgentSurame}', " +
+                            $"'{contractClientName}', '{contractClientSurname}', '{contractStatus}';";
+                        SqlCommand command = new SqlCommand(query, database.getConnection());
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show("Контракт изменён");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Пожалуйста, введите дату в формате: дд/мм/гггг", "Ошибка ввода данных", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
                 }
             }
 
