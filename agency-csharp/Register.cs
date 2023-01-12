@@ -116,10 +116,12 @@ namespace agency_csharp
         {
             var loginUser = login_tb.Text;
             var passUser = password_tb.Text;
+            var userNumber = number_tb.Text;
 
-            int length = GetLength($"select [r_login], [r_password], [r_isAdmin], [r_isUser], [r_isEmployee] from [dbo].[Register] where [r_login] = '{loginUser}' and [r_password] = '{passUser}'");            
+            int lengthUser = GetLength($"select [r_login], [r_password], [r_isAdmin], [r_isUser], [r_isEmployee] from [dbo].[Register] where [r_login] = '{loginUser}' and [r_password] = '{passUser}'");            
+            int lengthNum = GetLength($"select id_pk_user from Users where u_phoneNumber = '{userNumber}';");            
 
-            if (length > 0)
+            if (lengthUser > 0 || lengthNum > 0)
             {
                 return false;
             }
@@ -164,8 +166,12 @@ namespace agency_csharp
 
         private void Register_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form login = new Login();
-            login.Show();
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -967,7 +967,17 @@ namespace agency_csharp
 
         private void responseDel_btn_Click(object sender, EventArgs e)
         {
-            Utilities.DeleteRow(response_dgv);
+            int index = response_dgv.CurrentCell.RowIndex;
+
+            response_dgv.Rows[index].Visible = false;
+
+            if (response_dgv.Rows[index].Cells[0].Value.ToString() == string.Empty)
+            {
+                response_dgv.Rows[index].Cells[8].Value = RowState.Deleted;
+                return;
+            }
+
+            response_dgv.Rows[index].Cells[8].Value = RowState.Deleted;
         }
 
         private void contractChange_btn_Click(object sender, EventArgs e)

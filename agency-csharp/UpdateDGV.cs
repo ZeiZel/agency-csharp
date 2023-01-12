@@ -167,7 +167,6 @@ namespace agency_csharp
             database.closeConnection();
         }
 
-        // TODO: сделать обновление контрактов
         static public void Contracts(
             DataGridView dgv, 
             Database database,
@@ -211,7 +210,42 @@ namespace agency_csharp
         // TODO: сделать обновление откликов
         static public void Responses(DataGridView dgv, Database database)
         {
+            database.openConnection();
 
+            for (int i = 0; i < dgv.Rows.Count; i++)
+            {
+                var rowState = (RowState)dgv.Rows[i].Cells[8].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dgv.Rows[i].Cells[0].Value);
+
+                    var deleteClientQuery = $"EXEC ResponseDelete '{id}';";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteClientQuery, database.getConnection());
+                    commandEmpDel.ExecuteNonQuery();
+
+                    MessageBox.Show("Отклик удалён");
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var responseId = dgv.Rows[i].Cells[0].Value;
+                    var responseStatus = dgv.Rows[i].Cells[7].Value.ToString();
+
+                    string query = $"EXEC ResponseUpdate {responseId}, '{responseStatus}';";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Отклик изменён");
+                }
+            }
+
+            database.closeConnection();
         }
     }
 }
