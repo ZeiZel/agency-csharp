@@ -57,30 +57,30 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.clientAdd = new System.Windows.Forms.Button();
-            this.clientDel = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.adressApartment_tb = new System.Windows.Forms.TextBox();
             this.adressBuilding_tb = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.adressRegion_tb = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.adressID_tb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.adressCity_tb = new System.Windows.Forms.TextBox();
             this.adressStreet_tb = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.adressID_tb = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox4
@@ -410,10 +410,10 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
-            this.groupBox5.Controls.Add(this.pictureBox6);
-            this.groupBox5.Controls.Add(this.pictureBox7);
+            this.groupBox5.Controls.Add(this.pictureBox8);
+            this.groupBox5.Controls.Add(this.pictureBox1);
+            this.groupBox5.Controls.Add(this.button1);
             this.groupBox5.Controls.Add(this.clientAdd);
-            this.groupBox5.Controls.Add(this.clientDel);
             this.groupBox5.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox5.Location = new System.Drawing.Point(438, 342);
@@ -423,57 +423,21 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Панель управления";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(37, 51);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(43, 60);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 19;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(37, 133);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(43, 58);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            // 
             // clientAdd
             // 
-            this.clientAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.clientAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
             this.clientAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clientAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.clientAdd.FlatAppearance.BorderSize = 0;
             this.clientAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientAdd.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clientAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.clientAdd.Location = new System.Drawing.Point(86, 51);
+            this.clientAdd.Location = new System.Drawing.Point(87, 133);
             this.clientAdd.Name = "clientAdd";
             this.clientAdd.Size = new System.Drawing.Size(174, 60);
             this.clientAdd.TabIndex = 18;
             this.clientAdd.Text = "Изменить";
             this.clientAdd.UseVisualStyleBackColor = false;
-            // 
-            // clientDel
-            // 
-            this.clientDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.clientDel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clientDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.clientDel.FlatAppearance.BorderSize = 0;
-            this.clientDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clientDel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientDel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.clientDel.Location = new System.Drawing.Point(86, 133);
-            this.clientDel.Name = "clientDel";
-            this.clientDel.Size = new System.Drawing.Size(174, 60);
-            this.clientDel.TabIndex = 18;
-            this.clientDel.Text = "Удалить";
-            this.clientDel.UseVisualStyleBackColor = false;
             // 
             // groupBox12
             // 
@@ -521,6 +485,17 @@
             this.adressBuilding_tb.Size = new System.Drawing.Size(212, 35);
             this.adressBuilding_tb.TabIndex = 8;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label20.Location = new System.Drawing.Point(43, 31);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(150, 22);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Идентификатор";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -553,6 +528,17 @@
             this.label22.Size = new System.Drawing.Size(94, 22);
             this.label22.TabIndex = 9;
             this.label22.Text = "Квартира";
+            // 
+            // adressID_tb
+            // 
+            this.adressID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.adressID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.adressID_tb.Location = new System.Drawing.Point(43, 56);
+            this.adressID_tb.Multiline = true;
+            this.adressID_tb.Name = "adressID_tb";
+            this.adressID_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressID_tb.TabIndex = 8;
             // 
             // label6
             // 
@@ -609,27 +595,41 @@
             this.label16.TabIndex = 9;
             this.label16.Text = "Населённый пункт";
             // 
-            // label20
+            // button1
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label20.Location = new System.Drawing.Point(43, 31);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(150, 22);
-            this.label20.TabIndex = 10;
-            this.label20.Text = "Идентификатор";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.button1.Location = new System.Drawing.Point(87, 58);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(174, 60);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Добавить";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // adressID_tb
+            // pictureBox1
             // 
-            this.adressID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.adressID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.adressID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.adressID_tb.Location = new System.Drawing.Point(43, 56);
-            this.adressID_tb.Multiline = true;
-            this.adressID_tb.Name = "adressID_tb";
-            this.adressID_tb.Size = new System.Drawing.Size(212, 35);
-            this.adressID_tb.TabIndex = 8;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(38, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(38, 133);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(43, 60);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 20;
+            this.pictureBox8.TabStop = false;
             // 
             // Documents
             // 
@@ -642,7 +642,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Name = "Documents";
-            this.Text = "Documents";
+            this.Text = "Документы";
             this.Load += new System.EventHandler(this.Documents_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -651,10 +651,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -681,10 +681,7 @@
         private TextBox textBox9;
         private Label label14;
         private GroupBox groupBox5;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
         private Button clientAdd;
-        private Button clientDel;
         private Label label8;
         private Label label15;
         private Label label4;
@@ -706,5 +703,8 @@
         private TextBox adressStreet_tb;
         private Label label12;
         private Label label16;
+        private PictureBox pictureBox1;
+        private Button button1;
+        private PictureBox pictureBox8;
     }
 }

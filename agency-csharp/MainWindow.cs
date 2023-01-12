@@ -31,7 +31,7 @@ namespace agency_csharp
         readonly string refreshQueryClient =
             "select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Client C on Users.id_pk_user = C.id_user;";
         readonly string refreshQueryOrg =
-            "select id_pk_organization, o_name, o_phoneNumber, o_email from Organization;";
+            "select id_pk_organization, o_name, r_login, o_phoneNumber, o_email from Organization inner join Client C on C.id_pk_client = Organization.id_fk_client inner join Users U on U.id_pk_user = C.id_user inner join Register R2 on U.id_pk_user = R2.id_fk_user";
         readonly string refreshQueryVac =
             "select id_pk_vacancy, o_name, v_profession, v_description, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization";
         readonly string refreshQueryContracts =
@@ -62,11 +62,11 @@ namespace agency_csharp
             Utilities.RefreshDataGrid(clientView_dgv, database, SwitchState.Client, refreshQueryClient);
             clientView_dgv.Columns[5].Visible = false;
 
-            string[] columnsOrg = { "id_pk_organization", "o_name", "o_phoneNumber", "o_email" };
-            string[] columnNamesOrg = { "Идентификатор", "Наименование", "Контактный номер", "Почта" };
+            string[] columnsOrg = { "id_pk_organization", "o_name", "id_fk_client", "o_phoneNumber", "o_email" };
+            string[] columnNamesOrg = { "Идентификатор", "Наименование", "Представитель", "Контактный номер", "Почта" };
             Utilities.CreateColumns(organization_dgv, columnsOrg, columnNamesOrg);
             Utilities.RefreshDataGrid(organization_dgv, database, SwitchState.Organization, refreshQueryOrg);
-            organization_dgv.Columns[4].Visible = false;
+            organization_dgv.Columns[5].Visible = false;
 
             string[] columnsVac = { "id_pk_vacancy", "o_name", "v_profession", "v_description", "o_phoneNumber" };
             string[] columnNamesVac = { "ID вакансии", "Организация", "Должность", "Описание", "Контакный номер" };
@@ -120,7 +120,7 @@ namespace agency_csharp
 
             string userName, userSurname, userPatronymic;
 
-            string orgName, orgNumber, orgMail;
+            string orgName, orgNumber, orgMail, orgClient;
 
             string profession, vacDescription, vacNumber;
 
@@ -182,13 +182,14 @@ namespace agency_csharp
 
                     id = Convert.ToInt32(orgID_tb.Text);
                     orgName = orgName_tb.Text;
+                    orgClient = orgClient_tb.Text;
                     orgNumber = orgNum_tb.Text;
                     orgMail = orgMail_tb.Text;
 
                     if (organization_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
                     {
-                        organization_dgv.Rows[selectedRowIndex].SetValues(id, orgName, orgNumber, orgMail);
-                        organization_dgv.Rows[selectedRowIndex].Cells[4].Value = RowState.Modified;
+                        organization_dgv.Rows[selectedRowIndex].SetValues(id, orgName, orgClient, orgNumber, orgMail);
+                        organization_dgv.Rows[selectedRowIndex].Cells[5].Value = RowState.Modified;
                     }
                     break;
                 case SwitchState.Vacancy:
@@ -282,6 +283,7 @@ namespace agency_csharp
                     orgMail_tb.Text = "";
                     orgName_tb.Text = "";
                     orgNum_tb.Text = "";
+                    orgClient_tb.Text = "";
                     break;
                 case SwitchState.Vacancy:
                     vacancyID_tb.Text = "";
@@ -370,8 +372,9 @@ namespace agency_csharp
 
                 orgID_tb.Text = row.Cells[0].Value.ToString();
                 orgName_tb.Text = row.Cells[1].Value.ToString();
-                orgNum_tb.Text = row.Cells[2].Value.ToString();
-                orgMail_tb.Text = row.Cells[3].Value.ToString();
+                orgClient_tb.Text = row.Cells[2].Value.ToString();
+                orgNum_tb.Text = row.Cells[3].Value.ToString();
+                orgMail_tb.Text = row.Cells[4].Value.ToString();
             }
         }
 

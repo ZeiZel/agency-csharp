@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.orgClient_tb = new System.Windows.Forms.TextBox();
             this.orgNum_tb = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.orgMail_tb = new System.Windows.Forms.TextBox();
-            this.orgID_tb = new System.Windows.Forms.TextBox();
             this.orgName_tb = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -59,51 +59,51 @@
             // groupBox7
             // 
             this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox7.Controls.Add(this.orgClient_tb);
             this.groupBox7.Controls.Add(this.orgNum_tb);
-            this.groupBox7.Controls.Add(this.label36);
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Controls.Add(this.orgMail_tb);
-            this.groupBox7.Controls.Add(this.orgID_tb);
             this.groupBox7.Controls.Add(this.orgName_tb);
+            this.groupBox7.Controls.Add(this.label2);
             this.groupBox7.Controls.Add(this.label13);
             this.groupBox7.Controls.Add(this.label14);
             this.groupBox7.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox7.Location = new System.Drawing.Point(328, 12);
+            this.groupBox7.Location = new System.Drawing.Point(335, 21);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(296, 336);
+            this.groupBox7.Size = new System.Drawing.Size(296, 399);
             this.groupBox7.TabIndex = 30;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Персональные данные";
+            // 
+            // orgClient_tb
+            // 
+            this.orgClient_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.orgClient_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orgClient_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.orgClient_tb.Location = new System.Drawing.Point(48, 139);
+            this.orgClient_tb.Multiline = true;
+            this.orgClient_tb.Name = "orgClient_tb";
+            this.orgClient_tb.Size = new System.Drawing.Size(212, 35);
+            this.orgClient_tb.TabIndex = 8;
             // 
             // orgNum_tb
             // 
             this.orgNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orgNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgNum_tb.Location = new System.Drawing.Point(45, 195);
+            this.orgNum_tb.Location = new System.Drawing.Point(48, 204);
             this.orgNum_tb.Multiline = true;
             this.orgNum_tb.Name = "orgNum_tb";
             this.orgNum_tb.Size = new System.Drawing.Size(212, 35);
             this.orgNum_tb.TabIndex = 8;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label36.Location = new System.Drawing.Point(45, 31);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(150, 22);
-            this.label36.TabIndex = 10;
-            this.label36.Text = "Идентификатор";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label12.Location = new System.Drawing.Point(45, 94);
+            this.label12.Location = new System.Drawing.Point(48, 47);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(140, 22);
             this.label12.TabIndex = 10;
@@ -114,40 +114,40 @@
             this.orgMail_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgMail_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orgMail_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgMail_tb.Location = new System.Drawing.Point(45, 264);
+            this.orgMail_tb.Location = new System.Drawing.Point(48, 273);
             this.orgMail_tb.Multiline = true;
             this.orgMail_tb.Name = "orgMail_tb";
             this.orgMail_tb.Size = new System.Drawing.Size(212, 35);
             this.orgMail_tb.TabIndex = 8;
-            // 
-            // orgID_tb
-            // 
-            this.orgID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.orgID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orgID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgID_tb.Location = new System.Drawing.Point(45, 56);
-            this.orgID_tb.Multiline = true;
-            this.orgID_tb.Name = "orgID_tb";
-            this.orgID_tb.Size = new System.Drawing.Size(212, 35);
-            this.orgID_tb.TabIndex = 8;
             // 
             // orgName_tb
             // 
             this.orgName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orgName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgName_tb.Location = new System.Drawing.Point(45, 119);
+            this.orgName_tb.Location = new System.Drawing.Point(48, 72);
             this.orgName_tb.Multiline = true;
             this.orgName_tb.Name = "orgName_tb";
             this.orgName_tb.Size = new System.Drawing.Size(212, 35);
             this.orgName_tb.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label2.Location = new System.Drawing.Point(48, 114);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 22);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Представитель";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label13.Location = new System.Drawing.Point(45, 170);
+            this.label13.Location = new System.Drawing.Point(48, 179);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(177, 22);
             this.label13.TabIndex = 9;
@@ -158,7 +158,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label14.Location = new System.Drawing.Point(45, 239);
+            this.label14.Location = new System.Drawing.Point(48, 248);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 22);
             this.label14.TabIndex = 9;
@@ -171,7 +171,7 @@
             this.groupBox8.Controls.Add(this.orgDel_btn);
             this.groupBox8.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox8.Location = new System.Drawing.Point(123, 426);
+            this.groupBox8.Location = new System.Drawing.Point(117, 435);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(410, 125);
             this.groupBox8.TabIndex = 31;
@@ -353,7 +353,7 @@
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Name = "AddOrganization";
-            this.Text = "AddOrganization";
+            this.Text = "Добавить организацию";
             this.Load += new System.EventHandler(this.AddOrganization_Load);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -367,10 +367,8 @@
         #endregion
         private GroupBox groupBox7;
         private TextBox orgNum_tb;
-        private Label label36;
         private Label label12;
         private TextBox orgMail_tb;
-        private TextBox orgID_tb;
         private TextBox orgName_tb;
         private Label label13;
         private Label label14;
@@ -388,5 +386,7 @@
         private TextBox adressStreet_tb;
         private Label label15;
         private Label label16;
+        private TextBox orgClient_tb;
+        private Label label2;
     }
 }

@@ -61,7 +61,6 @@ namespace agency_csharp
             database.closeConnection();
         }
 
-        // TODO: сделать обновление клиентов
         static public void Clients(DataGridView dgv, Database database)
         {
             database.openConnection();
@@ -73,24 +72,6 @@ namespace agency_csharp
                 if (rowState == RowState.Existed)
                 {
                     continue;
-                }
-
-                if (rowState == RowState.Deleted)
-                {
-                    var id = Convert.ToInt32(dgv.Rows[i].Cells[0].Value);
-
-                    // TODO: у клиента есть много связанных таблиц и с ними нужно решить вопрос
-                    var deleteClientQuery = $"EXEC DeleteClient {id}";
-                    SqlCommand commandEmpDel = new SqlCommand(deleteClientQuery, database.getConnection());
-
-                    if (
-                            commandEmpDel.ExecuteNonQuery() == 0
-                        )
-                    {
-                        MessageBox.Show("Клиент удалён");
-                    }
-
-                    database.closeConnection();
                 }
 
                 if (rowState == RowState.Modified)
@@ -111,10 +92,35 @@ namespace agency_csharp
             database.closeConnection();
         }
 
-        // TODO: сделать обновление организаций
         static public void Organizations(DataGridView dgv, Database database)
         {
+            database.openConnection();
 
+            for (int i = 0; i < dgv.Rows.Count; i++)
+            {
+                var rowState = (RowState)dgv.Rows[i].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var orgId = dgv.Rows[i].Cells[0].Value.ToString();
+                    var orgName = dgv.Rows[i].Cells[1].Value.ToString();
+                    var orgClient = dgv.Rows[i].Cells[2].Value.ToString();
+                    var orgNum = dgv.Rows[i].Cells[3].Value.ToString();
+                    var orgMail = dgv.Rows[i].Cells[4].Value.ToString();
+
+                    string query =
+                        $"EXEC UpdateOrganization {orgId}, '{orgName}', '{orgClient}', '{orgNum}', '{orgMail}';";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            database.closeConnection();
         }
 
         static public void Vacancys(DataGridView dgv, Database database)
@@ -163,7 +169,45 @@ namespace agency_csharp
         // TODO: сделать обновление контрактов
         static public void Contracts(DataGridView dgv, Database database)
         {
+            database.openConnection();
 
+            for (int i = 0; i < dgv.Rows.Count; i++)
+            {
+                var rowState = (RowState)dgv.Rows[i].Cells[5].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dgv.Rows[i].Cells[0].Value);
+
+                    var deleteClientQuery = $"EXEC DeleteVacancy {id}";
+                    SqlCommand commandEmpDel = new SqlCommand(deleteClientQuery, database.getConnection());
+                    commandEmpDel.ExecuteNonQuery();
+
+                    MessageBox.Show("Вакансия удалена");
+                }
+
+                if (rowState == RowState.Modified)
+                {
+                    var vacId = dgv.Rows[i].Cells[0].Value;
+                    var vacOrg = dgv.Rows[i].Cells[1].Value.ToString();
+                    var vacProf = dgv.Rows[i].Cells[2].Value.ToString();
+                    var vacDesc = dgv.Rows[i].Cells[3].Value.ToString();
+                    var vacNumber = dgv.Rows[i].Cells[4].Value.ToString();
+
+                    string query = $"EXEC UpdateVacancy {vacId}, '{vacProf}', '{vacOrg}', '{vacDesc}', '{vacNumber}';";
+                    SqlCommand command = new SqlCommand(query, database.getConnection());
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Вакансия изменена");
+                }
+            }
+
+            database.closeConnection();
         }
 
         // TODO: сделать обновление откликов

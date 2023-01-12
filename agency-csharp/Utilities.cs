@@ -95,6 +95,7 @@ namespace agency_csharp
                         record.GetString(1),
                         record.GetString(2),
                         record.GetString(3),
+                        record.GetString(4),
                         RowState.ModifiedNew
                     );
                     break;

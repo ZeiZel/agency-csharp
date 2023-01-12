@@ -40,80 +40,79 @@ namespace agency_csharp
             var emailUser = mail_tb.Text;
             var patronymicUser = thirdname_tb.Text;
 
-            bool result = checkUser();
+            bool result = CheckUser();
 
             bool isNumeric = Int64.TryParse(numberUser, out Int64 n) && numberUser.Length == 10;
 
-            if (result)
+            try
             {
-                if (isNumeric)
+                if (result)
                 {
-                    if (
-                        login_tb.Text.Length > 0 &&
-                        password_tb.Text.Length > 0 &&
-                        name_tb.Text.Length > 0 &&
-                        number_tb.Text.Length > 0 &&
-                        surname_tb.Text.Length > 0 &&
-                        mail_tb.Text.Length > 0 &&
-                        thirdname_tb.Text.Length > 0 &&
-                        login_tb.Text.Length < 51 &&
-                        password_tb.Text.Length < 51 &&
-                        name_tb.Text.Length < 51 &&
-                        number_tb.Text.Length < 51 &&
-                        surname_tb.Text.Length < 51 &&
-                        mail_tb.Text.Length < 101 &&
-                        thirdname_tb.Text.Length < 51
-                    )
+                    if (isNumeric)
                     {
-                        database.openConnection();
-
-                        string queryUser = $"insert into Users (u_name, u_surname, u_patronymic, u_phoneNumber) values('{nameUser}', '{surnameUser}', '{patronymicUser}', '{numberUser}');";
-                        SqlCommand commandUser = new SqlCommand(queryUser, database.getConnection());
-
-                        //string queryRegister = $"insert into Register (id_fk_user, r_email, r_login, r_password, r_isAdmin, r_isUser, r_isEmployee) values('{userId}', '{emailUser}', '{loginUser}', '{passUser}', 0, 1, 0);";
-                        string queryRegister = $"EXEC CreateFKRegister '{nameUser}', '{emailUser}', '{loginUser}', '{passUser}', 0, 1, 0;";
-                        SqlCommand commandRegister = new SqlCommand(queryRegister, database.getConnection());
-
-                        if (commandUser.ExecuteNonQuery() == 1 && commandRegister.ExecuteNonQuery() == 1)
+                        if (
+                            login_tb.Text.Length > 0 &&
+                            password_tb.Text.Length > 0 &&
+                            name_tb.Text.Length > 0 &&
+                            number_tb.Text.Length > 0 &&
+                            surname_tb.Text.Length > 0 &&
+                            mail_tb.Text.Length > 0 &&
+                            thirdname_tb.Text.Length > 0 &&
+                            login_tb.Text.Length < 51 &&
+                            password_tb.Text.Length < 51 &&
+                            name_tb.Text.Length < 51 &&
+                            number_tb.Text.Length < 51 &&
+                            surname_tb.Text.Length < 51 &&
+                            mail_tb.Text.Length < 101 &&
+                            thirdname_tb.Text.Length < 51
+                        )
                         {
-                            Form success = new SuccessForm();
-                            success.Show();
-                            this.Close();
+                            database.openConnection();
+
+                            string queryUser = $"insert into Users (u_name, u_surname, u_patronymic, u_phoneNumber) values('{nameUser}', '{surnameUser}', '{patronymicUser}', '{numberUser}');";
+                            SqlCommand commandUser = new SqlCommand(queryUser, database.getConnection());
+
+                            //string queryRegister = $"insert into Register (id_fk_user, r_email, r_login, r_password, r_isAdmin, r_isUser, r_isEmployee) values('{userId}', '{emailUser}', '{loginUser}', '{passUser}', 0, 1, 0);";
+                            string queryRegister = $"EXEC CreateFKRegister '{nameUser}', '{emailUser}', '{loginUser}', '{passUser}', 0, 1, 0;";
+                            SqlCommand commandRegister = new SqlCommand(queryRegister, database.getConnection());
+
+                            if (commandUser.ExecuteNonQuery() == 1 && commandRegister.ExecuteNonQuery() == 1)
+                            {
+                                Form success = new SuccessForm();
+                                success.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                Form error = new ErrorForm();
+                                error.Show();
+                                this.Close();
+                            }
+
+                            database.closeConnection();
                         }
                         else
                         {
-                            Form error = new ErrorForm();
-                            error.Show();
-                            this.Close();
+                            MessageBox.Show("Введите данные во все поля. Либо уложитесь в 50 символов для всех полей и в 100 для почты.", "Зарегистрироваться не удалось", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
-
-                        database.closeConnection();
                     }
                     else
                     {
-                        MessageBox.Show("Введите данные во все поля. Либо уложитесь в 50 символов для всех полей и в 100 для почты.", "Зарегистрироваться не удалось", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Ваш номер телефона введён неправильно (вводите без \"+7\")", "Зарегистрироваться не удалось", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Ваш номер телефона введён неправильно (вводите без \"+7\")", "Зарегистрироваться не удалось", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Такой пользователь уже есть!");
                 }
             }
-            else
+            catch (Exception exc)
             {
-                MessageBox.Show("Такой пользователь уже есть!");
+                MessageBox.Show("Произошла совсем непредвиденная ошибка, связанная с базой данных");
             }
-            //try
-            //{
-
-            //}
-            //catch (Exception exc)
-            //{
-            //    MessageBox.Show("Произошла совсем непредвиденная ошибка, связанная с базой данных");
-            //}
         }
 
-        private Boolean checkUser()
+        private Boolean CheckUser()
         {
             var loginUser = login_tb.Text;
             var passUser = password_tb.Text;
