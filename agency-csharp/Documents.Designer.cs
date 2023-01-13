@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Documents));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,28 +40,30 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.passportSex_cb = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passportSeries_tb = new System.Windows.Forms.TextBox();
+            this.passportNumber_tb = new System.Windows.Forms.TextBox();
+            this.passportBirth_tb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.passportId_tb = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.docsID_tb = new System.Windows.Forms.TextBox();
+            this.docsEducation_tb = new System.Windows.Forms.TextBox();
+            this.docsTIN_tb = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.passportSave_btn = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.clientAdd = new System.Windows.Forms.Button();
+            this.passportAdd_btn = new System.Windows.Forms.Button();
+            this.passportChange_btn = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.adressApartment_tb = new System.Windows.Forms.TextBox();
             this.adressBuilding_tb = new System.Windows.Forms.TextBox();
@@ -74,13 +77,22 @@
             this.adressStreet_tb = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.passport_dgv = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.passportRefresh_btn = new System.Windows.Forms.Button();
+            this.passportSearch_btn = new System.Windows.Forms.Button();
+            this.passportClear_btn = new System.Windows.Forms.Button();
+            this.passportSearch_tb = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.passport_dgv)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
@@ -96,9 +108,9 @@
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox4.Location = new System.Drawing.Point(438, 12);
+            this.groupBox4.Location = new System.Drawing.Point(526, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(296, 309);
+            this.groupBox4.Size = new System.Drawing.Size(395, 309);
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Персональные данные";
@@ -129,11 +141,12 @@
             // 
             this.clientID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clientID_tb.Enabled = false;
             this.clientID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clientID_tb.Location = new System.Drawing.Point(39, 56);
             this.clientID_tb.Multiline = true;
             this.clientID_tb.Name = "clientID_tb";
-            this.clientID_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientID_tb.Size = new System.Drawing.Size(150, 35);
             this.clientID_tb.TabIndex = 8;
             // 
             // clientName_tb
@@ -144,7 +157,7 @@
             this.clientName_tb.Location = new System.Drawing.Point(39, 119);
             this.clientName_tb.Multiline = true;
             this.clientName_tb.Name = "clientName_tb";
-            this.clientName_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientName_tb.Size = new System.Drawing.Size(320, 35);
             this.clientName_tb.TabIndex = 8;
             // 
             // clientSur_tb
@@ -155,7 +168,7 @@
             this.clientSur_tb.Location = new System.Drawing.Point(39, 182);
             this.clientSur_tb.Multiline = true;
             this.clientSur_tb.Name = "clientSur_tb";
-            this.clientSur_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientSur_tb.Size = new System.Drawing.Size(320, 35);
             this.clientSur_tb.TabIndex = 8;
             // 
             // clientPat_tb
@@ -166,7 +179,7 @@
             this.clientPat_tb.Location = new System.Drawing.Point(39, 246);
             this.clientPat_tb.Multiline = true;
             this.clientPat_tb.Name = "clientPat_tb";
-            this.clientPat_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientPat_tb.Size = new System.Drawing.Size(320, 35);
             this.clientPat_tb.TabIndex = 8;
             // 
             // label10
@@ -194,16 +207,16 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox1.Controls.Add(this.passportSex_cb);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox11);
-            this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.passportSeries_tb);
+            this.groupBox1.Controls.Add(this.passportNumber_tb);
+            this.groupBox1.Controls.Add(this.passportBirth_tb);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.passportId_tb);
             this.groupBox1.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -212,6 +225,18 @@
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Паспортные данные";
+            // 
+            // passportSex_cb
+            // 
+            this.passportSex_cb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportSex_cb.FormattingEnabled = true;
+            this.passportSex_cb.Items.AddRange(new object[] {
+            "Женский",
+            "Мужской"});
+            this.passportSex_cb.Location = new System.Drawing.Point(39, 199);
+            this.passportSex_cb.Name = "passportSex_cb";
+            this.passportSex_cb.Size = new System.Drawing.Size(134, 30);
+            this.passportSex_cb.TabIndex = 15;
             // 
             // label8
             // 
@@ -240,7 +265,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label4.Location = new System.Drawing.Point(134, 173);
+            this.label4.Location = new System.Drawing.Point(179, 173);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 22);
             this.label4.TabIndex = 10;
@@ -257,49 +282,38 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Пол";
             // 
-            // textBox11
+            // passportSeries_tb
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox11.Location = new System.Drawing.Point(198, 119);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(167, 35);
-            this.textBox11.TabIndex = 11;
+            this.passportSeries_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.passportSeries_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passportSeries_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportSeries_tb.Location = new System.Drawing.Point(198, 119);
+            this.passportSeries_tb.Multiline = true;
+            this.passportSeries_tb.Name = "passportSeries_tb";
+            this.passportSeries_tb.Size = new System.Drawing.Size(167, 35);
+            this.passportSeries_tb.TabIndex = 11;
             // 
-            // textBox12
+            // passportNumber_tb
             // 
-            this.textBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox12.Location = new System.Drawing.Point(39, 119);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(150, 35);
-            this.textBox12.TabIndex = 12;
+            this.passportNumber_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.passportNumber_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passportNumber_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportNumber_tb.Location = new System.Drawing.Point(39, 119);
+            this.passportNumber_tb.Multiline = true;
+            this.passportNumber_tb.Name = "passportNumber_tb";
+            this.passportNumber_tb.Size = new System.Drawing.Size(150, 35);
+            this.passportNumber_tb.TabIndex = 12;
             // 
-            // textBox3
+            // passportBirth_tb
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(134, 198);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 35);
-            this.textBox3.TabIndex = 8;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(39, 198);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(89, 35);
-            this.textBox1.TabIndex = 8;
+            this.passportBirth_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.passportBirth_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passportBirth_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportBirth_tb.Location = new System.Drawing.Point(179, 198);
+            this.passportBirth_tb.Multiline = true;
+            this.passportBirth_tb.Name = "passportBirth_tb";
+            this.passportBirth_tb.Size = new System.Drawing.Size(186, 35);
+            this.passportBirth_tb.TabIndex = 8;
             // 
             // label1
             // 
@@ -312,25 +326,26 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Идентификатор";
             // 
-            // textBox2
+            // passportId_tb
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(39, 56);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 35);
-            this.textBox2.TabIndex = 8;
+            this.passportId_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.passportId_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passportId_tb.Enabled = false;
+            this.passportId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportId_tb.Location = new System.Drawing.Point(39, 56);
+            this.passportId_tb.Multiline = true;
+            this.passportId_tb.Name = "passportId_tb";
+            this.passportId_tb.Size = new System.Drawing.Size(326, 35);
+            this.passportId_tb.TabIndex = 8;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox9);
+            this.groupBox2.Controls.Add(this.docsID_tb);
+            this.groupBox2.Controls.Add(this.docsEducation_tb);
+            this.groupBox2.Controls.Add(this.docsTIN_tb);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
@@ -363,38 +378,39 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Образование";
             // 
-            // textBox7
+            // docsID_tb
             // 
-            this.textBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(39, 72);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(326, 35);
-            this.textBox7.TabIndex = 8;
+            this.docsID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.docsID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.docsID_tb.Enabled = false;
+            this.docsID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.docsID_tb.Location = new System.Drawing.Point(39, 72);
+            this.docsID_tb.Multiline = true;
+            this.docsID_tb.Name = "docsID_tb";
+            this.docsID_tb.Size = new System.Drawing.Size(326, 35);
+            this.docsID_tb.TabIndex = 8;
             // 
-            // textBox8
+            // docsEducation_tb
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.Location = new System.Drawing.Point(39, 135);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(326, 35);
-            this.textBox8.TabIndex = 8;
+            this.docsEducation_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.docsEducation_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.docsEducation_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.docsEducation_tb.Location = new System.Drawing.Point(39, 135);
+            this.docsEducation_tb.Multiline = true;
+            this.docsEducation_tb.Name = "docsEducation_tb";
+            this.docsEducation_tb.Size = new System.Drawing.Size(326, 35);
+            this.docsEducation_tb.TabIndex = 8;
             // 
-            // textBox9
+            // docsTIN_tb
             // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox9.Location = new System.Drawing.Point(39, 198);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(326, 35);
-            this.textBox9.TabIndex = 8;
+            this.docsTIN_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.docsTIN_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.docsTIN_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.docsTIN_tb.Location = new System.Drawing.Point(39, 198);
+            this.docsTIN_tb.Multiline = true;
+            this.docsTIN_tb.Name = "docsTIN_tb";
+            this.docsTIN_tb.Size = new System.Drawing.Size(326, 35);
+            this.docsTIN_tb.TabIndex = 8;
             // 
             // label14
             // 
@@ -410,25 +426,54 @@
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox5.Controls.Add(this.pictureBox5);
+            this.groupBox5.Controls.Add(this.passportSave_btn);
             this.groupBox5.Controls.Add(this.pictureBox8);
             this.groupBox5.Controls.Add(this.pictureBox1);
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.Controls.Add(this.clientAdd);
+            this.groupBox5.Controls.Add(this.passportAdd_btn);
+            this.groupBox5.Controls.Add(this.passportChange_btn);
             this.groupBox5.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox5.Location = new System.Drawing.Point(438, 342);
+            this.groupBox5.Location = new System.Drawing.Point(565, 336);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(296, 225);
+            this.groupBox5.Size = new System.Drawing.Size(320, 225);
             this.groupBox5.TabIndex = 28;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Панель управления";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(49, 161);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(43, 44);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            // 
+            // passportSave_btn
+            // 
+            this.passportSave_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.passportSave_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passportSave_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.passportSave_btn.FlatAppearance.BorderSize = 0;
+            this.passportSave_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passportSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportSave_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.passportSave_btn.Location = new System.Drawing.Point(98, 161);
+            this.passportSave_btn.Name = "passportSave_btn";
+            this.passportSave_btn.Size = new System.Drawing.Size(174, 44);
+            this.passportSave_btn.TabIndex = 21;
+            this.passportSave_btn.Text = "Сохранить";
+            this.passportSave_btn.UseVisualStyleBackColor = false;
+            this.passportSave_btn.Click += new System.EventHandler(this.clientSave_Click);
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(38, 133);
+            this.pictureBox8.Location = new System.Drawing.Point(49, 98);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(43, 60);
+            this.pictureBox8.Size = new System.Drawing.Size(43, 44);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 20;
             this.pictureBox8.TabStop = false;
@@ -436,45 +481,46 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(38, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(49, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(43, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // passportAdd_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.button1.Location = new System.Drawing.Point(87, 58);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 60);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.passportAdd_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
+            this.passportAdd_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passportAdd_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.passportAdd_btn.FlatAppearance.BorderSize = 0;
+            this.passportAdd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passportAdd_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportAdd_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.passportAdd_btn.Location = new System.Drawing.Point(98, 35);
+            this.passportAdd_btn.Name = "passportAdd_btn";
+            this.passportAdd_btn.Size = new System.Drawing.Size(174, 44);
+            this.passportAdd_btn.TabIndex = 18;
+            this.passportAdd_btn.Text = "Добавить";
+            this.passportAdd_btn.UseVisualStyleBackColor = false;
+            this.passportAdd_btn.Click += new System.EventHandler(this.passportAdd_btn_Click);
             // 
-            // clientAdd
+            // passportChange_btn
             // 
-            this.clientAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
-            this.clientAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clientAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.clientAdd.FlatAppearance.BorderSize = 0;
-            this.clientAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clientAdd.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.clientAdd.Location = new System.Drawing.Point(87, 133);
-            this.clientAdd.Name = "clientAdd";
-            this.clientAdd.Size = new System.Drawing.Size(174, 60);
-            this.clientAdd.TabIndex = 18;
-            this.clientAdd.Text = "Изменить";
-            this.clientAdd.UseVisualStyleBackColor = false;
+            this.passportChange_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.passportChange_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passportChange_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.passportChange_btn.FlatAppearance.BorderSize = 0;
+            this.passportChange_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passportChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportChange_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.passportChange_btn.Location = new System.Drawing.Point(98, 98);
+            this.passportChange_btn.Name = "passportChange_btn";
+            this.passportChange_btn.Size = new System.Drawing.Size(174, 44);
+            this.passportChange_btn.TabIndex = 18;
+            this.passportChange_btn.Text = "Изменить";
+            this.passportChange_btn.UseVisualStyleBackColor = false;
+            this.passportChange_btn.Click += new System.EventHandler(this.passportChange_btn_Click);
             // 
             // groupBox12
             // 
@@ -493,9 +539,9 @@
             this.groupBox12.Controls.Add(this.label16);
             this.groupBox12.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox12.Location = new System.Drawing.Point(757, 12);
+            this.groupBox12.Location = new System.Drawing.Point(1028, 12);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(296, 448);
+            this.groupBox12.Size = new System.Drawing.Size(435, 371);
             this.groupBox12.TabIndex = 29;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Данные адреса";
@@ -505,10 +551,10 @@
             this.adressApartment_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.adressApartment_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.adressApartment_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.adressApartment_tb.Location = new System.Drawing.Point(43, 383);
+            this.adressApartment_tb.Location = new System.Drawing.Point(225, 312);
             this.adressApartment_tb.Multiline = true;
             this.adressApartment_tb.Name = "adressApartment_tb";
-            this.adressApartment_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressApartment_tb.Size = new System.Drawing.Size(176, 35);
             this.adressApartment_tb.TabIndex = 8;
             // 
             // adressBuilding_tb
@@ -519,7 +565,7 @@
             this.adressBuilding_tb.Location = new System.Drawing.Point(43, 312);
             this.adressBuilding_tb.Multiline = true;
             this.adressBuilding_tb.Name = "adressBuilding_tb";
-            this.adressBuilding_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressBuilding_tb.Size = new System.Drawing.Size(176, 35);
             this.adressBuilding_tb.TabIndex = 8;
             // 
             // label20
@@ -552,7 +598,7 @@
             this.adressRegion_tb.Location = new System.Drawing.Point(43, 119);
             this.adressRegion_tb.Multiline = true;
             this.adressRegion_tb.Name = "adressRegion_tb";
-            this.adressRegion_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressRegion_tb.Size = new System.Drawing.Size(358, 35);
             this.adressRegion_tb.TabIndex = 8;
             // 
             // label22
@@ -560,7 +606,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label22.Location = new System.Drawing.Point(43, 358);
+            this.label22.Location = new System.Drawing.Point(225, 287);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(94, 22);
             this.label22.TabIndex = 9;
@@ -570,11 +616,12 @@
             // 
             this.adressID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.adressID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.adressID_tb.Enabled = false;
             this.adressID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.adressID_tb.Location = new System.Drawing.Point(43, 56);
             this.adressID_tb.Multiline = true;
             this.adressID_tb.Name = "adressID_tb";
-            this.adressID_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressID_tb.Size = new System.Drawing.Size(176, 35);
             this.adressID_tb.TabIndex = 8;
             // 
             // label6
@@ -596,7 +643,7 @@
             this.adressCity_tb.Location = new System.Drawing.Point(43, 182);
             this.adressCity_tb.Multiline = true;
             this.adressCity_tb.Name = "adressCity_tb";
-            this.adressCity_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressCity_tb.Size = new System.Drawing.Size(358, 35);
             this.adressCity_tb.TabIndex = 8;
             // 
             // adressStreet_tb
@@ -607,7 +654,7 @@
             this.adressStreet_tb.Location = new System.Drawing.Point(43, 246);
             this.adressStreet_tb.Multiline = true;
             this.adressStreet_tb.Name = "adressStreet_tb";
-            this.adressStreet_tb.Size = new System.Drawing.Size(212, 35);
+            this.adressStreet_tb.Size = new System.Drawing.Size(358, 35);
             this.adressStreet_tb.TabIndex = 8;
             // 
             // label12
@@ -632,11 +679,106 @@
             this.label16.TabIndex = 9;
             this.label16.Text = "Населённый пункт";
             // 
+            // passport_dgv
+            // 
+            this.passport_dgv.AllowUserToAddRows = false;
+            this.passport_dgv.AllowUserToDeleteRows = false;
+            this.passport_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.passport_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passport_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.passport_dgv.DefaultCellStyle = dataGridViewCellStyle1;
+            this.passport_dgv.Location = new System.Drawing.Point(12, 582);
+            this.passport_dgv.Name = "passport_dgv";
+            this.passport_dgv.ReadOnly = true;
+            this.passport_dgv.RowTemplate.Height = 25;
+            this.passport_dgv.Size = new System.Drawing.Size(1451, 211);
+            this.passport_dgv.TabIndex = 30;
+            this.passport_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.passport_dgv_CellClick);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.groupBox3.Controls.Add(this.passportRefresh_btn);
+            this.groupBox3.Controls.Add(this.passportSearch_btn);
+            this.groupBox3.Controls.Add(this.passportClear_btn);
+            this.groupBox3.Controls.Add(this.passportSearch_tb);
+            this.groupBox3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.groupBox3.Location = new System.Drawing.Point(1028, 461);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(411, 100);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Управление";
+            // 
+            // passportRefresh_btn
+            // 
+            this.passportRefresh_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.passportRefresh_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passportRefresh_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.passportRefresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passportRefresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("passportRefresh_btn.Image")));
+            this.passportRefresh_btn.Location = new System.Drawing.Point(78, 34);
+            this.passportRefresh_btn.Name = "passportRefresh_btn";
+            this.passportRefresh_btn.Size = new System.Drawing.Size(55, 52);
+            this.passportRefresh_btn.TabIndex = 17;
+            this.passportRefresh_btn.UseVisualStyleBackColor = false;
+            this.passportRefresh_btn.Click += new System.EventHandler(this.passportRefresh_btn_Click);
+            // 
+            // passportSearch_btn
+            // 
+            this.passportSearch_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.passportSearch_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passportSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.passportSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passportSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("passportSearch_btn.Image")));
+            this.passportSearch_btn.Location = new System.Drawing.Point(139, 34);
+            this.passportSearch_btn.Name = "passportSearch_btn";
+            this.passportSearch_btn.Size = new System.Drawing.Size(48, 52);
+            this.passportSearch_btn.TabIndex = 17;
+            this.passportSearch_btn.UseVisualStyleBackColor = false;
+            this.passportSearch_btn.Click += new System.EventHandler(this.passportSearch_btn_Click);
+            // 
+            // passportClear_btn
+            // 
+            this.passportClear_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.passportClear_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passportClear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.passportClear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passportClear_btn.Image = ((System.Drawing.Image)(resources.GetObject("passportClear_btn.Image")));
+            this.passportClear_btn.Location = new System.Drawing.Point(24, 34);
+            this.passportClear_btn.Name = "passportClear_btn";
+            this.passportClear_btn.Size = new System.Drawing.Size(48, 52);
+            this.passportClear_btn.TabIndex = 17;
+            this.passportClear_btn.UseVisualStyleBackColor = false;
+            this.passportClear_btn.Click += new System.EventHandler(this.passportClear_btn_Click);
+            // 
+            // passportSearch_tb
+            // 
+            this.passportSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.passportSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passportSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportSearch_tb.Location = new System.Drawing.Point(193, 40);
+            this.passportSearch_tb.Multiline = true;
+            this.passportSearch_tb.Name = "passportSearch_tb";
+            this.passportSearch_tb.Size = new System.Drawing.Size(189, 35);
+            this.passportSearch_tb.TabIndex = 8;
+            this.passportSearch_tb.TextChanged += new System.EventHandler(this.passportSearch_tb_TextChanged);
+            // 
             // Documents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 583);
+            this.ClientSize = new System.Drawing.Size(1475, 811);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.passport_dgv);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox2);
@@ -652,10 +794,14 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.passport_dgv)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -672,25 +818,22 @@
         private Label label10;
         private Label label11;
         private GroupBox groupBox1;
-        private Label label1;
-        private TextBox textBox2;
         private GroupBox groupBox2;
         private Label label7;
         private Label label9;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
+        private TextBox docsID_tb;
+        private TextBox docsEducation_tb;
+        private TextBox docsTIN_tb;
         private Label label14;
         private GroupBox groupBox5;
-        private Button clientAdd;
+        private Button passportChange_btn;
         private Label label8;
         private Label label15;
         private Label label4;
         private Label label3;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox3;
-        private TextBox textBox1;
+        private TextBox passportSeries_tb;
+        private TextBox passportNumber_tb;
+        private TextBox passportBirth_tb;
         private GroupBox groupBox12;
         private TextBox adressApartment_tb;
         private TextBox adressBuilding_tb;
@@ -705,7 +848,18 @@
         private Label label12;
         private Label label16;
         private PictureBox pictureBox1;
-        private Button button1;
+        private Button passportAdd_btn;
         private PictureBox pictureBox8;
+        private Label label1;
+        private TextBox passportId_tb;
+        private DataGridView passport_dgv;
+        private GroupBox groupBox3;
+        private Button passportRefresh_btn;
+        private Button passportSearch_btn;
+        private Button passportClear_btn;
+        private TextBox passportSearch_tb;
+        private ComboBox passportSex_cb;
+        private PictureBox pictureBox5;
+        private Button passportSave_btn;
     }
 }

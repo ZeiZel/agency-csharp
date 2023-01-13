@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.info_tabPage = new System.Windows.Forms.TabControl();
             this.employess_tab = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -209,6 +215,7 @@
             this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.сменитьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.info_tabPage.SuspendLayout();
             this.employess_tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -372,7 +379,16 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(371, 15);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -750,7 +766,16 @@
             this.clientView_dgv.AllowUserToAddRows = false;
             this.clientView_dgv.AllowUserToDeleteRows = false;
             this.clientView_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.clientView_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientView_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.clientView_dgv.DefaultCellStyle = dataGridViewCellStyle2;
             this.clientView_dgv.Location = new System.Drawing.Point(353, 25);
             this.clientView_dgv.Name = "clientView_dgv";
             this.clientView_dgv.ReadOnly = true;
@@ -1097,7 +1122,16 @@
             this.organization_dgv.AllowUserToAddRows = false;
             this.organization_dgv.AllowUserToDeleteRows = false;
             this.organization_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.organization_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.organization_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.organization_dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.organization_dgv.Location = new System.Drawing.Point(356, 25);
             this.organization_dgv.Name = "organization_dgv";
             this.organization_dgv.ReadOnly = true;
@@ -1427,7 +1461,16 @@
             this.vacancy_dgv.AllowUserToAddRows = false;
             this.vacancy_dgv.AllowUserToDeleteRows = false;
             this.vacancy_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.vacancy_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vacancy_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.vacancy_dgv.DefaultCellStyle = dataGridViewCellStyle4;
             this.vacancy_dgv.Location = new System.Drawing.Point(539, 25);
             this.vacancy_dgv.Name = "vacancy_dgv";
             this.vacancy_dgv.ReadOnly = true;
@@ -2079,7 +2122,16 @@
             this.contract_dgv.AllowUserToAddRows = false;
             this.contract_dgv.AllowUserToDeleteRows = false;
             this.contract_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.contract_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.contract_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.contract_dgv.DefaultCellStyle = dataGridViewCellStyle5;
             this.contract_dgv.Location = new System.Drawing.Point(615, 16);
             this.contract_dgv.Name = "contract_dgv";
             this.contract_dgv.ReadOnly = true;
@@ -2276,7 +2328,16 @@
             this.response_dgv.AllowUserToAddRows = false;
             this.response_dgv.AllowUserToDeleteRows = false;
             this.response_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.response_dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.response_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.response_dgv.DefaultCellStyle = dataGridViewCellStyle6;
             this.response_dgv.Location = new System.Drawing.Point(386, 32);
             this.response_dgv.Name = "response_dgv";
             this.response_dgv.ReadOnly = true;
@@ -2537,7 +2598,8 @@
             // управлениеToolStripMenuItem
             // 
             this.управлениеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.администрированиеToolStripMenuItem});
+            this.администрированиеToolStripMenuItem,
+            this.сменитьПользователяToolStripMenuItem});
             this.управлениеToolStripMenuItem.Name = "управлениеToolStripMenuItem";
             this.управлениеToolStripMenuItem.Size = new System.Drawing.Size(85, 23);
             this.управлениеToolStripMenuItem.Text = "Управление";
@@ -2545,7 +2607,7 @@
             // администрированиеToolStripMenuItem
             // 
             this.администрированиеToolStripMenuItem.Name = "администрированиеToolStripMenuItem";
-            this.администрированиеToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.администрированиеToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.администрированиеToolStripMenuItem.Text = "Администрирование";
             this.администрированиеToolStripMenuItem.Click += new System.EventHandler(this.администрированиеToolStripMenuItem_Click);
             // 
@@ -2593,6 +2655,13 @@
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            // 
+            // сменитьПользователяToolStripMenuItem
+            // 
+            this.сменитьПользователяToolStripMenuItem.Name = "сменитьПользователяToolStripMenuItem";
+            this.сменитьПользователяToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.сменитьПользователяToolStripMenuItem.Text = "Сменить пользователя";
+            this.сменитьПользователяToolStripMenuItem.Click += new System.EventHandler(this.сменитьПользователяToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -2866,5 +2935,6 @@
         private Label label16;
         private ComboBox contractStatus_cb;
         private ComboBox responseStatus_cb;
+        private ToolStripMenuItem сменитьПользователяToolStripMenuItem;
     }
 }

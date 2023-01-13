@@ -19,7 +19,8 @@ namespace agency_csharp
         Organization,
         Vacancy,
         Contract,
-        Response
+        Response,
+        Passport
     }
 
     public partial class MainWindow : Form
@@ -749,30 +750,16 @@ namespace agency_csharp
         private void passportEdit_btn_Click(object sender, EventArgs e)
         {
             if (
-                MessageBox.Show("При переходе на данную форму вы обязуетесь не разглашать паспортные данные пользователей.",
-                "Внимание",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-                ) == DialogResult.Yes)
+                MessageBox.Show(
+                    "При переходе на данную форму вы обязуетесь не разглашать паспортные данные пользователей.",
+                    "Внимание",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                    ) == DialogResult.Yes
+                )
             {
-                if (
-                        clientName_tb.Text.Length > 0 && clientName_tb.Text.Length <= 50 &&
-                        clientSur_tb.Text.Length > 0 && clientSur_tb.Text.Length <= 50 &&
-                        clientPat_tb.Text.Length > 0 && clientPat_tb.Text.Length <= 50
-                    )
-                {
-                    Form documents = new Documents(clientName_tb.Text, clientSur_tb.Text, clientPat_tb.Text, clientID_tb.Text);
-                    documents.Show();
-                }
-                else
-                {
-                    MessageBox.Show(
-                        "Сначала выберите пользователя, у которого хотите отредактировать паспорт",
-                        "Ошибка",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning
-                    );
-                }
+                Form documents = new Documents();
+                documents.Show();
             }
         }
 
@@ -824,11 +811,11 @@ namespace agency_csharp
                 if (findClient)
                 {
                     MessageBox.Show(
-                    "Такого клиента не существует!",
-                    "Не удалось добавить запись",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+                        "Такого клиента не существует!",
+                        "Не удалось добавить запись",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
                 }
                 else
                 {
@@ -981,6 +968,13 @@ namespace agency_csharp
         {
             Change(SwitchState.Response);
 
+        }
+
+        private void сменитьПользователяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form login = new Login();
+            login.Show();
         }
     }
 }

@@ -135,6 +135,29 @@ namespace agency_csharp
                         RowState.ModifiedNew
                     );
                     break;
+                case SwitchState.Passport:
+                    dgv.Rows.Add(
+                        record.GetInt32(0),
+                        record.GetInt32(1),
+                        record.GetInt32(2),
+                        record.GetInt32(3),
+                        record.GetString(4),
+                        record.GetString(5),
+                        record.GetString(6),
+                        record.GetString(7),
+                        record.GetString(8),
+                        record.GetString(9),
+                        record.GetString(10),
+                        record.GetString(11),
+                        record.GetString(12),
+                        record.GetString(13),
+                        record.GetString(14),
+                        record.GetString(15),
+                        record.GetString(16),
+                        record.GetString(17),
+                        RowState.ModifiedNew
+                    );
+                    break;
                 default:
                     MessageBox.Show("Внутренняя ошибка вызова состояния");
                     break;

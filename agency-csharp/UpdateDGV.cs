@@ -37,7 +37,7 @@ namespace agency_csharp
                             commandEmpDelRules.ExecuteNonQuery() == 0
                         )
                     {
-                        MessageBox.Show("Сотрудник удалён");
+                        MessageBox.Show("Сотрудник удалён", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     database.closeConnection();
@@ -55,6 +55,8 @@ namespace agency_csharp
                         $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
                     SqlCommand command = new SqlCommand(query, database.getConnection());
                     command.ExecuteNonQuery();
+
+                    MessageBox.Show("Сотрудник изменён", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -86,6 +88,8 @@ namespace agency_csharp
                         $"update [dbo].[Users] set [u_name] = '{userName}', [u_phoneNumber] = '{userNumber}', [u_surname] = '{userSurname}', [u_patronymic] = '{userPatronymic}' where [id_pk_user] = {userId};";
                     SqlCommand command = new SqlCommand(query, database.getConnection());
                     command.ExecuteNonQuery();
+
+                    MessageBox.Show("Клиент изменён", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -117,7 +121,7 @@ namespace agency_csharp
                     SqlCommand command = new SqlCommand(query, database.getConnection());
                     command.ExecuteNonQuery();
 
-                    MessageBox.Show("Организация изменена");
+                    MessageBox.Show("Организация изменена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -145,7 +149,7 @@ namespace agency_csharp
                     SqlCommand commandEmpDel = new SqlCommand(deleteClientQuery, database.getConnection());
                     commandEmpDel.ExecuteNonQuery();
 
-                    MessageBox.Show("Вакансия удалена");
+                    MessageBox.Show("Вакансия удалена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 if (rowState == RowState.Modified)
@@ -160,7 +164,7 @@ namespace agency_csharp
                     SqlCommand command = new SqlCommand(query, database.getConnection());
                     command.ExecuteNonQuery();
 
-                    MessageBox.Show("Вакансия изменена");
+                    MessageBox.Show("Вакансия изменена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -200,7 +204,7 @@ namespace agency_csharp
                     SqlCommand command = new SqlCommand(query, database.getConnection());
                     command.ExecuteNonQuery();
 
-                    MessageBox.Show("Контракт изменён");
+                    MessageBox.Show("Контракт изменён", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -228,7 +232,7 @@ namespace agency_csharp
                     SqlCommand commandEmpDel = new SqlCommand(deleteClientQuery, database.getConnection());
                     commandEmpDel.ExecuteNonQuery();
 
-                    MessageBox.Show("Отклик удалён");
+                    MessageBox.Show("Отклик удалён", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 if (rowState == RowState.Modified)
@@ -240,7 +244,7 @@ namespace agency_csharp
                     SqlCommand command = new SqlCommand(query, database.getConnection());
                     command.ExecuteNonQuery();
 
-                    MessageBox.Show("Отклик изменён");
+                    MessageBox.Show("Отклик изменён", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 

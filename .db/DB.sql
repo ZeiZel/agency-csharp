@@ -209,37 +209,37 @@ insert into ResponseStatus (rs_status) values ('Отменён');
 --             (@v_id, @o_id);
 --     END;
 
-
-create procedure AddClient
-    @clientName nvarchar(50),
-    @clientSurname nvarchar(50),
-    @clientPat nvarchar(50),
-    @clientNum nvarchar(50),
-    @adressRegion nvarchar(50),
-    @adressCity nvarchar(50),
-    @adressStreet nvarchar(50),
-    @adressBuilding nvarchar(50),
-    @adressApartment nvarchar(50)
-AS DECLARE @a_id int, @u_id int
-    BEGIN
-        insert into Adress
-            (a_region, a_city, a_street, a_building, a_apartment)
-        values
-            (@adressRegion, @adressCity, @adressStreet, @adressBuilding, @adressApartment);
-
-        select @a_id = id_pk_adress from Adress
-        where
-            a_apartment = @adressApartment and a_building = @adressBuilding and a_city = @adressCity;
-
-        insert into Users
-            (u_name, u_surname, u_patronymic, u_phoneNumber)
-        values
-            (@clientName, @clientSurname, @clientPat, @clientNum);
-
-        select @u_id = id_pk_user from Users where u_phoneNumber = @clientNum and u_name = @clientName;
-
-        insert into Client (id_user, id_adress) values (@u_id, @a_id);
-    END;
+-- Добавление клиента
+-- create procedure AddClient
+--     @clientName nvarchar(50),
+--     @clientSurname nvarchar(50),
+--     @clientPat nvarchar(50),
+--     @clientNum nvarchar(50),
+--     @adressRegion nvarchar(50),
+--     @adressCity nvarchar(50),
+--     @adressStreet nvarchar(50),
+--     @adressBuilding nvarchar(50),
+--     @adressApartment nvarchar(50)
+-- AS DECLARE @a_id int, @u_id int
+--     BEGIN
+--         insert into Adress
+--             (a_region, a_city, a_street, a_building, a_apartment)
+--         values
+--             (@adressRegion, @adressCity, @adressStreet, @adressBuilding, @adressApartment);
+--
+--         select @a_id = id_pk_adress from Adress
+--         where
+--             a_apartment = @adressApartment and a_building = @adressBuilding and a_city = @adressCity;
+--
+--         insert into Users
+--             (u_name, u_surname, u_patronymic, u_phoneNumber)
+--         values
+--             (@clientName, @clientSurname, @clientPat, @clientNum);
+--
+--         select @u_id = id_pk_user from Users where u_phoneNumber = @clientNum and u_name = @clientName;
+--
+--         insert into Client (id_user, id_adress) values (@u_id, @a_id);
+--     END;
 
 -- Добюавление организации
 -- create procedure AddOrganization
@@ -378,7 +378,99 @@ AS DECLARE @a_id int, @u_id int
 --         values
 --             (@contractConditions, @contractDate, @c_id, @e_id, @s_id)
 --     end;
+-- Обновление документов
+-- CREATE PROCEDURE ADDDocument
+--     @passportID int,
+--     @clientID int,
+--     @adressID int,
+--     @documentsID int,
+--
+--     @passSeries int,
+--     @passNum int,
+--     @passBirth nvarchar(50),
+--     @passSex nvarchar(50),
+--
+--     @adressRegion nvarchar(50),
+--     @adressCity nvarchar(50),
+--     @adressStreet nvarchar(50),
+--     @adressBuilding nvarchar(50),
+--     @adressApartment nvarchar(50),
+--
+--     @docsTIN nvarchar(50),
+--     @docsEducation nvarchar(50),
+--
+--     @clientName nvarchar(50),
+--     @clientSur nvarchar(50),
+--     @clientPat nvarchar(50)
+-- AS DECLARE @p_id int, @u_id int, @a_id int, @d_id int
+-- BEGIN
+--     select @p_id = id_pk_passport from Passport where id_pk_passport = @passportID;
+--     select @u_id = id_user from Client where id_pk_client = @clientID;
+--     select @a_id = id_pk_adress from Adress where id_pk_adress = @adressID;
+--     select @d_id = id_pk_document from Documents where id_pk_document = @documentsID;
+--
+--     insert into Passport
+--         (p_number, p_series, p_name, p_surname, p_patronymic, p_sex, p_birth, id_adress)
+--     values
+--         (@passNum, @passSeries, @clientName, @clientSur, @clientPat, @passSex, @passBirth, @a_id);
+--
+--     insert into Adress
+--         (a_region, a_city, a_street, a_building, a_apartment)
+--     values (@adressRegion, @adressCity, @adressStreet, @adressBuilding, @adressApartment);
+--
+--     insert into Documents
+--         (id_passport, d_education, d_TIN)
+--     values
+--         (@p_id, @docsEducation, @docsTIN);
+--
+--     insert into UserDoc (id_fk_user, id_fk_doc) values (@u_id, @d_id)
+-- END;
 
+-- Добавление документов
+-- CREATE PROCEDURE UpdateDocument
+--     @passportID int,
+--     @clientID int,
+--     @adressID int,
+--     @documentsID int,
+--
+--     @passSeries int,
+--     @passNum int,
+--     @passBirth nvarchar(50),
+--     @passSex nvarchar(50),
+--
+--     @adressRegion nvarchar(50),
+--     @adressCity nvarchar(50),
+--     @adressStreet nvarchar(50),
+--     @adressBuilding nvarchar(50),
+--     @adressApartment nvarchar(50),
+--
+--     @docsTIN nvarchar(50),
+--     @docsEducation nvarchar(50),
+--
+--     @clientName nvarchar(50),
+--     @clientSur nvarchar(50),
+--     @clientPat nvarchar(50)
+-- AS DECLARE @p_id int, @c_id int, @a_id int, @d_id int
+-- BEGIN
+--     select @p_id = id_pk_passport from Passport where id_pk_passport = @passportID;
+--     select @a_id = id_pk_adress from Adress where id_pk_adress = @adressID;
+--     select @d_id = id_pk_document from Documents where id_pk_document = @documentsID;
+--
+--     UPDATE Passport
+--     SET p_name = @clientName, p_surname = @clientSur,
+--         p_patronymic = @clientPat, p_number = @passNum, p_series = @passSeries,
+--         p_sex = @passSex, p_birth = @passBirth
+--     WHERE id_pk_passport = @passportID;
+--
+--     UPDATE Documents
+--     SET d_TIN = @docsTIN, d_education = @docsEducation
+--     WHERE id_pk_document = @documentsID;
+--
+--     UPDATE Adress
+--     SET a_region = @adressRegion, a_city = @adressCity, a_street = @adressStreet,
+--         a_building = @adressBuilding, a_apartment = @adressApartment
+--     WHERE id_pk_adress = @adressID;
+-- END;
 
 
 -- INSERTS
