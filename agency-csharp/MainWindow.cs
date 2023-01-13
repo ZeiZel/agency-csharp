@@ -355,6 +355,12 @@ namespace agency_csharp
         {
             userStatus_tstb.Text = $"{_user.Login}: {_user.Status}";
             IsAdmin();
+
+            // TODO: если получится успеть, то стоит сделать настройки
+            параметрыToolStripMenuItem.Visible = false;
+
+            // TODO: было бы очень классно успеть доделать реализацию паспортных данных
+
         }
 
         /// <summary>
@@ -670,7 +676,6 @@ namespace agency_csharp
             updates.Show();
         }
 
-        // TODO: Реализовать добавление клиента
         /// <summary>
         /// Кнопки добавления записей
         /// </summary>
@@ -682,7 +687,6 @@ namespace agency_csharp
             addClient.Show();
         }
 
-        // TODO: Реализовать добавление организации
         private void orgAdd_btn_Click(object sender, EventArgs e)
         {
             Form addOrg = new AddOrganization();
@@ -772,40 +776,27 @@ namespace agency_csharp
             }
         }
 
-        // TODO: Реализовать добавление контракта
         private void contractAdd_btn_Click(object sender, EventArgs e)
         {
             database.openConnection();
 
             //var id = Convert.ToInt32(userId_tb.Text);
-            var userName = name_tb.Text;
-            var userSurname = surname_tb.Text;
-            var userPatronymic = thirdname_tb.Text;
-            var userNumber = number_tb.Text;
-
-            if (Int64.TryParse(userNumber, out Int64 n))
-            {
-                string queryString =
-                    $"insert into [dbo].[Users] ([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) values('{userName}', '{userSurname}', '{userPatronymic}', '{userNumber}');";
-                SqlCommand command = new SqlCommand(queryString, database.getConnection());
-                command.ExecuteNonQuery();
-
-                string queryAddEmployee = $"EXEC AddUserEmployee  {userName}, {userNumber}";
-                SqlCommand commandAddEmp = new SqlCommand(queryAddEmployee, database.getConnection());
-                commandAddEmp.ExecuteNonQuery();
-
-                MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show(
-                    "Пожалуйста, введите корректный номер телефона",
-                    "Не удалось добавить запись",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-            }
-
+            var contractConditions = contractConditions_tb.Text;
+            var contractDate = contractDate_tb.Text;
+            var contractAgentName = contractAgentName_tb.Text;
+            var contractAgentSurname = contractAgentSurame_tb.Text;
+            var contractClientName = contractClientName_tb.Text;
+            var contractClientSurname = contractClientSurname_tb.Text;
+            var contractStatus = contractStatus_cb.Text;
+            
+            string queryString =
+                $"EXEC ADDContract '{contractConditions}', '{contractDate}', " +
+                $"'{contractAgentName}', '{contractAgentSurname}', " +
+                $"'{contractClientName}', '{contractClientSurname}', '{contractStatus}';";
+            SqlCommand command = new SqlCommand(queryString, database.getConnection());
+            command.ExecuteNonQuery();
+            MessageBox.Show("Запись добавлена", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
             database.closeConnection();
         }
 

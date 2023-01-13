@@ -207,7 +207,6 @@ namespace agency_csharp
             database.closeConnection();
         }
 
-        // TODO: сделать обновление откликов
         static public void Responses(DataGridView dgv, Database database)
         {
             database.openConnection();

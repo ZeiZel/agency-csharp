@@ -58,3 +58,5 @@ D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csh
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.AddOrganization.resources
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.Settings.resources
 D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency_csharp.EmployeeRegister.resources
+D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+D:\CourseProject\agency-csharp\agency-csharp\obj\Debug\net6.0-windows\agency-csharp.csproj.ResolveComReference.cache

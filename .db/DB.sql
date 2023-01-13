@@ -108,7 +108,8 @@ create table UserDoc (
 create table UserResponse (
     id_pk_response int identity(1,1) not null primary key,
     id_fk_vacancy int not null foreign key references Vacancy (id_pk_vacancy),
-    id_fk_user int not null foreign key references Users (id_pk_user)
+    id_fk_user int not null foreign key references Users (id_pk_user),
+    id_fk_status int not null foreign key references ResponseStatus (id_pk_status)
 );
 
 -- статус обработки отклика пользователя
@@ -209,56 +210,178 @@ insert into ResponseStatus (rs_status) values ('Отменён');
 --     END;
 
 
+create procedure AddClient
+    @clientName nvarchar(50),
+    @clientSurname nvarchar(50),
+    @clientPat nvarchar(50),
+    @clientNum nvarchar(50),
+    @adressRegion nvarchar(50),
+    @adressCity nvarchar(50),
+    @adressStreet nvarchar(50),
+    @adressBuilding nvarchar(50),
+    @adressApartment nvarchar(50)
+AS DECLARE @a_id int, @u_id int
+    BEGIN
+        insert into Adress
+            (a_region, a_city, a_street, a_building, a_apartment)
+        values
+            (@adressRegion, @adressCity, @adressStreet, @adressBuilding, @adressApartment);
+
+        select @a_id = id_pk_adress from Adress
+        where
+            a_apartment = @adressApartment and a_building = @adressBuilding and a_city = @adressCity;
+
+        insert into Users
+            (u_name, u_surname, u_patronymic, u_phoneNumber)
+        values
+            (@clientName, @clientSurname, @clientPat, @clientNum);
+
+        select @u_id = id_pk_user from Users where u_phoneNumber = @clientNum and u_name = @clientName;
+
+        insert into Client (id_user, id_adress) values (@u_id, @a_id);
+    END;
+
+-- Добюавление организации
+-- create procedure AddOrganization
+--     @orgName nvarchar(50),
+--     @orgClient nvarchar(50),
+--     @orgNum nvarchar(50),
+--     @orgMail nvarchar(50),
+--     @adressRegion nvarchar(50),
+--     @adressCity nvarchar(50),
+--     @adressStreet nvarchar(50),
+--     @adressBuilding nvarchar(50),
+--     @adressApartment nvarchar(50)
+-- AS DECLARE @a_id int, @o_id int, @u_id int
+--     BEGIN
+--         -- Создаём и ищем адрес
+--         insert into Adress
+--             (a_region, a_city, a_street, a_building, a_apartment)
+--         values
+--             (@adressRegion, @adressCity, @adressStreet, @adressBuilding, @adressApartment);
+--
+--         select @a_id = id_pk_adress from Adress
+--         where
+--             a_apartment = @adressApartment and a_building = @adressBuilding and a_city = @adressCity;
+--
+--         -- Ищем пользователя через регистрацию
+--         select @u_id = id_fk_user from Register where r_login = @orgClient;
+--
+--         -- Добавляем организацию
+--         insert into Organization
+--             (o_name, o_email, o_phoneNumber, id_fk_adress, id_fk_client)
+--         values
+--             (@orgName, @orgMail, @orgNum, @a_id, @u_id);
+--     END;
+
+-- Изменение данных организации
+-- create procedure UpdateOrganization
+--     @orgId int,
+--     @orgName nvarchar(50),
+--     @orgClient nvarchar(50),
+--     @orgNum nvarchar(50),
+--     @orgMail nvarchar(50)
+-- as declare @u_id int, @c_id int
+-- begin
+--     select @u_id = id_fk_user from Register where r_login = @orgClient;
+--
+--     select @c_id = id_pk_client from Client where id_user = @u_id;
+--
+--     UPDATE Organization
+--     SET o_phoneNumber = @orgNum, o_name = @orgName, o_email = @orgMail, id_fk_client = @c_id
+--     where id_pk_organization = @orgId;
+-- end;
+
+-- Обновление контракта
+-- create procedure UpdateContract
+--     @contractId int,
+--     @contractConditions nvarchar(50),
+--     @contractDate nvarchar(50),
+--     @contractAgentName nvarchar(50),
+--     @contractAgentSurname nvarchar(50),
+--     @contractClientName nvarchar(50),
+--     @contractClientSurname nvarchar(50),
+--     @contractStatus nvarchar(50)
+-- AS DECLARE @c_id int, @e_id int, @s_id int
+--     BEGIN
+--         -- Поиск клиента
+--         select @c_id = id_pk_client from Client
+--             inner join Users U on U.id_pk_user = Client.id_user
+--         where u_name = @contractClientName and u_surname = @contractClientSurname;
+--
+--         -- Поиск работника
+--         select @e_id = id_pk_employee from Employee
+--             inner join Users U on U.id_pk_user = Employee.id_fk_user
+--         where u_name = @contractAgentName and u_surname = @contractAgentSurname;
+--
+--         -- Поиск статуса
+--         select @s_id = id_pk_status from ContractStatus where cs_status = @contractStatus;
+--
+--         -- Обновление данных
+--         UPDATE Contracts
+--         SET
+--             c_conditions = @contractConditions,
+--             c_createdAt = @contractDate,
+--             c_fk_client = @c_id,
+--             c_fk_employee = @e_id,
+--             c_fk_status = @s_id
+--         where id_pk_contract = @contractId;
+--     END;
+
+-- Обновление отклика
+-- CREATE PROCEDURE ResponseUpdate
+--     @responseId int,
+--     @responseStatus nvarchar(50)
+-- AS DECLARE @s_id int
+--     BEGIN
+--         select @s_id = id_pk_status from ResponseStatus where rs_status = @responseStatus;
+--         UPDATE UserResponse
+--         SET id_fk_status = @s_id
+--         where id_pk_response = @responseId;
+--     END;
+
+-- Удаление отклика
+-- CREATE PROCEDURE ResponseDelete
+--     @responseId int
+-- AS
+--     BEGIN
+--         DELETE FROM UserResponse WHERE id_pk_response = @responseId;
+--     END;
+
+-- Добавление контракта
+-- create procedure ADDContract
+--     @contractConditions nvarchar(1000),
+--     @contractDate nvarchar(50),
+--     @contractAgentName nvarchar(50),
+--     @contractAgentSurname nvarchar(50),
+--     @contractClientName nvarchar(50),
+--     @contractClientSurname nvarchar(50),
+--     @contractStatus nvarchar(50)
+-- AS DECLARE @c_id int, @e_id int, @s_id int
+--     begin
+--         -- Поиск клиента
+--         select @c_id = id_pk_client from Client
+--             inner join Users U on U.id_pk_user = Client.id_user
+--         where u_name = @contractClientName and u_surname = @contractClientSurname;
+--
+--         -- Поиск работника
+--         select @e_id = id_pk_employee from Employee
+--             inner join Users U on U.id_pk_user = Employee.id_fk_user
+--         where u_name = @contractAgentName and u_surname = @contractAgentSurname;
+--
+--         -- Поиск статуса
+--         select @s_id = id_pk_status from ContractStatus where cs_status = @contractStatus;
+--
+--         -- Добавление нового контракта
+--         insert into Contracts
+--             (c_conditions, c_createdAt, c_fk_client, c_fk_employee, c_fk_status)
+--         values
+--             (@contractConditions, @contractDate, @c_id, @e_id, @s_id)
+--     end;
+
+
+
 -- INSERTS
-
--- insert into Users
---     (u_name, u_surname, u_patronymic, u_phoneNumber)
--- values
---     ('Олег', 'Ларионов', 'Олегович', '1234567891');
--- insert into Users
---     (u_name, u_surname, u_patronymic, u_phoneNumber)
--- values
---     ('Валерий', 'Львов', 'Владимирович', '1234567892');
--- insert into Users
---     (u_name, u_surname, u_patronymic, u_phoneNumber)
--- values
---     ('Александр', 'Марков', 'Юрьевич', '1234567893');
--- insert into Users
---     (u_name, u_surname, u_patronymic, u_phoneNumber)
--- values
---     ('Организатор', 'Организатор', 'Организатор', '1234567894');
---
--- insert into Register
---     (id_fk_user, r_email, r_login, r_password, r_isAdmin, r_isUser, r_isEmployee)
--- values
---     (1, 'oleg@yandex.ru', 'oleg', 'oleg', 1, 1, 1);
--- insert into Register
---     (id_fk_user, r_email, r_login, r_password, r_isAdmin, r_isUser, r_isEmployee)
--- values
---     (2, 'valery@yandex.ru', 'valery', 'valery', 0, 1, 1);
--- insert into Register
---     (id_fk_user, r_email, r_login, r_password, r_isAdmin, r_isUser, r_isEmployee)
--- values
---     (3, 'alek@yandex.ru', 'alek', 'alek', 0, 1, 0);
--- insert into Register
---     (id_fk_user, r_email, r_login, r_password, r_isAdmin, r_isUser, r_isEmployee)
--- values
---     (4, 'org@yandex.ru', 'org', 'org', 0, 1, 0);
---
--- insert into Employee (id_fk_user) values (2);
---
-
-
-
-
-
-
-
-
-
-
-
-
 
 insert into Adress
     (a_region, a_city, a_street, a_building, a_apartment)
@@ -278,7 +401,7 @@ values (2, 2);
 
 insert into Organization
     (o_name, o_email, o_phoneNumber, id_fk_adress, id_fk_client)
-values ('Krizbyt', 'arstozka@yandex.ru', '1234567890', 2, 1);
+values ('Krizbyt', 'arstozka@yandex.ru', '1234567890', 2, 7);
 
 insert into Vacancy
     (id_organization, v_profession, v_description, v_contactNumber)
@@ -302,7 +425,7 @@ values
 insert into UserResponse
     (id_fk_vacancy, id_fk_user)
 values
-    (1, 2);
+    (3, 2);
 
 insert into OrgVac
     (id_fk_vac, id_fk_org)

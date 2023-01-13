@@ -35,5 +35,10 @@ namespace agency_csharp
             clientSur_tb.Text = _surname;
             clientPat_tb.Text = _patronymic;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Данные успешно добавлены клиенту!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
