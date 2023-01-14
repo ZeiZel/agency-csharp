@@ -14,6 +14,16 @@ namespace agency_csharp
     public partial class Vacancy : Form
     {
         private readonly CheckUser _user;
+        private readonly string refreshVacQuery = @$"
+        select
+            id_pk_vacancy, A.id_pk_adress,
+            O.o_name, v_profession, v_description,
+            A.a_region, A.a_city, A.a_street, A.a_building, A.a_apartment
+        from Vacancy
+            inner join Organization O on O.id_pk_organization = Vacancy.id_organization
+            inner join Adress A on A.id_pk_adress = O.id_fk_adress
+        ";
+        
         Database database = new Database();
         int selectedRow;
 
@@ -28,7 +38,7 @@ namespace agency_csharp
             CreateColumns(vacancy_dgv);
             RefreshDataGrid(
                 vacancy_dgv,
-                "select id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment from Vacancy, Organization, Adress inner join Organization O on Adress.id_pk_adress = O.id_fk_adress"
+                refreshVacQuery
             );
         }
 
@@ -148,7 +158,7 @@ namespace agency_csharp
         {
             RefreshDataGrid(
                 vacancy_dgv,
-                "select id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment from Vacancy, Organization, Adress inner join Organization O on Adress.id_pk_adress = O.id_fk_adress"
+                refreshVacQuery
             );
         }
 
@@ -161,7 +171,7 @@ namespace agency_csharp
             var userName = _user.Login;
             var vacancyId = vacancy_dgv.Rows[selectedRowIndex].Cells[0].Value.ToString();
 
-            string queryResponse = $"EXEC ResponseUserInsert {userName}, {vacancyId}";
+            string queryResponse = $"EXEC ResponseUserInsert '{userName}', {vacancyId}";
             SqlCommand command = new SqlCommand(queryResponse, database.getConnection());
             command.ExecuteNonQuery();
 
@@ -196,8 +206,16 @@ namespace agency_csharp
         private void vacSearch_tb_TextChanged(object sender, EventArgs e)
         {
             Search(
-                vacancy_dgv, 
-                $"select id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment from Vacancy, Organization, Adress inner join Organization O on Adress.id_pk_adress = O.id_fk_adress where concat(id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment) like '%{vacSearch_tb.Text}%'"
+                vacancy_dgv,
+                @$"
+                select
+                    id_pk_vacancy, A.id_pk_adress,
+                    O.o_name, v_profession, v_description,
+                    A.a_region, A.a_city, A.a_street, A.a_building, A.a_apartment
+                from Vacancy
+                    inner join Organization O on O.id_pk_organization = Vacancy.id_organization
+                    inner join Adress A on A.id_pk_adress = O.id_fk_adress
+                where concat(id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment) like '%{vacSearch_tb.Text}%'"
             );
 
         }
@@ -206,7 +224,15 @@ namespace agency_csharp
         {
             Search(
                 vacancy_dgv,
-                $"select id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment from Vacancy, Organization, Adress inner join Organization O on Adress.id_pk_adress = O.id_fk_adress where concat(id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment) like '%{vacSearch_tb.Text}%'"
+                @$"
+                select
+                    id_pk_vacancy, A.id_pk_adress,
+                    O.o_name, v_profession, v_description,
+                    A.a_region, A.a_city, A.a_street, A.a_building, A.a_apartment
+                from Vacancy
+                    inner join Organization O on O.id_pk_organization = Vacancy.id_organization
+                    inner join Adress A on A.id_pk_adress = O.id_fk_adress
+                where concat(id_pk_vacancy, id_pk_adress, O.o_name, v_profession, v_description, a_region, a_city, a_street, a_building, a_apartment) like '%{vacSearch_tb.Text}%'"
             );
         }
 
