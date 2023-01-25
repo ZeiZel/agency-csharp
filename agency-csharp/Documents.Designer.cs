@@ -118,9 +118,9 @@ namespace agency_csharp
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox4.Location = new System.Drawing.Point(451, 10);
+            this.groupBox4.Location = new System.Drawing.Point(361, 10);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(339, 268);
+            this.groupBox4.Size = new System.Drawing.Size(462, 232);
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Персональные данные";
@@ -141,7 +141,7 @@ namespace agency_csharp
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label2.Location = new System.Drawing.Point(33, 81);
+            this.label2.Location = new System.Drawing.Point(198, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 20);
             this.label2.TabIndex = 10;
@@ -164,10 +164,10 @@ namespace agency_csharp
             this.clientName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientName_tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.clientName_tb.Location = new System.Drawing.Point(33, 103);
+            this.clientName_tb.Location = new System.Drawing.Point(198, 49);
             this.clientName_tb.Multiline = true;
             this.clientName_tb.Name = "clientName_tb";
-            this.clientName_tb.Size = new System.Drawing.Size(274, 30);
+            this.clientName_tb.Size = new System.Drawing.Size(232, 30);
             this.clientName_tb.TabIndex = 8;
             // 
             // clientSur_tb
@@ -175,10 +175,10 @@ namespace agency_csharp
             this.clientSur_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientSur_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientSur_tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.clientSur_tb.Location = new System.Drawing.Point(33, 158);
+            this.clientSur_tb.Location = new System.Drawing.Point(33, 114);
             this.clientSur_tb.Multiline = true;
             this.clientSur_tb.Name = "clientSur_tb";
-            this.clientSur_tb.Size = new System.Drawing.Size(274, 30);
+            this.clientSur_tb.Size = new System.Drawing.Size(397, 30);
             this.clientSur_tb.TabIndex = 8;
             // 
             // clientPat_tb
@@ -186,10 +186,10 @@ namespace agency_csharp
             this.clientPat_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientPat_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientPat_tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.clientPat_tb.Location = new System.Drawing.Point(33, 213);
+            this.clientPat_tb.Location = new System.Drawing.Point(33, 169);
             this.clientPat_tb.Multiline = true;
             this.clientPat_tb.Name = "clientPat_tb";
-            this.clientPat_tb.Size = new System.Drawing.Size(274, 30);
+            this.clientPat_tb.Size = new System.Drawing.Size(397, 30);
             this.clientPat_tb.TabIndex = 8;
             // 
             // label10
@@ -197,7 +197,7 @@ namespace agency_csharp
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label10.Location = new System.Drawing.Point(33, 192);
+            this.label10.Location = new System.Drawing.Point(33, 148);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(91, 20);
             this.label10.TabIndex = 9;
@@ -208,7 +208,7 @@ namespace agency_csharp
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label11.Location = new System.Drawing.Point(33, 136);
+            this.label11.Location = new System.Drawing.Point(33, 92);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 20);
             this.label11.TabIndex = 9;
@@ -361,7 +361,7 @@ namespace agency_csharp
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox2.Location = new System.Drawing.Point(10, 259);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(345, 232);
+            this.groupBox2.Size = new System.Drawing.Size(435, 232);
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Данные документов";
@@ -371,7 +371,7 @@ namespace agency_csharp
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label7.Location = new System.Drawing.Point(33, 41);
+            this.label7.Location = new System.Drawing.Point(33, 33);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(148, 20);
             this.label7.TabIndex = 10;
@@ -397,7 +397,7 @@ namespace agency_csharp
             this.docsID_tb.Location = new System.Drawing.Point(33, 62);
             this.docsID_tb.Multiline = true;
             this.docsID_tb.Name = "docsID_tb";
-            this.docsID_tb.Size = new System.Drawing.Size(279, 30);
+            this.docsID_tb.Size = new System.Drawing.Size(148, 30);
             this.docsID_tb.TabIndex = 8;
             // 
             // docsEducation_tb
@@ -408,7 +408,7 @@ namespace agency_csharp
             this.docsEducation_tb.Location = new System.Drawing.Point(33, 117);
             this.docsEducation_tb.Multiline = true;
             this.docsEducation_tb.Name = "docsEducation_tb";
-            this.docsEducation_tb.Size = new System.Drawing.Size(279, 30);
+            this.docsEducation_tb.Size = new System.Drawing.Size(369, 30);
             this.docsEducation_tb.TabIndex = 8;
             // 
             // docsTIN_tb
@@ -419,7 +419,7 @@ namespace agency_csharp
             this.docsTIN_tb.Location = new System.Drawing.Point(33, 172);
             this.docsTIN_tb.Multiline = true;
             this.docsTIN_tb.Name = "docsTIN_tb";
-            this.docsTIN_tb.Size = new System.Drawing.Size(279, 30);
+            this.docsTIN_tb.Size = new System.Drawing.Size(369, 30);
             this.docsTIN_tb.TabIndex = 8;
             // 
             // label14
@@ -444,7 +444,7 @@ namespace agency_csharp
             this.groupBox5.Controls.Add(this.passportChange_btn);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox5.Location = new System.Drawing.Point(484, 291);
+            this.groupBox5.Location = new System.Drawing.Point(517, 292);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(274, 195);
             this.groupBox5.TabIndex = 28;
@@ -549,9 +549,9 @@ namespace agency_csharp
             this.groupBox12.Controls.Add(this.label16);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox12.Location = new System.Drawing.Point(881, 10);
+            this.groupBox12.Location = new System.Drawing.Point(835, 10);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(373, 322);
+            this.groupBox12.Size = new System.Drawing.Size(417, 322);
             this.groupBox12.TabIndex = 29;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Данные адреса";
@@ -561,7 +561,7 @@ namespace agency_csharp
             this.adressApartment_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.adressApartment_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.adressApartment_tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.adressApartment_tb.Location = new System.Drawing.Point(193, 270);
+            this.adressApartment_tb.Location = new System.Drawing.Point(239, 270);
             this.adressApartment_tb.Multiline = true;
             this.adressApartment_tb.Name = "adressApartment_tb";
             this.adressApartment_tb.Size = new System.Drawing.Size(151, 30);
@@ -608,7 +608,7 @@ namespace agency_csharp
             this.adressRegion_tb.Location = new System.Drawing.Point(37, 103);
             this.adressRegion_tb.Multiline = true;
             this.adressRegion_tb.Name = "adressRegion_tb";
-            this.adressRegion_tb.Size = new System.Drawing.Size(307, 30);
+            this.adressRegion_tb.Size = new System.Drawing.Size(353, 30);
             this.adressRegion_tb.TabIndex = 8;
             // 
             // label22
@@ -616,7 +616,7 @@ namespace agency_csharp
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label22.Location = new System.Drawing.Point(193, 249);
+            this.label22.Location = new System.Drawing.Point(239, 249);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(90, 20);
             this.label22.TabIndex = 9;
@@ -653,7 +653,7 @@ namespace agency_csharp
             this.adressCity_tb.Location = new System.Drawing.Point(37, 158);
             this.adressCity_tb.Multiline = true;
             this.adressCity_tb.Name = "adressCity_tb";
-            this.adressCity_tb.Size = new System.Drawing.Size(307, 30);
+            this.adressCity_tb.Size = new System.Drawing.Size(353, 30);
             this.adressCity_tb.TabIndex = 8;
             // 
             // adressStreet_tb
@@ -664,7 +664,7 @@ namespace agency_csharp
             this.adressStreet_tb.Location = new System.Drawing.Point(37, 213);
             this.adressStreet_tb.Multiline = true;
             this.adressStreet_tb.Name = "adressStreet_tb";
-            this.adressStreet_tb.Size = new System.Drawing.Size(307, 30);
+            this.adressStreet_tb.Size = new System.Drawing.Size(353, 30);
             this.adressStreet_tb.TabIndex = 8;
             // 
             // label12
@@ -708,7 +708,7 @@ namespace agency_csharp
             this.passport_dgv.Name = "passport_dgv";
             this.passport_dgv.ReadOnly = true;
             this.passport_dgv.RowTemplate.Height = 25;
-            this.passport_dgv.Size = new System.Drawing.Size(1244, 183);
+            this.passport_dgv.Size = new System.Drawing.Size(1244, 268);
             this.passport_dgv.TabIndex = 30;
             this.passport_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.passport_dgv_CellClick);
             // 
@@ -721,7 +721,7 @@ namespace agency_csharp
             this.groupBox3.Controls.Add(this.passportSearch_tb);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox3.Location = new System.Drawing.Point(881, 400);
+            this.groupBox3.Location = new System.Drawing.Point(835, 400);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(352, 87);
             this.groupBox3.TabIndex = 31;
@@ -786,7 +786,7 @@ namespace agency_csharp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 703);
+            this.ClientSize = new System.Drawing.Size(1264, 784);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.passport_dgv);
             this.Controls.Add(this.groupBox12);
@@ -819,24 +819,24 @@ namespace agency_csharp
 
         #endregion
 
-        private GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox4;
         private Label label19;
-        private Label label2;
+        private System.Windows.Forms.Label label2;
         private TextBox clientID_tb;
-        private TextBox clientName_tb;
-        private TextBox clientSur_tb;
-        private TextBox clientPat_tb;
-        private Label label10;
-        private Label label11;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private Label label7;
+        private System.Windows.Forms.TextBox clientName_tb;
+        private System.Windows.Forms.TextBox clientSur_tb;
+        private System.Windows.Forms.TextBox clientPat_tb;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label7;
         private Label label9;
-        private TextBox docsID_tb;
-        private TextBox docsEducation_tb;
-        private TextBox docsTIN_tb;
+        private System.Windows.Forms.TextBox docsID_tb;
+        private System.Windows.Forms.TextBox docsEducation_tb;
+        private System.Windows.Forms.TextBox docsTIN_tb;
         private Label label14;
-        private GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox5;
         private Button passportChange_btn;
         private Label label8;
         private Label label15;
@@ -845,17 +845,17 @@ namespace agency_csharp
         private TextBox passportSeries_tb;
         private TextBox passportNumber_tb;
         private TextBox passportBirth_tb;
-        private GroupBox groupBox12;
-        private TextBox adressApartment_tb;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TextBox adressApartment_tb;
         private TextBox adressBuilding_tb;
         private Label label20;
         private Label label5;
-        private TextBox adressRegion_tb;
-        private Label label22;
+        private System.Windows.Forms.TextBox adressRegion_tb;
+        private System.Windows.Forms.Label label22;
         private TextBox adressID_tb;
         private Label label6;
-        private TextBox adressCity_tb;
-        private TextBox adressStreet_tb;
+        private System.Windows.Forms.TextBox adressCity_tb;
+        private System.Windows.Forms.TextBox adressStreet_tb;
         private Label label12;
         private Label label16;
         private PictureBox pictureBox1;
@@ -863,8 +863,8 @@ namespace agency_csharp
         private PictureBox pictureBox8;
         private Label label1;
         private TextBox passportId_tb;
-        private DataGridView passport_dgv;
-        private GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView passport_dgv;
+        private System.Windows.Forms.GroupBox groupBox3;
         private Button passportRefresh_btn;
         private Button passportSearch_btn;
         private Button passportClear_btn;

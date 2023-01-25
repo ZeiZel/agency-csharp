@@ -17,6 +17,9 @@
     <Compile Remove="Forms\**" />
     <EmbeddedResource Remove="Forms\**" />
     <None Remove="Forms\**" />
+    <Compile Update="Workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

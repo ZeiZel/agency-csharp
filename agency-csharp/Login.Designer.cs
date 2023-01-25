@@ -51,6 +51,8 @@ namespace agency_csharp
             this.closedEye_pb = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.org_btn = new System.Windows.Forms.Button();
+            this.worker_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.openedEye_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closedEye_pb)).BeginInit();
@@ -66,9 +68,9 @@ namespace agency_csharp
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.LoginBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.LoginBtn.Location = new System.Drawing.Point(75, 336);
+            this.LoginBtn.Location = new System.Drawing.Point(75, 338);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(156, 52);
+            this.LoginBtn.Size = new System.Drawing.Size(143, 52);
             this.LoginBtn.TabIndex = 0;
             this.LoginBtn.Text = "Вход";
             this.LoginBtn.UseVisualStyleBackColor = false;
@@ -82,7 +84,7 @@ namespace agency_csharp
             this.login_tb.Location = new System.Drawing.Point(75, 164);
             this.login_tb.Multiline = true;
             this.login_tb.Name = "login_tb";
-            this.login_tb.Size = new System.Drawing.Size(237, 36);
+            this.login_tb.Size = new System.Drawing.Size(292, 36);
             this.login_tb.TabIndex = 1;
             // 
             // password_tb
@@ -93,7 +95,7 @@ namespace agency_csharp
             this.password_tb.Location = new System.Drawing.Point(75, 260);
             this.password_tb.Multiline = true;
             this.password_tb.Name = "password_tb";
-            this.password_tb.Size = new System.Drawing.Size(237, 36);
+            this.password_tb.Size = new System.Drawing.Size(292, 36);
             this.password_tb.TabIndex = 1;
             // 
             // register_btn
@@ -105,9 +107,9 @@ namespace agency_csharp
             this.register_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.register_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.register_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.register_btn.Location = new System.Drawing.Point(75, 414);
+            this.register_btn.Location = new System.Drawing.Point(224, 338);
             this.register_btn.Name = "register_btn";
-            this.register_btn.Size = new System.Drawing.Size(156, 52);
+            this.register_btn.Size = new System.Drawing.Size(143, 52);
             this.register_btn.TabIndex = 0;
             this.register_btn.Text = "Регистрация";
             this.register_btn.UseVisualStyleBackColor = false;
@@ -148,7 +150,7 @@ namespace agency_csharp
             // openedEye_pb
             // 
             this.openedEye_pb.Image = ((System.Drawing.Image)(resources.GetObject("openedEye_pb.Image")));
-            this.openedEye_pb.Location = new System.Drawing.Point(330, 260);
+            this.openedEye_pb.Location = new System.Drawing.Point(381, 260);
             this.openedEye_pb.Name = "openedEye_pb";
             this.openedEye_pb.Size = new System.Drawing.Size(35, 35);
             this.openedEye_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -159,7 +161,7 @@ namespace agency_csharp
             // closedEye_pb
             // 
             this.closedEye_pb.Image = ((System.Drawing.Image)(resources.GetObject("closedEye_pb.Image")));
-            this.closedEye_pb.Location = new System.Drawing.Point(330, 261);
+            this.closedEye_pb.Location = new System.Drawing.Point(381, 260);
             this.closedEye_pb.Name = "closedEye_pb";
             this.closedEye_pb.Size = new System.Drawing.Size(35, 35);
             this.closedEye_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -174,9 +176,9 @@ namespace agency_csharp
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(258, 414);
+            this.button1.Location = new System.Drawing.Point(381, 338);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 52);
+            this.button1.Size = new System.Drawing.Size(52, 50);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -188,6 +190,8 @@ namespace agency_csharp
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.LoginBtn);
             this.panel1.Controls.Add(this.closedEye_pb);
+            this.panel1.Controls.Add(this.org_btn);
+            this.panel1.Controls.Add(this.worker_btn);
             this.panel1.Controls.Add(this.register_btn);
             this.panel1.Controls.Add(this.openedEye_pb);
             this.panel1.Controls.Add(this.login_tb);
@@ -198,6 +202,40 @@ namespace agency_csharp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 600);
             this.panel1.TabIndex = 7;
+            // 
+            // org_btn
+            // 
+            this.org_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.org_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.org_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.org_btn.FlatAppearance.BorderSize = 0;
+            this.org_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.org_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.org_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.org_btn.Location = new System.Drawing.Point(152, 510);
+            this.org_btn.Name = "org_btn";
+            this.org_btn.Size = new System.Drawing.Size(143, 52);
+            this.org_btn.TabIndex = 0;
+            this.org_btn.Text = "Организация";
+            this.org_btn.UseVisualStyleBackColor = false;
+            this.org_btn.Click += new System.EventHandler(this.org_btn_Click);
+            // 
+            // worker_btn
+            // 
+            this.worker_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(97)))));
+            this.worker_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.worker_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.worker_btn.FlatAppearance.BorderSize = 0;
+            this.worker_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.worker_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.worker_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.worker_btn.Location = new System.Drawing.Point(152, 452);
+            this.worker_btn.Name = "worker_btn";
+            this.worker_btn.Size = new System.Drawing.Size(143, 52);
+            this.worker_btn.TabIndex = 0;
+            this.worker_btn.Text = "Соискатель";
+            this.worker_btn.UseVisualStyleBackColor = false;
+            this.worker_btn.Click += new System.EventHandler(this.worker_btn_Click);
             // 
             // Login
             // 
@@ -216,20 +254,24 @@ namespace agency_csharp
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+
         }
+
+        private System.Windows.Forms.Button worker_btn;
+        private System.Windows.Forms.Button org_btn;
 
         #endregion
 
-        private Button LoginBtn;
-        private TextBox login_tb;
-        private TextBox password_tb;
-        private Button register_btn;
+        private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.TextBox login_tb;
+        private System.Windows.Forms.TextBox password_tb;
+        private System.Windows.Forms.Button register_btn;
         private PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Label label2;
-        private PictureBox openedEye_pb;
-        private PictureBox closedEye_pb;
-        private Button button1;
+        private System.Windows.Forms.PictureBox openedEye_pb;
+        private System.Windows.Forms.PictureBox closedEye_pb;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
     }
 }

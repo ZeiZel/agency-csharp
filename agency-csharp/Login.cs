@@ -107,5 +107,30 @@ namespace agency_csharp
             openedEye_pb.Visible = true;
             closedEye_pb.Visible = false;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void worker_btn_Click(object sender, EventArgs e)
+        {
+            var user = new CheckUser("emptyUser", false, false);
+
+            Form vacancy = new Vacancy(user);
+            vacancy.Show();
+
+            this.Hide();
+        }
+
+        private void org_btn_Click(object sender, EventArgs e)
+        {
+            var user = new CheckUser("emptyUser", false, false);
+
+            Form org = new Workers(user);
+            org.Show();
+
+            this.Hide();
+        }
     }
 }

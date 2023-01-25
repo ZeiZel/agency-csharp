@@ -97,9 +97,9 @@ namespace agency_csharp
             this.groupBox14.Controls.Add(this.label34);
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox14.Location = new System.Drawing.Point(32, 323);
+            this.groupBox14.Location = new System.Drawing.Point(32, 392);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(254, 388);
+            this.groupBox14.Size = new System.Drawing.Size(392, 388);
             this.groupBox14.TabIndex = 33;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Данные адреса";
@@ -112,7 +112,7 @@ namespace agency_csharp
             this.adressApartment_tb.Location = new System.Drawing.Point(37, 332);
             this.adressApartment_tb.Multiline = true;
             this.adressApartment_tb.Name = "adressApartment_tb";
-            this.adressApartment_tb.Size = new System.Drawing.Size(182, 30);
+            this.adressApartment_tb.Size = new System.Drawing.Size(324, 30);
             this.adressApartment_tb.TabIndex = 8;
             // 
             // adressBuilding_tb
@@ -123,7 +123,7 @@ namespace agency_csharp
             this.adressBuilding_tb.Location = new System.Drawing.Point(37, 270);
             this.adressBuilding_tb.Multiline = true;
             this.adressBuilding_tb.Name = "adressBuilding_tb";
-            this.adressBuilding_tb.Size = new System.Drawing.Size(182, 30);
+            this.adressBuilding_tb.Size = new System.Drawing.Size(324, 30);
             this.adressBuilding_tb.TabIndex = 8;
             // 
             // label29
@@ -156,7 +156,7 @@ namespace agency_csharp
             this.adressRegion_tb.Location = new System.Drawing.Point(37, 103);
             this.adressRegion_tb.Multiline = true;
             this.adressRegion_tb.Name = "adressRegion_tb";
-            this.adressRegion_tb.Size = new System.Drawing.Size(182, 30);
+            this.adressRegion_tb.Size = new System.Drawing.Size(324, 30);
             this.adressRegion_tb.TabIndex = 8;
             // 
             // label31
@@ -178,7 +178,7 @@ namespace agency_csharp
             this.adressId_tb.Location = new System.Drawing.Point(37, 49);
             this.adressId_tb.Multiline = true;
             this.adressId_tb.Name = "adressId_tb";
-            this.adressId_tb.Size = new System.Drawing.Size(182, 30);
+            this.adressId_tb.Size = new System.Drawing.Size(160, 30);
             this.adressId_tb.TabIndex = 8;
             // 
             // label32
@@ -200,7 +200,7 @@ namespace agency_csharp
             this.adressCity_tb.Location = new System.Drawing.Point(37, 158);
             this.adressCity_tb.Multiline = true;
             this.adressCity_tb.Name = "adressCity_tb";
-            this.adressCity_tb.Size = new System.Drawing.Size(182, 30);
+            this.adressCity_tb.Size = new System.Drawing.Size(324, 30);
             this.adressCity_tb.TabIndex = 8;
             // 
             // adressStreet_tb
@@ -211,7 +211,7 @@ namespace agency_csharp
             this.adressStreet_tb.Location = new System.Drawing.Point(37, 213);
             this.adressStreet_tb.Multiline = true;
             this.adressStreet_tb.Name = "adressStreet_tb";
-            this.adressStreet_tb.Size = new System.Drawing.Size(182, 30);
+            this.adressStreet_tb.Size = new System.Drawing.Size(324, 30);
             this.adressStreet_tb.TabIndex = 8;
             // 
             // label33
@@ -245,7 +245,7 @@ namespace agency_csharp
             this.groupBox9.Controls.Add(this.vacSearch_tb);
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox9.Location = new System.Drawing.Point(357, 426);
+            this.groupBox9.Location = new System.Drawing.Point(454, 690);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(350, 90);
             this.groupBox9.TabIndex = 32;
@@ -310,13 +310,16 @@ namespace agency_csharp
             // 
             this.vacancy_dgv.AllowUserToAddRows = false;
             this.vacancy_dgv.AllowUserToDeleteRows = false;
+            this.vacancy_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.vacancy_dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.vacancy_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vacancy_dgv.Location = new System.Drawing.Point(357, 40);
+            this.vacancy_dgv.Location = new System.Drawing.Point(454, 40);
             this.vacancy_dgv.Name = "vacancy_dgv";
             this.vacancy_dgv.ReadOnly = true;
             this.vacancy_dgv.RowTemplate.Height = 25;
-            this.vacancy_dgv.Size = new System.Drawing.Size(910, 367);
+            this.vacancy_dgv.Size = new System.Drawing.Size(813, 621);
             this.vacancy_dgv.TabIndex = 31;
             this.vacancy_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vacancy_dgv_CellClick);
             // 
@@ -335,7 +338,7 @@ namespace agency_csharp
             this.groupBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
             this.groupBox10.Location = new System.Drawing.Point(32, 40);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(254, 278);
+            this.groupBox10.Size = new System.Drawing.Size(392, 331);
             this.groupBox10.TabIndex = 30;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Персональные данные";
@@ -348,7 +351,7 @@ namespace agency_csharp
             this.vacNum_tb.Location = new System.Drawing.Point(29, 220);
             this.vacNum_tb.Multiline = true;
             this.vacNum_tb.Name = "vacNum_tb";
-            this.vacNum_tb.Size = new System.Drawing.Size(182, 30);
+            this.vacNum_tb.Size = new System.Drawing.Size(332, 94);
             this.vacNum_tb.TabIndex = 8;
             // 
             // label35
@@ -381,7 +384,7 @@ namespace agency_csharp
             this.vacancyID_tb.Location = new System.Drawing.Point(29, 49);
             this.vacancyID_tb.Multiline = true;
             this.vacancyID_tb.Name = "vacancyID_tb";
-            this.vacancyID_tb.Size = new System.Drawing.Size(182, 30);
+            this.vacancyID_tb.Size = new System.Drawing.Size(168, 30);
             this.vacancyID_tb.TabIndex = 8;
             // 
             // vacOrgName_tb
@@ -392,7 +395,7 @@ namespace agency_csharp
             this.vacOrgName_tb.Location = new System.Drawing.Point(29, 103);
             this.vacOrgName_tb.Multiline = true;
             this.vacOrgName_tb.Name = "vacOrgName_tb";
-            this.vacOrgName_tb.Size = new System.Drawing.Size(182, 30);
+            this.vacOrgName_tb.Size = new System.Drawing.Size(332, 30);
             this.vacOrgName_tb.TabIndex = 8;
             // 
             // label18
@@ -402,9 +405,9 @@ namespace agency_csharp
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label18.Location = new System.Drawing.Point(29, 198);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(168, 20);
+            this.label18.Size = new System.Drawing.Size(91, 20);
             this.label18.TabIndex = 9;
-            this.label18.Text = "Контактный номер";
+            this.label18.Text = "Описание";
             // 
             // vacName_tb
             // 
@@ -414,7 +417,7 @@ namespace agency_csharp
             this.vacName_tb.Location = new System.Drawing.Point(29, 158);
             this.vacName_tb.Multiline = true;
             this.vacName_tb.Name = "vacName_tb";
-            this.vacName_tb.Size = new System.Drawing.Size(182, 30);
+            this.vacName_tb.Size = new System.Drawing.Size(332, 30);
             this.vacName_tb.TabIndex = 8;
             // 
             // label21
@@ -468,9 +471,8 @@ namespace agency_csharp
             // 
             this.userStatus_tstb.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.userStatus_tstb.Enabled = false;
-            this.userStatus_tstb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.userStatus_tstb.Name = "userStatus_tstb";
-            this.userStatus_tstb.Size = new System.Drawing.Size(129, 23);
+            this.userStatus_tstb.Size = new System.Drawing.Size(170, 23);
             this.userStatus_tstb.Click += new System.EventHandler(this.userStatus_tstb_Click);
             // 
             // response_btn
@@ -482,7 +484,7 @@ namespace agency_csharp
             this.response_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.response_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.response_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.response_btn.Location = new System.Drawing.Point(735, 434);
+            this.response_btn.Location = new System.Drawing.Point(832, 698);
             this.response_btn.Name = "response_btn";
             this.response_btn.Size = new System.Drawing.Size(153, 75);
             this.response_btn.TabIndex = 35;
@@ -495,7 +497,7 @@ namespace agency_csharp
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1293, 741);
+            this.ClientSize = new System.Drawing.Size(1293, 812);
             this.Controls.Add(this.response_btn);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox14);
@@ -523,39 +525,39 @@ namespace agency_csharp
 
         #endregion
 
-        private GroupBox groupBox14;
-        private TextBox adressApartment_tb;
-        private TextBox adressBuilding_tb;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.TextBox adressApartment_tb;
+        private System.Windows.Forms.TextBox adressBuilding_tb;
         private Label label29;
         private Label label30;
-        private TextBox adressRegion_tb;
+        private System.Windows.Forms.TextBox adressRegion_tb;
         private Label label31;
-        private TextBox adressId_tb;
+        private System.Windows.Forms.TextBox adressId_tb;
         private Label label32;
-        private TextBox adressCity_tb;
-        private TextBox adressStreet_tb;
+        private System.Windows.Forms.TextBox adressCity_tb;
+        private System.Windows.Forms.TextBox adressStreet_tb;
         private Label label33;
         private Label label34;
-        private GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox groupBox9;
         private Button refresh_btn;
         private Button vacSearch_btn;
         private Button vacClrear_btn;
         private TextBox vacSearch_tb;
-        private DataGridView vacancy_dgv;
-        private GroupBox groupBox10;
-        private TextBox vacNum_tb;
+        private System.Windows.Forms.DataGridView vacancy_dgv;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TextBox vacNum_tb;
         private Label label35;
         private Label label17;
-        private TextBox vacancyID_tb;
-        private TextBox vacOrgName_tb;
-        private Label label18;
-        private TextBox vacName_tb;
+        private System.Windows.Forms.TextBox vacancyID_tb;
+        private System.Windows.Forms.TextBox vacOrgName_tb;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox vacName_tb;
         private Label label21;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem информацияToolStripMenuItem;
         private ToolStripMenuItem оПрограммеToolStripMenuItem;
         private ToolStripMenuItem обновленияToolStripMenuItem;
         private ToolStripTextBox userStatus_tstb;
-        private Button response_btn;
+        private System.Windows.Forms.Button response_btn;
     }
 }

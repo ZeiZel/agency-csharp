@@ -9,7 +9,15 @@ namespace agency_csharp
 {
     class Database
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source=kk1412-0;Initial Catalog=Львов;Integrated Security=true;Persist Security Info=True;Encrypt=True;TrustServerCertificate=True");
+        // SqlConnection sqlConnection = new SqlConnection(@"Data Source=kk1412-0;Initial Catalog=Львов;Integrated Security=true;Persist Security Info=True;Encrypt=True;TrustServerCertificate=True");
+        SqlConnection sqlConnection = new SqlConnection(@"
+                Data Source=ZEIZEL;
+                Initial Catalog=Agency;Persist Security Info=True;
+                User ID=guest;
+                Password=guest;
+                MultipleActiveResultSets=True;
+                Encrypt=True;
+                TrustServerCertificate=True");
         
         public void openConnection()
         {

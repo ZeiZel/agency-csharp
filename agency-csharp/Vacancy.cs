@@ -14,7 +14,8 @@ namespace agency_csharp
     public partial class Vacancy : Form
     {
         private readonly CheckUser _user;
-        private readonly string refreshVacQuery = @$"
+        
+        private readonly string refreshVacQuery = @"
         select
             id_pk_vacancy, A.id_pk_adress,
             O.o_name, v_profession, v_description,
@@ -30,6 +31,7 @@ namespace agency_csharp
         public Vacancy(CheckUser user)
         {
             _user = user;
+
             StartPosition = FormStartPosition.CenterScreen;
 
             InitializeComponent();
@@ -40,6 +42,15 @@ namespace agency_csharp
                 vacancy_dgv,
                 refreshVacQuery
             );
+            Loggined();
+        }
+
+        private void Loggined()
+        {
+            if (_user.Login == "emptyUser")
+            {
+                response_btn.Visible = false;
+            }
         }
 
         private void ReadSingleRow(DataGridView dgv, IDataRecord record)
@@ -130,6 +141,12 @@ namespace agency_csharp
 
         private void Vacancy_Load(object sender, EventArgs e)
         {
+            if (_user.Login == "emptyUser")
+            {
+                userStatus_tstb.Text = "Вы незарегистрированы!";
+                return;
+            }
+
             userStatus_tstb.Text = $"{_user.Login}: {_user.Status}";
         }
 
@@ -240,6 +257,12 @@ namespace agency_csharp
         {
             Form login = new Login();
             login.Show();
+            this.Hide();
+        }
+
+        private void vacancy_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

@@ -219,13 +219,13 @@ namespace agency_csharp
             this.параметрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.управлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.администрированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сменитьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обновленияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userStatus_tstb = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.сменитьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.info_tabPage.SuspendLayout();
             this.employess_tab.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -295,7 +295,7 @@ namespace agency_csharp
             this.info_tabPage.Location = new System.Drawing.Point(0, 27);
             this.info_tabPage.Name = "info_tabPage";
             this.info_tabPage.SelectedIndex = 0;
-            this.info_tabPage.Size = new System.Drawing.Size(1425, 717);
+            this.info_tabPage.Size = new System.Drawing.Size(1221, 618);
             this.info_tabPage.TabIndex = 0;
             // 
             // employess_tab
@@ -310,7 +310,7 @@ namespace agency_csharp
             this.employess_tab.Location = new System.Drawing.Point(4, 24);
             this.employess_tab.Name = "employess_tab";
             this.employess_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.employess_tab.Size = new System.Drawing.Size(1417, 689);
+            this.employess_tab.Size = new System.Drawing.Size(1213, 590);
             this.employess_tab.TabIndex = 0;
             this.employess_tab.Text = "Сотрудники";
             // 
@@ -321,11 +321,11 @@ namespace agency_csharp
             this.groupBox2.Controls.Add(this.search_grid_btn);
             this.groupBox2.Controls.Add(this.clear_btn);
             this.groupBox2.Controls.Add(this.search_tb);
-            this.groupBox2.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox2.Location = new System.Drawing.Point(662, 472);
+            this.groupBox2.Location = new System.Drawing.Point(567, 409);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(417, 100);
+            this.groupBox2.Size = new System.Drawing.Size(357, 87);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Управление";
@@ -337,9 +337,9 @@ namespace agency_csharp
             this.refresh_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.refresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("refresh_btn.Image")));
-            this.refresh_btn.Location = new System.Drawing.Point(73, 30);
+            this.refresh_btn.Location = new System.Drawing.Point(63, 26);
             this.refresh_btn.Name = "refresh_btn";
-            this.refresh_btn.Size = new System.Drawing.Size(55, 52);
+            this.refresh_btn.Size = new System.Drawing.Size(47, 45);
             this.refresh_btn.TabIndex = 17;
             this.refresh_btn.UseVisualStyleBackColor = false;
             this.refresh_btn.Click += new System.EventHandler(this.refresh_btn_Click);
@@ -351,9 +351,9 @@ namespace agency_csharp
             this.search_grid_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.search_grid_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_grid_btn.Image = ((System.Drawing.Image)(resources.GetObject("search_grid_btn.Image")));
-            this.search_grid_btn.Location = new System.Drawing.Point(134, 30);
+            this.search_grid_btn.Location = new System.Drawing.Point(115, 26);
             this.search_grid_btn.Name = "search_grid_btn";
-            this.search_grid_btn.Size = new System.Drawing.Size(48, 52);
+            this.search_grid_btn.Size = new System.Drawing.Size(41, 45);
             this.search_grid_btn.TabIndex = 17;
             this.search_grid_btn.UseVisualStyleBackColor = false;
             this.search_grid_btn.Click += new System.EventHandler(this.search_grid_btn_Click);
@@ -365,9 +365,9 @@ namespace agency_csharp
             this.clear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_btn.Image = ((System.Drawing.Image)(resources.GetObject("clear_btn.Image")));
-            this.clear_btn.Location = new System.Drawing.Point(19, 30);
+            this.clear_btn.Location = new System.Drawing.Point(16, 26);
             this.clear_btn.Name = "clear_btn";
-            this.clear_btn.Size = new System.Drawing.Size(48, 52);
+            this.clear_btn.Size = new System.Drawing.Size(41, 45);
             this.clear_btn.TabIndex = 17;
             this.clear_btn.UseVisualStyleBackColor = false;
             this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
@@ -376,11 +376,11 @@ namespace agency_csharp
             // 
             this.search_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.search_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.search_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.search_tb.Location = new System.Drawing.Point(188, 36);
+            this.search_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.search_tb.Location = new System.Drawing.Point(161, 31);
             this.search_tb.Multiline = true;
             this.search_tb.Name = "search_tb";
-            this.search_tb.Size = new System.Drawing.Size(212, 35);
+            this.search_tb.Size = new System.Drawing.Size(182, 30);
             this.search_tb.TabIndex = 8;
             this.search_tb.TextChanged += new System.EventHandler(this.search_tb_TextChanged);
             // 
@@ -393,17 +393,17 @@ namespace agency_csharp
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Montserrat", 10F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(371, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(318, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(999, 424);
+            this.dataGridView1.Size = new System.Drawing.Size(856, 367);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -420,11 +420,11 @@ namespace agency_csharp
             this.personality_data_gb.Controls.Add(this.thirdname_tb);
             this.personality_data_gb.Controls.Add(this.label5);
             this.personality_data_gb.Controls.Add(this.label4);
-            this.personality_data_gb.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.personality_data_gb.Font = new System.Drawing.Font("Montserrat", 10F);
             this.personality_data_gb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.personality_data_gb.Location = new System.Drawing.Point(35, 15);
+            this.personality_data_gb.Location = new System.Drawing.Point(30, 13);
             this.personality_data_gb.Name = "personality_data_gb";
-            this.personality_data_gb.Size = new System.Drawing.Size(296, 377);
+            this.personality_data_gb.Size = new System.Drawing.Size(254, 327);
             this.personality_data_gb.TabIndex = 21;
             this.personality_data_gb.TabStop = false;
             this.personality_data_gb.Text = "Персональные данные";
@@ -433,19 +433,19 @@ namespace agency_csharp
             // 
             this.number_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.number_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.number_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.number_tb.Location = new System.Drawing.Point(38, 307);
+            this.number_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.number_tb.Location = new System.Drawing.Point(33, 266);
             this.number_tb.Multiline = true;
             this.number_tb.Name = "number_tb";
-            this.number_tb.Size = new System.Drawing.Size(212, 35);
+            this.number_tb.Size = new System.Drawing.Size(182, 30);
             this.number_tb.TabIndex = 8;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label7.Location = new System.Drawing.Point(38, 26);
+            this.label7.Location = new System.Drawing.Point(33, 23);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(150, 22);
             this.label7.TabIndex = 10;
@@ -454,9 +454,9 @@ namespace agency_csharp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label3.Location = new System.Drawing.Point(38, 89);
+            this.label3.Location = new System.Drawing.Point(33, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 22);
             this.label3.TabIndex = 10;
@@ -467,30 +467,30 @@ namespace agency_csharp
             this.userId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.userId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userId.Enabled = false;
-            this.userId.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.userId.Location = new System.Drawing.Point(38, 51);
+            this.userId.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.userId.Location = new System.Drawing.Point(33, 44);
             this.userId.Multiline = true;
             this.userId.Name = "userId";
-            this.userId.Size = new System.Drawing.Size(212, 35);
+            this.userId.Size = new System.Drawing.Size(182, 30);
             this.userId.TabIndex = 8;
             // 
             // name_tb
             // 
             this.name_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.name_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.name_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.name_tb.Location = new System.Drawing.Point(38, 114);
+            this.name_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.name_tb.Location = new System.Drawing.Point(33, 99);
             this.name_tb.Multiline = true;
             this.name_tb.Name = "name_tb";
-            this.name_tb.Size = new System.Drawing.Size(212, 35);
+            this.name_tb.Size = new System.Drawing.Size(182, 30);
             this.name_tb.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label6.Location = new System.Drawing.Point(38, 282);
+            this.label6.Location = new System.Drawing.Point(33, 244);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(177, 22);
             this.label6.TabIndex = 9;
@@ -500,30 +500,30 @@ namespace agency_csharp
             // 
             this.surname_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.surname_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.surname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.surname_tb.Location = new System.Drawing.Point(38, 177);
+            this.surname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.surname_tb.Location = new System.Drawing.Point(33, 153);
             this.surname_tb.Multiline = true;
             this.surname_tb.Name = "surname_tb";
-            this.surname_tb.Size = new System.Drawing.Size(212, 35);
+            this.surname_tb.Size = new System.Drawing.Size(182, 30);
             this.surname_tb.TabIndex = 8;
             // 
             // thirdname_tb
             // 
             this.thirdname_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.thirdname_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.thirdname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.thirdname_tb.Location = new System.Drawing.Point(38, 241);
+            this.thirdname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.thirdname_tb.Location = new System.Drawing.Point(33, 209);
             this.thirdname_tb.Multiline = true;
             this.thirdname_tb.Name = "thirdname_tb";
-            this.thirdname_tb.Size = new System.Drawing.Size(212, 35);
+            this.thirdname_tb.Size = new System.Drawing.Size(182, 30);
             this.thirdname_tb.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label5.Location = new System.Drawing.Point(38, 216);
+            this.label5.Location = new System.Drawing.Point(33, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 22);
             this.label5.TabIndex = 9;
@@ -532,9 +532,9 @@ namespace agency_csharp
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label4.Location = new System.Drawing.Point(38, 152);
+            this.label4.Location = new System.Drawing.Point(33, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 22);
             this.label4.TabIndex = 9;
@@ -551,11 +551,11 @@ namespace agency_csharp
             this.groupBox1.Controls.Add(this.delete_btn);
             this.groupBox1.Controls.Add(this.save_btn);
             this.groupBox1.Controls.Add(this.change_btn);
-            this.groupBox1.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox1.Location = new System.Drawing.Point(35, 420);
+            this.groupBox1.Location = new System.Drawing.Point(30, 364);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 237);
+            this.groupBox1.Size = new System.Drawing.Size(254, 205);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Панель управления";
@@ -563,9 +563,9 @@ namespace agency_csharp
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(34, 170);
+            this.pictureBox4.Location = new System.Drawing.Point(29, 147);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox4.Size = new System.Drawing.Size(37, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
@@ -573,9 +573,9 @@ namespace agency_csharp
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(34, 41);
+            this.pictureBox3.Location = new System.Drawing.Point(29, 36);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox3.Size = new System.Drawing.Size(37, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -583,9 +583,9 @@ namespace agency_csharp
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(34, 84);
+            this.pictureBox2.Location = new System.Drawing.Point(29, 73);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox2.Size = new System.Drawing.Size(37, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 19;
             this.pictureBox2.TabStop = false;
@@ -593,9 +593,9 @@ namespace agency_csharp
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 127);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 110);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(37, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -607,11 +607,11 @@ namespace agency_csharp
             this.add_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.add_btn.FlatAppearance.BorderSize = 0;
             this.add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.add_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.add_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.add_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.add_btn.Location = new System.Drawing.Point(83, 41);
+            this.add_btn.Location = new System.Drawing.Point(71, 36);
             this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(174, 37);
+            this.add_btn.Size = new System.Drawing.Size(149, 32);
             this.add_btn.TabIndex = 18;
             this.add_btn.Text = "Добавить";
             this.add_btn.UseVisualStyleBackColor = false;
@@ -624,11 +624,11 @@ namespace agency_csharp
             this.delete_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.delete_btn.FlatAppearance.BorderSize = 0;
             this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.delete_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.delete_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.delete_btn.Location = new System.Drawing.Point(83, 84);
+            this.delete_btn.Location = new System.Drawing.Point(71, 73);
             this.delete_btn.Name = "delete_btn";
-            this.delete_btn.Size = new System.Drawing.Size(174, 37);
+            this.delete_btn.Size = new System.Drawing.Size(149, 32);
             this.delete_btn.TabIndex = 18;
             this.delete_btn.Text = "Удалить";
             this.delete_btn.UseVisualStyleBackColor = false;
@@ -641,11 +641,11 @@ namespace agency_csharp
             this.save_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.save_btn.FlatAppearance.BorderSize = 0;
             this.save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.save_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.save_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.save_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.save_btn.Location = new System.Drawing.Point(83, 170);
+            this.save_btn.Location = new System.Drawing.Point(71, 147);
             this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(174, 37);
+            this.save_btn.Size = new System.Drawing.Size(149, 32);
             this.save_btn.TabIndex = 18;
             this.save_btn.Text = "Сохранить";
             this.save_btn.UseVisualStyleBackColor = false;
@@ -659,11 +659,11 @@ namespace agency_csharp
             this.change_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.change_btn.FlatAppearance.BorderSize = 0;
             this.change_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.change_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.change_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.change_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.change_btn.Location = new System.Drawing.Point(83, 127);
+            this.change_btn.Location = new System.Drawing.Point(71, 110);
             this.change_btn.Name = "change_btn";
-            this.change_btn.Size = new System.Drawing.Size(174, 37);
+            this.change_btn.Size = new System.Drawing.Size(149, 32);
             this.change_btn.TabIndex = 18;
             this.change_btn.Text = "Изменить";
             this.change_btn.UseVisualStyleBackColor = false;
@@ -676,11 +676,11 @@ namespace agency_csharp
             this.Register.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.Register.FlatAppearance.BorderSize = 0;
             this.Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Register.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Register.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.Register.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Register.Location = new System.Drawing.Point(371, 461);
+            this.Register.Location = new System.Drawing.Point(318, 400);
             this.Register.Name = "Register";
-            this.Register.Size = new System.Drawing.Size(211, 82);
+            this.Register.Size = new System.Drawing.Size(181, 71);
             this.Register.TabIndex = 18;
             this.Register.Text = "Зарегистрировать пользователя";
             this.Register.UseVisualStyleBackColor = false;
@@ -697,7 +697,7 @@ namespace agency_csharp
             this.clients_tab.Location = new System.Drawing.Point(4, 24);
             this.clients_tab.Name = "clients_tab";
             this.clients_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.clients_tab.Size = new System.Drawing.Size(1417, 689);
+            this.clients_tab.Size = new System.Drawing.Size(1213, 590);
             this.clients_tab.TabIndex = 1;
             this.clients_tab.Text = "Клиенты";
             // 
@@ -708,11 +708,11 @@ namespace agency_csharp
             this.groupBox3.Controls.Add(this.clientSearch_btn);
             this.groupBox3.Controls.Add(this.clientClear_btn);
             this.groupBox3.Controls.Add(this.clientSearch_tb);
-            this.groupBox3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox3.Location = new System.Drawing.Point(656, 469);
+            this.groupBox3.Location = new System.Drawing.Point(562, 406);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(428, 100);
+            this.groupBox3.Size = new System.Drawing.Size(367, 87);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Управление";
@@ -724,9 +724,9 @@ namespace agency_csharp
             this.clientRefresh_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.clientRefresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientRefresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("clientRefresh_btn.Image")));
-            this.clientRefresh_btn.Location = new System.Drawing.Point(78, 34);
+            this.clientRefresh_btn.Location = new System.Drawing.Point(67, 29);
             this.clientRefresh_btn.Name = "clientRefresh_btn";
-            this.clientRefresh_btn.Size = new System.Drawing.Size(55, 52);
+            this.clientRefresh_btn.Size = new System.Drawing.Size(47, 45);
             this.clientRefresh_btn.TabIndex = 17;
             this.clientRefresh_btn.UseVisualStyleBackColor = false;
             this.clientRefresh_btn.Click += new System.EventHandler(this.clientRefresh_btn_Click);
@@ -738,9 +738,9 @@ namespace agency_csharp
             this.clientSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.clientSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("clientSearch_btn.Image")));
-            this.clientSearch_btn.Location = new System.Drawing.Point(139, 34);
+            this.clientSearch_btn.Location = new System.Drawing.Point(119, 29);
             this.clientSearch_btn.Name = "clientSearch_btn";
-            this.clientSearch_btn.Size = new System.Drawing.Size(48, 52);
+            this.clientSearch_btn.Size = new System.Drawing.Size(41, 45);
             this.clientSearch_btn.TabIndex = 17;
             this.clientSearch_btn.UseVisualStyleBackColor = false;
             this.clientSearch_btn.Click += new System.EventHandler(this.clientSearch_btn_Click);
@@ -752,9 +752,9 @@ namespace agency_csharp
             this.clientClear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.clientClear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clientClear_btn.Image = ((System.Drawing.Image)(resources.GetObject("clientClear_btn.Image")));
-            this.clientClear_btn.Location = new System.Drawing.Point(24, 34);
+            this.clientClear_btn.Location = new System.Drawing.Point(21, 29);
             this.clientClear_btn.Name = "clientClear_btn";
-            this.clientClear_btn.Size = new System.Drawing.Size(48, 52);
+            this.clientClear_btn.Size = new System.Drawing.Size(41, 45);
             this.clientClear_btn.TabIndex = 17;
             this.clientClear_btn.UseVisualStyleBackColor = false;
             this.clientClear_btn.Click += new System.EventHandler(this.clientClear_btn_Click);
@@ -763,11 +763,11 @@ namespace agency_csharp
             // 
             this.clientSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clientSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientSearch_tb.Location = new System.Drawing.Point(193, 40);
+            this.clientSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.clientSearch_tb.Location = new System.Drawing.Point(165, 35);
             this.clientSearch_tb.Multiline = true;
             this.clientSearch_tb.Name = "clientSearch_tb";
-            this.clientSearch_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientSearch_tb.Size = new System.Drawing.Size(182, 30);
             this.clientSearch_tb.TabIndex = 8;
             this.clientSearch_tb.TextChanged += new System.EventHandler(this.clientSearch_tb_TextChanged);
             // 
@@ -780,17 +780,17 @@ namespace agency_csharp
             this.clientView_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Montserrat", 10F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.clientView_dgv.DefaultCellStyle = dataGridViewCellStyle2;
-            this.clientView_dgv.Location = new System.Drawing.Point(353, 25);
+            this.clientView_dgv.Location = new System.Drawing.Point(303, 22);
             this.clientView_dgv.Name = "clientView_dgv";
             this.clientView_dgv.ReadOnly = true;
             this.clientView_dgv.RowTemplate.Height = 25;
-            this.clientView_dgv.Size = new System.Drawing.Size(1035, 424);
+            this.clientView_dgv.Size = new System.Drawing.Size(887, 367);
             this.clientView_dgv.TabIndex = 26;
             this.clientView_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.client_dgv_CellClick);
             // 
@@ -807,11 +807,11 @@ namespace agency_csharp
             this.groupBox4.Controls.Add(this.clientPat_tb);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox4.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox4.Location = new System.Drawing.Point(29, 25);
+            this.groupBox4.Location = new System.Drawing.Point(25, 22);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(296, 364);
+            this.groupBox4.Size = new System.Drawing.Size(254, 315);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Персональные данные";
@@ -820,19 +820,19 @@ namespace agency_csharp
             // 
             this.clientNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clientNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientNum_tb.Location = new System.Drawing.Point(39, 312);
+            this.clientNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.clientNum_tb.Location = new System.Drawing.Point(33, 270);
             this.clientNum_tb.Multiline = true;
             this.clientNum_tb.Name = "clientNum_tb";
-            this.clientNum_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientNum_tb.Size = new System.Drawing.Size(182, 30);
             this.clientNum_tb.TabIndex = 8;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label19.Location = new System.Drawing.Point(39, 31);
+            this.label19.Location = new System.Drawing.Point(33, 27);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(150, 22);
             this.label19.TabIndex = 10;
@@ -841,9 +841,9 @@ namespace agency_csharp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label2.Location = new System.Drawing.Point(39, 94);
+            this.label2.Location = new System.Drawing.Point(33, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 22);
             this.label2.TabIndex = 10;
@@ -854,30 +854,30 @@ namespace agency_csharp
             this.clientID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.clientID_tb.Enabled = false;
-            this.clientID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientID_tb.Location = new System.Drawing.Point(39, 56);
+            this.clientID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.clientID_tb.Location = new System.Drawing.Point(33, 49);
             this.clientID_tb.Multiline = true;
             this.clientID_tb.Name = "clientID_tb";
-            this.clientID_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientID_tb.Size = new System.Drawing.Size(182, 30);
             this.clientID_tb.TabIndex = 8;
             // 
             // clientName_tb
             // 
             this.clientName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientName_tb.Location = new System.Drawing.Point(39, 119);
+            this.clientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.clientName_tb.Location = new System.Drawing.Point(33, 103);
             this.clientName_tb.Multiline = true;
             this.clientName_tb.Name = "clientName_tb";
-            this.clientName_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientName_tb.Size = new System.Drawing.Size(182, 30);
             this.clientName_tb.TabIndex = 8;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label8.Location = new System.Drawing.Point(39, 287);
+            this.label8.Location = new System.Drawing.Point(33, 249);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(177, 22);
             this.label8.TabIndex = 9;
@@ -887,30 +887,30 @@ namespace agency_csharp
             // 
             this.clientSur_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientSur_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clientSur_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientSur_tb.Location = new System.Drawing.Point(39, 182);
+            this.clientSur_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.clientSur_tb.Location = new System.Drawing.Point(33, 158);
             this.clientSur_tb.Multiline = true;
             this.clientSur_tb.Name = "clientSur_tb";
-            this.clientSur_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientSur_tb.Size = new System.Drawing.Size(182, 30);
             this.clientSur_tb.TabIndex = 8;
             // 
             // clientPat_tb
             // 
             this.clientPat_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.clientPat_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.clientPat_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clientPat_tb.Location = new System.Drawing.Point(39, 246);
+            this.clientPat_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.clientPat_tb.Location = new System.Drawing.Point(33, 213);
             this.clientPat_tb.Multiline = true;
             this.clientPat_tb.Name = "clientPat_tb";
-            this.clientPat_tb.Size = new System.Drawing.Size(212, 35);
+            this.clientPat_tb.Size = new System.Drawing.Size(182, 30);
             this.clientPat_tb.TabIndex = 8;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label10.Location = new System.Drawing.Point(39, 221);
+            this.label10.Location = new System.Drawing.Point(33, 192);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 22);
             this.label10.TabIndex = 9;
@@ -919,9 +919,9 @@ namespace agency_csharp
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label11.Location = new System.Drawing.Point(39, 157);
+            this.label11.Location = new System.Drawing.Point(33, 136);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 22);
             this.label11.TabIndex = 9;
@@ -934,11 +934,11 @@ namespace agency_csharp
             this.passportEdit_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.passportEdit_btn.FlatAppearance.BorderSize = 0;
             this.passportEdit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.passportEdit_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passportEdit_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.passportEdit_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.passportEdit_btn.Location = new System.Drawing.Point(353, 469);
+            this.passportEdit_btn.Location = new System.Drawing.Point(303, 415);
             this.passportEdit_btn.Name = "passportEdit_btn";
-            this.passportEdit_btn.Size = new System.Drawing.Size(174, 57);
+            this.passportEdit_btn.Size = new System.Drawing.Size(191, 65);
             this.passportEdit_btn.TabIndex = 18;
             this.passportEdit_btn.Text = "Редактировать паспорт";
             this.passportEdit_btn.UseVisualStyleBackColor = false;
@@ -953,11 +953,11 @@ namespace agency_csharp
             this.groupBox5.Controls.Add(this.clientAdd);
             this.groupBox5.Controls.Add(this.clientSave);
             this.groupBox5.Controls.Add(this.clientChange);
-            this.groupBox5.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox5.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox5.Location = new System.Drawing.Point(29, 395);
+            this.groupBox5.Location = new System.Drawing.Point(25, 342);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(296, 189);
+            this.groupBox5.Size = new System.Drawing.Size(254, 164);
             this.groupBox5.TabIndex = 24;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Панель управления";
@@ -965,9 +965,9 @@ namespace agency_csharp
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(34, 127);
+            this.pictureBox5.Location = new System.Drawing.Point(29, 110);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox5.Size = new System.Drawing.Size(37, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 19;
             this.pictureBox5.TabStop = false;
@@ -975,9 +975,9 @@ namespace agency_csharp
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(34, 41);
+            this.pictureBox6.Location = new System.Drawing.Point(29, 36);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox6.Size = new System.Drawing.Size(37, 32);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
@@ -985,9 +985,9 @@ namespace agency_csharp
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(34, 84);
+            this.pictureBox8.Location = new System.Drawing.Point(29, 73);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox8.Size = new System.Drawing.Size(37, 32);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 19;
             this.pictureBox8.TabStop = false;
@@ -999,11 +999,11 @@ namespace agency_csharp
             this.clientAdd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.clientAdd.FlatAppearance.BorderSize = 0;
             this.clientAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clientAdd.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clientAdd.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.clientAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.clientAdd.Location = new System.Drawing.Point(83, 41);
+            this.clientAdd.Location = new System.Drawing.Point(71, 36);
             this.clientAdd.Name = "clientAdd";
-            this.clientAdd.Size = new System.Drawing.Size(174, 37);
+            this.clientAdd.Size = new System.Drawing.Size(149, 32);
             this.clientAdd.TabIndex = 18;
             this.clientAdd.Text = "Добавить";
             this.clientAdd.UseVisualStyleBackColor = false;
@@ -1016,11 +1016,11 @@ namespace agency_csharp
             this.clientSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.clientSave.FlatAppearance.BorderSize = 0;
             this.clientSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clientSave.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clientSave.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.clientSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.clientSave.Location = new System.Drawing.Point(83, 127);
+            this.clientSave.Location = new System.Drawing.Point(71, 110);
             this.clientSave.Name = "clientSave";
-            this.clientSave.Size = new System.Drawing.Size(174, 37);
+            this.clientSave.Size = new System.Drawing.Size(149, 32);
             this.clientSave.TabIndex = 18;
             this.clientSave.Text = "Сохранить";
             this.clientSave.UseVisualStyleBackColor = false;
@@ -1034,11 +1034,11 @@ namespace agency_csharp
             this.clientChange.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.clientChange.FlatAppearance.BorderSize = 0;
             this.clientChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clientChange.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clientChange.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.clientChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.clientChange.Location = new System.Drawing.Point(83, 84);
+            this.clientChange.Location = new System.Drawing.Point(71, 73);
             this.clientChange.Name = "clientChange";
-            this.clientChange.Size = new System.Drawing.Size(174, 37);
+            this.clientChange.Size = new System.Drawing.Size(149, 32);
             this.clientChange.TabIndex = 18;
             this.clientChange.Text = "Изменить";
             this.clientChange.UseVisualStyleBackColor = false;
@@ -1053,7 +1053,7 @@ namespace agency_csharp
             this.organizations_tab.Controls.Add(this.groupBox8);
             this.organizations_tab.Location = new System.Drawing.Point(4, 24);
             this.organizations_tab.Name = "organizations_tab";
-            this.organizations_tab.Size = new System.Drawing.Size(1417, 689);
+            this.organizations_tab.Size = new System.Drawing.Size(1213, 593);
             this.organizations_tab.TabIndex = 2;
             this.organizations_tab.Text = "Организации";
             // 
@@ -1064,11 +1064,11 @@ namespace agency_csharp
             this.groupBox6.Controls.Add(this.orgSearch_btn);
             this.groupBox6.Controls.Add(this.orgClear_btn);
             this.groupBox6.Controls.Add(this.orgSearch_tb);
-            this.groupBox6.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox6.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox6.Location = new System.Drawing.Point(654, 467);
+            this.groupBox6.Location = new System.Drawing.Point(561, 405);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(420, 100);
+            this.groupBox6.Size = new System.Drawing.Size(360, 87);
             this.groupBox6.TabIndex = 27;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Управление";
@@ -1080,9 +1080,9 @@ namespace agency_csharp
             this.orgRefresh_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.orgRefresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgRefresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("orgRefresh_btn.Image")));
-            this.orgRefresh_btn.Location = new System.Drawing.Point(73, 33);
+            this.orgRefresh_btn.Location = new System.Drawing.Point(63, 29);
             this.orgRefresh_btn.Name = "orgRefresh_btn";
-            this.orgRefresh_btn.Size = new System.Drawing.Size(55, 52);
+            this.orgRefresh_btn.Size = new System.Drawing.Size(47, 45);
             this.orgRefresh_btn.TabIndex = 17;
             this.orgRefresh_btn.UseVisualStyleBackColor = false;
             this.orgRefresh_btn.Click += new System.EventHandler(this.orgRefresh_btn_Click);
@@ -1094,9 +1094,9 @@ namespace agency_csharp
             this.orgSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.orgSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("orgSearch_btn.Image")));
-            this.orgSearch_btn.Location = new System.Drawing.Point(134, 33);
+            this.orgSearch_btn.Location = new System.Drawing.Point(115, 29);
             this.orgSearch_btn.Name = "orgSearch_btn";
-            this.orgSearch_btn.Size = new System.Drawing.Size(48, 52);
+            this.orgSearch_btn.Size = new System.Drawing.Size(41, 45);
             this.orgSearch_btn.TabIndex = 17;
             this.orgSearch_btn.UseVisualStyleBackColor = false;
             this.orgSearch_btn.Click += new System.EventHandler(this.orgSearch_btn_Click);
@@ -1108,9 +1108,9 @@ namespace agency_csharp
             this.orgClear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.orgClear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgClear_btn.Image = ((System.Drawing.Image)(resources.GetObject("orgClear_btn.Image")));
-            this.orgClear_btn.Location = new System.Drawing.Point(19, 33);
+            this.orgClear_btn.Location = new System.Drawing.Point(16, 29);
             this.orgClear_btn.Name = "orgClear_btn";
-            this.orgClear_btn.Size = new System.Drawing.Size(48, 52);
+            this.orgClear_btn.Size = new System.Drawing.Size(41, 45);
             this.orgClear_btn.TabIndex = 17;
             this.orgClear_btn.UseVisualStyleBackColor = false;
             this.orgClear_btn.Click += new System.EventHandler(this.orgClear_btn_Click);
@@ -1119,11 +1119,11 @@ namespace agency_csharp
             // 
             this.orgSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orgSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgSearch_tb.Location = new System.Drawing.Point(188, 39);
+            this.orgSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.orgSearch_tb.Location = new System.Drawing.Point(161, 34);
             this.orgSearch_tb.Multiline = true;
             this.orgSearch_tb.Name = "orgSearch_tb";
-            this.orgSearch_tb.Size = new System.Drawing.Size(212, 35);
+            this.orgSearch_tb.Size = new System.Drawing.Size(182, 30);
             this.orgSearch_tb.TabIndex = 8;
             this.orgSearch_tb.TextChanged += new System.EventHandler(this.orgSearch_tb_TextChanged);
             // 
@@ -1136,17 +1136,17 @@ namespace agency_csharp
             this.organization_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Montserrat", 10F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.organization_dgv.DefaultCellStyle = dataGridViewCellStyle3;
-            this.organization_dgv.Location = new System.Drawing.Point(356, 25);
+            this.organization_dgv.Location = new System.Drawing.Point(305, 22);
             this.organization_dgv.Name = "organization_dgv";
             this.organization_dgv.ReadOnly = true;
             this.organization_dgv.RowTemplate.Height = 25;
-            this.organization_dgv.Size = new System.Drawing.Size(1042, 424);
+            this.organization_dgv.Size = new System.Drawing.Size(893, 367);
             this.organization_dgv.TabIndex = 26;
             this.organization_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.org_dgv_CellClick);
             // 
@@ -1163,11 +1163,11 @@ namespace agency_csharp
             this.groupBox7.Controls.Add(this.orgName_tb);
             this.groupBox7.Controls.Add(this.label13);
             this.groupBox7.Controls.Add(this.label14);
-            this.groupBox7.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox7.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox7.Location = new System.Drawing.Point(29, 25);
+            this.groupBox7.Location = new System.Drawing.Point(25, 22);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(303, 372);
+            this.groupBox7.Size = new System.Drawing.Size(260, 322);
             this.groupBox7.TabIndex = 25;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Персональные данные";
@@ -1176,19 +1176,19 @@ namespace agency_csharp
             // 
             this.orgNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orgNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgNum_tb.Location = new System.Drawing.Point(45, 245);
+            this.orgNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.orgNum_tb.Location = new System.Drawing.Point(39, 212);
             this.orgNum_tb.Multiline = true;
             this.orgNum_tb.Name = "orgNum_tb";
-            this.orgNum_tb.Size = new System.Drawing.Size(212, 35);
+            this.orgNum_tb.Size = new System.Drawing.Size(182, 30);
             this.orgNum_tb.TabIndex = 8;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label36.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label36.Location = new System.Drawing.Point(45, 31);
+            this.label36.Location = new System.Drawing.Point(39, 27);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(150, 22);
             this.label36.TabIndex = 10;
@@ -1197,9 +1197,9 @@ namespace agency_csharp
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label9.Location = new System.Drawing.Point(45, 157);
+            this.label9.Location = new System.Drawing.Point(39, 136);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 22);
             this.label9.TabIndex = 10;
@@ -1208,9 +1208,9 @@ namespace agency_csharp
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label12.Location = new System.Drawing.Point(45, 94);
+            this.label12.Location = new System.Drawing.Point(39, 81);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(140, 22);
             this.label12.TabIndex = 10;
@@ -1220,11 +1220,11 @@ namespace agency_csharp
             // 
             this.orgMail_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgMail_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orgMail_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgMail_tb.Location = new System.Drawing.Point(45, 314);
+            this.orgMail_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.orgMail_tb.Location = new System.Drawing.Point(39, 272);
             this.orgMail_tb.Multiline = true;
             this.orgMail_tb.Name = "orgMail_tb";
-            this.orgMail_tb.Size = new System.Drawing.Size(212, 35);
+            this.orgMail_tb.Size = new System.Drawing.Size(182, 30);
             this.orgMail_tb.TabIndex = 8;
             // 
             // orgID_tb
@@ -1232,41 +1232,41 @@ namespace agency_csharp
             this.orgID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.orgID_tb.Enabled = false;
-            this.orgID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgID_tb.Location = new System.Drawing.Point(45, 56);
+            this.orgID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.orgID_tb.Location = new System.Drawing.Point(39, 49);
             this.orgID_tb.Multiline = true;
             this.orgID_tb.Name = "orgID_tb";
-            this.orgID_tb.Size = new System.Drawing.Size(212, 35);
+            this.orgID_tb.Size = new System.Drawing.Size(182, 30);
             this.orgID_tb.TabIndex = 8;
             // 
             // orgClient_tb
             // 
             this.orgClient_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgClient_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orgClient_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgClient_tb.Location = new System.Drawing.Point(45, 182);
+            this.orgClient_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.orgClient_tb.Location = new System.Drawing.Point(39, 158);
             this.orgClient_tb.Multiline = true;
             this.orgClient_tb.Name = "orgClient_tb";
-            this.orgClient_tb.Size = new System.Drawing.Size(212, 35);
+            this.orgClient_tb.Size = new System.Drawing.Size(182, 30);
             this.orgClient_tb.TabIndex = 8;
             // 
             // orgName_tb
             // 
             this.orgName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.orgName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.orgName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.orgName_tb.Location = new System.Drawing.Point(45, 119);
+            this.orgName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.orgName_tb.Location = new System.Drawing.Point(39, 103);
             this.orgName_tb.Multiline = true;
             this.orgName_tb.Name = "orgName_tb";
-            this.orgName_tb.Size = new System.Drawing.Size(212, 35);
+            this.orgName_tb.Size = new System.Drawing.Size(182, 30);
             this.orgName_tb.TabIndex = 8;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label13.Location = new System.Drawing.Point(45, 220);
+            this.label13.Location = new System.Drawing.Point(39, 191);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(177, 22);
             this.label13.TabIndex = 9;
@@ -1275,9 +1275,9 @@ namespace agency_csharp
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label14.Location = new System.Drawing.Point(45, 289);
+            this.label14.Location = new System.Drawing.Point(39, 250);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 22);
             this.label14.TabIndex = 9;
@@ -1292,11 +1292,11 @@ namespace agency_csharp
             this.groupBox8.Controls.Add(this.orgAdd_btn);
             this.groupBox8.Controls.Add(this.orgSave_btn);
             this.groupBox8.Controls.Add(this.orgChange_btn);
-            this.groupBox8.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox8.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox8.Location = new System.Drawing.Point(29, 403);
+            this.groupBox8.Location = new System.Drawing.Point(25, 349);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(303, 184);
+            this.groupBox8.Size = new System.Drawing.Size(260, 159);
             this.groupBox8.TabIndex = 24;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Панель управления";
@@ -1304,9 +1304,9 @@ namespace agency_csharp
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(34, 127);
+            this.pictureBox9.Location = new System.Drawing.Point(29, 110);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox9.Size = new System.Drawing.Size(37, 32);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 19;
             this.pictureBox9.TabStop = false;
@@ -1314,9 +1314,9 @@ namespace agency_csharp
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(34, 41);
+            this.pictureBox10.Location = new System.Drawing.Point(29, 36);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox10.Size = new System.Drawing.Size(37, 32);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 19;
             this.pictureBox10.TabStop = false;
@@ -1324,9 +1324,9 @@ namespace agency_csharp
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(34, 84);
+            this.pictureBox12.Location = new System.Drawing.Point(29, 73);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox12.Size = new System.Drawing.Size(37, 32);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 19;
             this.pictureBox12.TabStop = false;
@@ -1338,11 +1338,11 @@ namespace agency_csharp
             this.orgAdd_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.orgAdd_btn.FlatAppearance.BorderSize = 0;
             this.orgAdd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orgAdd_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.orgAdd_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.orgAdd_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.orgAdd_btn.Location = new System.Drawing.Point(83, 41);
+            this.orgAdd_btn.Location = new System.Drawing.Point(71, 36);
             this.orgAdd_btn.Name = "orgAdd_btn";
-            this.orgAdd_btn.Size = new System.Drawing.Size(174, 37);
+            this.orgAdd_btn.Size = new System.Drawing.Size(149, 32);
             this.orgAdd_btn.TabIndex = 18;
             this.orgAdd_btn.Text = "Добавить";
             this.orgAdd_btn.UseVisualStyleBackColor = false;
@@ -1355,11 +1355,11 @@ namespace agency_csharp
             this.orgSave_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.orgSave_btn.FlatAppearance.BorderSize = 0;
             this.orgSave_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orgSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.orgSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.orgSave_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.orgSave_btn.Location = new System.Drawing.Point(83, 127);
+            this.orgSave_btn.Location = new System.Drawing.Point(71, 110);
             this.orgSave_btn.Name = "orgSave_btn";
-            this.orgSave_btn.Size = new System.Drawing.Size(174, 37);
+            this.orgSave_btn.Size = new System.Drawing.Size(149, 32);
             this.orgSave_btn.TabIndex = 18;
             this.orgSave_btn.Text = "Сохранить";
             this.orgSave_btn.UseVisualStyleBackColor = false;
@@ -1373,11 +1373,11 @@ namespace agency_csharp
             this.orgChange_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.orgChange_btn.FlatAppearance.BorderSize = 0;
             this.orgChange_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orgChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.orgChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.orgChange_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.orgChange_btn.Location = new System.Drawing.Point(83, 84);
+            this.orgChange_btn.Location = new System.Drawing.Point(71, 73);
             this.orgChange_btn.Name = "orgChange_btn";
-            this.orgChange_btn.Size = new System.Drawing.Size(174, 37);
+            this.orgChange_btn.Size = new System.Drawing.Size(149, 32);
             this.orgChange_btn.TabIndex = 18;
             this.orgChange_btn.Text = "Изменить";
             this.orgChange_btn.UseVisualStyleBackColor = false;
@@ -1392,7 +1392,7 @@ namespace agency_csharp
             this.vacamcy_tab.Controls.Add(this.groupBox11);
             this.vacamcy_tab.Location = new System.Drawing.Point(4, 24);
             this.vacamcy_tab.Name = "vacamcy_tab";
-            this.vacamcy_tab.Size = new System.Drawing.Size(1417, 689);
+            this.vacamcy_tab.Size = new System.Drawing.Size(1213, 593);
             this.vacamcy_tab.TabIndex = 3;
             this.vacamcy_tab.Text = "Вакансии";
             // 
@@ -1403,11 +1403,11 @@ namespace agency_csharp
             this.groupBox9.Controls.Add(this.vacSearch_btn);
             this.groupBox9.Controls.Add(this.vacClrear_btn);
             this.groupBox9.Controls.Add(this.vacSearch_tb);
-            this.groupBox9.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox9.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox9.Location = new System.Drawing.Point(950, 488);
+            this.groupBox9.Location = new System.Drawing.Point(814, 423);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(426, 100);
+            this.groupBox9.Size = new System.Drawing.Size(365, 87);
             this.groupBox9.TabIndex = 27;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Управление";
@@ -1419,9 +1419,9 @@ namespace agency_csharp
             this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.Location = new System.Drawing.Point(77, 33);
+            this.button15.Location = new System.Drawing.Point(66, 29);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(55, 52);
+            this.button15.Size = new System.Drawing.Size(47, 45);
             this.button15.TabIndex = 17;
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
@@ -1433,9 +1433,9 @@ namespace agency_csharp
             this.vacSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.vacSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vacSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("vacSearch_btn.Image")));
-            this.vacSearch_btn.Location = new System.Drawing.Point(138, 33);
+            this.vacSearch_btn.Location = new System.Drawing.Point(118, 29);
             this.vacSearch_btn.Name = "vacSearch_btn";
-            this.vacSearch_btn.Size = new System.Drawing.Size(48, 52);
+            this.vacSearch_btn.Size = new System.Drawing.Size(41, 45);
             this.vacSearch_btn.TabIndex = 17;
             this.vacSearch_btn.UseVisualStyleBackColor = false;
             this.vacSearch_btn.Click += new System.EventHandler(this.vacSearch_btn_Click);
@@ -1447,9 +1447,9 @@ namespace agency_csharp
             this.vacClrear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.vacClrear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vacClrear_btn.Image = ((System.Drawing.Image)(resources.GetObject("vacClrear_btn.Image")));
-            this.vacClrear_btn.Location = new System.Drawing.Point(23, 33);
+            this.vacClrear_btn.Location = new System.Drawing.Point(20, 29);
             this.vacClrear_btn.Name = "vacClrear_btn";
-            this.vacClrear_btn.Size = new System.Drawing.Size(48, 52);
+            this.vacClrear_btn.Size = new System.Drawing.Size(41, 45);
             this.vacClrear_btn.TabIndex = 17;
             this.vacClrear_btn.UseVisualStyleBackColor = false;
             this.vacClrear_btn.Click += new System.EventHandler(this.vacClrear_btn_Click);
@@ -1458,11 +1458,11 @@ namespace agency_csharp
             // 
             this.vacSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vacSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vacSearch_tb.Location = new System.Drawing.Point(192, 39);
+            this.vacSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.vacSearch_tb.Location = new System.Drawing.Point(165, 34);
             this.vacSearch_tb.Multiline = true;
             this.vacSearch_tb.Name = "vacSearch_tb";
-            this.vacSearch_tb.Size = new System.Drawing.Size(212, 35);
+            this.vacSearch_tb.Size = new System.Drawing.Size(182, 30);
             this.vacSearch_tb.TabIndex = 8;
             this.vacSearch_tb.TextChanged += new System.EventHandler(this.vacSearch_tb_TextChanged);
             // 
@@ -1475,17 +1475,17 @@ namespace agency_csharp
             this.vacancy_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Montserrat", 10F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.vacancy_dgv.DefaultCellStyle = dataGridViewCellStyle4;
-            this.vacancy_dgv.Location = new System.Drawing.Point(539, 25);
+            this.vacancy_dgv.Location = new System.Drawing.Point(462, 22);
             this.vacancy_dgv.Name = "vacancy_dgv";
             this.vacancy_dgv.ReadOnly = true;
             this.vacancy_dgv.RowTemplate.Height = 25;
-            this.vacancy_dgv.Size = new System.Drawing.Size(837, 364);
+            this.vacancy_dgv.Size = new System.Drawing.Size(717, 315);
             this.vacancy_dgv.TabIndex = 26;
             this.vacancy_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.vac_dgv_CellClick);
             // 
@@ -1502,11 +1502,11 @@ namespace agency_csharp
             this.groupBox10.Controls.Add(this.label18);
             this.groupBox10.Controls.Add(this.vacName_tb);
             this.groupBox10.Controls.Add(this.label21);
-            this.groupBox10.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox10.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox10.Location = new System.Drawing.Point(29, 25);
+            this.groupBox10.Location = new System.Drawing.Point(25, 22);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(417, 607);
+            this.groupBox10.Size = new System.Drawing.Size(357, 526);
             this.groupBox10.TabIndex = 25;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Персональные данные";
@@ -1515,9 +1515,9 @@ namespace agency_csharp
             // 
             this.vacDecription_rtb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacDecription_rtb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vacDecription_rtb.Location = new System.Drawing.Point(34, 330);
+            this.vacDecription_rtb.Location = new System.Drawing.Point(29, 286);
             this.vacDecription_rtb.Name = "vacDecription_rtb";
-            this.vacDecription_rtb.Size = new System.Drawing.Size(357, 247);
+            this.vacDecription_rtb.Size = new System.Drawing.Size(306, 214);
             this.vacDecription_rtb.TabIndex = 11;
             this.vacDecription_rtb.Text = "";
             // 
@@ -1525,19 +1525,19 @@ namespace agency_csharp
             // 
             this.vacNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vacNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vacNum_tb.Location = new System.Drawing.Point(34, 254);
+            this.vacNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.vacNum_tb.Location = new System.Drawing.Point(29, 220);
             this.vacNum_tb.Multiline = true;
             this.vacNum_tb.Name = "vacNum_tb";
-            this.vacNum_tb.Size = new System.Drawing.Size(212, 35);
+            this.vacNum_tb.Size = new System.Drawing.Size(182, 30);
             this.vacNum_tb.TabIndex = 8;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label35.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label35.Location = new System.Drawing.Point(34, 31);
+            this.label35.Location = new System.Drawing.Point(29, 27);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(150, 22);
             this.label35.TabIndex = 10;
@@ -1546,9 +1546,9 @@ namespace agency_csharp
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label17.Location = new System.Drawing.Point(34, 94);
+            this.label17.Location = new System.Drawing.Point(29, 81);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(125, 22);
             this.label17.TabIndex = 10;
@@ -1559,30 +1559,30 @@ namespace agency_csharp
             this.vacancyID_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacancyID_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.vacancyID_tb.Enabled = false;
-            this.vacancyID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vacancyID_tb.Location = new System.Drawing.Point(34, 56);
+            this.vacancyID_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.vacancyID_tb.Location = new System.Drawing.Point(29, 49);
             this.vacancyID_tb.Multiline = true;
             this.vacancyID_tb.Name = "vacancyID_tb";
-            this.vacancyID_tb.Size = new System.Drawing.Size(212, 35);
+            this.vacancyID_tb.Size = new System.Drawing.Size(182, 30);
             this.vacancyID_tb.TabIndex = 8;
             // 
             // vacOrgName_tb
             // 
             this.vacOrgName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacOrgName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vacOrgName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vacOrgName_tb.Location = new System.Drawing.Point(34, 119);
+            this.vacOrgName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.vacOrgName_tb.Location = new System.Drawing.Point(29, 103);
             this.vacOrgName_tb.Multiline = true;
             this.vacOrgName_tb.Name = "vacOrgName_tb";
-            this.vacOrgName_tb.Size = new System.Drawing.Size(212, 35);
+            this.vacOrgName_tb.Size = new System.Drawing.Size(182, 30);
             this.vacOrgName_tb.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label1.Location = new System.Drawing.Point(34, 305);
+            this.label1.Location = new System.Drawing.Point(29, 264);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 22);
             this.label1.TabIndex = 9;
@@ -1591,9 +1591,9 @@ namespace agency_csharp
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label18.Location = new System.Drawing.Point(34, 229);
+            this.label18.Location = new System.Drawing.Point(29, 198);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(177, 22);
             this.label18.TabIndex = 9;
@@ -1603,19 +1603,19 @@ namespace agency_csharp
             // 
             this.vacName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.vacName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.vacName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.vacName_tb.Location = new System.Drawing.Point(34, 182);
+            this.vacName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.vacName_tb.Location = new System.Drawing.Point(29, 158);
             this.vacName_tb.Multiline = true;
             this.vacName_tb.Name = "vacName_tb";
-            this.vacName_tb.Size = new System.Drawing.Size(212, 35);
+            this.vacName_tb.Size = new System.Drawing.Size(182, 30);
             this.vacName_tb.TabIndex = 8;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label21.Location = new System.Drawing.Point(34, 157);
+            this.label21.Location = new System.Drawing.Point(29, 136);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(108, 22);
             this.label21.TabIndex = 9;
@@ -1632,11 +1632,11 @@ namespace agency_csharp
             this.groupBox11.Controls.Add(this.vacDel_tb);
             this.groupBox11.Controls.Add(this.vacSave_tb);
             this.groupBox11.Controls.Add(this.vacChange_tb);
-            this.groupBox11.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox11.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox11.Location = new System.Drawing.Point(539, 395);
+            this.groupBox11.Location = new System.Drawing.Point(462, 342);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(296, 237);
+            this.groupBox11.Size = new System.Drawing.Size(254, 205);
             this.groupBox11.TabIndex = 24;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Панель управления";
@@ -1644,9 +1644,9 @@ namespace agency_csharp
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(34, 170);
+            this.pictureBox13.Location = new System.Drawing.Point(29, 147);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox13.Size = new System.Drawing.Size(37, 32);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 19;
             this.pictureBox13.TabStop = false;
@@ -1654,9 +1654,9 @@ namespace agency_csharp
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(34, 41);
+            this.pictureBox14.Location = new System.Drawing.Point(29, 36);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox14.Size = new System.Drawing.Size(37, 32);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 19;
             this.pictureBox14.TabStop = false;
@@ -1664,9 +1664,9 @@ namespace agency_csharp
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(34, 84);
+            this.pictureBox15.Location = new System.Drawing.Point(29, 73);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox15.Size = new System.Drawing.Size(37, 32);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 19;
             this.pictureBox15.TabStop = false;
@@ -1674,9 +1674,9 @@ namespace agency_csharp
             // pictureBox16
             // 
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(34, 127);
+            this.pictureBox16.Location = new System.Drawing.Point(29, 110);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox16.Size = new System.Drawing.Size(37, 32);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox16.TabIndex = 19;
             this.pictureBox16.TabStop = false;
@@ -1688,11 +1688,11 @@ namespace agency_csharp
             this.vacAdd_tb.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.vacAdd_tb.FlatAppearance.BorderSize = 0;
             this.vacAdd_tb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vacAdd_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.vacAdd_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.vacAdd_tb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.vacAdd_tb.Location = new System.Drawing.Point(83, 41);
+            this.vacAdd_tb.Location = new System.Drawing.Point(71, 36);
             this.vacAdd_tb.Name = "vacAdd_tb";
-            this.vacAdd_tb.Size = new System.Drawing.Size(174, 37);
+            this.vacAdd_tb.Size = new System.Drawing.Size(149, 32);
             this.vacAdd_tb.TabIndex = 18;
             this.vacAdd_tb.Text = "Добавить";
             this.vacAdd_tb.UseVisualStyleBackColor = false;
@@ -1705,11 +1705,11 @@ namespace agency_csharp
             this.vacDel_tb.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.vacDel_tb.FlatAppearance.BorderSize = 0;
             this.vacDel_tb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vacDel_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.vacDel_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.vacDel_tb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.vacDel_tb.Location = new System.Drawing.Point(83, 84);
+            this.vacDel_tb.Location = new System.Drawing.Point(71, 73);
             this.vacDel_tb.Name = "vacDel_tb";
-            this.vacDel_tb.Size = new System.Drawing.Size(174, 37);
+            this.vacDel_tb.Size = new System.Drawing.Size(149, 32);
             this.vacDel_tb.TabIndex = 18;
             this.vacDel_tb.Text = "Удалить";
             this.vacDel_tb.UseVisualStyleBackColor = false;
@@ -1722,11 +1722,11 @@ namespace agency_csharp
             this.vacSave_tb.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.vacSave_tb.FlatAppearance.BorderSize = 0;
             this.vacSave_tb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vacSave_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.vacSave_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.vacSave_tb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.vacSave_tb.Location = new System.Drawing.Point(83, 170);
+            this.vacSave_tb.Location = new System.Drawing.Point(71, 147);
             this.vacSave_tb.Name = "vacSave_tb";
-            this.vacSave_tb.Size = new System.Drawing.Size(174, 37);
+            this.vacSave_tb.Size = new System.Drawing.Size(149, 32);
             this.vacSave_tb.TabIndex = 18;
             this.vacSave_tb.Text = "Сохранить";
             this.vacSave_tb.UseVisualStyleBackColor = false;
@@ -1740,11 +1740,11 @@ namespace agency_csharp
             this.vacChange_tb.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.vacChange_tb.FlatAppearance.BorderSize = 0;
             this.vacChange_tb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vacChange_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.vacChange_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.vacChange_tb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.vacChange_tb.Location = new System.Drawing.Point(83, 127);
+            this.vacChange_tb.Location = new System.Drawing.Point(71, 110);
             this.vacChange_tb.Name = "vacChange_tb";
-            this.vacChange_tb.Size = new System.Drawing.Size(174, 37);
+            this.vacChange_tb.Size = new System.Drawing.Size(149, 32);
             this.vacChange_tb.TabIndex = 18;
             this.vacChange_tb.Text = "Изменить";
             this.vacChange_tb.UseVisualStyleBackColor = false;
@@ -1759,7 +1759,7 @@ namespace agency_csharp
             this.contract_tab.Controls.Add(this.contract_dgv);
             this.contract_tab.Location = new System.Drawing.Point(4, 24);
             this.contract_tab.Name = "contract_tab";
-            this.contract_tab.Size = new System.Drawing.Size(1417, 689);
+            this.contract_tab.Size = new System.Drawing.Size(1213, 593);
             this.contract_tab.TabIndex = 4;
             this.contract_tab.Text = "Контракты";
             this.contract_tab.UseVisualStyleBackColor = true;
@@ -1771,11 +1771,11 @@ namespace agency_csharp
             this.groupBox17.Controls.Add(this.contractSearch_btn);
             this.groupBox17.Controls.Add(this.contractClear_btn);
             this.groupBox17.Controls.Add(this.contractSearch_tb);
-            this.groupBox17.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox17.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox17.Location = new System.Drawing.Point(958, 472);
+            this.groupBox17.Location = new System.Drawing.Point(821, 409);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(437, 100);
+            this.groupBox17.Size = new System.Drawing.Size(375, 87);
             this.groupBox17.TabIndex = 30;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Управление";
@@ -1787,9 +1787,9 @@ namespace agency_csharp
             this.contractRefresh_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.contractRefresh_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contractRefresh_btn.Image = ((System.Drawing.Image)(resources.GetObject("contractRefresh_btn.Image")));
-            this.contractRefresh_btn.Location = new System.Drawing.Point(77, 33);
+            this.contractRefresh_btn.Location = new System.Drawing.Point(66, 29);
             this.contractRefresh_btn.Name = "contractRefresh_btn";
-            this.contractRefresh_btn.Size = new System.Drawing.Size(55, 52);
+            this.contractRefresh_btn.Size = new System.Drawing.Size(47, 45);
             this.contractRefresh_btn.TabIndex = 17;
             this.contractRefresh_btn.UseVisualStyleBackColor = false;
             this.contractRefresh_btn.Click += new System.EventHandler(this.contractRefresh_btn_Click);
@@ -1801,9 +1801,9 @@ namespace agency_csharp
             this.contractSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.contractSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contractSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("contractSearch_btn.Image")));
-            this.contractSearch_btn.Location = new System.Drawing.Point(138, 33);
+            this.contractSearch_btn.Location = new System.Drawing.Point(118, 29);
             this.contractSearch_btn.Name = "contractSearch_btn";
-            this.contractSearch_btn.Size = new System.Drawing.Size(48, 52);
+            this.contractSearch_btn.Size = new System.Drawing.Size(41, 45);
             this.contractSearch_btn.TabIndex = 17;
             this.contractSearch_btn.UseVisualStyleBackColor = false;
             this.contractSearch_btn.Click += new System.EventHandler(this.contractSearch_btn_Click);
@@ -1815,9 +1815,9 @@ namespace agency_csharp
             this.contractClear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.contractClear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.contractClear_btn.Image = ((System.Drawing.Image)(resources.GetObject("contractClear_btn.Image")));
-            this.contractClear_btn.Location = new System.Drawing.Point(23, 33);
+            this.contractClear_btn.Location = new System.Drawing.Point(20, 29);
             this.contractClear_btn.Name = "contractClear_btn";
-            this.contractClear_btn.Size = new System.Drawing.Size(48, 52);
+            this.contractClear_btn.Size = new System.Drawing.Size(41, 45);
             this.contractClear_btn.TabIndex = 17;
             this.contractClear_btn.UseVisualStyleBackColor = false;
             this.contractClear_btn.Click += new System.EventHandler(this.contractClear_btn_Click);
@@ -1826,11 +1826,11 @@ namespace agency_csharp
             // 
             this.contractSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.contractSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contractSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.contractSearch_tb.Location = new System.Drawing.Point(192, 39);
+            this.contractSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.contractSearch_tb.Location = new System.Drawing.Point(165, 34);
             this.contractSearch_tb.Multiline = true;
             this.contractSearch_tb.Name = "contractSearch_tb";
-            this.contractSearch_tb.Size = new System.Drawing.Size(212, 35);
+            this.contractSearch_tb.Size = new System.Drawing.Size(182, 30);
             this.contractSearch_tb.TabIndex = 8;
             this.contractSearch_tb.TextChanged += new System.EventHandler(this.contractSearch_tb_TextChanged);
             // 
@@ -1843,11 +1843,11 @@ namespace agency_csharp
             this.groupBox18.Controls.Add(this.contractAdd_btn);
             this.groupBox18.Controls.Add(this.contractSave_btn);
             this.groupBox18.Controls.Add(this.contractChange_btn);
-            this.groupBox18.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox18.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox18.Location = new System.Drawing.Point(615, 472);
+            this.groupBox18.Location = new System.Drawing.Point(527, 409);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(296, 186);
+            this.groupBox18.Size = new System.Drawing.Size(254, 161);
             this.groupBox18.TabIndex = 29;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Панель управления";
@@ -1855,9 +1855,9 @@ namespace agency_csharp
             // pictureBox17
             // 
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(34, 84);
+            this.pictureBox17.Location = new System.Drawing.Point(29, 73);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox17.Size = new System.Drawing.Size(37, 32);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox17.TabIndex = 19;
             this.pictureBox17.TabStop = false;
@@ -1865,9 +1865,9 @@ namespace agency_csharp
             // pictureBox18
             // 
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(34, 41);
+            this.pictureBox18.Location = new System.Drawing.Point(29, 36);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox18.Size = new System.Drawing.Size(37, 32);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox18.TabIndex = 19;
             this.pictureBox18.TabStop = false;
@@ -1875,9 +1875,9 @@ namespace agency_csharp
             // contractChange_pb
             // 
             this.contractChange_pb.Image = ((System.Drawing.Image)(resources.GetObject("contractChange_pb.Image")));
-            this.contractChange_pb.Location = new System.Drawing.Point(34, 127);
+            this.contractChange_pb.Location = new System.Drawing.Point(29, 110);
             this.contractChange_pb.Name = "contractChange_pb";
-            this.contractChange_pb.Size = new System.Drawing.Size(43, 37);
+            this.contractChange_pb.Size = new System.Drawing.Size(37, 32);
             this.contractChange_pb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.contractChange_pb.TabIndex = 19;
             this.contractChange_pb.TabStop = false;
@@ -1889,11 +1889,11 @@ namespace agency_csharp
             this.contractAdd_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.contractAdd_btn.FlatAppearance.BorderSize = 0;
             this.contractAdd_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.contractAdd_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractAdd_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.contractAdd_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.contractAdd_btn.Location = new System.Drawing.Point(83, 41);
+            this.contractAdd_btn.Location = new System.Drawing.Point(71, 36);
             this.contractAdd_btn.Name = "contractAdd_btn";
-            this.contractAdd_btn.Size = new System.Drawing.Size(174, 37);
+            this.contractAdd_btn.Size = new System.Drawing.Size(149, 32);
             this.contractAdd_btn.TabIndex = 18;
             this.contractAdd_btn.Text = "Добавить";
             this.contractAdd_btn.UseVisualStyleBackColor = false;
@@ -1906,11 +1906,11 @@ namespace agency_csharp
             this.contractSave_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.contractSave_btn.FlatAppearance.BorderSize = 0;
             this.contractSave_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.contractSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.contractSave_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.contractSave_btn.Location = new System.Drawing.Point(83, 84);
+            this.contractSave_btn.Location = new System.Drawing.Point(71, 73);
             this.contractSave_btn.Name = "contractSave_btn";
-            this.contractSave_btn.Size = new System.Drawing.Size(174, 37);
+            this.contractSave_btn.Size = new System.Drawing.Size(149, 32);
             this.contractSave_btn.TabIndex = 18;
             this.contractSave_btn.Text = "Сохранить";
             this.contractSave_btn.UseVisualStyleBackColor = false;
@@ -1924,11 +1924,11 @@ namespace agency_csharp
             this.contractChange_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.contractChange_btn.FlatAppearance.BorderSize = 0;
             this.contractChange_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.contractChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.contractChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.contractChange_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.contractChange_btn.Location = new System.Drawing.Point(83, 127);
+            this.contractChange_btn.Location = new System.Drawing.Point(71, 110);
             this.contractChange_btn.Name = "contractChange_btn";
-            this.contractChange_btn.Size = new System.Drawing.Size(174, 37);
+            this.contractChange_btn.Size = new System.Drawing.Size(149, 32);
             this.contractChange_btn.TabIndex = 18;
             this.contractChange_btn.Text = "Изменить";
             this.contractChange_btn.UseVisualStyleBackColor = false;
@@ -1943,11 +1943,11 @@ namespace agency_csharp
             this.groupBox16.Controls.Add(this.contractAgentName_tb);
             this.groupBox16.Controls.Add(this.contractClientSurname_tb);
             this.groupBox16.Controls.Add(this.contractClientName_tb);
-            this.groupBox16.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox16.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox16.Location = new System.Drawing.Point(20, 472);
+            this.groupBox16.Location = new System.Drawing.Point(17, 409);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(532, 151);
+            this.groupBox16.Size = new System.Drawing.Size(456, 131);
             this.groupBox16.TabIndex = 28;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Заключили";
@@ -1955,9 +1955,9 @@ namespace agency_csharp
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label41.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label41.Location = new System.Drawing.Point(34, 37);
+            this.label41.Location = new System.Drawing.Point(29, 32);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(65, 22);
             this.label41.TabIndex = 10;
@@ -1966,9 +1966,9 @@ namespace agency_csharp
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label42.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label42.Location = new System.Drawing.Point(34, 100);
+            this.label42.Location = new System.Drawing.Point(29, 87);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(78, 22);
             this.label42.TabIndex = 10;
@@ -1978,44 +1978,44 @@ namespace agency_csharp
             // 
             this.contractAgentSurame_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.contractAgentSurame_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contractAgentSurame_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.contractAgentSurame_tb.Location = new System.Drawing.Point(317, 31);
+            this.contractAgentSurame_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.contractAgentSurame_tb.Location = new System.Drawing.Point(272, 27);
             this.contractAgentSurame_tb.Multiline = true;
             this.contractAgentSurame_tb.Name = "contractAgentSurame_tb";
-            this.contractAgentSurame_tb.Size = new System.Drawing.Size(176, 35);
+            this.contractAgentSurame_tb.Size = new System.Drawing.Size(151, 30);
             this.contractAgentSurame_tb.TabIndex = 8;
             // 
             // contractAgentName_tb
             // 
             this.contractAgentName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.contractAgentName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contractAgentName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.contractAgentName_tb.Location = new System.Drawing.Point(117, 31);
+            this.contractAgentName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.contractAgentName_tb.Location = new System.Drawing.Point(100, 27);
             this.contractAgentName_tb.Multiline = true;
             this.contractAgentName_tb.Name = "contractAgentName_tb";
-            this.contractAgentName_tb.Size = new System.Drawing.Size(182, 35);
+            this.contractAgentName_tb.Size = new System.Drawing.Size(156, 30);
             this.contractAgentName_tb.TabIndex = 8;
             // 
             // contractClientSurname_tb
             // 
             this.contractClientSurname_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.contractClientSurname_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contractClientSurname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.contractClientSurname_tb.Location = new System.Drawing.Point(317, 94);
+            this.contractClientSurname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.contractClientSurname_tb.Location = new System.Drawing.Point(272, 81);
             this.contractClientSurname_tb.Multiline = true;
             this.contractClientSurname_tb.Name = "contractClientSurname_tb";
-            this.contractClientSurname_tb.Size = new System.Drawing.Size(176, 35);
+            this.contractClientSurname_tb.Size = new System.Drawing.Size(151, 30);
             this.contractClientSurname_tb.TabIndex = 8;
             // 
             // contractClientName_tb
             // 
             this.contractClientName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.contractClientName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contractClientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.contractClientName_tb.Location = new System.Drawing.Point(117, 94);
+            this.contractClientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.contractClientName_tb.Location = new System.Drawing.Point(100, 81);
             this.contractClientName_tb.Multiline = true;
             this.contractClientName_tb.Name = "contractClientName_tb";
-            this.contractClientName_tb.Size = new System.Drawing.Size(182, 35);
+            this.contractClientName_tb.Size = new System.Drawing.Size(156, 30);
             this.contractClientName_tb.TabIndex = 8;
             // 
             // groupBox15
@@ -2029,11 +2029,11 @@ namespace agency_csharp
             this.groupBox15.Controls.Add(this.contractConditions_tb);
             this.groupBox15.Controls.Add(this.contractDate_tb);
             this.groupBox15.Controls.Add(this.label40);
-            this.groupBox15.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox15.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox15.Location = new System.Drawing.Point(20, 16);
+            this.groupBox15.Location = new System.Drawing.Point(17, 14);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(532, 445);
+            this.groupBox15.Size = new System.Drawing.Size(456, 386);
             this.groupBox15.TabIndex = 28;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Персональные данные";
@@ -2045,17 +2045,17 @@ namespace agency_csharp
             "Заключён",
             "Выполнен",
             "Отменён"});
-            this.contractStatus_cb.Location = new System.Drawing.Point(214, 57);
+            this.contractStatus_cb.Location = new System.Drawing.Point(183, 49);
             this.contractStatus_cb.Name = "contractStatus_cb";
-            this.contractStatus_cb.Size = new System.Drawing.Size(182, 26);
+            this.contractStatus_cb.Size = new System.Drawing.Size(157, 26);
             this.contractStatus_cb.TabIndex = 11;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label15.Location = new System.Drawing.Point(214, 31);
+            this.label15.Location = new System.Drawing.Point(183, 27);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(69, 22);
             this.label15.TabIndex = 10;
@@ -2064,9 +2064,9 @@ namespace agency_csharp
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label37.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label37.Location = new System.Drawing.Point(34, 31);
+            this.label37.Location = new System.Drawing.Point(29, 27);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(150, 22);
             this.label37.TabIndex = 10;
@@ -2075,9 +2075,9 @@ namespace agency_csharp
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label38.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label38.Location = new System.Drawing.Point(34, 94);
+            this.label38.Location = new System.Drawing.Point(29, 81);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(163, 22);
             this.label38.TabIndex = 10;
@@ -2088,20 +2088,20 @@ namespace agency_csharp
             this.contractId_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.contractId_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.contractId_tb.Enabled = false;
-            this.contractId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.contractId_tb.Location = new System.Drawing.Point(34, 56);
+            this.contractId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.contractId_tb.Location = new System.Drawing.Point(29, 49);
             this.contractId_tb.Multiline = true;
             this.contractId_tb.Name = "contractId_tb";
-            this.contractId_tb.Size = new System.Drawing.Size(150, 35);
+            this.contractId_tb.Size = new System.Drawing.Size(129, 30);
             this.contractId_tb.TabIndex = 8;
             // 
             // contractConditions_tb
             // 
             this.contractConditions_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.contractConditions_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contractConditions_tb.Location = new System.Drawing.Point(34, 182);
+            this.contractConditions_tb.Location = new System.Drawing.Point(29, 158);
             this.contractConditions_tb.Name = "contractConditions_tb";
-            this.contractConditions_tb.Size = new System.Drawing.Size(459, 242);
+            this.contractConditions_tb.Size = new System.Drawing.Size(393, 210);
             this.contractConditions_tb.TabIndex = 0;
             this.contractConditions_tb.Text = "";
             // 
@@ -2109,19 +2109,19 @@ namespace agency_csharp
             // 
             this.contractDate_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.contractDate_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contractDate_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.contractDate_tb.Location = new System.Drawing.Point(34, 119);
+            this.contractDate_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.contractDate_tb.Location = new System.Drawing.Point(29, 103);
             this.contractDate_tb.Multiline = true;
             this.contractDate_tb.Name = "contractDate_tb";
-            this.contractDate_tb.Size = new System.Drawing.Size(459, 35);
+            this.contractDate_tb.Size = new System.Drawing.Size(393, 30);
             this.contractDate_tb.TabIndex = 8;
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label40.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label40.Location = new System.Drawing.Point(34, 157);
+            this.label40.Location = new System.Drawing.Point(29, 136);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(82, 22);
             this.label40.TabIndex = 9;
@@ -2136,17 +2136,17 @@ namespace agency_csharp
             this.contract_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Montserrat", 10F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.contract_dgv.DefaultCellStyle = dataGridViewCellStyle5;
-            this.contract_dgv.Location = new System.Drawing.Point(615, 16);
+            this.contract_dgv.Location = new System.Drawing.Point(527, 14);
             this.contract_dgv.Name = "contract_dgv";
             this.contract_dgv.ReadOnly = true;
             this.contract_dgv.RowTemplate.Height = 25;
-            this.contract_dgv.Size = new System.Drawing.Size(780, 445);
+            this.contract_dgv.Size = new System.Drawing.Size(669, 386);
             this.contract_dgv.TabIndex = 27;
             this.contract_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contract_dgv_CellClick);
             // 
@@ -2158,7 +2158,7 @@ namespace agency_csharp
             this.responses_tab.Controls.Add(this.responseData_gb);
             this.responses_tab.Location = new System.Drawing.Point(4, 24);
             this.responses_tab.Name = "responses_tab";
-            this.responses_tab.Size = new System.Drawing.Size(1417, 689);
+            this.responses_tab.Size = new System.Drawing.Size(1213, 593);
             this.responses_tab.TabIndex = 5;
             this.responses_tab.Text = "Отклики";
             this.responses_tab.UseVisualStyleBackColor = true;
@@ -2172,11 +2172,11 @@ namespace agency_csharp
             this.groupBox22.Controls.Add(this.responseDel_btn);
             this.groupBox22.Controls.Add(this.responseSave_btn);
             this.groupBox22.Controls.Add(this.responseChange_btn);
-            this.groupBox22.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox22.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox22.Location = new System.Drawing.Point(386, 446);
+            this.groupBox22.Location = new System.Drawing.Point(331, 387);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(530, 152);
+            this.groupBox22.Size = new System.Drawing.Size(454, 132);
             this.groupBox22.TabIndex = 32;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Панель управления";
@@ -2184,9 +2184,9 @@ namespace agency_csharp
             // pictureBox19
             // 
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(276, 82);
+            this.pictureBox19.Location = new System.Drawing.Point(237, 71);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox19.Size = new System.Drawing.Size(37, 32);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox19.TabIndex = 19;
             this.pictureBox19.TabStop = false;
@@ -2194,9 +2194,9 @@ namespace agency_csharp
             // pictureBox22
             // 
             this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(29, 63);
+            this.pictureBox22.Location = new System.Drawing.Point(25, 55);
             this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox22.Size = new System.Drawing.Size(37, 32);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox22.TabIndex = 19;
             this.pictureBox22.TabStop = false;
@@ -2204,9 +2204,9 @@ namespace agency_csharp
             // pictureBox23
             // 
             this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(276, 39);
+            this.pictureBox23.Location = new System.Drawing.Point(237, 34);
             this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(43, 37);
+            this.pictureBox23.Size = new System.Drawing.Size(37, 32);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox23.TabIndex = 19;
             this.pictureBox23.TabStop = false;
@@ -2218,11 +2218,11 @@ namespace agency_csharp
             this.responseDel_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.responseDel_btn.FlatAppearance.BorderSize = 0;
             this.responseDel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.responseDel_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseDel_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.responseDel_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.responseDel_btn.Location = new System.Drawing.Point(78, 63);
+            this.responseDel_btn.Location = new System.Drawing.Point(67, 55);
             this.responseDel_btn.Name = "responseDel_btn";
-            this.responseDel_btn.Size = new System.Drawing.Size(174, 37);
+            this.responseDel_btn.Size = new System.Drawing.Size(149, 32);
             this.responseDel_btn.TabIndex = 18;
             this.responseDel_btn.Text = "Удалить";
             this.responseDel_btn.UseVisualStyleBackColor = false;
@@ -2235,11 +2235,11 @@ namespace agency_csharp
             this.responseSave_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.responseSave_btn.FlatAppearance.BorderSize = 0;
             this.responseSave_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.responseSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseSave_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.responseSave_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.responseSave_btn.Location = new System.Drawing.Point(325, 82);
+            this.responseSave_btn.Location = new System.Drawing.Point(279, 71);
             this.responseSave_btn.Name = "responseSave_btn";
-            this.responseSave_btn.Size = new System.Drawing.Size(174, 37);
+            this.responseSave_btn.Size = new System.Drawing.Size(149, 32);
             this.responseSave_btn.TabIndex = 18;
             this.responseSave_btn.Text = "Сохранить";
             this.responseSave_btn.UseVisualStyleBackColor = false;
@@ -2253,11 +2253,11 @@ namespace agency_csharp
             this.responseChange_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.responseChange_btn.FlatAppearance.BorderSize = 0;
             this.responseChange_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.responseChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responseChange_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.responseChange_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.responseChange_btn.Location = new System.Drawing.Point(325, 39);
+            this.responseChange_btn.Location = new System.Drawing.Point(279, 34);
             this.responseChange_btn.Name = "responseChange_btn";
-            this.responseChange_btn.Size = new System.Drawing.Size(174, 37);
+            this.responseChange_btn.Size = new System.Drawing.Size(149, 32);
             this.responseChange_btn.TabIndex = 18;
             this.responseChange_btn.Text = "Изменить";
             this.responseChange_btn.UseVisualStyleBackColor = false;
@@ -2270,11 +2270,11 @@ namespace agency_csharp
             this.groupBox21.Controls.Add(this.responseSearch_btn);
             this.groupBox21.Controls.Add(this.responseClear_btn);
             this.groupBox21.Controls.Add(this.responseSearch_tb);
-            this.groupBox21.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox21.Font = new System.Drawing.Font("Montserrat", 10F);
             this.groupBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.groupBox21.Location = new System.Drawing.Point(944, 446);
+            this.groupBox21.Location = new System.Drawing.Point(809, 387);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(420, 100);
+            this.groupBox21.Size = new System.Drawing.Size(360, 87);
             this.groupBox21.TabIndex = 31;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Управление";
@@ -2286,9 +2286,9 @@ namespace agency_csharp
             this.responseRefresh_brn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.responseRefresh_brn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.responseRefresh_brn.Image = ((System.Drawing.Image)(resources.GetObject("responseRefresh_brn.Image")));
-            this.responseRefresh_brn.Location = new System.Drawing.Point(77, 33);
+            this.responseRefresh_brn.Location = new System.Drawing.Point(66, 29);
             this.responseRefresh_brn.Name = "responseRefresh_brn";
-            this.responseRefresh_brn.Size = new System.Drawing.Size(55, 52);
+            this.responseRefresh_brn.Size = new System.Drawing.Size(47, 45);
             this.responseRefresh_brn.TabIndex = 17;
             this.responseRefresh_brn.UseVisualStyleBackColor = false;
             this.responseRefresh_brn.Click += new System.EventHandler(this.responseRefresh_brn_Click);
@@ -2300,9 +2300,9 @@ namespace agency_csharp
             this.responseSearch_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.responseSearch_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.responseSearch_btn.Image = ((System.Drawing.Image)(resources.GetObject("responseSearch_btn.Image")));
-            this.responseSearch_btn.Location = new System.Drawing.Point(138, 33);
+            this.responseSearch_btn.Location = new System.Drawing.Point(118, 29);
             this.responseSearch_btn.Name = "responseSearch_btn";
-            this.responseSearch_btn.Size = new System.Drawing.Size(48, 52);
+            this.responseSearch_btn.Size = new System.Drawing.Size(41, 45);
             this.responseSearch_btn.TabIndex = 17;
             this.responseSearch_btn.UseVisualStyleBackColor = false;
             this.responseSearch_btn.Click += new System.EventHandler(this.responseSearch_btn_Click);
@@ -2314,9 +2314,9 @@ namespace agency_csharp
             this.responseClear_btn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.responseClear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.responseClear_btn.Image = ((System.Drawing.Image)(resources.GetObject("responseClear_btn.Image")));
-            this.responseClear_btn.Location = new System.Drawing.Point(23, 33);
+            this.responseClear_btn.Location = new System.Drawing.Point(20, 29);
             this.responseClear_btn.Name = "responseClear_btn";
-            this.responseClear_btn.Size = new System.Drawing.Size(48, 52);
+            this.responseClear_btn.Size = new System.Drawing.Size(41, 45);
             this.responseClear_btn.TabIndex = 17;
             this.responseClear_btn.UseVisualStyleBackColor = false;
             this.responseClear_btn.Click += new System.EventHandler(this.responseClear_btn_Click);
@@ -2325,11 +2325,11 @@ namespace agency_csharp
             // 
             this.responseSearch_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseSearch_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.responseSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseSearch_tb.Location = new System.Drawing.Point(192, 39);
+            this.responseSearch_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.responseSearch_tb.Location = new System.Drawing.Point(165, 34);
             this.responseSearch_tb.Multiline = true;
             this.responseSearch_tb.Name = "responseSearch_tb";
-            this.responseSearch_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseSearch_tb.Size = new System.Drawing.Size(182, 30);
             this.responseSearch_tb.TabIndex = 8;
             this.responseSearch_tb.TextChanged += new System.EventHandler(this.responseSearch_tb_TextChanged);
             // 
@@ -2342,17 +2342,17 @@ namespace agency_csharp
             this.response_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Montserrat", 10F);
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.response_dgv.DefaultCellStyle = dataGridViewCellStyle6;
-            this.response_dgv.Location = new System.Drawing.Point(386, 32);
+            this.response_dgv.Location = new System.Drawing.Point(331, 28);
             this.response_dgv.Name = "response_dgv";
             this.response_dgv.ReadOnly = true;
             this.response_dgv.RowTemplate.Height = 25;
-            this.response_dgv.Size = new System.Drawing.Size(978, 387);
+            this.response_dgv.Size = new System.Drawing.Size(838, 335);
             this.response_dgv.TabIndex = 27;
             this.response_dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.resp_dgv_CellClick);
             // 
@@ -2375,11 +2375,11 @@ namespace agency_csharp
             this.responseData_gb.Controls.Add(this.label48);
             this.responseData_gb.Controls.Add(this.label45);
             this.responseData_gb.Controls.Add(this.label49);
-            this.responseData_gb.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.responseData_gb.Font = new System.Drawing.Font("Montserrat", 10F);
             this.responseData_gb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.responseData_gb.Location = new System.Drawing.Point(24, 32);
+            this.responseData_gb.Location = new System.Drawing.Point(21, 28);
             this.responseData_gb.Name = "responseData_gb";
-            this.responseData_gb.Size = new System.Drawing.Size(296, 621);
+            this.responseData_gb.Size = new System.Drawing.Size(254, 538);
             this.responseData_gb.TabIndex = 26;
             this.responseData_gb.TabStop = false;
             this.responseData_gb.Text = "Отклик";
@@ -2391,17 +2391,17 @@ namespace agency_csharp
             "Отправлен",
             "Обработан",
             "Отменён"});
-            this.responseStatus_cb.Location = new System.Drawing.Point(34, 570);
+            this.responseStatus_cb.Location = new System.Drawing.Point(29, 494);
             this.responseStatus_cb.Name = "responseStatus_cb";
-            this.responseStatus_cb.Size = new System.Drawing.Size(212, 26);
+            this.responseStatus_cb.Size = new System.Drawing.Size(182, 26);
             this.responseStatus_cb.TabIndex = 13;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label16.Location = new System.Drawing.Point(34, 544);
+            this.label16.Location = new System.Drawing.Point(29, 471);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(69, 22);
             this.label16.TabIndex = 12;
@@ -2412,19 +2412,19 @@ namespace agency_csharp
             this.responseClientNum_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseClientNum_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseClientNum_tb.Enabled = false;
-            this.responseClientNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseClientNum_tb.Location = new System.Drawing.Point(34, 499);
+            this.responseClientNum_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.responseClientNum_tb.Location = new System.Drawing.Point(29, 432);
             this.responseClientNum_tb.Multiline = true;
             this.responseClientNum_tb.Name = "responseClientNum_tb";
-            this.responseClientNum_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseClientNum_tb.Size = new System.Drawing.Size(182, 30);
             this.responseClientNum_tb.TabIndex = 8;
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label43.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label43.Location = new System.Drawing.Point(34, 104);
+            this.label43.Location = new System.Drawing.Point(29, 90);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(125, 22);
             this.label43.TabIndex = 10;
@@ -2433,9 +2433,9 @@ namespace agency_csharp
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label47.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label47.Location = new System.Drawing.Point(34, 469);
+            this.label47.Location = new System.Drawing.Point(29, 406);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(177, 22);
             this.label47.TabIndex = 9;
@@ -2444,9 +2444,9 @@ namespace agency_csharp
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label46.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label46.Location = new System.Drawing.Point(34, 250);
+            this.label46.Location = new System.Drawing.Point(29, 217);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(46, 22);
             this.label46.TabIndex = 10;
@@ -2455,9 +2455,9 @@ namespace agency_csharp
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label44.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label44.Location = new System.Drawing.Point(34, 31);
+            this.label44.Location = new System.Drawing.Point(29, 27);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(150, 22);
             this.label44.TabIndex = 10;
@@ -2468,11 +2468,11 @@ namespace agency_csharp
             this.responseClientName_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseClientName_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseClientName_tb.Enabled = false;
-            this.responseClientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseClientName_tb.Location = new System.Drawing.Point(34, 280);
+            this.responseClientName_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.responseClientName_tb.Location = new System.Drawing.Point(29, 243);
             this.responseClientName_tb.Multiline = true;
             this.responseClientName_tb.Name = "responseClientName_tb";
-            this.responseClientName_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseClientName_tb.Size = new System.Drawing.Size(182, 30);
             this.responseClientName_tb.TabIndex = 8;
             // 
             // responseOrg_tb
@@ -2480,11 +2480,11 @@ namespace agency_csharp
             this.responseOrg_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseOrg_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseOrg_tb.Enabled = false;
-            this.responseOrg_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseOrg_tb.Location = new System.Drawing.Point(34, 134);
+            this.responseOrg_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.responseOrg_tb.Location = new System.Drawing.Point(29, 116);
             this.responseOrg_tb.Multiline = true;
             this.responseOrg_tb.Name = "responseOrg_tb";
-            this.responseOrg_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseOrg_tb.Size = new System.Drawing.Size(182, 30);
             this.responseOrg_tb.TabIndex = 8;
             // 
             // responseClientSurname_tb
@@ -2492,11 +2492,11 @@ namespace agency_csharp
             this.responseClientSurname_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseClientSurname_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseClientSurname_tb.Enabled = false;
-            this.responseClientSurname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseClientSurname_tb.Location = new System.Drawing.Point(34, 353);
+            this.responseClientSurname_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.responseClientSurname_tb.Location = new System.Drawing.Point(29, 306);
             this.responseClientSurname_tb.Multiline = true;
             this.responseClientSurname_tb.Name = "responseClientSurname_tb";
-            this.responseClientSurname_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseClientSurname_tb.Size = new System.Drawing.Size(182, 30);
             this.responseClientSurname_tb.TabIndex = 8;
             // 
             // responseVac_tb
@@ -2504,11 +2504,11 @@ namespace agency_csharp
             this.responseVac_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseVac_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseVac_tb.Enabled = false;
-            this.responseVac_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseVac_tb.Location = new System.Drawing.Point(34, 207);
+            this.responseVac_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.responseVac_tb.Location = new System.Drawing.Point(29, 179);
             this.responseVac_tb.Multiline = true;
             this.responseVac_tb.Name = "responseVac_tb";
-            this.responseVac_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseVac_tb.Size = new System.Drawing.Size(182, 30);
             this.responseVac_tb.TabIndex = 8;
             // 
             // responseClientPat_tb
@@ -2516,11 +2516,11 @@ namespace agency_csharp
             this.responseClientPat_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseClientPat_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseClientPat_tb.Enabled = false;
-            this.responseClientPat_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseClientPat_tb.Location = new System.Drawing.Point(34, 426);
+            this.responseClientPat_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.responseClientPat_tb.Location = new System.Drawing.Point(29, 369);
             this.responseClientPat_tb.Multiline = true;
             this.responseClientPat_tb.Name = "responseClientPat_tb";
-            this.responseClientPat_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseClientPat_tb.Size = new System.Drawing.Size(182, 30);
             this.responseClientPat_tb.TabIndex = 8;
             // 
             // responseId_tb
@@ -2528,19 +2528,19 @@ namespace agency_csharp
             this.responseId_tb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
             this.responseId_tb.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.responseId_tb.Enabled = false;
-            this.responseId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.responseId_tb.Location = new System.Drawing.Point(34, 61);
+            this.responseId_tb.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.responseId_tb.Location = new System.Drawing.Point(29, 53);
             this.responseId_tb.Multiline = true;
             this.responseId_tb.Name = "responseId_tb";
-            this.responseId_tb.Size = new System.Drawing.Size(212, 35);
+            this.responseId_tb.Size = new System.Drawing.Size(182, 30);
             this.responseId_tb.TabIndex = 8;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label48.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label48.Location = new System.Drawing.Point(34, 396);
+            this.label48.Location = new System.Drawing.Point(29, 343);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(90, 22);
             this.label48.TabIndex = 9;
@@ -2549,9 +2549,9 @@ namespace agency_csharp
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label45.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label45.Location = new System.Drawing.Point(34, 177);
+            this.label45.Location = new System.Drawing.Point(29, 153);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(108, 22);
             this.label45.TabIndex = 9;
@@ -2560,9 +2560,9 @@ namespace agency_csharp
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label49.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label49.Location = new System.Drawing.Point(34, 323);
+            this.label49.Location = new System.Drawing.Point(29, 280);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(91, 22);
             this.label49.TabIndex = 9;
@@ -2578,7 +2578,8 @@ namespace agency_csharp
             this.userStatus_tstb});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1425, 27);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1221, 27);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -2621,6 +2622,13 @@ namespace agency_csharp
             this.администрированиеToolStripMenuItem.Text = "Администрирование";
             this.администрированиеToolStripMenuItem.Click += new System.EventHandler(this.администрированиеToolStripMenuItem_Click);
             // 
+            // сменитьПользователяToolStripMenuItem
+            // 
+            this.сменитьПользователяToolStripMenuItem.Name = "сменитьПользователяToolStripMenuItem";
+            this.сменитьПользователяToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.сменитьПользователяToolStripMenuItem.Text = "Сменить пользователя";
+            this.сменитьПользователяToolStripMenuItem.Click += new System.EventHandler(this.сменитьПользователяToolStripMenuItem_Click);
+            // 
             // информацияToolStripMenuItem
             // 
             this.информацияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2648,37 +2656,32 @@ namespace agency_csharp
             // 
             this.userStatus_tstb.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.userStatus_tstb.Enabled = false;
+            this.userStatus_tstb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.userStatus_tstb.Name = "userStatus_tstb";
-            this.userStatus_tstb.Size = new System.Drawing.Size(150, 23);
+            this.userStatus_tstb.Size = new System.Drawing.Size(129, 23);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 722);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 623);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1425, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1221, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
-            // 
-            // сменитьПользователяToolStripMenuItem
-            // 
-            this.сменитьПользователяToolStripMenuItem.Name = "сменитьПользователяToolStripMenuItem";
-            this.сменитьПользователяToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.сменитьПользователяToolStripMenuItem.Text = "Сменить пользователя";
-            this.сменитьПользователяToolStripMenuItem.Click += new System.EventHandler(this.сменитьПользователяToolStripMenuItem_Click);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(86, 16);
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1425, 744);
+            this.ClientSize = new System.Drawing.Size(1221, 645);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.info_tabPage);
             this.Controls.Add(this.menuStrip1);

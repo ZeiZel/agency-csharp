@@ -20,7 +20,15 @@ namespace agency_csharp
 
         private void ClientAdd_Load(object sender, EventArgs e)
         {
+            sex_cb.Visible = false;
+            profession_tb.Visible = false;
+            birth_tb.Visible = false;
+            education_tb.Visible = false;
 
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
         }
 
         private void add_btn_Click(object sender, EventArgs e)
@@ -37,6 +45,12 @@ namespace agency_csharp
             var adressStreet = adressStreet_tb.Text;
             var adressBuilding = adressBuilding_tb.Text;
             var adressApartment = adressApartment_tb.Text;
+
+            bool status = clientStatus_cb.Checked;
+            var clientSex = sex_cb.Text;
+            var clientBirth = birth_tb.Text;
+            var clientEducation = education_tb.Text;
+            var clientProfession = profession_tb.Text;
 
             bool result = CheckClient($"select u_name, u_phoneNumber, u_patronymic, u_surname from Users where u_name = '{clientName}' and u_phoneNumber = '{clientNum}' and u_patronymic = '{clientPat}' and u_surname = '{clientSurname}';");
             bool findNumber = CheckClient($"select u_phoneNumber from Users where u_phoneNumber = '{clientNum}';");
@@ -60,8 +74,13 @@ namespace agency_csharp
                         )
                         {
                             string queryString =
-                            $"EXEC AddClient '{clientName}', '{clientSurname}', '{clientPat}', '{clientNum}', " +
-                            $"'{adressRegion}', '{adressCity}', '{adressStreet}', '{adressBuilding}', '{adressApartment}';";
+                            @$"
+                                EXEC AddClient 
+                                '{clientName}', '{clientSurname}', '{clientPat}', '{clientNum}',
+                                '{adressRegion}', '{adressCity}', '{adressStreet}', '{adressBuilding}', '{adressApartment}',
+                                '{status}', '{clientSex}', '{clientBirth}', '{clientEducation}', '{clientProfession}'
+                            ;";
+
                             SqlCommand command = new SqlCommand(queryString, database.getConnection());
                             command.ExecuteNonQuery();
 
@@ -147,6 +166,33 @@ namespace agency_csharp
             adapter.Fill(table);
 
             return table.Rows.Count;
+        }
+
+        private void clientStatus_cb_CheckedChanged(object sender, EventArgs e)
+        {
+            if (clientStatus_cb.CheckState == CheckState.Unchecked)
+            {
+                sex_cb.Visible = false;
+                profession_tb.Visible = false;
+                birth_tb.Visible = false;
+                education_tb.Visible = false;
+
+                label3.Visible = false;
+                label4.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+            } else
+            {
+                sex_cb.Visible = true;
+                profession_tb.Visible = true;
+                birth_tb.Visible = true;
+                education_tb.Visible = true;
+
+                label3.Visible = true;
+                label4.Visible = true;
+                label5.Visible = true;
+                label6.Visible = true;
+            }
         }
     }
 }
