@@ -1,4 +1,13 @@
-﻿namespace agency_csharp
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+namespace agency_csharp
 {
     partial class CheckUpdates
     {
@@ -29,6 +38,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckUpdates));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.checkUpdates_btn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -37,9 +47,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(33, 76);
+            this.progressBar1.Location = new System.Drawing.Point(28, 66);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(257, 36);
+            this.progressBar1.Size = new System.Drawing.Size(220, 31);
             this.progressBar1.TabIndex = 0;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
@@ -50,11 +60,11 @@
             this.checkUpdates_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.checkUpdates_btn.FlatAppearance.BorderSize = 0;
             this.checkUpdates_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkUpdates_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkUpdates_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.checkUpdates_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.checkUpdates_btn.Location = new System.Drawing.Point(41, 137);
+            this.checkUpdates_btn.Location = new System.Drawing.Point(35, 119);
             this.checkUpdates_btn.Name = "checkUpdates_btn";
-            this.checkUpdates_btn.Size = new System.Drawing.Size(240, 36);
+            this.checkUpdates_btn.Size = new System.Drawing.Size(206, 31);
             this.checkUpdates_btn.TabIndex = 20;
             this.checkUpdates_btn.Text = "Проверить обновления";
             this.checkUpdates_btn.UseVisualStyleBackColor = false;
@@ -68,23 +78,24 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(59, 38);
+            this.label7.Location = new System.Drawing.Point(51, 33);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(205, 22);
+            this.label7.Size = new System.Drawing.Size(197, 20);
             this.label7.TabIndex = 21;
             this.label7.Text = "Проверка обновления";
             // 
             // CheckUpdates
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(326, 209);
+            this.ClientSize = new System.Drawing.Size(279, 181);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.checkUpdates_btn);
             this.Controls.Add(this.progressBar1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CheckUpdates";
             this.Text = "Обновление";
             this.Load += new System.EventHandler(this.CheckUpdates_Load);

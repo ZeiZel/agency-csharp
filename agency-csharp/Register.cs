@@ -166,7 +166,9 @@ namespace agency_csharp
 
         private void Register_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+            Form login = new Login();
+            login.Show();
+            this.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

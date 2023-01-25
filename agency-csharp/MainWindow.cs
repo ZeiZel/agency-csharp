@@ -1,5 +1,15 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace agency_csharp
 {
@@ -544,7 +554,7 @@ namespace agency_csharp
                 clientView_dgv,
                 database,
                 SwitchState.Client,
-                $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{clientSearch_tb.Text}%'"
+                $"select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Client C on Users.id_pk_user = C.id_user where concat(id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber) like '%{clientSearch_tb.Text}%'"
             );
         }
 
@@ -564,7 +574,7 @@ namespace agency_csharp
                 vacancy_dgv,
                 database,
                 SwitchState.Vacancy,
-                $"select id_pk_vacancy, o_name, v_profession, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization where concat(id_pk_vacancy, o_name, v_profession, o_phoneNumber) like '%{vacSearch_tb.Text}%';"
+                $"select id_pk_vacancy, o_name, v_profession, v_description, o_phoneNumber from Vacancy inner join Organization O on O.id_pk_organization = Vacancy.id_organization where concat(id_pk_vacancy, o_name, v_profession, v_description, o_phoneNumber) like '%{vacSearch_tb.Text}%';"
             );
         }
 
@@ -902,7 +912,7 @@ namespace agency_csharp
                 clientView_dgv,
                 database,
                 SwitchState.Client,
-                $"select * from [dbo].[Users] inner join Employee E on Users.id_pk_user = E.id_fk_user where concat([u_name], [u_surname], [u_patronymic], [u_phoneNumber]) like '%{clientSearch_tb.Text}%'"
+                $"select id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber from Users inner join Client C on Users.id_pk_user = C.id_user where concat(id_pk_user, u_name, u_surname, u_patronymic, u_phoneNumber) like '%{clientSearch_tb.Text}%'"
             );
         }
 

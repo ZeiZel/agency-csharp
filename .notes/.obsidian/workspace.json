@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f665a0dd0f53c51f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Таблицы.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1d38fb64006ad891",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Курсовой проект.md",
+                "file": "Таблицы.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Курсовой проект.md",
+                "file": "Таблицы.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Курсовой проект.md"
+                "file": "Таблицы.md"
               }
             }
           }
@@ -146,13 +160,13 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "fc29ff21272f8c7f",
+  "active": "f665a0dd0f53c51f",
   "lastOpenFiles": [
+    "Курсовой проект.md",
     "assets/login.png",
     "README.md",
     "assets/register.png",
     "assets/findVacancy.png",
-    "Курсовой проект.md",
     "'/assets/About.png'.md",
     "assets/About.png",
     "assets/AdminPanel.png",

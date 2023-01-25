@@ -1,4 +1,14 @@
-﻿namespace agency_csharp
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace agency_csharp
 {
     partial class Report
     {
@@ -28,6 +38,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.conract_exp_btn = new System.Windows.Forms.Button();
             this.responses_exp_btn = new System.Windows.Forms.Button();
             this.export_btn = new System.Windows.Forms.Button();
@@ -43,11 +54,11 @@
             this.conract_exp_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.conract_exp_btn.FlatAppearance.BorderSize = 0;
             this.conract_exp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.conract_exp_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.conract_exp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.conract_exp_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.conract_exp_btn.Location = new System.Drawing.Point(137, 139);
+            this.conract_exp_btn.Location = new System.Drawing.Point(117, 120);
             this.conract_exp_btn.Name = "conract_exp_btn";
-            this.conract_exp_btn.Size = new System.Drawing.Size(198, 63);
+            this.conract_exp_btn.Size = new System.Drawing.Size(170, 55);
             this.conract_exp_btn.TabIndex = 21;
             this.conract_exp_btn.Text = "Экспортировать контракты";
             this.conract_exp_btn.UseVisualStyleBackColor = false;
@@ -59,11 +70,11 @@
             this.responses_exp_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.responses_exp_btn.FlatAppearance.BorderSize = 0;
             this.responses_exp_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.responses_exp_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.responses_exp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.responses_exp_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.responses_exp_btn.Location = new System.Drawing.Point(137, 62);
+            this.responses_exp_btn.Location = new System.Drawing.Point(117, 54);
             this.responses_exp_btn.Name = "responses_exp_btn";
-            this.responses_exp_btn.Size = new System.Drawing.Size(198, 63);
+            this.responses_exp_btn.Size = new System.Drawing.Size(170, 55);
             this.responses_exp_btn.TabIndex = 21;
             this.responses_exp_btn.Text = "Экспортировать заявки";
             this.responses_exp_btn.UseVisualStyleBackColor = false;
@@ -75,11 +86,11 @@
             this.export_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.export_btn.FlatAppearance.BorderSize = 0;
             this.export_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.export_btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.export_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.export_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.export_btn.Location = new System.Drawing.Point(137, 216);
+            this.export_btn.Location = new System.Drawing.Point(117, 187);
             this.export_btn.Name = "export_btn";
-            this.export_btn.Size = new System.Drawing.Size(198, 63);
+            this.export_btn.Size = new System.Drawing.Size(170, 55);
             this.export_btn.TabIndex = 19;
             this.export_btn.Text = "Экспортировать сотрудников";
             this.export_btn.UseVisualStyleBackColor = false;
@@ -87,19 +98,21 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 345);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 296);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(485, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(416, 22);
             this.statusStrip1.TabIndex = 21;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripProgressBar1
             // 
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(86, 16);
             // 
             // toolStripStatusLabel1
             // 
@@ -109,14 +122,15 @@
             // 
             // Report
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(485, 367);
+            this.ClientSize = new System.Drawing.Size(416, 318);
             this.Controls.Add(this.conract_exp_btn);
             this.Controls.Add(this.responses_exp_btn);
             this.Controls.Add(this.export_btn);
             this.Controls.Add(this.statusStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Report";
             this.Text = "Отчётность";
             this.TransparencyKey = System.Drawing.Color.White;
